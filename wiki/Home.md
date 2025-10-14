@@ -57,18 +57,33 @@ Currently we support the standard Stealth Burner, Dragon Burner, Rapid Burner, Y
 <a href="https://github.com/sponsors/DraftShift" target="_blank" alt="Sponsor Us">![GitHub Sponsors](https://img.shields.io/github/sponsors/DraftShift?logo=githubsponsors&label=Sponsors&labelColor=rgb(246%2C%20248%2C%20250)&color=rgb(191%2C%2057%2C%20137))</a>
 
 ## Table of Contents
-1. [Bill of Materials](Bill-of-Materials)
-2. [Docks](Docks)
-3. [Printing](Printing)
-4. [Assembling](Assembling)
-5. [Installation](Installation)
-6. [Configuration](Configuration)
-7. [Calibration](Calibration)
-8. [Slicers](Slicers)
-9. [Serials](Serials)
-10. [Support & FAQs](Support-and-FAQs)
-11. [Contributing & Donating](Contributing-and-Donating)
-12. [Team & Credits](Team-and-Credits)
-13. [Vendors & Kits](Vendors-and-Kits)
+
+*Getting Started*
+- [Checklist](Checklist)
+- [Bill of Materials](Bill-of-Materials)
+
+*Selecting*
+- [Toolheads](Toolheads)
+  - Stealthburner
+  - Dragonburner
+  - Anthead
+- [Docks](Docks)
+
+*Building*
+- [Printing](Printing)
+- [Assembling](Assembling)
+
+*Configuration*
+- [Installation](Installation)
+- [Configuration](Configuration)
+- [Calibration](Calibration)
+- [Slicers](Slicers)
+
+*Support*
+- [Serials](Serials)
+- [Support & FAQs](Support-and-FAQs)
+- [Contributing & Donating](Contributing-and-Donating)
+- [Team & Credits](Team-and-Credits)
+- [Vendors & Kits](Vendors-and-Kits)
 
 </td></tr></table>
