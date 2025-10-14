@@ -1,40 +1,63 @@
-# <img src="https://github.com/DraftShift/Stealthchanger/blob/main/media/Stealthchanger_logo.png?raw=true" height="100" align="top" /> StealthChanger
+# <img src="https://github.com/DraftShift/Stealthchanger/blob/main/media/Stealthchanger_logo.png?raw=true" height="50" align="top" /> StealthChanger
 
-Stealth Changer is a friction and magnetic fit, 3d printing multiple tool changer for the Voron 2.4 printer.
+<em>Tool changing system for Vorons and other front mount printer motion systems.<em>
 
-The purpose of a multiple toolhead changer is to allow for mixed material and mixed color printing without having to manually swap filament or purge filament during the swapping of materials. This allows for faster printing and less wasted filament compared to manual swapping and multi-material units like the ERCF or an AMS system.
+<table comment="two-column layout"><tr><td width="80%">
 
-It consists of a toolhead shuttle, toolhead backplate, and a optotap sensor for Z probing.
+## Stealthchanger Overview
+StealthChanger is a project to convert a Voron 2.4 printer into one with multiple toolheads.
 
-Stealth Changer supports a number of popular toolheads by mounting a backplate to the toolhead while using existing toolhead mounting points.
+Mounting of the toolhead to the shuttle is done by using bushings and pins, with magnets to help create a strong mounting connection for high-speed printing, and uses the same principles as [TAP](https://github.com/VoronDesign/Voron-Tap) to measure Z offsets.
 
-The shuttle replaces the current Voron TAP or Voron X carriage frame while using the TAP optotap sensor.
+StealthChanger draws from many different projects including [tapchanger](https://github.com/viesturz/tapchanger), and involves the contributions of many people who contribute to make it better. 
 
-Mounting of the toolhead with the shuttle is done by using bushings and pins, with magnets to help create a strong mounting connection for high-speed printing while also providing better inputshaping results than TAP.
+## Stealthchanger Components
+<add breakout diagram?><br>
+The stealthchanger system consists of multiple parts. Some are essential, some have many different options, and some are optional. 
 
-This is a very light design, requiring less parts and as such is cheaper and easier to build.  Input shaper tests have shown it to be as rigid if not more than current Tapchanger.
+### Shuttle & Backplate
 
-All parts are easily replaceable without reprinting if wear happens, life of the bushings and pins are still being tested.
+<img src="https://github.com/sdylewski/StealthChanger/tree/main/media/shuttle.jpg" width="200"><br>
 
-The number of docks that can be installed is based on the width of the printer and the X/Y joins that allow the shuttle to reach the left and right side docks.
+The shuttle replaces your Voron shuttle with one that has bushings to connect to the backplate of each toolhead
+<p>
+### Toolhead Modular Dock
+<img src="" align=left width="300">Crossbar
+- Modular Dock
+- Door buffer
 
+### Electronics and cable management system
+- FannyPack
+- Umbilicals
 
-## Tool compatability
+### Top Hat
+<picture>
+
+### XY Offset Calibration Hardware (SexBolt or Nudge)
+Sexbolt, Nudge, or Printed calibration
+
+### Klipper tool changing software
+KTE
+
+## Planning
+- Make sure to visit our [Checklist](Checklist)
+- Tool compatability
 Currently we support the standard Stealth Burner, Dragon Burner, Rapid Burner, Yavoth, XOL and Archetype. There is also a usermod for the [Mini Stealth Burner](../blob/main/UserMods/jdmontgomer/MiniSB_SC).
 
-## Before you begin
+## Building
 
-Make sure to visit our [Checklist](Checklist)
-
-There are a few considerations that should be taken into account before you begin this project. First is, yes, you need an optotop board on every tool. The board is needed as thats how klipper knows which board is active. When the tap sensor is triggered, it knows which tool it has. You do not need the other tap parts though, like the MGN9 rail. StealthChanger by design also acts like the normal tap and does z probing.
-
-Are you going to be printing any material that needs an enclosed printer? If the answer is yes, then you will need a tophat on your printer (or longer vertical extrusions). Typically, it adds around 200mm to the top (give or take based on your specific build). 
-
-Canbus is nearly a requirement. While technically you dont need to do canbus, getting that many wires to each tool and doing so in a way that they won't tangle is going to be a nightmare. That being said, cable management is a very big part of the process. Without it, the cables will get wrapped up around each other and cause issues. Having some kind of plan for umbilicals is a must when considering the project.
-
-How are you doing docks? There are a few different ways of doing them, and what you choose is going to influence a lot of things. If you plan on using a stock Voron build, remember that you need to have clearance at the sides of the docks for the front idlers to go beside them. This will also influence number of tools. You also have the option of top rail mounted docks or crossbar docks. Crossbar docks are probably the most stable, as they ultimately can be more stiff. You can also do a crossbar plus topmount for even more rigidity. If you decide to go this route, then you really want to use 2040 extrusions for your front rails. This way you can still use all the stock voron doors/panels etc with the crossbar, as well as not have the idlers hitting the crossbar. Top mounted docks are completely acceptable though, they just have a little more movement to them. As an alternative option the team has created a printable [door buffer](https://github.com/DraftShift/DoorBuffer) that will give you a crossbar without requiremend to replace your current front frame.
+## Calibration
 
 
+
+</td>
+<td valign="top">
+
+ <a href="https://discord.gg/draftshift" target="_blank" alt="Join our Discord">![Discord](https://img.shields.io/discord/1226846451028725821?logo=discord&logoColor=%23ffffff&label=Join%20our%20Discord&labelColor=%237785cc&color=%23adf5ff)</a>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="https://github.com/sponsors/DraftShift" target="_blank" alt="Sponsor Us">![GitHub Sponsors](https://img.shields.io/github/sponsors/DraftShift?logo=githubsponsors&label=Sponsors&labelColor=rgb(246%2C%20248%2C%20250)&color=rgb(191%2C%2057%2C%20137))</a>
+
+## Table of Contents
 1. [Bill of Materials](Bill-of-Materials)
 2. [Docks](Docks)
 3. [Printing](Printing)
@@ -48,3 +71,5 @@ How are you doing docks? There are a few different ways of doing them, and what 
 11. [Contributing & Donating](Contributing-and-Donating)
 12. [Team & Credits](Team-and-Credits)
 13. [Vendors & Kits](Vendors-and-Kits)
+
+</td></tr></table>
