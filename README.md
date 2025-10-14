@@ -1,5 +1,5 @@
-## Stealthchanger Documentation Upgrade Project
-The goals of this project are to help reorganize and rewrite some of the documentation, with the goal of merging this back into the mainline Stealthchanger wiki. 
+## Stealthchanger Wiki Upgrade Project
+The goals of this project are to help reorganize and rewrite some of the documentation on the wiki, with the goal of merging this back into the mainline Stealthchanger wiki. 
 
 - Contributers:
   <a href="https://github.com/sdylewski" title="Major Hack"><img src="https://github.com/sdylewski.png?size=40" width="40" height="40" alt="Major Hack" /></a>
@@ -14,21 +14,7 @@ The goals of this project are to help reorganize and rewrite some of the documen
   - How to sync the readme.md with the Home wiki page so they're the same (as it is now)
 <hr>
 
-<table><tr><td><img src="media/Stealthchanger_logo.png?raw=true" height="100" align="top" align="left" style="height: 100px;" /> </td>
- <td><h1>StealthChanger</h1>
-<em>Tool changing system for Vorons and other front mount printer motion systems.<em>
- </td></tr></table>
 
-## Stealthchanger Overview
--explain what it is
--related projects, etc. 
--The stealthchanger system consists of multiple parts. Some are essential, some have many different options, and some are optional.  
-
-## Stealthchanger Components
-
-## Documentation Overview
-
-## How to get started
 
 
 
