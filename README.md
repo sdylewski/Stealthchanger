@@ -10,7 +10,8 @@ The goals of this project are to help reorganize and rewrite some of the documen
   - Start with high-level description, then go deeper
   - one page per toolhead, with details for each
   - Better flow for what should come first, next, etc.
-  - More obvoius documentation links in the correct order. for example, at the bottom of each page, include the full Table of Contents. This should combat the doc links at the right of the wiki that are in the incorrect alphabetical order!  (or name pages like "1. introduction", "2. Building", "3. 
+  - More obvoius documentation links in the correct order. for example, at the bottom of each page, include the full Table of Contents. This should combat the doc links at the right of the wiki that are in the incorrect alphabetical order!  (or name pages like "1. introduction", "2. Building", "3. Etc"
+  - How to sync the readme.md with the Home wiki page so they're the same (as it is now)
 <hr>
 
 <table><tr><td><img src="media/Stealthchanger_logo.png?raw=true" height="100" align="top" align="left" style="height: 100px;" /> </td>
