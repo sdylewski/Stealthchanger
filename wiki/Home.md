@@ -17,12 +17,11 @@ The stealthchanger system consists of multiple parts. Some are essential, some h
 
 ### Shuttle & Backplate
 
-<img src="https://github.com/sdylewski/StealthChanger/tree/main/media/shuttle.jpg" width="200"><br>
-
+<img src="../media/shuttle.jpg" width="200"><br>
 The shuttle replaces your Voron shuttle with one that has bushings to connect to the backplate of each toolhead
-<p>
+ 
 ### Toolhead Modular Dock
-<img src="" align=left width="300">Crossbar
+<img src="Images/Dock_top_mount.png" width="200">Crossbar
 - Modular Dock
 - Door buffer
 
