@@ -12,25 +12,34 @@ Mounting of the toolhead to the shuttle is done by using bushings and pins, with
 StealthChanger draws from many different projects including [tapchanger](https://github.com/viesturz/tapchanger), and involves the contributions of many people who work together to make it better. 
 
 ## Stealthchanger Components
-<add breakout diagram?><br>
 The stealthchanger system consists of multiple parts. Some are essential, some have many different options, and some are optional. 
 
-### Shuttle & Backplate
-
-<img src="../media/shuttle.jpg" width="200"><br>
+<table><tr><td valign="top" width="50%"><h3>Shuttle & Backplate</h3>
 The shuttle replaces your Voron shuttle with one that has bushings to connect to the backplate of each toolhead
+</td><td valign="top" width="50%">
+<img src="../media/shuttle.jpg" width="200">
+</td></tr></table>
+
+<table><tr><td valign="top" width="50%"><h3>Modular Dock</h3>
+This mounts to the top front of your printer to hold/dock the toolheads when not in use. May also contain a crossbar at the bottom of the dock. Some docks just use the crossbar.
+<ul>
+<li>Crossbar [optional]</li>
+<li>Modular Dock</li>
+<li>Door buffer [optional]. Needed if mounting crossbar to front of frame.</li>
+</td><td valign="top" width="50%">
+<img src="../media/Dock_top_mount.png" width="200">
+</td></tr></table>
+
+<table><tr><td valign="top" width="50%"><h3>Electronics and cable management system</h3>
+Mounts a CAN or USB distribution board on the back of the printer, and manages all the cables and PTFE tubes going to the toolheads. 
+<ul>
+<li>FannyPack</li>
+<li>Umbilicals</li>
+</ul>
+</td><td valign="top" width="50%">
+<img src="../media/shuttle.jpg" width="200">
+</td></tr></table>
  
-### Toolhead Modular Dock
-
-<img src="Images/Dock_top_mount.png" width="200">
-- Crossbar [optional]
-- Modular Dock
-- Door buffer [optional]
-
-### Electronics and cable management system
-- FannyPack
-- Umbilicals
-
 ### Top Hat
 <picture>
 
@@ -61,17 +70,19 @@ Currently we support the standard Stealth Burner, Dragon Burner, Rapid Burner, Y
 ## Table of Contents
 
 *Getting Started*
+- [Overview](Home)
 - [Checklist](Checklist)
-- [Bill of Materials](Bill-of-Materials)
 
-*Selecting*
+*Planning and Selecting*
 - [Toolheads](Toolheads)
   - Stealthburner
   - Dragonburner
   - Anthead
-- [Docks](Docks)
+- [Docks & Crossbar](Docks)
 
 *Building*
+- [Bill of Materials](Bill-of-Materials)
+- [Vendors & Kits](Vendors-and-Kits)
 - [Printing](Printing)
 - [Assembling](Assembling)
 
@@ -86,6 +97,6 @@ Currently we support the standard Stealth Burner, Dragon Burner, Rapid Burner, Y
 - [Support & FAQs](Support-and-FAQs)
 - [Contributing & Donating](Contributing-and-Donating)
 - [Team & Credits](Team-and-Credits)
-- [Vendors & Kits](Vendors-and-Kits)
+
 
 </td></tr></table>
