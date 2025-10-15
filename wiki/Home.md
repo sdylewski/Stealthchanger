@@ -14,31 +14,32 @@ StealthChanger draws from many different projects including [tapchanger](https:/
 ## Stealthchanger Components
 The stealthchanger system consists of multiple parts. Some are essential, some have many different options, and some are optional. 
 
-<table><tr><td valign="top" width="50%"><h3>Shuttle & Backplate</h3>
+<table><tr><td valign="top" width="400px"><h3>Shuttle & Backplate</h3>
 The shuttle replaces your Voron shuttle with one that has bushings to connect to the backplate of each toolhead
-</td><td valign="top" width="50%">
+</td><td valign="top" width="400px">
 <img src="../media/shuttle.jpg" width="200">
-</td></tr></table>
-
-<table><tr><td valign="top" width="50%"><h3>Modular Dock</h3>
+</td></tr>
+ 
+<tr><td valign="top" width="400px"><h3>Modular Dock</h3>
 This mounts to the top front of your printer to hold/dock the toolheads when not in use. May also contain a crossbar at the bottom of the dock. Some docks just use the crossbar.
 <ul>
 <li>Crossbar [optional]</li>
 <li>Modular Dock</li>
 <li>Door buffer [optional]. Needed if mounting crossbar to front of frame.</li>
-</td><td valign="top" width="50%">
+</td><td valign="top" width="400px">
 <img src="../media/Dock_top_mount.png" width="200">
-</td></tr></table>
+</td></tr>
 
-<table><tr><td valign="top" width="50%"><h3>Electronics and cable management system</h3>
+<tr><td valign="top" width="400px"><h3>Electronics and cable management system</h3>
 Mounts a CAN or USB distribution board on the back of the printer, and manages all the cables and PTFE tubes going to the toolheads. 
 <ul>
 <li>FannyPack</li>
 <li>Umbilicals</li>
 </ul>
-</td><td valign="top" width="50%">
+</td><td valign="top" width="400px">
 <img src="../media/shuttle.jpg" width="200">
-</td></tr></table>
+</td></tr>
+</table>
  
 ### Top Hat
 <picture>
