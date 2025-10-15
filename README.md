@@ -1,6 +1,6 @@
 # <img src="https://github.com/DraftShift/Stealthchanger/blob/main/media/Stealthchanger_logo.png?raw=true" height="50" align="top" /> StealthChanger
 
-<em>Tool changing system for Vorons and other front mount printer motion systems.<em>
+<b>Tool changing system for Vorons and other front mount printer motion systems.</b>
 
 <table comment="two-column layout"><tr><td width="80%">
 
