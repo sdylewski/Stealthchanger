@@ -9,7 +9,7 @@ StealthChanger is a project to convert a Voron 2.4 printer into one with multipl
 
 Mounting of the toolhead to the shuttle is done by using bushings and pins, with magnets to help create a strong mounting connection for high-speed printing, and uses the same principles as [TAP](https://github.com/VoronDesign/Voron-Tap) to measure Z offsets.
 
-StealthChanger draws from many different projects including [tapchanger](https://github.com/viesturz/tapchanger), and involves the contributions of many people who contribute to make it better. 
+StealthChanger draws from many different projects including [tapchanger](https://github.com/viesturz/tapchanger), and involves the contributions of many people who work together to make it better. 
 
 ## Stealthchanger Components
 <add breakout diagram?><br>
@@ -21,9 +21,11 @@ The stealthchanger system consists of multiple parts. Some are essential, some h
 The shuttle replaces your Voron shuttle with one that has bushings to connect to the backplate of each toolhead
  
 ### Toolhead Modular Dock
-<img src="Images/Dock_top_mount.png" width="200">Crossbar
+
+<img src="Images/Dock_top_mount.png" width="200">
+- Crossbar [optional]
 - Modular Dock
-- Door buffer
+- Door buffer [optional]
 
 ### Electronics and cable management system
 - FannyPack
@@ -50,7 +52,7 @@ Currently we support the standard Stealth Burner, Dragon Burner, Rapid Burner, Y
 
 
 </td>
-<td valign="top">
+<td valign="top" width="20%">
 
  <a href="https://discord.gg/draftshift" target="_blank" alt="Join our Discord">![Discord](https://img.shields.io/discord/1226846451028725821?logo=discord&logoColor=%23ffffff&label=Join%20our%20Discord&labelColor=%237785cc&color=%23adf5ff)</a>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
