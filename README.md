@@ -14,16 +14,16 @@ StealthChanger draws from many different projects including [tapchanger](https:/
 ## Stealthchanger Components
 The stealthchanger system consists of multiple parts. Some are essential, some have many different options, and some are optional. 
 
-<table><tr><td valign="top" width="400px"><h3><a href="/Documentation/Shuttle.md">Shuttle</a> & Backplate</h3>
+<table><tr><td valign="top" width="400px"><h3><a href="/Documentation/Shuttle.md">Shuttle</a> & Backplates</h3>
 The shuttle replaces your Voron shuttle with one that has bushings to connect to the backplate of each toolhead
 </td><td valign="top" width="400px">
 <img src="/media/Shuttle/shuttle.jpg" width="200">
 </td></tr>
  
-<tr><td valign="top" width="400px"><h3><a href="/Documentation/Dock.md">Modular Dock</a></h3>
+<tr><td valign="top" width="400px"><h3><a href="/Documentation/Docks.md">Modular Dock</a></h3>
 This mounts to the top front of your printer to hold/dock the toolheads when not in use. May also contain a crossbar at the bottom of the dock. Some docks just use the crossbar.
 <ul>
-<li><a href="/Documentation/Dock.md">Modular Dock</a></li>
+<li><a href="/Documentation/Docks.md">Modular Dock</a></li>
 <li><a href="/Documentation/Crossbar.md">Crossbar [optional]</a></li>
 <li><a href="/Documentation/DoorBuffer.md">Door buffer [optional]. Needed if mounting crossbar to front of frame.</li>
 </td><td valign="top" width="400px">
@@ -34,18 +34,15 @@ This mounts to the top front of your printer to hold/dock the toolheads when not
 Power and data needs to be distributed from your main board to each toolhead, along with your filament.  
 <ul>
 <li><a href="/Documentation/FannyPack.md">Fanny Pack</a> mounts a CAN or USB distribution board on the back of the printer</li>
-<li>Umbilicals</li>
-<li>Filament management</li>
+<li><a href="/Documentation/Umbilicals.md">Umbilicals</a> and exhaust plates</li>
+<li><a href="/Documentation/FilamentManagement.md">Filament management</a></li>
 </ul>
 </td><td valign="top" width="400px">
-<img src="/media/Cabling/wire_management.jpg" width="180">
+<img src="/media/CableManagement/wire_management.jpg" width="180">
 </td></tr>
 
 <tr><td valign="top" width="400px"><h3><a href="/Documentation/TopHat.md">Top Hat</a></h3>
 With the dock at the top of the printer and umbilicals extending upward, enclosed printers will want to extend the top of the printer using a top hat.  
-<ul>
-<li><a href="/Documentation/TopHat.md">Top Hat</a></li>
-</ul>
 </td><td valign="top" width="400px">
 <img src="/media/TopHat/TopHat.jpg" width="180">
 </td></tr>
