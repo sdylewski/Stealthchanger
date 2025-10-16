@@ -44,8 +44,8 @@ Mounts a CAN or USB distribution board on the back of the printer, and manages a
 ### Top Hat
 <picture>
 
-### XY Offset Calibration Hardware (SexBolt or Nudge)
-Sexbolt, Nudge, or Printed calibration
+### Inter tool XY Offset Calibration Hardware
+Sexbolt, Nudge, Axiscope or Printed calibration
 
 ### Klipper tool changing software
 KTE
