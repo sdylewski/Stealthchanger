@@ -108,7 +108,7 @@ Klipper needs to be toolchanger aware with added code.
 - [Printing](/Documentation/Printing.md)
 - [Assembling](/Documentation/Assembling.md)
 
-### Software
+### [Software](/Documentation/Software.md)
 - [Installation](/Documentation/Installation.md)
 - [Configuration](/Documentation/Configuration.md)
 - [Calibration](/Documentation/Calibration.md)
