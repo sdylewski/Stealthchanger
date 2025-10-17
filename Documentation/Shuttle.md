@@ -3,7 +3,7 @@
 1. [Shuttle Options](#shuttle-options)
 2. [Assembling Shuttle and Backplates](#assembling-shuttle-and-backplates)
 3. [Installing Shuttle](#installing-shuttle)
-4. [Preload](#preload)
+4. [Backplate Preload](#preload)
 5. [Tips and Tricks](#tips-and-tricks)
 
 This is the part that goes on your X carriage to mate and pickup each tool. It will mate with a BACKPLATE that's made specifically for your toolhead. <br>
@@ -59,8 +59,12 @@ In order to get proper matching set you should:
 Print <a href="https://github.com/DraftShift/StealthChanger/tree/main/STLs/Extras/BeltHelper">BeltHelper</a> to help make this easier!<br>
 See the excellent Draftshift <a href="https://github.com/DraftShift/StealthChanger/blob/main/Manual/Stealthchanger_Assembly_Guide.pdf">assembly guide</a> for installation instructions.
 
-## Preload
-Every backplate needs to be adjusted. Preload is meant remove all the wiggle when it's fully seated by preloading the pins onto the bushings. To set your preload you want to back the FSCS screws till they are just touching the magnest on the shuttle.  See [Preload Paper Trick](#preload-paper-trick)
+## Backplate Preload
+(move this to backplate section?)
+Every backplate needs to be adjusted. Preload is meant remove all the wiggle when it's fully seated by preloading the pins onto the bushings. To set your preload you want to back the FSCS screws till they are just touching the magnest on the shuttle. 
+
+You can use a piece of paper per side to make sure they both have the same pressure.
+Big thank you to `ButtSlark` on Discord for this technique.
 
 
 ## Tips and Tricks
@@ -76,9 +80,6 @@ If you printed the shuttle and backplate and things are just not smooth or you h
 
 Big thank you to `unguided-wanderer` on Discord for this technique.
 
-### Preload Paper Trick
-You can use a piece of paper per side to make sure they both have the same pressure.
-Big thank you to `ButtSlark` on Discord for this technique.
 
 ### Cleaning out bushings
 Sometimes the bushings aren't debured or do not slide well when you recieve them.
