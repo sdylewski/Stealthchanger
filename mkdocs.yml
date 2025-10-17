@@ -1,0 +1,32 @@
+site_name: StealthChanger Docs
+repo_url: https://github.com/DraftShift/SteatlthChanger
+theme:
+  name: material
+nav:
+  - Home: README.md
+  - Components:
+    - Shuttle: Shuttle.md
+    - Backplate: Backplate.md
+    - Docks: Docks.md
+    - Crossbar: Crossbar.md
+    - Door Buffer: DoorBuffer.md
+  - Building:
+    - Bill of Materials: Bill-of-Materials.md
+    - Vendors and Kits: Vendors-and-Kits.md
+  - Software & Configuration:
+    - Software: Software.md
+    - Configuration: Configuration.md
+    - Calibration: Calibration.md
+    - Slicers: Slicers.md
+  - Support:
+    - Contributing & Donating: Contributing-and-Donating.md
+    - Team & Credits: Team-and-Credits.md
+markdown_extensions:
+  - admonition
+  - toc:
+      permalink: true
+  - def_list
+  - attr_list
+plugins:
+  - search
+
