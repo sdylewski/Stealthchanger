@@ -1,0 +1,16 @@
+/* docs/assets/brand.css */
+
+/* Light mode primary color (header, active tabs, etc.) */
+:root {
+  --md-primary-fg-color: #db3f38;          /* your brand red */
+  --md-accent-fg-color:  #db3f38;          /* optional: match accent to brand */
+  /* Keep header text/icons white for contrast (default is fine) */
+  /* --md-primary-bg-color: #ffffff;  <-- text ON primary; default is #fff */
+}
+
+/* Dark mode (slate) – keep brand the same, or tweak if needed */
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color: #db3f38;
+  --md-accent-fg-color:  #db3f38;
+}
+
