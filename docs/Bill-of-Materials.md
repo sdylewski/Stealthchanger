@@ -113,4 +113,4 @@ Image by BT123
 
 Due to QC issues, this is an [Alternative bush](https://s.click.aliexpress.com/e/_DFJQgtN) which has also been tested and works fine.
 
-Alternatively you can purchase check on our official [vendors list](Vendors-and-Kits)
+Alternatively you can purchase check on our official [vendors list](Vendors-and-Kits.md)

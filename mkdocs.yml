@@ -1,12 +1,13 @@
 site_name: StealthChanger Docs
 repo_url: https://github.com/DraftShift/SteatlthChanger
+strict: false
 theme:
   name: material
 nav:
   - Home: README.md
   - Components:
     - Shuttle: Shuttle.md
-    - Backplate: Backplate.md
+    - Toolheads & Backplates: Toolheads.md
     - Docks: Docks.md
     - Crossbar: Crossbar.md
     - Door Buffer: DoorBuffer.md
