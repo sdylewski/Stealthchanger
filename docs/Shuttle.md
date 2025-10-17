@@ -3,7 +3,7 @@
 1. [Shuttle Options](#shuttle-options)
 2. [Assembling Shuttle and Backplates](#assembling-shuttle-and-backplates)
 3. [Installing Shuttle](#installing-shuttle)
-4. [Backplate Preload](#preload)
+4. [Backplate Preload](#backplate-preload)
 5. [Tips and Tricks](#tips-and-tricks)
 
 This is the part that goes on your X carriage to mate and pickup each tool. It will mate with a BACKPLATE that's made specifically for your toolhead. <br>
