@@ -6,8 +6,8 @@ theme:
   name: material
   features:
     - navigation.expand      # expand all nav sections on load
-    - navigation.sections    # (optional) group top-level items as sections
-    - navigation.tabs      # (optional) show top-level as tabs across the top
+    #- navigation.sections    # (optional) group top-level items as sections
+    # - navigation.tabs      # (optional) show top-level as tabs across the top
   logo: media/Logos/Stealthchanger_logo.svg         # shown top-left
   favicon: media/Logos/Stealthchanger_logo_small.png      # 32×32 or 48×48 PNG recommended
   palette:
