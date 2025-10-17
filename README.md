@@ -47,7 +47,7 @@ Power and data needs to be distributed from your main board to each toolhead, al
 <tr><td valign="top" width="50%"><h3><a href="/Documentation/TopHat.md">Top Hat</a></h3>
 With the dock at the top of the printer and umbilicals extending upward, enclosed printers will want to extend the top of the printer using a top hat.  
 </td><td valign="top" width="50%">
-<img src="/media/TopHat/TopHat.jpg" width="180">
+<img src="/media/TopHat/printed_tophat.png" width="180">
 </td></tr>
 
 <tr><td valign="top" width="50%"><h3><a href="/Documentation/Probes.md">Probes</a></h3>
@@ -66,12 +66,12 @@ Klipper needs to be toolchanger aware with added code.
 <li><a href="/Documentation/Software.md">Klipper Toolchanger</a></li>
 </ul>
 </td><td valign="top" width="50%">
-<img src="/media/klipper_toolchanger_logo.png" width="180">
+<img src="/media/Logos/klipper_toolchanger_logo.png" width="180">
 </td></tr>
 
 </table>
 
-<em>Ready to get started? <em>
+<em>Ready to get started?</em>
 
 ## Next --> [Planning](/Documentation/Planning.md)
 
@@ -79,46 +79,47 @@ Klipper needs to be toolchanger aware with added code.
 ## Documentation / Table of Contents
 
 <table><tr><td width="50%" valign="top">
- [Overview](/Readme.md)
+ 
+[Overview](/Readme.md)
 
-*[Planning and Selecting](/Documentation/Planning.md)*
+### [Planning and Selecting](/Documentation/Planning.md)
 - [Checklist](/Documentation/Checklist.md)
 - [Shuttle](/Documentation/Shuttle.md)
 - [Cable Management](/Documentation/CableManagement.md)
-  - Umbilicals
+  - [Umbilicals](/Documentation/Umbilicals.md)
 - [Docks & Crossbar](/Documentation/Docks.md)
-  - Crossbar
-  - Door Buffer
+  - [Crossbar](/Documentation/CrossbarUmbilicals.md)
+  - [Door Buffer](/Documentation/DoorBuffer.md)
 - [Toolheads & Backplates](/Documentation/Toolheads.md)
-  - Stealthburner
-  - Dragonburner
+  - [Stealthburner](/Documentation/Stealthburner.md)
+  - [Dragonburner](/Documentation/Dragonburner.md)
   - Rapidburner
   - Anthead
   - A4T
   - Yavoth
 - [Probes](/Documentation/Probes.md)
-- Top Hat
+- [Top Hat](/Documentation/TopHat.md)
 
 </td><td width="50%" valign="top">
  
-*Building*
+### Building
 - [Bill of Materials](/Documentation/Bill-of-Materials.md)
 - [Vendors & Kits](/DocumentationVendors-and-Kits.md)
 - [Printing](/Documentation/Printing.md)
 - [Assembling](/Documentation/Assembling.md)
 
-*Configuration*
+### Software
 - [Installation](/Documentation/Installation.md)
 - [Configuration](/Documentation/Configuration.md)
 - [Calibration](/Documentation/Calibration.md)
 - [Slicers](/Documentation/Slicers.md)
 
-*Support*
+### Support
 - [Serials](/Documentation/Serials.md)
 - [Support & FAQs](/Documentation/Support-and-FAQs.md)
 - [Contributing & Donating](/Documentation/Contributing-and-Donating.md)
 - [Team & Credits](/Documentation/Team-and-Credits.md)
-
+- Discord link
 </td></tr></table>
 
 
