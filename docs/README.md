@@ -20,7 +20,7 @@ The stealthchanger system consists of multiple parts. Some are essential, some h
  <tr><td valign="top" width="50%"><h3><a href="Shuttle.md">Shuttle</a> & <a href="Toolheads.md">Backplates</a></h3>
 The shuttle replaces your Voron shuttle with one that has bushings to connect to the backplate of each toolhead
 </td><td valign="top" width="50%">
-<img src="/media/Shuttle/shuttle.jpg" width="200">
+<img src="media/Shuttle/shuttle.jpg" width="200">
 </td></tr>
  
 <tr><td valign="top" width="50%"><h3><a href="Docks.md">Modular Dock</a></h3>
@@ -30,7 +30,7 @@ This mounts to the top front of your printer to hold/dock the toolheads when not
 <li><a href="Crossbar.md">Crossbar [optional]</a></li>
 <li><a href="DoorBuffer.md">Door buffer [optional]. Needed if mounting crossbar to front of frame.</li>
 </td><td valign="top" width="50%">
-<img src="/media/Dock/dock_front.png" width="400">
+<img src="media/Dock/dock_front.png" width="400">
 </td></tr>
 
 <tr><td valign="top" width="50%"><h3><a href="CableManagement.md">Cable Management</a></h3>
@@ -41,13 +41,13 @@ Power and data needs to be distributed from your main board to each toolhead, al
 <li><a href="FilamentManagement.md">Filament management</a></li>
 </ul>
 </td><td valign="top" width="50%">
-<img src="/media/CableManagement/wire_management.jpg" width="180">
+<img src="media/CableManagement/wire_management.jpg" width="180">
 </td></tr>
 
 <tr><td valign="top" width="50%"><h3><a href="TopHat.md">Top Hat</a></h3>
 With the dock at the top of the printer and umbilicals extending upward, enclosed printers will want to extend the top of the printer using a top hat.  
 </td><td valign="top" width="50%">
-<img src="/media/TopHat/printed_tophat.png" width="180">
+<img src="media/TopHat/printed_tophat.png" width="180">
 </td></tr>
 
 <tr><td valign="top" width="50%"><h3><a href="Probes.md">Probes</a></h3>
@@ -57,7 +57,7 @@ Physical probes are used to measure the X and Y offsets of your tools relative t
 <li><a href="Endstops.md">Endstops</a> for X and Y gantry endstops</li>
 </ul>
 </td><td valign="top" width="50%">
-<img src="/media/Probes/sexball-probe.jpg" width="180">
+<img src="media/Probes/sexball-probe.jpg" width="180">
 </td></tr>
 
 <tr><td valign="top" width="50%"><h3><a href="Software.md">Klipper Toolchanger</a></h3>
@@ -66,7 +66,7 @@ Klipper needs to be toolchanger aware with added code.
 <li><a href="Software.md">Klipper Toolchanger</a></li>
 </ul>
 </td><td valign="top" width="50%">
-<img src="/media/Logos/klipper_toolchanger_logo.png" width="180">
+<img src="media/Logos/klipper_toolchanger_logo.png" width="180">
 </td></tr>
 
 </table>
