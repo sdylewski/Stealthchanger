@@ -17,53 +17,53 @@ StealthChanger draws from many different projects including [tapchanger](https:/
 The stealthchanger system consists of multiple parts. Some are essential, some have many different options, and some are optional. 
 
 <table>
- <tr><td valign="top" width="50%"><h3><a href="/docs/Shuttle.md">Shuttle</a> & <a href="/docs/Toolheads.md">Backplates</a></h3>
+ <tr><td valign="top" width="50%"><h3><a href="Shuttle.md">Shuttle</a> & <a href="Toolheads.md">Backplates</a></h3>
 The shuttle replaces your Voron shuttle with one that has bushings to connect to the backplate of each toolhead
 </td><td valign="top" width="50%">
 <img src="/media/Shuttle/shuttle.jpg" width="200">
 </td></tr>
  
-<tr><td valign="top" width="50%"><h3><a href="/docs/Docks.md">Modular Dock</a></h3>
+<tr><td valign="top" width="50%"><h3><a href="Docks.md">Modular Dock</a></h3>
 This mounts to the top front of your printer to hold/dock the toolheads when not in use. May also contain a crossbar at the bottom of the dock. Some docks just use the crossbar. <br>
 <ul>
-<li><a href="/docs/Docks.md">Modular Dock</a></li>
-<li><a href="/docs/Crossbar.md">Crossbar [optional]</a></li>
-<li><a href="/docs/DoorBuffer.md">Door buffer [optional]. Needed if mounting crossbar to front of frame.</li>
+<li><a href="Docks.md">Modular Dock</a></li>
+<li><a href="Crossbar.md">Crossbar [optional]</a></li>
+<li><a href="DoorBuffer.md">Door buffer [optional]. Needed if mounting crossbar to front of frame.</li>
 </td><td valign="top" width="50%">
 <img src="/media/Dock/dock_front.png" width="400">
 </td></tr>
 
-<tr><td valign="top" width="50%"><h3><a href="/docs/CableManagement.md">Cable Management</a></h3>
+<tr><td valign="top" width="50%"><h3><a href="CableManagement.md">Cable Management</a></h3>
 Power and data needs to be distributed from your main board to each toolhead, along with your filament.  
 <ul>
-<li><a href="/docs/FannyPack.md">Fanny Pack</a> mounts a CAN or USB distribution board on the back of the printer</li>
-<li><a href="/docs/Umbilicals.md">Umbilicals</a> and exhaust plates</li>
-<li><a href="/docs/FilamentManagement.md">Filament management</a></li>
+<li><a href="FannyPack.md">Fanny Pack</a> mounts a CAN or USB distribution board on the back of the printer</li>
+<li><a href="Umbilicals.md">Umbilicals</a> and exhaust plates</li>
+<li><a href="FilamentManagement.md">Filament management</a></li>
 </ul>
 </td><td valign="top" width="50%">
 <img src="/media/CableManagement/wire_management.jpg" width="180">
 </td></tr>
 
-<tr><td valign="top" width="50%"><h3><a href="/docs/TopHat.md">Top Hat</a></h3>
+<tr><td valign="top" width="50%"><h3><a href="TopHat.md">Top Hat</a></h3>
 With the dock at the top of the printer and umbilicals extending upward, enclosed printers will want to extend the top of the printer using a top hat.  
 </td><td valign="top" width="50%">
 <img src="/media/TopHat/printed_tophat.png" width="180">
 </td></tr>
 
-<tr><td valign="top" width="50%"><h3><a href="/docs/Probes.md">Probes</a></h3>
+<tr><td valign="top" width="50%"><h3><a href="Probes.md">Probes</a></h3>
 Physical probes are used to measure the X and Y offsets of your tools relative to Tool 0. Endstop switches are included here also
 <ul>
-<li><a href="/docs/Probes.md">Probes</a> for determing offsets</li>
-<li><a href="/docs/Endstops.md">Endstops</a> for X and Y gantry endstops</li>
+<li><a href="Probes.md">Probes</a> for determing offsets</li>
+<li><a href="Endstops.md">Endstops</a> for X and Y gantry endstops</li>
 </ul>
 </td><td valign="top" width="50%">
 <img src="/media/Probes/sexball-probe.jpg" width="180">
 </td></tr>
 
-<tr><td valign="top" width="50%"><h3><a href="/docs/Software.md">Klipper Toolchanger</a></h3>
+<tr><td valign="top" width="50%"><h3><a href="Software.md">Klipper Toolchanger</a></h3>
 Klipper needs to be toolchanger aware with added code.
 <ul>
-<li><a href="/docs/Software.md">Klipper Toolchanger</a></li>
+<li><a href="Software.md">Klipper Toolchanger</a></li>
 </ul>
 </td><td valign="top" width="50%">
 <img src="/media/Logos/klipper_toolchanger_logo.png" width="180">
@@ -73,7 +73,7 @@ Klipper needs to be toolchanger aware with added code.
 
 <em>Ready to get started?</em>
 
-## Next --> [Planning](/docs/Planning.md)
+## Next --> [Planning](Planning.md)
 
 
 ## Documentation / Table of Contents
@@ -82,43 +82,43 @@ Klipper needs to be toolchanger aware with added code.
  
 [Overview](/Readme.md)
 
-### [Planning and Selecting](/docs/Planning.md)
-- [Checklist](/docs/Checklist.md)
-- [Shuttle](/docs/Shuttle.md)
-- [Cable Management](/docs/CableManagement.md)
-  - [Umbilicals](/docs/Umbilicals.md)
-- [Docks & Crossbar](/docs/Docks.md)
-  - [Crossbar](/docs/CrossbarUmbilicals.md)
-  - [Door Buffer](/docs/DoorBuffer.md)
-- [Toolheads & Backplates](/docs/Toolheads.md)
-  - [Stealthburner](/docs/Stealthburner.md)
-  - [Dragonburner](/docs/Dragonburner.md)
+### [Planning and Selecting](Planning.md)
+- [Checklist](Checklist.md)
+- [Shuttle](Shuttle.md)
+- [Cable Management](CableManagement.md)
+  - [Umbilicals](Umbilicals.md)
+- [Docks & Crossbar](Docks.md)
+  - [Crossbar](CrossbarUmbilicals.md)
+  - [Door Buffer](DoorBuffer.md)
+- [Toolheads & Backplates](Toolheads.md)
+  - [Stealthburner](Stealthburner.md)
+  - [Dragonburner](Dragonburner.md)
   - Rapidburner
   - Anthead
   - A4T
   - Yavoth
-- [Probes](/docs/Probes.md)
-- [Top Hat](/docs/TopHat.md)
+- [Probes](Probes.md)
+- [Top Hat](TopHat.md)
 
 </td><td width="50%" valign="top">
  
 ### Building
-- [Bill of Materials](/docs/Bill-of-Materials.md)
+- [Bill of Materials](Bill-of-Materials.md)
 - [Vendors & Kits](/docsVendors-and-Kits.md)
-- [Printing](/docs/Printing.md)
-- [Assembling](/docs/Assembling.md)
+- [Printing](Printing.md)
+- [Assembling](Assembling.md)
 
-### [Software](/docs/Software.md)
-- [Installation](/docs/Installation.md)
-- [Configuration](/docs/Configuration.md)
-- [Calibration](/docs/Calibration.md)
-- [Slicers](/docs/Slicers.md)
+### [Software](Software.md)
+- [Installation](Installation.md)
+- [Configuration](Configuration.md)
+- [Calibration](Calibration.md)
+- [Slicers](Slicers.md)
 
 ### Support
-- [Serials](/docs/Serials.md)
-- [Support & FAQs](/docs/Support-and-FAQs.md)
-- [Contributing & Donating](/docs/Contributing-and-Donating.md)
-- [Team & Credits](/docs/Team-and-Credits.md)
+- [Serials](Serials.md)
+- [Support & FAQs](Support-and-FAQs.md)
+- [Contributing & Donating](Contributing-and-Donating.md)
+- [Team & Credits](Team-and-Credits.md)
 - Discord link
 </td></tr></table>
 
