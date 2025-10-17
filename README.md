@@ -1,8 +1,8 @@
+<table comment="two-column layout"><tr><td width="80%">
+ 
 # <img src="https://github.com/DraftShift/Stealthchanger/blob/main/media/Stealthchanger_logo.png?raw=true" height="50" align="top" /> StealthChanger
 
 <b>Tool changing system for Vorons and other front mount printer motion systems.</b>
-
-<table comment="two-column layout"><tr><td width="80%">
 
 ## Stealthchanger Overview
 StealthChanger is a project to convert a Voron 2.4 printer into one with multiple toolheads.
@@ -63,21 +63,14 @@ Klipper needs to be toolchanger aware with added code.
 <li><a href="/Documentation/Software.md">Klipper Toolchanger</a></li>
 </ul>
 </td><td valign="top" width="400px">
-<img src="" width="180">
+<img src="/media/klipper_toolchanger_logo.png" width="180">
 </td></tr>
 
 </table>
 
-## Planning
-- Make sure to visit our [Checklist](Checklist)
-- Tool compatability
-Currently we support the standard Stealth Burner, Dragon Burner, Rapid Burner, Yavoth, XOL and Archetype. There is also a usermod for the [Mini Stealth Burner](../blob/main/UserMods/jdmontgomer/MiniSB_SC).
+Ready to get started? 
 
-## Building
-
-## Calibration
-
-
+## Next --> [Planning](/Documentation/Planning.md)
 
 </td>
 <td valign="top" width="20%">
@@ -88,34 +81,43 @@ Currently we support the standard Stealth Burner, Dragon Burner, Rapid Burner, Y
 
 ## Table of Contents
 
-*Getting Started*
-- [Overview](Home)
-- [Checklist](Checklist)
+[Overview](/Readme.md)
 
 *Planning and Selecting*
-- [Toolheads](Toolheads)
+- [Checklist](/Documentation/Checklist.md)
+- [Shuttle](/Documentation/Shuttle.md)
+- [Cable Management](/Documentation/CableManagement.md)
+  - Umbilicals
+- [Docks & Crossbar](/Documentation/Docks.md)
+  - Crossbar
+  - Door Buffer
+- [Toolheads & Backplates](/Documentation/Toolheads.md)
   - Stealthburner
   - Dragonburner
+  - Rapidburner
   - Anthead
-- [Docks & Crossbar](Docks)
+  - A4T
+  - Yavoth
+- [Probes](/Documentation/Probes.md)
+- Top Hat
 
 *Building*
-- [Bill of Materials](Bill-of-Materials)
-- [Vendors & Kits](Vendors-and-Kits)
-- [Printing](Printing)
-- [Assembling](Assembling)
+- [Bill of Materials](/Documentation/Bill-of-Materials.md)
+- [Vendors & Kits](/DocumentationVendors-and-Kits.md)
+- [Printing](/Documentation/Printing.md)
+- [Assembling](/Documentation/Assembling.md)
 
 *Configuration*
-- [Installation](Installation)
-- [Configuration](Configuration)
-- [Calibration](Calibration)
-- [Slicers](Slicers)
+- [Installation](/Documentation/Installation.md)
+- [Configuration](/Documentation/Configuration.md)
+- [Calibration](/Documentation/Calibration.md)
+- [Slicers](/Documentation/Slicers.md)
 
 *Support*
-- [Serials](Serials)
-- [Support & FAQs](Support-and-FAQs)
-- [Contributing & Donating](Contributing-and-Donating)
-- [Team & Credits](Team-and-Credits)
+- [Serials](/Documentation/Serials.md)
+- [Support & FAQs](/Documentation/Support-and-FAQs.md)
+- [Contributing & Donating](/Documentation/Contributing-and-Donating.md)
+- [Team & Credits](/Documentation/Team-and-Credits.md)
 
 
 </td></tr></table>
