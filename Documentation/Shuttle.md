@@ -1,27 +1,44 @@
 # Shuttle
 
-1. [Assembling Shuttle and Backplates](#assembling-shuttle-and-backplates)
-2. [Installing Shuttle](#installing-shuttle)
-3. [Preload](#preload)
-4. [Tips and Tricks](#tips-and-tricks)
+1. [Shuttle Options](#shuttle-options)
+2. [Assembling Shuttle and Backplates](#assembling-shuttle-and-backplates)
+3. [Installing Shuttle](#installing-shuttle)
+4. [Preload](#preload)
+5. [Tips and Tricks](#tips-and-tricks)
 
 This is the part that goes on your X carriage to mate and pickup each tool. It will mate with a BACKPLATE that's made specifically for your toolhead. <br>
 
+## Shuttle Options
 <table>
-<tr><th>Shuttle Options</th><th>Details</th></tr>
-<tr><td><a href="https://www.fysetc.com/products/fysetc-stealthchanger-cnc-shuttle-kit-sb-combo-v2-board-tool-distribution-board-h36-board?variant=44927105040559">Fystec CNC Shuttle</a><br>
-		<img src="/media/Shuttle/Fystec_CNC_Shuttle.jpg" width=200></td><td>
+<tr><td valign="top">
+		<img src="/media/Shuttle/Fystec_CNC_Shuttle.jpg" width=200></td>
+	<td valign="top">
+			<a href="https://www.fysetc.com/products/fysetc-stealthchanger-cnc-shuttle-kit-sb-combo-v2-board-tool-distribution-board-h36-board?variant=44927105040559">Fystec CNC Shuttle</a><br>
+		<ul>
 			<li>It comes with pins, N52 magnets, and screws for 6 backplates also!</li>
-			<li>No instructions are included, so you need to figure it out</li>
+			<li>No instructions are included, so you need to use the printed shuttle build instructions</li>
 		</ul></td></tr>
-<tr><td><a href="https://kb-3d.com/store/voron/6008-ldo-motors-stealth-changer-cnc-shuttle-kit-6975415159350.html">LDO Kit CNC Shuttle</a><br>
-		<img src="/media/Shuttle/LDO_CNC_shuttle.jpg" width=200></td><td>
-			<ul><li>Not sure what comes with this kit; shuttle seems similar to the Fystec</li>
+	
+<tr><td valign="top">
+		<img src="/media/Shuttle/LDO_CNC_shuttle.jpg" width=200></td>
+	<td valign="top">
+			<a href="https://kb-3d.com/store/voron/6008-ldo-motors-stealth-changer-cnc-shuttle-kit-6975415159350.html">LDO Kit CNC Shuttle</a><br>
+		<ul>
+			<li>Not sure what comes with this kit; shuttle seems similar to the Fystec</li>
 		</ul></td></tr>
-<tr><td><a href="https://github.com/DraftShift/StealthChanger?tab=readme-ov-file">Print your own</a><br>
-		<img src="/media/Shuttle/printed_backplate_v1.1.jpg" width=200></td><td>
+<tr><td valign="top">
+		<img src="/media/Shuttle/printed_backplate_v1.1.jpg" width=200></td><td valign="top">
+			<a href="https://github.com/DraftShift/StealthChanger?tab=readme-ov-file">Print your own</a><br>
 			<ul><li>These are thicker so you loose a bit more Y in print volume, and they are less rigid than CNC shuttles</li>
-		</ul></td></tr>
+		</ul>
+		<b>Bill of materials</b>
+		<ul>
+		<li>[3] 6x3mm magnets (N52 Highly recommended to counter the pull from the umbilicals)</li>
+		<li>[4] m3x6 BHCS head (mgn bolts) m3x12 if used with the shuttle keeper</li>
+		<li>[3] 4x6x6mm brass bushing (4mm id x 6mm od x 6mm tall)</li>
+		<li>[2] m3x40 SHCS (Optional: to stiffen the shuttle, Fully threaded, no shoulder)</li>
+		</ul>
+</td></tr>
 </table>
 
 
