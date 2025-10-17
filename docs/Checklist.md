@@ -7,7 +7,7 @@
  - [ ] Visit the [BOM](Bill-of-Materials.md) to make sure you have ordered everything you need for the convertion
  - [ ] Visit our [Printing](Printing.md) guide and start printing
  - [ ] At this point please inspect your prints, take extra note that your hexes are very uniform, if the tops are flat you will have alignment issues, it doesn't take much for things to start off wrong here.
- - [ ] [Assemble](Assembling.md) the shuttle and backplates
+ - [ ] [Assemble](Shuttle.md) the shuttle and backplates
  - [ ] [Install](Installation.md) software
  - [ ] [Configure](Configuration.md) software
  - [ ] Calibrate [Z Offsets](Calibration.md#z-offset)

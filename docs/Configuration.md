@@ -5,7 +5,7 @@ Toolchangers start with number 0, and count up. So for all the configs, make sur
 3. [Offsets](#offsets)
 4. [Dock Positions](#dock-positions)
 5. [close_y and safe_y](#close_y-and-safe_y)
-6. [Docking Path](#Docking-Path)
+6. [Docking Path](#Path)
 
 ## Toolheads Configuration
 
@@ -48,7 +48,7 @@ It is important to get this right. If you don't, you will have changing issues, 
 
 IE, if you Y park position is -15. Your close Y should be 15. If your Y park position is 0, it should be 30. Safe Y should be slighty further out. 
 
-## Docking Path
+## Path
 
 The docking path can be confusing for people to understand. Let's try to disect it. Take this path:
 

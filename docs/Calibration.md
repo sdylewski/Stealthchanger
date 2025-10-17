@@ -73,7 +73,7 @@ The Moving using config parameters is as such:
 
 **NOTE:** `gcode_x_offset` and `gcode_y_offset` on T0 are always 0
 
-### [Sexball Probe](Bill-of-Materials#sexball-probe) or [NozzleAlign](https://github.com/viesturz/NozzleAlign)
+### [Sexball Probe](Bill-of-Materials.md#sexball-probe) or [NozzleAlign](https://github.com/viesturz/NozzleAlign)
 
 Follow the guide at [NozzleAlign](https://github.com/viesturz/NozzleAlign)
 
