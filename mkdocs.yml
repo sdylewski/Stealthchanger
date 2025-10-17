@@ -1,33 +1,54 @@
 site_name: StealthChanger Docs
-repo_url: https://github.com/DraftShift/SteatlthChanger
+repo_url: https://github.com/DraftShift/StealthChanger
 strict: false
+
 theme:
   name: material
+  logo: media/Logos/Stealthchanger_logo.svg         # shown top-left
+  favicon: media/Logos/Stealthchanger_logo.png      # 32×32 or 48×48 PNG recommended
+  palette:
+    - scheme: default                         # light
+      primary: indigo                         # will be overridden by CSS below
+      accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - scheme: slate                           # dark
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+
+extra_css:
+  - assets/brand.css
+
 nav:
   - Home: README.md
   - Components:
-    - Shuttle: Shuttle.md
-    - Toolheads & Backplates: Toolheads.md
-    - Docks: Docks.md
-    - Crossbar: Crossbar.md
-    - Door Buffer: DoorBuffer.md
+      - Shuttle: Shuttle.md
+      - Toolheads & Backplates: Toolheads.md
+      - Docks: Docks.md
+      - Crossbar: Crossbar.md
+      - Door Buffer: DoorBuffer.md
   - Building:
-    - Bill of Materials: Bill-of-Materials.md
-    - Vendors and Kits: Vendors-and-Kits.md
+      - Bill of Materials: Bill-of-Materials.md
+      - Vendors and Kits: Vendors-and-Kits.md
   - Software & Configuration:
-    - Software: Software.md
-    - Configuration: Configuration.md
-    - Calibration: Calibration.md
-    - Slicers: Slicers.md
+      - Software: Software.md
+      - Configuration: Configuration.md
+      - Calibration: Calibration.md
+      - Slicers: Slicers.md
   - Support:
-    - Contributing & Donating: Contributing-and-Donating.md
-    - Team & Credits: Team-and-Credits.md
+      - Contributing & Donating: Contributing-and-Donating.md
+      - Team & Credits: Team-and-Credits.md
+
 markdown_extensions:
   - admonition
   - toc:
       permalink: true
   - def_list
   - attr_list
+
 plugins:
   - search
-
