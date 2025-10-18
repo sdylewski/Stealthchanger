@@ -32,9 +32,13 @@ This is the part that goes on your X carriage to mate and pickup each tool. It w
 		<li>[3] 4x6x6mm brass bushing (4mm id x 6mm od x 6mm tall)</li>
 		<li>[2] m3x40 SHCS (Optional: to stiffen the shuttle, Fully threaded, no shoulder)</li>
 		</ul>
+		### Printing shuttle
+		See [Printing](Printing.md) before printing the shuttle!
+		Shuttle print orientation is flat on the parts back with supports enabled currently, we are working on models with integrated supports.
+		![Print Orientation](https://github.com/DraftShift/StealthChanger/blob/main/media/Print_orientation.jpg?raw=true)
+		
 </td></tr>
 </table>
-
 
 **NOTE: D2HW shuttle is not compatible with Hall Effects, and D2HW back plate will affect cooling.**
 
