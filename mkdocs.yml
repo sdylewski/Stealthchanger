@@ -1,7 +1,7 @@
 site_name: StealthChanger Docs
 repo_url: https://github.com/DraftShift/StealthChanger
 strict: false
-
+docs_dir: Docs
 theme:
   name: material
   features:
