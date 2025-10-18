@@ -12,7 +12,7 @@ This is the part that goes on your X carriage to mate and pickup each tool. It w
 			<li>It comes with pins, N52 magnets, and screws for 6 backplates also!</li>
 			<li>No instructions are included, so you need to use the printed shuttle build instructions</li>
 		</ul></td></tr>
-	
+	 
 <tr><td valign="top">
 		<img src="media/Shuttle/LDO_CNC_shuttle.jpg" width=200></td>
 	<td valign="top">
