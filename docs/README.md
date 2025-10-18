@@ -76,54 +76,5 @@ Klipper needs to be toolchanger aware with added code.
 ## Next --> [Planning](Planning.md)
 
 
-## Documentation / Table of Contents
-
-<table><tr><td width="50%" valign="top">
- 
-[Overview](/Readme.md)
-
-### [Planning and Selecting](Planning.md)
-- [Checklist](Checklist.md)
-- [Shuttle](Shuttle.md)
-- [Cable Management](CableManagement.md)
-  - [Umbilicals](Umbilicals.md)
-- [Docks & Crossbar](Docks.md)
-  - [Crossbar](CrossbarUmbilicals.md)
-  - [Door Buffer](DoorBuffer.md)
-- [Toolheads & Backplates](Toolheads.md)
-  - [Stealthburner](Stealthburner.md)
-  - [Dragonburner](Dragonburner.md)
-  - Rapidburner
-  - Anthead
-  - A4T
-  - Yavoth
-- [Probes](Probes.md)
-- [Top Hat](TopHat.md)
-
-</td><td width="50%" valign="top">
- 
-### Building
-- [Bill of Materials](Bill-of-Materials.md)
-- [Vendors & Kits](/docsVendors-and-Kits.md)
-- [Printing](Printing.md)
-- [Assembling](Assembling.md)
-
-### [Software](Software.md)
-- [Installation](Installation.md)
-- [Configuration](Configuration.md)
-- [Calibration](Calibration.md)
-- [Slicers](Slicers.md)
-
-### Support
-- [Serials](Serials.md)
-- [Support & FAQs](Support-and-FAQs.md)
-- [Contributing & Donating](Contributing-and-Donating.md)
-- [Team & Credits](Team-and-Credits.md)
-- Discord link
-</td></tr></table>
-
-
-
-
 
 
