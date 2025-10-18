@@ -1,0 +1,11 @@
+title: StealthChanger Docs
+description: Tool changing system for Voron and others
+theme: just-the-docs
+# If your site is served as https://<user>.github.io/<repo>:
+url: https://sdylewski.github.io/StealthChanger
+baseurl: /StealthChanger
+
+# (optional) Just the Docs options
+search_enabled: true
+logo: /StealthChanger/media/Logos/Stealthchanger_logo.svg
+
