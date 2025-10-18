@@ -3,6 +3,17 @@
 This is the part that goes on your X carriage to mate and pickup each tool. It will mate with a BACKPLATE that's made specifically for your toolhead. <br>
 
 ## Shuttle Options
+
+## Shuttle Options
+
+| Image | Details |
+|---:|:---|
+| ![Fystec CNC Shuttle](media/Shuttle/Fystec_CNC_Shuttle.jpg){ width="240" } | [Fystec CNC Shuttle](https://www.fysetc.com/...)<br>- Comes with pins, N52 magnets, screws for 6 backplates.<br>- Use printed shuttle build instructions. |
+| ![LDO CNC Shuttle](media/Shuttle/LDO_CNC_shuttle.jpg){ width="240" } | [LDO Kit CNC Shuttle](https://kb-3d.com/store/voron/6008-ldo-motors-stealth-changer-cnc-shuttle-kit-6975415159350.html)<br>- Similar to FYSETC. |
+| ![Printed backplate](media/Shuttle/printed_backplate_v1.1.jpg){ width="240" } | [Print your own](https://github.com/DraftShift/StealthChanger?tab=readme-ov-file)<br>- Thicker, slightly less rigid; small Y-travel loss. |
+
+
+
 <table>
 <tr><td valign="top">
 		<img src="media/Shuttle/Fystec_CNC_Shuttle.jpg" width=200></td> 
