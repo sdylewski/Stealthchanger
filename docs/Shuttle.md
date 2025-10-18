@@ -5,7 +5,7 @@ This is the part that goes on your X carriage to mate and pickup each tool. It w
 ## Shuttle Options
 <table>
 <tr><td valign="top">
-		<img src="media/Shuttle/Fystec_CNC_Shuttle.jpg" width=200></td>
+		<img src="media/Shuttle/Fystec_CNC_Shuttle.jpg" width=200></td> 
 	<td valign="top">
 			<a href="https://www.fysetc.com/products/fysetc-stealthchanger-cnc-shuttle-kit-sb-combo-v2-board-tool-distribution-board-h36-board?variant=44927105040559">Fystec CNC Shuttle</a><br>
 		<ul>
