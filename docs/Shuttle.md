@@ -14,6 +14,7 @@ This is the part that goes on your X carriage to mate and pickup each tool. It w
 
 
 
+
 <table>
 <tr><td valign="top">
 		<img src="media/Shuttle/Fystec_CNC_Shuttle.jpg" width=200></td> 
