@@ -5,7 +5,7 @@ This is the part that goes on your X carriage to mate and pickup each tool. It w
 ## Shuttle Options
 <table>
 <tr><td valign="top">
-		<img src="media/Shuttle/Fystec_CNC_Shuttle.jpg" width=200></td> 
+		<img src="/media/Shuttle/Fystec_CNC_Shuttle.jpg" width=200></td> 
 	<td valign="top">
 			<a href="https://www.fysetc.com/products/fysetc-stealthchanger-cnc-shuttle-kit-sb-combo-v2-board-tool-distribution-board-h36-board?variant=44927105040559">Fystec CNC Shuttle</a><br>
 		<ul>
@@ -14,14 +14,14 @@ This is the part that goes on your X carriage to mate and pickup each tool. It w
 		</ul></td></tr>
 	
 <tr><td valign="top">
-		<img src="media/Shuttle/LDO_CNC_shuttle.jpg" width=200></td>
+		<img src="/docs/media/Shuttle/LDO_CNC_shuttle.jpg" width=200></td>
 	<td valign="top">
 			<a href="https://kb-3d.com/store/voron/6008-ldo-motors-stealth-changer-cnc-shuttle-kit-6975415159350.html">LDO Kit CNC Shuttle</a><br>
 		<ul>
 			<li>Not sure what comes with this kit; shuttle seems similar to the Fystec</li>
 		</ul></td></tr>
 <tr><td valign="top">
-		<img src="media/Shuttle/printed_backplate_v1.1.jpg" width=200></td><td valign="top">
+		<img src="../media/Shuttle/printed_backplate_v1.1.jpg" width=200></td><td valign="top">
 			<a href="https://github.com/DraftShift/StealthChanger?tab=readme-ov-file">Print your own</a><br>
 			<ul><li>These are thicker so you loose a bit more Y in print volume, and they are less rigid than CNC shuttles</li>
 		</ul>
