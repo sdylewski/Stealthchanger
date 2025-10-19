@@ -13,6 +13,6 @@ url: https://sdylewski.github.io/StealthChanger
 baseurl: /StealthChanger
 
 # Just the Docs options (examples)
-logo: /StealthChanger/media/Logos/Stealthchanger_logo.svg
+logo: /media/Logos/Stealthchanger_logo.svg
 search_enabled: true
 
