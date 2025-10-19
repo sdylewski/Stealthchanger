@@ -34,7 +34,8 @@ This mounts to the top front of your printer to hold/dock the toolheads when not
 <ul>
 <li><a href="Docks.md">Modular Dock</a></li>
 <li><a href="Crossbar.md">Crossbar [optional]</a></li>
-<li><a href="DoorBuffer.md">Door buffer [optional]. Needed if mounting crossbar to front of frame.</li>
+<li><a href="DoorBuffer.md">Door buffer [optional].</a> Needed if mounting crossbar to front of frame.</li>
+</ul>
 </td><td valign="top" width="50%">
 <img src="media/Dock/dock_front.png" width="400">
 </td></tr>
