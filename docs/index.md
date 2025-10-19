@@ -1,7 +1,8 @@
 ---
 title: Home
 nav_order: 1
-___
+has_children: true
+---
 
 # <img src="media/Logos/Stealthchanger_logo.png" style="height:50px;vertical-align:text-top" /> StealthChanger
 
