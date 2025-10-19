@@ -11,7 +11,7 @@ This is the part that goes on your X carriage to mate and pickup each tool. It w
 <table>
 <tr>
 	<td valign="top"> 
-	<a href="https://www.fysetc.com/products/fysetc-stealthchanger-cnc-shuttle-kit-sb-combo-v2-board-tool-distribution-board-h36-board?variant=44927105040559">Fystec CNC Shuttle</a><br>
+	<h3><a href="https://www.fysetc.com/products/fysetc-stealthchanger-cnc-shuttle-kit-sb-combo-v2-board-tool-distribution-board-h36-board?variant=44927105040559">Fystec CNC Shuttle</a></h3><br>
 	<ul>
 		<li>It comes with pins, N52 magnets, and screws for 6 backplates also!</li>
 		<li>No instructions are included, so you need to use the printed shuttle build instructions</li>
@@ -22,7 +22,7 @@ This is the part that goes on your X carriage to mate and pickup each tool. It w
 	 
 <tr>
 	<td valign="top">
-	<a href="https://kb-3d.com/store/voron/6008-ldo-motors-stealth-changer-cnc-shuttle-kit-6975415159350.html">LDO Kit CNC Shuttle</a><br>
+	<h3><a href="https://kb-3d.com/store/voron/6008-ldo-motors-stealth-changer-cnc-shuttle-kit-6975415159350.html">LDO Kit CNC Shuttle</a></h3><br>
 	<ul>
 	<li>Not sure what comes with this kit; shuttle seems similar to the Fystec</li>
 	</ul></td>
@@ -32,7 +32,7 @@ This is the part that goes on your X carriage to mate and pickup each tool. It w
 		
 <tr>
 	<td valign="top" width="50%">
-	<a href="https://github.com/DraftShift/StealthChanger?tab=readme-ov-file">Print your own</a><br>
+	<h3><a href="https://github.com/DraftShift/StealthChanger?tab=readme-ov-file">Print your own</a></h3><br>
 	<ul><li>These are thicker so you loose a bit more Y in print volume, and they are less rigid than CNC shuttles</li>
 	</ul>
   	<h3>Bill of materials</h3>
@@ -42,14 +42,18 @@ This is the part that goes on your X carriage to mate and pickup each tool. It w
 		<li>[3] 4×6×6 mm brass bushing</li>
  		<li>[2] M3×40 SHCS (optional, fully threaded)</li>
  	 </ul>
+	</td>
+	<td valign="top">
+	<img src="media/Shuttle/printed_backplate_v1.1.jpg" width=200>
+	</td></tr>
+<tr><td valign="top">
 	<h3>Printing shuttle</h3>
 	<ul>
     	<li>See <a href="Printing.md">Printing</a> before printing the shuttle</li>
     	<li>Shuttle orientation is flat on the back with supports enabled</li>
   	</ul>
+	</td><td valign="top">
 	<img src="media/Print_orientation.jpg" width="320" alt="Print Orientation">
-	<td valign="top">
-	<img src="media/Shuttle/printed_backplate_v1.1.jpg" width=200>
 	</td></tr>
 </table>
 
