@@ -5,7 +5,7 @@ parent: Home
 ---
 # Shuttle
 
-This is the part that goes on your X carriage to mate and pickup each tool. It will mate with a BACKPLATE that's made specifically for your toolhead. All shuttles now have a vertical flag at the top that interacts with an OptoTap sensor mounted on the backplate to detect the tool and register taps on the build plate<br>
+This is the part that goes on your X carriage to mate and pickup each tool. It will mate with a BACKPLATE that's made specifically for your toolhead. All shuttles have a vertical flag at the top that interacts with an OptoTap sensor mounted on the backplate to detect the tool and register taps on the build plate<br>
 
 ## Shuttle Options
 <table>
