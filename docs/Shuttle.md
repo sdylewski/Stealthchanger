@@ -8,7 +8,14 @@ parent: Home
 This is the part that goes on your X carriage to mate and pickup each tool. It will mate with a BACKPLATE that's made specifically for your toolhead. <br>
 
 ## Shuttle Options
+|   |   |
+|---|---|
+| <img src="media/Shuttle/Fystec_CNC_Shuttle.jpg" width="200" alt="Fystec CNC Shuttle"> | 
+[Fystec CNC Shuttle](https://www.fysetc.com/…)<br>- Comes with pins, N52 magnets, screws for 6 backplates<br>- Use the printed shuttle instructions |
+| <img src="media/Shuttle/LDO_CNC_shuttle.jpg" width="200" alt="LDO CNC Shuttle"> | [LDO Kit CNC Shuttle](https://kb-3d.com/…)<br>- Similar to FYSETC |
+| <img src="media/Shuttle/printed_backplate_v1.1.jpg" width="200" alt="Printed backplate"> | <strong>Print your own</strong><br><br><strong>Bill of materials</strong><br>• [3] 6×3 mm magnets (N52)<br>• [4] M3×6 BHCS (M3×12 w/ keeper)<br>• [3] 4×6×6 mm bushings<br>• [2] M3×40 SHCS (optional)<br><br><strong>Printing</strong><br>See <a href="Printing.md">Printing</a> first.<br><img src="media/Print_orientation.jpg" width="320" alt="Print Orientation"> |
 
+## Shuttle Options
 <table>
 <tr><td valign="top" width="50%">
 		<img src="media/Shuttle/Fystec_CNC_Shuttle.jpg" width=200></td> 
@@ -30,24 +37,25 @@ This is the part that goes on your X carriage to mate and pickup each tool. It w
 		<img src="media/Shuttle/printed_backplate_v1.1.jpg" width=200></td>
 	<td valign="top" width="50%">
 			<a href="https://github.com/DraftShift/StealthChanger?tab=readme-ov-file">Print your own</a><br>
-			<ul><li>These are thicker so you loose a bit more Y in print volume, and they are less rigid than CNC shuttles</li>
+		<ul><li>These are thicker so you loose a bit more Y in print volume, and they are less rigid than CNC shuttles</li>
 		</ul>
-			
-		### Bill of materials
-		- [3] 6x3mm magnets (N52 Highly recommended to counter the pull from the umbilicals)</li>
-		- [4] m3x6 BHCS head (mgn bolts) m3x12 if used with the shuttle keeper</li>
-		- [3] 4x6x6mm brass bushing (4mm id x 6mm od x 6mm tall)</li>
-		- [2] m3x40 SHCS (Optional: to stiffen the shuttle, Fully threaded, no shoulder)</li>
-		
-		### Printing shuttle
-		- See [Printing](Printing.md) before printing the shuttle!
-		- Shuttle print orientation is flat on the parts back with supports enabled currently, we are working on models with integrated supports.
-		<img src="media/Print_orientation.jpg" width="320" alt="Print Orientation">
+  <h3>Bill of materials</h3>
+  <ul>
+    <li>[3] 6×3 mm magnets (N52 recommended)</li>
+    <li>[4] M3×6 BHCS (MGN bolts), M3×12 if using shuttle keeper</li>
+    <li>[3] 4×6×6 mm brass bushing</li>
+    <li>[2] M3×40 SHCS (optional, fully threaded)</li>
+  </ul>
+
+  <h3>Printing shuttle</h3>
+  <ul>
+    <li>See <a href="Printing.md">Printing</a> before printing the shuttle</li>
+    <li>Shuttle orientation is flat on the back with supports enabled</li>
+  </ul>
+	<img src="media/Print_orientation.jpg" width="320" alt="Print Orientation">
 		
 </td></tr>
 </table>
-
-**NOTE: D2HW shuttle is not compatible with Hall Effects, and D2HW back plate will affect cooling.**
 
 ## Assembling Shuttle and Backplates
 In order to get proper matching set you should:
