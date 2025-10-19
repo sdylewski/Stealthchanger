@@ -2,7 +2,6 @@
 title: Shuttle
 nav_order: 1
 parent: Home
-
 ---
 # Shuttle
 
@@ -32,11 +31,13 @@ This is the part that goes on your X carriage to mate and pickup each tool. It w
 			<a href="https://github.com/DraftShift/StealthChanger?tab=readme-ov-file">Print your own</a><br>
 			<ul><li>These are thicker so you loose a bit more Y in print volume, and they are less rigid than CNC shuttles</li>
 		</ul>
+			
 		### Bill of materials
 		- [3] 6x3mm magnets (N52 Highly recommended to counter the pull from the umbilicals)</li>
 		- [4] m3x6 BHCS head (mgn bolts) m3x12 if used with the shuttle keeper</li>
 		- [3] 4x6x6mm brass bushing (4mm id x 6mm od x 6mm tall)</li>
 		- [2] m3x40 SHCS (Optional: to stiffen the shuttle, Fully threaded, no shoulder)</li>
+		
 		### Printing shuttle
 		- See [Printing](Printing.md) before printing the shuttle!
 		- Shuttle print orientation is flat on the parts back with supports enabled currently, we are working on models with integrated supports.
