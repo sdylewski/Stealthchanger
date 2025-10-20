@@ -1,3 +1,10 @@
+---
+title: Bill of Materials
+nav_order: 2
+parent: Building
+---
+<!-- Use the page layout at TOC.md:  https://github.com/sdylewski/StealthChanger/blob/main/docs/TOC.md -->
+
 All parts (screws, magnets, etc) are Voron, and Voron Tap standards.
 
 1. [Shuttle](#shuttle)
