@@ -3,13 +3,13 @@ title: Dragonburner
 nav_order: 2
 parent: Toolheads
 ---
+<!-- Use the page layout at TOC.md:  https://github.com/sdylewski/StealthChanger/blob/main/docs/TOC.md -->
 
-# Anthead
+# Dragonburner
 
 Dragonburner link
 
 (list all the options for this toolhead, and the relevant mods)
-
 
 
 <table>
@@ -31,3 +31,4 @@ We always recommend to use the original cowls when possible and the [Modular Doc
   </td></tr>
 
   </table>
+
