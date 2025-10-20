@@ -1,32 +1,33 @@
-- Home: index.md
-	- Shuttle: Shuttle.md
-	- Toolheads & Backplates: Toolheads.md
-		- Anthead
-		- Dragonburner
-		- Stealthburner
-	- Docks: Docks.md
-		- Modular Dock
-		- Crossbar: Crossbar.md
-		- Door Buffer: DoorBuffer.md
-	- Electronics & Cable Management
- 		- Distribution
-		- Fanny Pack
-		- Umbilicals
-		- Filament management
-    	- Power considerations: Power.md
-	- Top Hat
-	- Probes
-	- Endstops
-- Building:
- 	- Checklist
-	- Bill of Materials: Bill-of-Materials.md
-	- Vendors and Kits: Vendors-and-Kits.md
-- Software & Configuration:
-	- Software: Software.md
-	- Configuration: Configuration.md
-	- Calibration: Calibration.md
-	- Slicers: Slicers.md
-- Support:
-	- Contributing & Donating: Contributing-and-Donating.md
-	- Team & Credits: Team-and-Credits.md
+1. Home: index.md
+	1. Shuttle: Shuttle.md
+ 	2. Toolheads & Backplates: Toolheads.md
+		1. Anthead
+		2. Dragonburner
+		3. Stealthburner
+		4. A4T
+	3. Docks: Docks.md
+		1. Modular Dock
+		2. Crossbar: Crossbar.md
+		3. Door Buffer: DoorBuffer.md
+	4. Electronics & Cable Management
+ 		1. Electrical Distribution
+		2. Fanny Pack
+		3. Umbilicals
+		4. Filament management
+    	5. Power considerations: Power.md
+	5. Top Hat
+	6. Probes
+	7. Endstops
+2. Building:
+ 	1. Checklist
+	2. Bill of Materials: Bill-of-Materials.md
+	3. Vendors and Kits: Vendors-and-Kits.md
+3. Software & Configuration:
+	1. Software: Software.md
+	2. Configuration: Configuration.md
+	3. Calibration: Calibration.md
+	4. Slicers: Slicers.md
+4. Support:
+	1. Contributing & Donating: Contributing-and-Donating.md
+	2. Team & Credits: Team-and-Credits.md
 
