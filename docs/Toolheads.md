@@ -1,3 +1,8 @@
+---
+title: Toolheads
+nav_order: 2
+parent: Home
+---
 
 # Toolheads
 
@@ -5,7 +10,7 @@ People seem to like smaller toolheads for Stealthchanger because you can fit mor
 <br>Note that toolheads go hand-in-hand with their associated docks, and the options/mods available for them. 
 
 <table>
-<tr><th>Components</th><th>Details</th></tr>
+<tr><th>Toolhead</th><th>Details</th></tr>
 <tr><td valign=top><strong><a href="https://github.com/PrintersForAnts/AntHead/tree/main">AntHead<br>
 	<img src="media/Toolheads/Anthead/Anthead.png" width=200></a></strong></td>
 	<td valign=top><ul><li>Popular and modern.</li>
@@ -50,4 +55,5 @@ We always recommend to use the original cowls when possible and the [Modular Doc
 		<li><a href="https://www.printables.com/model/1358108-stealtchanger-stealthburner-backplate-with-screwed/comments">Screwed pins backplate</a></li>
 		</ul></td></tr>
 </table>
+
 
