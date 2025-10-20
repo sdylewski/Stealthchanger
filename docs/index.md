@@ -23,7 +23,7 @@ StealthChanger draws from many different projects including [tapchanger](https:/
 The stealthchanger system consists of multiple parts. Some are essential, some have many different options, and some are optional. 
 
 <table>
- <tr><td valign="top" width="50%"><h3><a href="Shuttle.md">Shuttle</a> & <a href="Toolheads.md">Backplates</a></h3>
+ <tr><td valign="top" width="50%"><h3><a href="Shuttle.md">Shuttle</a> & <a href="Toolheads.md">Toolhead Backplate</a></h3>
 The shuttle replaces your Voron shuttle with one that has bushings to connect to the backplate of each toolhead
 </td><td valign="top" width="50%">
 <img src="media/Shuttle/shuttle.jpg" width="200">
