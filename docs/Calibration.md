@@ -1,3 +1,14 @@
+---
+title: Calibration
+nav_order: 3
+parent: Software
+---
+<!-- Use the page layout at TOC.md:  https://github.com/sdylewski/StealthChanger/blob/main/docs/TOC.md -->
+
+
+(page unchanged from original - needs work)
+
+
 1. [Z Offset](#z-offset)
 2. [GCODE Z Offset](#gcode-z-offset)
 3. [Dock Parking](#dock-parking)
