@@ -1,3 +1,12 @@
+---
+title: FAQ
+nav_order: 1
+parent: Support
+---
+<!-- Use the page layout at TOC.md:  https://github.com/sdylewski/StealthChanger/blob/main/docs/TOC.md -->
+
+(original page, needs to be updated)
+
 1. [Methods](#methods)
 2. [FAQs](#faqs)
 3. [Build Guide](#build-guide)
