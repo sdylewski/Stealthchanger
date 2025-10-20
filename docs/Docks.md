@@ -3,6 +3,9 @@ title: Docks
 nav_order: 3
 parent: Home
 ---
+<!-- Use the page layout at TOC.md:  https://github.com/sdylewski/StealthChanger/blob/main/docs/TOC.md -->
+
+
 
 ## Crossbar, dock, and door buffer
 A crossbar is recommended for stability, but there are options for how to mount it, and then that enables/disables other things.  You need to pick one of these options below.
