@@ -1,7 +1,12 @@
 ---
-title: Software
-nav_order: 2
+title: Software & Configuration
+nav_order: 3
+parent: Home
 ---
+<!-- Use the page layout at TOC.md:  https://github.com/sdylewski/StealthChanger/blob/main/docs/TOC.md -->
+
+(Scott's notes page, needs to be updated)
+
 # Software
 
 this page should give an overview of the software, plus:
@@ -22,4 +27,5 @@ Sounds like I should use "Klipper-toolchanger-easy" instead of the default repo.
 
 SW Setup issues:
 * if using "fan0 or fan2" from slicer, need to change those back to named fans.
+
 
