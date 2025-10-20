@@ -2,8 +2,10 @@
 title: Endstops
 nav_order: 7
 parent: Home
+render_with_liquid: false
 ---
 <!-- Use the page layout at TOC.md:  https://github.com/sdylewski/StealthChanger/blob/main/docs/TOC.md -->
+<!-- This page has the liquid html rendering image off so the gcode renders properly -->
 
 # What 
 
@@ -28,6 +30,7 @@ https://github.com/DraftShift/StealthChanger/tree/main/STLs/Endstops
 By @Contomo
 
 Run with `TEST_ENDSTOP_REPEATABILITY AXIS=X`
+<!-- Note the syntax {% set axis ... crashed the html parser on github, so need to use {%raw} instead of tripple quotes-->
 
 ```
 [gcode_macro TEST_ENDSTOP_REPEATABILITY]
