@@ -1,8 +1,9 @@
 ---
 title: Power considerations
-nav_order: 1
-parent: Home
+nav_order: 5
+parent: Electronics & Cable Management
 ---
+<!-- Use the page layout at TOC.md:  https://github.com/sdylewski/StealthChanger/blob/main/docs/TOC.md -->
 
 
 More toolheads active at the same time means you will need more baseload power required. A 200W 24V PSU might not suffice if all of your toolheads are heating up at the same time, 
