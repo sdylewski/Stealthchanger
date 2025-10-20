@@ -1,3 +1,13 @@
+---
+title: Checklist
+nav_order: 1
+parent: Building
+---
+<!-- Use the page layout at TOC.md:  https://github.com/sdylewski/StealthChanger/blob/main/docs/TOC.md -->
+
+(original page, needs to be updated)
+
+ 
  - [ ] Read and understand all the documentation
  - [ ]  Decide on the tools to use, See [Docks](Docks.md) for a calculation of how many will fit
  - [ ] Decide on dock types, [Modular Dock](https://github.com/DraftShift/ModularDock) or other
