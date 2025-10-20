@@ -1,3 +1,11 @@
+---
+title: Team & Credits
+nav_order: 4
+parent: Support
+---
+<!-- Use the page layout at TOC.md:  https://github.com/sdylewski/StealthChanger/blob/main/docs/TOC.md -->
+
+
 1. [Official Team Roster](#official-team-roster)
 2. [Credits](#credits)
 
