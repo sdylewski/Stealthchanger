@@ -3,7 +3,7 @@ title: Stealthburner
 nav_order: 3
 parent: Toolheads
 ---
-
+<!-- Use the page layout at TOC.md:  https://github.com/sdylewski/StealthChanger/blob/main/docs/TOC.md -->
 # Stealthburner Toolhead
 
 Stealthburner link
@@ -25,4 +25,5 @@ Stealthburner link
 		</ul></td></tr>
 
   </table>
+
 
