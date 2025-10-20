@@ -1,9 +1,9 @@
-<!-- Use the page layout at TOC.md:  https://github.com/sdylewski/StealthChanger/blob/main/docs/TOC.md -->
 ---
 title: Cable management
 nav_order: 4
 parent: Home
 ---
+<!-- Use the page layout at TOC.md:  https://github.com/sdylewski/StealthChanger/blob/main/docs/TOC.md -->
 
 # What 
 
@@ -44,5 +44,6 @@ Unless the toolheads are daisy chained together the CAN bus is more of a CAN sta
 If you have SB2209s however you might need to add more termination resistors. Add one termination resistor at the time and test if all the boards get picked up, if not add more or move them around, it's unclear what's causing the SB2209 to be more sensitive to reflections, other boards don't have this issue.
 
 Other common issues are usually resolved by going through Esotericals CAN guide https://canbus.esoterical.online/, it's the same process for each toolhead.
+
 
 
