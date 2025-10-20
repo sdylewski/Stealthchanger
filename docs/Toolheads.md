@@ -11,7 +11,7 @@ People seem to like smaller toolheads for Stealthchanger because you can fit mor
 
 <table>
 <tr><th>Toolhead</th><th>Details</th></tr>
-<tr><td valign=top><strong><a href="https://github.com/PrintersForAnts/AntHead/tree/main">AntHead<br>
+<tr><td valign=top><strong><a href="Anthead.md">AntHead<br>
 	<img src="media/Toolheads/Anthead/Anthead.png" width=200></a></strong></td>
 	<td valign=top><ul><li>Popular and modern.</li>
 		<li>Uses 60mm wide docks</li>
@@ -20,7 +20,7 @@ People seem to like smaller toolheads for Stealthchanger because you can fit mor
 	</ul></td></tr>
 	
 <tr>
-	<td valign=top><strong><a href="https://github.com/Armchair-Heavy-Industries/A4T?tab=readme-ov-file">A4T<br>
+	<td valign=top><strong><a href="A4T.md">A4T<br>
 	<img src="media/Toolheads/A4T/A4t.png" width=200></a></strong>
 	</td>
 	<td valign=top><ul><li>Slightly less supported with mods, but performance is supposed to be good.</li>
@@ -29,7 +29,7 @@ People seem to like smaller toolheads for Stealthchanger because you can fit mor
 	</ul></td></tr>
 	
 <tr>
-	<td valign=top><strong><a href="https://github.com/chirpy2605/voron/tree/main/V0/Dragon_Burner">Dragonburner<br>
+	<td valign=top><strong><a href="Dragonburner.md">Dragonburner<br>
     <img src="media/Toolheads/Dragonburner/Dragonburner.png" width=200></a></strong>
 	</td>
 	<td valign=top><ul><li>Uses 60mm wide docks. Can use stubby docks. </li>
@@ -45,7 +45,7 @@ We always recommend to use the original cowls when possible and the [Modular Doc
   </td></tr>
 	
 <tr>
-	<td valign=top><strong><a href="https://github.com/VoronDesign/Voron-Stealthburner">Stealthburner<br>
+	<td valign=top><strong><a href="Stealthburner.md">Stealthburner<br>
     <img src="media/Toolheads/Stealthburner/Stealthburner.png" width=200></a></strong>
 	</td>
 	<td valign=top><ul><li>Can work fine. Needs 76mm wide dock. Docking is a bit harder, but mine seems fine. Needs work on umbilical attachment for 3mm spring steel umbuilical from N3MI.</li>
@@ -55,5 +55,6 @@ We always recommend to use the original cowls when possible and the [Modular Doc
 		<li><a href="https://www.printables.com/model/1358108-stealtchanger-stealthburner-backplate-with-screwed/comments">Screwed pins backplate</a></li>
 		</ul></td></tr>
 </table>
+
 
 
