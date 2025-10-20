@@ -1,3 +1,13 @@
+---
+title: Slicers
+nav_order: 4
+parent: Software & Configuration
+---
+<!-- Use the page layout at TOC.md:  https://github.com/sdylewski/StealthChanger/blob/main/docs/TOC.md -->
+
+(original page, needs to be updated)
+
+
 1. [Slicer Software](#slicer-software)
 2. [Slicer GCODEs](#slicer-gcodes)
 
