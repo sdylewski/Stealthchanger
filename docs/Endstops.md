@@ -2,7 +2,6 @@
 title: Endstops
 nav_order: 7
 parent: Home
-render_with_liquid: false
 ---
 <!-- Use the page layout at TOC.md:  https://github.com/sdylewski/StealthChanger/blob/main/docs/TOC.md -->
 <!-- This page has the liquid html rendering image off so the gcode renders properly -->
@@ -30,7 +29,6 @@ https://github.com/DraftShift/StealthChanger/tree/main/STLs/Endstops
 By @Contomo
 
 Run with `TEST_ENDSTOP_REPEATABILITY AXIS=X`
-<!-- Note the syntax {% set axis ... crashed the html parser on github, so need to use {%raw} instead of tripple quotes-->
 
 {% raw %}
 ```
@@ -66,6 +64,7 @@ gcode:
 {% endraw %}
 
 Depending on how strong the umbilical affects the toolhead in the corners, it might be more accurate to return to the center position before homing the other axis, that way the homing is always done in the middle of the gantry and any effect of umbilicals or gantry being racked does not affect the homing precision.
+
 
 
 
