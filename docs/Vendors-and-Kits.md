@@ -1,3 +1,11 @@
+---
+title: Vendors & Kits
+nav_order: 3
+parent: Building
+---
+<!-- Use the page layout at TOC.md:  https://github.com/sdylewski/StealthChanger/blob/main/docs/TOC.md -->
+
+
 Currently we are working with Manufacturers and Vendors on official kits and CNC parts.  Once available and officially tested they will be listed here in alphabetical order.
 
 
