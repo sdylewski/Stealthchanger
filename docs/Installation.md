@@ -1,7 +1,7 @@
 ---
 title: Installation
 nav_order: 1
-parent: Software
+parent: Software & Configuration
 ---
 <!-- Use the page layout at TOC.md:  https://github.com/sdylewski/StealthChanger/blob/main/docs/TOC.md -->
 
