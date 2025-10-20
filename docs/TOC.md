@@ -23,7 +23,7 @@
 	2. Bill of Materials: Bill-of-Materials.md
 	3. Vendors and Kits: Vendors-and-Kits.md
 3. Software & Configuration:
-	1. Software: Software.md
+	1. Installation: Installation.md
 	2. Configuration: Configuration.md
 	3. Calibration: Calibration.md
 	4. Slicers: Slicers.md
