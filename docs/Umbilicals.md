@@ -1,10 +1,12 @@
 ---
 title: Umbilicals
-nav_order: 2
-parent: Home
+nav_order: 3
+parent: Electronics & Cable Management
 ---
+<!-- Use the page layout at TOC.md:  https://github.com/sdylewski/StealthChanger/blob/main/docs/TOC.md -->
+# Umbilicals
 
-# What
+## What
 
 Each tool uses a separate toolhead PCB that provides power and communication (either via CAN or USB). With several toolheads this quickly adds up in terms of spaghetti and can hook behind the frame or each other, tossing toolheads out of their docks or out of the shuttle if they are not properly managed.
 
@@ -28,3 +30,4 @@ Put the toolhead on the shuttle and move the gantry to the furthest position the
 
 
 See Cable management for how to manage them at the back of the printer and connect the umbilicals to the host.
+
