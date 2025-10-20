@@ -1,5 +1,5 @@
 ---
-title: Home
+title: StealthChanger Components
 nav_order: 1
 has_children: true
 ---
