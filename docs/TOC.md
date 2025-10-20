@@ -16,17 +16,16 @@
 	- Top Hat
 	- Probes
 	- Endstops
-  - Building:
-      - Checklist
-	- 
-      - Bill of Materials: Bill-of-Materials.md
-      - Vendors and Kits: Vendors-and-Kits.md
-  - Software & Configuration:
-      - Software: Software.md
-      - Configuration: Configuration.md
-      - Calibration: Calibration.md
-      - Slicers: Slicers.md
-  - Support:
-      - Contributing & Donating: Contributing-and-Donating.md
-      - Team & Credits: Team-and-Credits.md
+- Building:
+   	- Checklist
+    - Bill of Materials: Bill-of-Materials.md
+    - Vendors and Kits: Vendors-and-Kits.md
+- Software & Configuration:
+  	- Software: Software.md
+    - Configuration: Configuration.md
+    - Calibration: Calibration.md
+    - Slicers: Slicers.md
+- Support:
+  - Contributing & Donating: Contributing-and-Donating.md
+    - Team & Credits: Team-and-Credits.md
 
