@@ -1,8 +1,9 @@
 ---
 title: Endstops
-nav_order: 1
+nav_order: 7
 parent: Home
 ---
+<!-- Use the page layout at TOC.md:  https://github.com/sdylewski/StealthChanger/blob/main/docs/TOC.md -->
 
 # What 
 
@@ -60,4 +61,5 @@ gcode:
 ```
 
 Depending on how strong the umbilical affects the toolhead in the corners, it might be more accurate to return to the center position before homing the other axis, that way the homing is always done in the middle of the gantry and any effect of umbilicals or gantry being racked does not affect the homing precision.
+
 
