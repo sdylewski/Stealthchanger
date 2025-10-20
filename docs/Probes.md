@@ -35,3 +35,8 @@ https://github.com/zruncho3d/nudge
 ### Axiscope
 // TODO
 https://github.com/nic335/Axiscope
+
+### Using test print instead
+// TODO
+https://www.printables.com/model/201707-x-y-and-z-calibration-tool-for-idex-dual-extruder
+
