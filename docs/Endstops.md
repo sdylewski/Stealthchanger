@@ -1,7 +1,7 @@
 ---
 title: Endstops
 nav_order: 7
-parent: Home
+parent: StealthChanger Components
 ---
 <!-- Use the page layout at TOC.md:  https://github.com/sdylewski/StealthChanger/blob/main/docs/TOC.md -->
 <!-- This page has the liquid html rendering image off so the gcode renders properly -->

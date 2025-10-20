@@ -1,7 +1,7 @@
 ---
 title: Toolheads
 nav_order: 2
-parent: Home
+parent: StealthChanger Components
 ---
 <!-- Use the page layout at TOC.md:  https://github.com/sdylewski/StealthChanger/blob/main/docs/TOC.md -->
 # Toolheads

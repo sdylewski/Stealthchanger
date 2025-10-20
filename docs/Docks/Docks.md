@@ -1,10 +1,10 @@
 ---
 title: Docks
 nav_order: 3
-parent: Home
+parent: StealthChanger Components
 ---
 <!-- Use the page layout at TOC.md:  https://github.com/sdylewski/StealthChanger/blob/main/docs/TOC.md -->
-
+# Docks
 
 
 ## Crossbar, dock, and door buffer
@@ -39,11 +39,7 @@ A crossbar is recommended for stability, but there are options for how to mount 
    
 </table>
 
-## Door Buffer
-
-
-
-
+## Modular Dock
 
 The team has created their own dock as a solution. It allows for mounting from both the top bar, as well as a crossbar (or both). While its currently still in testing, its an option if you can do some work without having a full readme. You can view it here: [DraftShift Modular Dock](https://github.com/DraftShift/ModularDock)
 

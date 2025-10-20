@@ -1,7 +1,7 @@
 ---
 title: Electronics & Cable Management
 nav_order: 4
-parent: Home
+parent: StealthChanger Components
 ---
 <!-- Use the page layout at TOC.md:  https://github.com/sdylewski/StealthChanger/blob/main/docs/TOC.md -->
 
