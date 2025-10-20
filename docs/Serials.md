@@ -1,3 +1,10 @@
+---
+title: Serials
+nav_order: 1
+parent: Support
+---
+<!-- Use the page layout at TOC.md:  https://github.com/sdylewski/StealthChanger/blob/main/docs/TOC.md -->
+
 1. [Requests](#requests)
 2. [List](#list)
 
