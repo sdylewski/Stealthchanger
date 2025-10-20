@@ -78,10 +78,6 @@ Klipper needs to be toolchanger aware with added code.
 
 </table>
 
-<em>Ready to get started?</em>
-
-## Next --> [Planning](Planning.md)
-
 
 
 
