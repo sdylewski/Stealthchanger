@@ -3,7 +3,7 @@ title: Toolheads
 nav_order: 2
 parent: Home
 ---
-
+<!-- Use the page layout at TOC.md:  https://github.com/sdylewski/StealthChanger/blob/main/docs/TOC.md -->
 # Toolheads
 
 People seem to like smaller toolheads for Stealthchanger because you can fit more in the space you're using. You may build a dock for your existing toolhead (I had a Stealthburner), and then built new toolheads as other types. You can mix and match, but the configs get more complicated because you need to have different ones for each toolhead. For me, you need to calibrate each toolhead anyway, so it seems a good opportunity to try different toolheads. The list here is just the options I'm interested in.  StealthChanger supports other toolheads also!<br>
@@ -55,6 +55,7 @@ We always recommend to use the original cowls when possible and the [Modular Doc
 		<li><a href="https://www.printables.com/model/1358108-stealtchanger-stealthburner-backplate-with-screwed/comments">Screwed pins backplate</a></li>
 		</ul></td></tr>
 </table>
+
 
 
 
