@@ -1,5 +1,4 @@
-- Home: README.md
-- Components
+- Home: index.md
 	- Shuttle: Shuttle.md
 	- Toolheads & Backplates: Toolheads.md
 		- Anthead
@@ -9,24 +8,25 @@
 		- Modular Dock
 		- Crossbar: Crossbar.md
 		- Door Buffer: DoorBuffer.md
-	- Cable Management
+	- Electronics & Cable Management
+ 		- Distribution
 		- Fanny Pack
 		- Umbilicals
 		- Filament management
+    	- Power considerations: Power.md
 	- Top Hat
 	- Probes
 	- Endstops
-    - Power considerations: Power.md
 - Building:
-   	- Checklist
-    - Bill of Materials: Bill-of-Materials.md
-    - Vendors and Kits: Vendors-and-Kits.md
+ 	- Checklist
+	- Bill of Materials: Bill-of-Materials.md
+	- Vendors and Kits: Vendors-and-Kits.md
 - Software & Configuration:
-  	- Software: Software.md
-    - Configuration: Configuration.md
-    - Calibration: Calibration.md
-    - Slicers: Slicers.md
+	- Software: Software.md
+	- Configuration: Configuration.md
+	- Calibration: Calibration.md
+	- Slicers: Slicers.md
 - Support:
-  - Contributing & Donating: Contributing-and-Donating.md
-    - Team & Credits: Team-and-Credits.md
+	- Contributing & Donating: Contributing-and-Donating.md
+	- Team & Credits: Team-and-Credits.md
 
