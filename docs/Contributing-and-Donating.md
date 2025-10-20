@@ -1,3 +1,13 @@
+---
+title: Contributing & Donating
+nav_order: 1
+parent: Support
+---
+<!-- Use the page layout at TOC.md:  https://github.com/sdylewski/StealthChanger/blob/main/docs/TOC.md -->
+
+(original page, needs to be updated)
+
+
 **STEP 1 for all options**
 
 Follow [Creating a pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request)
