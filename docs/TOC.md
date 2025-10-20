@@ -16,6 +16,7 @@
 	- Top Hat
 	- Probes
 	- Endstops
+    - Power considerations: Power.md
 - Building:
    	- Checklist
     - Bill of Materials: Bill-of-Materials.md
