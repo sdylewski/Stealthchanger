@@ -15,5 +15,7 @@ Note that unlike the 200W version the 450 and 600W are actively cooled with an a
 
 Other options are UHP variants with a smaller form factor (//TODO), often using 2 low wattages PSUs combined. Make sure if you use multiple PSUs that you tie the GND of each one together to have a common reference point otherwise communications issues will arise 
 
-// TODO
+// TODO: power management mitigation in SW so all heaters aren't on at the same time (add link to code or slicer settings?)
+
+// TODO: 
 

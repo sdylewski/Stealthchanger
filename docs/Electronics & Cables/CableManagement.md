@@ -5,6 +5,8 @@ parent: StealthChanger Components
 ---
 <!-- Use the page layout at TOC.md:  https://github.com/sdylewski/StealthChanger/blob/main/docs/TOC.md -->
 
+I'd like to have this a a summary page, but have more detail on individual pages?  
+
 # What 
 
 Lots of toolheads mean lots of extra wires that need to be managed properly. With the umbilicals going to the exhaust there are several options to connect them and to clean up the bundle with a backpack.

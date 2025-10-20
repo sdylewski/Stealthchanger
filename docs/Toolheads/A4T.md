@@ -11,7 +11,6 @@ A4T link
 (list all the options for this toolhead, and the relevant mods)
 
 
-
 <table>
 <tr><th>Toolhead</th><th>Details</th></tr>
 <tr>

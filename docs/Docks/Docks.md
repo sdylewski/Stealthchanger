@@ -6,6 +6,7 @@ parent: StealthChanger Components
 <!-- Use the page layout at TOC.md:  https://github.com/sdylewski/StealthChanger/blob/main/docs/TOC.md -->
 # Docks
 
+(I could convert this to a non-table for easier editing, but the images are nice to be organized with the description)
 
 ## Crossbar, dock, and door buffer
 A crossbar is recommended for stability, but there are options for how to mount it, and then that enables/disables other things.  You need to pick one of these options below.
@@ -14,20 +15,20 @@ A crossbar is recommended for stability, but there are options for how to mount 
 <table>
 <tr><th>Crossbar options</th><th>Details</th></tr>
 <tr><td>No crossbar / Top mount<br>
-		<img src="media/Dock/Dock_top_mount.png" width=200></td><td>
+		<img src="../media/Dock/Dock_top_mount.png" width=200></td><td>
 			<ul><li>Least sturdy option</li>
 			<li>Requires several printed braces & links to help stabilize the docks</li>
 			<li>No need for <a href="https://github.com/DraftShift/DoorBuffer">door buffer</a>?</li>
 		</ul></td></tr>
 	<tr><td>Crossbar mounted outside front extrusions<br>
-		<img src="media/Dock/LDO_Dock.png" width=200></td><td>
+		<img src="../media/Dock/LDO_Dock.png" width=200></td><td>
 			<ul><li>Probably the most common setup</li>
 				<li>Strongest setup (least dock movement potential)</li>
 			<li>Requires a <a href="https://github.com/DraftShift/DoorBuffer">door buffer</a> so your door will still have something flat on the front of the printer</li>
 			<li>This option is what comes with the LDO kit</li>
 		</ul></td></tr>
 	<tr><td>Crossbar mounted <em>between</em> front extrusions<br>
-		<img src="media/Dock/Dock_crabby.png" width=200></td><td>
+		<img src="../media/Dock/Dock_crabby.png" width=200></td><td>
 			<ul><li>No need for <a href="https://github.com/DraftShift/DoorBuffer">door buffer</a></li>
          <li>Needs tight bolts to keep from rotating</li>
          <li>An other tips from people who've done this?</li>

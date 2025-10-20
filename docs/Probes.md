@@ -25,6 +25,7 @@ The beacon/carto is mounted on the shuttle, so the shuttle will require an extra
 
 
 ## 2. Calibration probes
+// todo:  add pros/cons for different methods
 
 ### Sexball
 // TODO
@@ -42,3 +43,36 @@ https://github.com/nic335/Axiscope
 https://www.printables.com/model/201707-x-y-and-z-calibration-tool-for-idex-dual-extruder
 
 
+
+(below from BOM page)
+
+## Sexball probe
+
+![Sexball probe](https://github.com/DraftShift/StealthChanger/blob/main/media/sexball-probe.jpg?raw=true)
+
+Image By asoli
+
+Calibration probe option that just replaces the shaft on a sexbolt.
+- [Probe](https://s.click.aliexpress.com/e/_oB1egOH)
+- [12mm Ball with M5 Threads](https://s.click.aliexpress.com/e/_o2DGfvf)
+- [M5x30mm External Thread Pin](https://s.click.aliexpress.com/e/_omw2qxX)
+
+**NOTE:** For micron M5x25mm Pin is tall enough
+
+**NOTE:** Only use the hartk style bodys with the sleeves, knockoffs have too much slop.
+
+![Sexball probe types](https://github.com/DraftShift/StealthChanger/blob/main/media/sexball-probe-types.jpg?raw=true)
+
+Image by BT123
+
+
+## Affiliate Links
+
+| Parts   	  | Link 1     | Link 2    | Link 3    |
+|-----------  |------------|-----------|-----------|
+| Bushing 	  | [AliExpress](https://s.click.aliexpress.com/e/_Dmsh3LJ) | [US Amazon](https://amzn.to/3RAjKtY) | [UK Amazon](https://amzn.to/48jnoPO) | 
+| Pin     	  | [AliExpress](https://s.click.aliexpress.com/e/_DCQkrFP) | [US Amazon](https://amzn.to/3GZBSZn) | [UK Amazon](https://amzn.to/488gP2v) |
+
+Due to QC issues, this is an [Alternative bushing](https://s.click.aliexpress.com/e/_DFJQgtN) which has also been tested and works fine.
+
+Alternatively you can purchase check on our official [vendors list](Building/Vendors-and-Kits.md)

@@ -5,4 +5,27 @@ parent: StealthChanger Components
 ---
 <!-- Use the page layout at TOC.md:  https://github.com/sdylewski/StealthChanger/blob/main/docs/TOC.md -->
 
-(empty page, needs to be updated)
+# Top Hat
+
+If you want to enclose your printer, a top hat is needed to allow the cables to extend above the original frame, but to still be enclosed. The curent recommendation is to use 200mm height of the top hat.  
+
+You can pick one of the following options:
+
+<img src="media/TopHat/LDO_tophat.png" width="200">
+
+## LDO Kit Top Hat
+A 200mm tall top hat is included in the [LDO top-hat kit](https://ldomotion.com/products/16607023627247272)
+(add affiliate link?)
+
+<img src="media/TopHat/printed_tophat.png" width="200">
+
+## Printed Top Hat
+DraftShift Design has a <a href="https://github.com/DraftShift/Tophat">printed top hat!</a>
+
+## Build your own
+Depending on your situation, you can build your own with existing materials, or order extrusions from places like [Mitsumi USA](https://us.misumi-ec.com/vona2/detail/110302683830/?CategorySpec=unitType%3a%3a1%0900000042747%3a%3amig00000001423216%0900000042730%3a%3amig00000001495349%0900000042733%3a%3aa%0900000042720%3a%3aa&list=PageCategory) 
+(add Mitsumi BOM for Voron 300, 350?) 
+
+## Top Hat Accessories
+* Hinges?
+* Latches?

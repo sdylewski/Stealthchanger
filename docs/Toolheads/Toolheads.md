@@ -6,13 +6,25 @@ parent: StealthChanger Components
 <!-- Use the page layout at TOC.md:  https://github.com/sdylewski/StealthChanger/blob/main/docs/TOC.md -->
 # Toolheads
 
-People seem to like smaller toolheads for Stealthchanger because you can fit more in the space you're using. You may build a dock for your existing toolhead (I had a Stealthburner), and then built new toolheads as other types. You can mix and match, but the configs get more complicated because you need to have different ones for each toolhead. For me, you need to calibrate each toolhead anyway, so it seems a good opportunity to try different toolheads. The list here is just the options I'm interested in.  StealthChanger supports other toolheads also!<br>
-<br>Note that toolheads go hand-in-hand with their associated docks, and the options/mods available for them. 
+Many of the most common toolheads are supported.  You may build a dock for your existing toolhead, and then built new toolheads as other types. You can mix and match, but the configs get more complicated because you need to have different ones for each toolhead. 
+
+Note that toolheads go hand-in-hand with their associated docks, and the options/mods available for them. 
+
+## Selecting a new toolhead?
+### Extruders
+* [Awesome-Extruders](https://github.com/SartorialGrunt0/Awesome-Toolheads?tab=readme-ov-file)
+[Extruder comparision](https://3dp-info.fyi/extruder-comparison)
+### Toolheads
+* [Awesome-Toolheads](https://github.com/SartorialGrunt0/Awesome-Toolheads?tab=readme-ov-file)
+* [Toolhead comparison](https://3dp-info.fyi/toolhead-comparison)
+
+Each toolhead page will contain specifics for the backplate, dock, and modifications for that toolhead.
+
 
 <table>
-<tr><th>Toolhead</th><th>Details</th></tr>
+<tr><th>Toolhead</th><th>Quick Summary</th></tr>
 <tr><td valign=top><strong><a href="Anthead.md">AntHead<br>
-	<img src="media/Toolheads/Anthead/Anthead.png" width=200></a></strong></td>
+	<img src="../media/Toolheads/Anthead.png" width=200></a></strong></td>
 	<td valign=top><ul><li>Popular and modern.</li>
 		<li>Uses 60mm wide docks</li>
     <li>Can use stubby docks?</li>
@@ -21,7 +33,7 @@ People seem to like smaller toolheads for Stealthchanger because you can fit mor
 	
 <tr>
 	<td valign=top><strong><a href="A4T.md">A4T<br>
-	<img src="media/Toolheads/A4T/A4t.png" width=200></a></strong>
+	<img src="../media/Toolheads/A4t.png" width=200></a></strong>
 	</td>
 	<td valign=top><ul><li>Slightly less supported with mods, but performance is supposed to be good.</li>
 	<li>Requires Shorter Z joints like <a href="https://github.com/VoronDesign/VoronUsers/tree/main/printer_mods/hartk1213/Voron2.4_GE5C">Ge5C z-joints</a> so you don't bottom out your carriage when homing.</li>
@@ -29,8 +41,8 @@ People seem to like smaller toolheads for Stealthchanger because you can fit mor
 	</ul></td></tr>
 	
 <tr>
-	<td valign=top><strong><a href="Dragonburner.md">Dragonburner<br>
-    <img src="media/Toolheads/Dragonburner/Dragonburner.png" width=200></a></strong>
+	<td valign=top><strong><a href="Dragonburner.md">Dragonburner & Rapidburner<br>
+    <img src="../media/Toolheads/Dragonburner.png" width=200></a></strong>
 	</td>
 	<td valign=top><ul><li>Uses 60mm wide docks. Can use stubby docks. </li>
 	<li><a href="https://github.com/bigtreetech/EBB/blob/master/EBB%20CAN%20V1.1%20and%20V1.2%20(STM32G0B1)/EBB36%20CAN%20V1.1%20and%20V1.2/Hardware/EBB36%20CAN%20V1.1%26V1.2-PIN.png">EBB36 CAN Toolhead Board</a>, using UserMod <a href="https://github.com/DraftShift/StealthChanger/tree/main/UserMods/TheSin-/PCB36_Mount">TheSin PCB36 Mount</a></li>
@@ -46,16 +58,51 @@ We always recommend to use the original cowls when possible and the [Modular Doc
 	
 <tr>
 	<td valign=top><strong><a href="Stealthburner.md">Stealthburner<br>
-    <img src="media/Toolheads/Stealthburner/Stealthburner.png" width=200></a></strong>
+    <img src="../media/Toolheads/Stealthburner.png" width=200></a></strong>
 	</td>
-	<td valign=top><ul><li>Can work fine. Needs 76mm wide dock. Docking is a bit harder, but mine seems fine. Needs work on umbilical attachment for 3mm spring steel umbuilical from N3MI.</li>
+	<td valign=top><ul>
+	<li>76mm wide dock. </li>
+	<li>Docking is a bit harder? </li>
+	<li>Needs work on umbilical attachment for 3mm spring steel umbuilical from N3MI.</li>
 		<li>Recommend the <a href="https://www.printables.com/model/1384948-stealthchanger-stealthburner-backplate-v11-magnet">screw-in backplate mod</a> for better 4mm pin positioning</li>
 		<li>and magnetic backplate (same file above) for better control of stealthburner on dock.</li>
 		<li><a href="https://www.printables.com/model/994635-stealthchanger-stealthburner-minimal-docks-aka-hap">Happy Crab Docks</a></li>
 		<li><a href="https://www.printables.com/model/1358108-stealtchanger-stealthburner-backplate-with-screwed/comments">Screwed pins backplate</a></li>
 		</ul></td></tr>
-</table>
+		
+<tr>
+	<td valign=top><strong><a href="SV08.md">SV08<br>
+	<img src="../media/Toolheads/SV08.png" width=200></a></strong>
+	</td>
+	<td valign=top>
+	<ul>
+	<li></li>
+	<li></li>
+	</ul>
+	</td></tr>
+		
+<tr>
+	<td valign=top><strong><a href="XOL.md">XOL<br>
+	<img src="../media/Toolheads/Xol.png" width=200></a></strong>
+	</td>
+	<td valign=top>
+	<ul>
+	<li></li>
+	<li></li>
+	</ul>
+	</td></tr>
+<tr>
+	<td valign=top><strong><a href="Yavoth.md">Yavoth<br>
+	<img src="../media/Toolheads/yavoth.png" width=200></a></strong>
+	</td>
+	<td valign=top>
+	<ul>
+	<li></li>
+	<li></li>
+	</ul>
+	</td></tr>
 
+</table>
 
 
 
