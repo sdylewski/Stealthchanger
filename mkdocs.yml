@@ -37,6 +37,7 @@ nav:
       - Docks: Docks.md
       - Crossbar: Crossbar.md
       - Door Buffer: DoorBuffer.md
+      - Power considerations: Power.md
   - Building:
       - Bill of Materials: Bill-of-Materials.md
       - Vendors and Kits: Vendors-and-Kits.md
