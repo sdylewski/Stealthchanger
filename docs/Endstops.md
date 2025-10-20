@@ -32,6 +32,7 @@ By @Contomo
 Run with `TEST_ENDSTOP_REPEATABILITY AXIS=X`
 <!-- Note the syntax {% set axis ... crashed the html parser on github, so need to use {%raw} instead of tripple quotes-->
 
+{% raw %}
 ```
 [gcode_macro TEST_ENDSTOP_REPEATABILITY]
 variable_cache: {}
@@ -62,7 +63,9 @@ gcode:
         _TEST_ENDSTOP_REPEATABILITY PROCESS={axis}
     {% endif %}
 ```
+{% endraw %}
 
 Depending on how strong the umbilical affects the toolhead in the corners, it might be more accurate to return to the center position before homing the other axis, that way the homing is always done in the middle of the gantry and any effect of umbilicals or gantry being racked does not affect the homing precision.
+
 
 
