@@ -1,7 +1,6 @@
 ---
 title: Software
-nav_order: 3
-parent: Home
+nav_order: 2
 ---
 # Software
 
@@ -23,3 +22,4 @@ Sounds like I should use "Klipper-toolchanger-easy" instead of the default repo.
 
 SW Setup issues:
 * if using "fan0 or fan2" from slicer, need to change those back to named fans.
+
