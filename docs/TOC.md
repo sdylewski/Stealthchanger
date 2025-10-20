@@ -29,6 +29,7 @@
 	3. Calibration: Calibration.md
 	4. Slicers: Slicers.md
 4. Support:
-	1. Contributing & Donating: Contributing-and-Donating.md
-	2. Team & Credits: Team-and-Credits.md
+   	1. Serials
+   	2. Contributing & Donating: Contributing-and-Donating.md
+	3. Team & Credits: Team-and-Credits.md
 
