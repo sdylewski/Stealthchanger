@@ -22,6 +22,7 @@
  	1. Checklist
 	2. Bill of Materials: Bill-of-Materials.md
 	3. Vendors and Kits: Vendors-and-Kits.md
+ 	4. Printing
 3. Software & Configuration:
 	1. Installation: Installation.md
 	2. Configuration: Configuration.md
