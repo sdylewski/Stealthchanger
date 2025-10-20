@@ -1,3 +1,13 @@
+---
+title: Installation
+nav_order: 1
+parent: Software
+---
+<!-- Use the page layout at TOC.md:  https://github.com/sdylewski/StealthChanger/blob/main/docs/TOC.md -->
+
+(original page, needs to be updated)
+
+
 All sections are required, so please follow all steps carefully.
 
 1. [Klipper Addon](#klipper-addon)
