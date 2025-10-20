@@ -1,3 +1,13 @@
+---
+title: Printing
+nav_order: 4
+parent: Building
+---
+<!-- Use the page layout at TOC.md:  https://github.com/sdylewski/StealthChanger/blob/main/docs/TOC.md -->
+
+(original page, needs to be updated)
+
+
 1. [Parts](#parts)
 2. [Settings](#settings)
 3. [Orientation](#orientation)
