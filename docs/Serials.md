@@ -1,6 +1,6 @@
 ---
 title: Serials
-nav_order: 1
+nav_order: 2
 parent: Support
 ---
 <!-- Use the page layout at TOC.md:  https://github.com/sdylewski/StealthChanger/blob/main/docs/TOC.md -->
