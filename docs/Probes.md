@@ -1,8 +1,9 @@
 ---
 title: Probes
-nav_order: 1
+nav_order: 6
 parent: Home
 ---
+<!-- Use the page layout at TOC.md:  https://github.com/sdylewski/StealthChanger/blob/main/docs/TOC.md -->
 # Probes
 
 ## What
@@ -39,4 +40,5 @@ https://github.com/nic335/Axiscope
 ### Using test print instead
 // TODO
 https://www.printables.com/model/201707-x-y-and-z-calibration-tool-for-idex-dual-extruder
+
 
