@@ -6,7 +6,7 @@ parent: Toolheads
 
 # A4T Toolhead
 
-<img src="../media/Toolheads/A4t.png" width=200></a>
+<img src="../media/Toolheads/A4t.png" width=200>
 
 ## References
 * [A4T Reference Page](https://github.com/Armchair-Heavy-Industries/A4T)

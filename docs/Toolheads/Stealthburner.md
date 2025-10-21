@@ -22,7 +22,7 @@ parent: Toolheads
 ## Toolhead Options & Mods
 * [Stealthburner numbered cowls](https://github.com/sdylewski/StealthChanger/tree/main/UserMods/Dumplap/Stealthburner%20Number%20Cowls)
 * [SC Barf LED for Stealthburner](https://github.com/sdylewski/StealthChanger/tree/main/UserMods/N3MI-DG/StealthBurner_SC_Barf)
-* 
+
 
 ## StealthChanger Requirements
 * Requires Shorter Z joints like <a href="https://github.com/VoronDesign/VoronUsers/tree/main/printer_mods/hartk1213/Voron2.4_GE5C">Ge5C z-joints</a> so you don't bottom out your carriage when homing.
