@@ -29,7 +29,7 @@ parent: Toolheads
 * Dock width: 60mm
 * Common components for [your dock type](.../Dock.md)
 * [Modular dock assembly guide](https://github.com/DraftShift/ModularDock/blob/main/Manual/ModularDock_Assembly_Guide.pdf)
-* Dragonburner IS compatible with stubby docks!
+* Dragonburner can use stubby docks
 
 ### Dock options
 * Draftshift Design [Dragonburner Back and Base](https://github.com/DraftShift/ModularDock/tree/main/STLs/Dragonburner)
