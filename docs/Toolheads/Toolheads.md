@@ -27,7 +27,7 @@ Each toolhead page will contain specifics for the backplate, dock, and modificat
 
 
 <table>
-<tr><th>Toolhead</th><th>Quick Summary</th></tr>
+<tr><th>Toolhead</th><th align="left">Quick Summary</th></tr>
 <tr><td valign=top><strong><a href="Anthead.md">AntHead<br>
 	<img src="../media/Toolheads/Anthead.png" width=200></a></strong></td>
 	<td valign=top><ul>
@@ -59,7 +59,6 @@ Each toolhead page will contain specifics for the backplate, dock, and modificat
 	</ul>
   **NOTE: If you plan on using the Tapchanger Dragonburner dock you must use the [custom cowl by OstroMa](https://github.com/DraftShift/StealthChanger/blob/main/UserMods/OstroMa/DB_Cowl_v8_with_TapChanger_Dock_Hooks.stl). 
 We always recommend to use the original cowls when possible and the [Modular Dock](https://github.com/DraftShift/ModularDock) does not require any special Cowl, print the original from the Dragonburner repo.**
-
   
   </td></tr>
 	
