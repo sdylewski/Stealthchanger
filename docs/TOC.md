@@ -5,13 +5,15 @@
 		2. Dragonburner
 		3. Stealthburner
 		4. A4T
+		5. SV08
+		6. Yavoth
+		7. XOL
 	3. Docks: Docks.md
 	4. Electronics & Cable Management
 		1. Electrical Distribution
-		2. Fanny Pack
-		3. Umbilicals
-		4. Filament management
-    	5. Power considerations: Power.md
+		2. Umbilicals
+		3. Filament management
+		4. Power considerations: Power.md
 	5. Top Hat
 	6. Probes
 	7. Endstops

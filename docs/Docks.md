@@ -86,7 +86,7 @@ Crossbar mounted <em>between</em> front extrusions:
 For crossbars mounted outside the front extrusions, you need to use the door buffer so your door will shut against something flat. There are options for different door types, including Clicky Clacky doors.
 
 ### References:
-* DraftShift Door Buffer
+* [DraftShift Door Buffer](https://github.com/DraftShift/DoorBuffer)
 
 ### User Mods:
 * [BTT HDMI display mount](https://www.printables.com/model/1419633-btt-hdmi5-v10v12-mount-for-voron-with-clicky-clack) for Clicky Clacky and door buffer

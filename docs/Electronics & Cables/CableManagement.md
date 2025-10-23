@@ -5,35 +5,19 @@ parent: StealthChanger Components
 ---
 <!-- Use the page layout at TOC.md:  https://github.com/sdylewski/StealthChanger/blob/main/docs/TOC.md -->
 
-I'd like to have this a a summary page, but have more detail on individual pages?  
+# Electronics & Cable Mangement
+Lots of toolheads mean lots of extra wires and filament that needs to be managed properly. With the umbilicals going to the exhaust port there are several options to connect them and to clean up the bundle with a "backpack" mounted on the back of the printer.
 
-# What 
+<img src="../media/CableManagement/LDO_Stealthchanger_back_annotated.png" width="400">
 
-Lots of toolheads mean lots of extra wires that need to be managed properly. With the umbilicals going to the exhaust there are several options to connect them and to clean up the bundle with a backpack.
-
-## Backpack
-
-FannyPack (https://github.com/DraftShift/CableManagement/tree/main/FannyPack) is most used to create a backpack to mount distribution boards and clean up the mess at the back. 
-
-There is also Hexa backpack https://github.com/MikeYankeeOscarBeta/hexabackpack 
-
-Specifically for the Fysetc Hexa distro fusion board (https://www.printables.com/model/1366367-fysetc-hexa-distro-fusion-backpack) (though there is also a usermod for the Fysetc hexa distro fusion board for FannyPack: https://github.com/patrezp/CableManagement/tree/main/UserMods/patrezp/Fysetc_Hexa_distro_fusion_mod)
-
-# Distribution
-
-## USB
-* // TODO usb distribution boards
-## CAN
-
-* Wago's: the cheapest and easiest way is to connect all your V_in, GND, CAN_L and CAN_H respectively together with wago's.
-
-* Fysetc Hexa distro fusion board https://wiki.fysetc.com/docs/hexa_distro_fusion
-* Fysetc CAN BUS distribution board (this is the predecessor to the hexa distro fusion board)
-* CEB
-* // TODO all the other common options 
+## Components
+* [Backpack](#Backpack) - holds any power and data distribution boards 
+* [Umbilical Plate](Umbilicals.md) - holds one end of the umbilical while allowing wiring and filament to pass through
+* [Umbilicals](Umbilicals.md) - Wiring harness going to toolhead
+* Power Requirements - Make sure you're getting enough power.
+* Filament management - Options for how to manage 2-6 spools.
 
 
-Make sure that the V_in and GND wire that goes from the PSU to your wago's or distribution board has a thicker gauge as it will carry the power of all the toolheads combined. To calculate the wire gauge, calculate the max power consumption of all your toolheads combined, take a healthy margin and use a wire gauge calculator that gives you the cross section or AWG required.
 
 ## Bowden tube routing
 Depending on where you have your filament spools https://github.com/DraftShift/CableManagement/tree/main/UserMods/N3MI-DG/Filament_Entry can be useful to clean up the bowden tube paths.

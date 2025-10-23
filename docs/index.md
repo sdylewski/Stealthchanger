@@ -21,11 +21,21 @@ Mounting of the toolhead to the shuttle is done by using bushings and pins, with
 StealthChanger draws from many different projects including [tapchanger](https://github.com/viesturz/tapchanger), and involves the contributions of many people who work together to make it better. 
 
 ## Stealthchanger Components
-The stealthchanger system consists of multiple parts. Some are essential, some have many different options, and some are optional. 
-
+The stealthchanger system consists of multiple parts. Some are essential, some have many different options, and some are optional. <br>
+<img src="media/CableManagement/LDO_Stealthchanger_back_annotated.png" width="400"><br>
 <table>
- <tr><td valign="top" width="50%"><h3><a href="Shuttle.md">Shuttle</a> & <a href="Toolheads.md">Toolhead Backplate</a></h3>
-The shuttle replaces your Voron shuttle with one that has bushings to connect to the backplate of each toolhead
+ <tr><td valign="top" width="50%"><h3><a href="Shuttle.md">Shuttle</a> & <a href="Toolheads/Toolheads.md">Toolhead Backplate</a></h3>
+The shuttle replaces your Voron shuttle with one that has bushings to connect to the backplate of each toolhead. Backplates and docks are available for the following toolheads:<br>
+<ul>
+<li><a href="Toolheads/Anthead.md">Anthead</a></li>
+<li><a href="Toolheads/Stealthburner.md">Stealthburner</a></li>
+<li><a href="Toolheads/Dragonburner.md">Dragonburner/Rapidburner</a></li>
+<li><a href="Toolheads/A4T.md">A4T</a></li>
+<li><a href="Toolheads/SV08.md">SV08</a></li>
+<li><a href="Toolheads/Yavoth.md">Yavoth</a></li>
+<li><a href="Toolheads/XOL.md">XOL</a></li>
+</ul>
+See the <a href="Toolheads/Toolheads.md">Toolheads</a> page for a comparison of each toolhead.
 </td><td valign="top" width="50%">
 <img src="media/Shuttle/shuttle.jpg" width="200">
 </td></tr>
@@ -41,11 +51,13 @@ This mounts to the top front of your printer to hold/dock the toolheads when not
 <img src="media/Dock/dock_front.png" width="400">
 </td></tr>
 
-<tr><td valign="top" width="50%"><h3><a href="CableManagement.md">Cable Management</a></h3>
+<tr><td valign="top" width="50%"><h3>Electronics & Cable Management</h3>
+Lots of toolheads mean lots of extra wires and filament that needs to be managed properly. With the umbilicals going to the exhaust port there are several options to connect them and to clean up the bundle with a "backpack" mounted on the back of the printer.
 Power and data needs to be distributed from your main board to each toolhead, along with your filament.  
 <ul>
-<li><a href="FannyPack.md">Fanny Pack</a> mounts a CAN or USB distribution board on the back of the printer</li>
+<li><a href="ElectricalDistribution.md">Backpack & Electrical Distribution</a></li>
 <li><a href="Umbilicals.md">Umbilicals</a> and exhaust plates</li>
+<li><a href="Power.md">Power Supply</a>
 <li><a href="FilamentManagement.md">Filament management</a></li>
 </ul>
 </td><td valign="top" width="50%">
@@ -71,7 +83,10 @@ Physical probes are used to measure the X and Y offsets of your tools relative t
 <tr><td valign="top" width="50%"><h3><a href="Software.md">Klipper Toolchanger</a></h3>
 Klipper needs to be toolchanger aware with added code.
 <ul>
-<li><a href="Software.md">Klipper Toolchanger</a></li>
+<li><a href="Installation.md">Klipper Toolchanger Installation</a></li>
+<li><a href="Configuration.md">Configuration</a></li>
+<li><a href="Calibration.md">Calibration</a></li>
+<li><a href="Slicers.md">Slicers</a></li>
 </ul>
 </td><td valign="top" width="50%">
 <img src="media/Logos/klipper_toolchanger_logo.png" width="180">
