@@ -6,9 +6,6 @@
 		3. Stealthburner
 		4. A4T
 	3. Docks: Docks.md
-		1. Modular Dock
-		2. Crossbar: Crossbar.md
-		3. Door Buffer: DoorBuffer.md
 	4. Electronics & Cable Management
 		1. Electrical Distribution
 		2. Fanny Pack
