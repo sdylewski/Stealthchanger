@@ -107,3 +107,7 @@ If you have TMC autotune, make sure to set the Z motors profile to `performance`
 
 ### I can't seem to get my tools to sit flush
 Make sure your nozzle blocker cup isn't pushing the tool out of its flush position, ideally retract the cup as far as possible, then make sure the tool sits flush by adjusting the back of the dock, then slowly raise the cup until it touches the nozzle without putting force on the toolhead
+
+### My tool is going straight into the dock, I had to emergency stop
+Make sure the `[rounded_path]` is added to your printer cfg, without it it will ignore the rounded paths in the pickup/dropoff sequence and go straight to the pickup position and the dock will be in the way.
+
