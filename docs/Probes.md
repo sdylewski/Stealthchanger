@@ -35,8 +35,11 @@ The beacon/carto is mounted on the shuttle, so the shuttle will require an extra
 https://github.com/zruncho3d/nudge
 
 ### Axiscope
-// TODO
-https://github.com/nic335/Axiscope
+[Axiscope](https://github.com/nic335/Axiscope) uses a camera instead of a physical probe to align each toolhead nozzle. With its provided web interface it's really easy to go through the toolheads, align them and determine the offsets. It also supports a physical endstop to determine the gcode Z offsets (make sure your nozzle is clean).
+
+Physical probes only works if the bore hole of your nozzle is exactly in the center, which is not always the case with very cheap nozzles. If it's not it will introduce a bias and thus the nozzles will remain misaligned. With a camera you remove the reliance of good tolerances out of the equation, you visually align the nozzle bore hole and those offsets will be perfect. It also has the added benefit that you inspect your nozzle closely so you don't forget to remove crud when determining the gcode Z-offsets.
+
+While it requires more manual alignment than a physical probe, aligning 5 toolheads is still done in a couple of minutes.
 
 ### Using test print instead
 // TODO
@@ -76,3 +79,4 @@ Image by BT123
 Due to QC issues, this is an [Alternative bushing](https://s.click.aliexpress.com/e/_DFJQgtN) which has also been tested and works fine.
 
 Alternatively you can purchase check on our official [vendors list](Building/Vendors-and-Kits.md)
+
