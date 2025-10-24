@@ -17,12 +17,14 @@ parent: Toolheads
 * OR - [Stealthburner screw-in pins backplate](https://www.printables.com/model/1358108-stealtchanger-stealthburner-backplate-with-screwed)
 * OR - [Stealthburner screw-in pins and magnetic backplate](https://www.printables.com/model/1384948-stealthchanger-stealthburner-backplate-v11-magnet)
 * [Backplate assembly instructions](https://github.com/sdylewski/StealthChanger/blob/main/Manual/Stealthchanger_Assembly_Guide.pdf)
-* Requires supports. [Printing instructions](../Printing.md)
+* Requires supports. [Printing instructions](../Building/Printing.md)
+
+Having magnets that keep the toolhead in place in the docks and nicely aligned with the shuttle is recommended for smooth dropoff/pickup.
 
 ## Toolhead Options & Mods
 * [Stealthburner numbered cowls](https://github.com/sdylewski/StealthChanger/tree/main/UserMods/Dumplap/Stealthburner%20Number%20Cowls)
 * [SC Barf LED for Stealthburner](https://github.com/sdylewski/StealthChanger/tree/main/UserMods/N3MI-DG/StealthBurner_SC_Barf)
-
+* [FilaMAtrix](https://github.com/thunderkeys/FilamATrix) for runout sensor, cutter and ECAS fitting
 
 ## StealthChanger Requirements
 * Requires Shorter Z joints like <a href="https://github.com/VoronDesign/VoronUsers/tree/main/printer_mods/hartk1213/Voron2.4_GE5C">Ge5C z-joints</a> so you don't bottom out your carriage when homing.
@@ -42,3 +44,4 @@ parent: Toolheads
 
 ## Tips & Suggestions
 * TBD
+
