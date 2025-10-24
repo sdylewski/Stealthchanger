@@ -47,6 +47,12 @@ While it requires more manual alignment than a physical probe, aligning 5 toolhe
 // TODO
 https://www.printables.com/model/201707-x-y-and-z-calibration-tool-for-idex-dual-extruder
 
+# FAQ
+
+### My sexball probe doesn't work, it's always triggered
+If you're using sensorless homing you have set the diag jumper to detect a stall. Make sure to plug endstops or other micro switches into endstop ports that do not share the pins with the corresponding motor diag pin, e.g. one that corresponds with the Z motors. Check your mainboard manual which ports match which motors.
+
+
 
 
 (below from BOM page)
@@ -81,5 +87,6 @@ Image by BT123
 Due to QC issues, this is an [Alternative bushing](https://s.click.aliexpress.com/e/_DFJQgtN) which has also been tested and works fine.
 
 Alternatively you can purchase check on our official [vendors list](Building/Vendors-and-Kits.md)
+
 
 
