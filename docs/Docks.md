@@ -62,6 +62,7 @@ A crossbar is recommended for stability, but there are options for how to mount 
 		<img src="media/Dock/Dock_top_mount.png" width=300></td></tr>
 </table>
 
+
 ### Crossbar dimensions
 
 Crossbar mounted <em>outside</em> front extrusions:
@@ -92,3 +93,17 @@ For crossbars mounted outside the front extrusions, you need to use the door buf
 * [BTT HDMI display mount](https://www.printables.com/model/1419633-btt-hdmi5-v10v12-mount-for-voron-with-clicky-clack) for Clicky Clacky and door buffer
 * Door buffer for [2-hinge CNC doors](https://github.com/DraftShift/DoorBuffer/tree/main/UserMods/Dumplap) from CHAOTICLAB
 * [Other user mods](https://github.com/DraftShift/DoorBuffer/tree/main/UserMods)
+
+# FAQ
+
+### Moving from and to the dock is so slow
+You can increase the printer Z speed `max_z_velocity` and acceleration `max_z_accel`, depending on your motors, motor drivers. It's recommended to increase this in small steps because lost steps due to a loose belt will violently skew the gantry and might break your motor mounts.
+For example 24V moons motors with TMC2209 drivers can reliably get `max_z_velocity: 200` and `max_z_accel: 750` if the rest of the hardware is fine, that speed reduces dropoff/pickup to ~10seconds.
+
+### I can't seem to get past 50mm/s Z velocity before it makes really angry noises and skips steps
+Make sure you have [StealthChop](https://www.klipper3d.org/TMC_Drivers.html#setting-spreadcycle-vs-stealthchop-mode) disabled on all of the Z motors. Spreadcycle is louder but gives much more torque that's required to run the Z velocity at a higher speed
+
+If you have TMC autotune, make sure to set the Z motors profile to `performance`, by default Z motors will be on the silent profile.
+
+### I can't seem to get my tools to sit flush
+Make sure your nozzle blocker cup isn't pushing the tool out of its flush position, ideally retract the cup as far as possible, then make sure the tool sits flush by adjusting the back of the dock, then slowly raise the cup until it touches the nozzle without putting force on the toolhead
