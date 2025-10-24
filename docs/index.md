@@ -55,10 +55,10 @@ This mounts to the top front of your printer to hold/dock the toolheads when not
 Lots of toolheads mean lots of extra wires and filament that needs to be managed properly. With the umbilicals going to the exhaust port there are several options to connect them and to clean up the bundle with a "backpack" mounted on the back of the printer.
 Power and data needs to be distributed from your main board to each toolhead, along with your filament.  
 <ul>
-<li><a href="ElectricalDistribution.md">Backpack & Electrical Distribution</a></li>
-<li><a href="Umbilicals.md">Umbilicals</a> and exhaust plates</li>
-<li><a href="Power.md">Power Supply</a>
-<li><a href="FilamentManagement.md">Filament management</a></li>
+<li><a href="CableManagement/ElectricalDistribution.md">Backpack & Electrical Distribution</a></li>
+<li><a href="CableManagement/Umbilicals.md">Umbilicals</a> and exhaust plates</li>
+<li><a href="Electronics_CablesPower.md">Power Supply</a>
+<li><a href="CableManagement/FilamentManagement.md">Filament management</a></li>
 </ul>
 </td><td valign="top" width="50%">
 <img src="media/CableManagement/wire_management.jpg" width="180">
