@@ -16,6 +16,8 @@ There are 2 types of probes used in StealthChanger. One is the familiar Z-probe 
 Each toolhead of Stealthchanger has a OctoTap PCB boards, this can be used for homing with the nozzle just like Voron TAP. Even if you use a different z-probe, you still need an OctoTap PCB per toolhead as it is also used to detect which tool is active on the shuttle and whether the pickup of a new tool has succeeded.
 Note that the z-offset will be negative for TAP as the motors will continue to go below the zero (= bed level) point to trigger the OctoTap sensor by pushing the toolhead up out of the shuttle until it triggers the OctoTap.
 
+Installing a wiper near the bed and have a CLEAN_NOZZLE call after the initial home and before QGL and re-home is recommended, any leftover filament will throw off gantry levelling and actual bed height.
+
 ### Beacon/Carto
 The beacon/carto is mounted on the shuttle, so the shuttle will require an extra umbilical
 // TODO
@@ -79,4 +81,5 @@ Image by BT123
 Due to QC issues, this is an [Alternative bushing](https://s.click.aliexpress.com/e/_DFJQgtN) which has also been tested and works fine.
 
 Alternatively you can purchase check on our official [vendors list](Building/Vendors-and-Kits.md)
+
 
