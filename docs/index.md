@@ -70,7 +70,7 @@ The stealthchanger system consists of multiple parts. Some are essential, some h
     <ul>
      <li><a href="CableManagement/ElectricalDistribution.md">Backpack & Electrical Distribution</a></li>
      <li><a href="CableManagement/Umbilicals.md">Umbilicals</a> and exhaust plates</li>
-     <li><a href="Electronics_CablesPower.md">Power Supply</a>
+     <li><a href="Electronics_CablesPower.md">Power Supply</a></li>
      <li><a href="CableManagement/FilamentManagement.md">Filament management</a></li>
     </ul>
     </td><td valign="top" width="50%">
