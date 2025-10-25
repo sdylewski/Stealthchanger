@@ -24,6 +24,7 @@ StealthChanger draws from many different projects including [tapchanger](https:/
 The stealthchanger system consists of multiple parts. Some are essential, some have many different options, and some are optional. <br>
 <img src="media/CableManagement/LDO_Stealthchanger_back_annotated.png" width="400"><br>
 <table>
+<tbody>
  <tr><td valign="top" width="50%"><h3><a href="Shuttle.md">Shuttle</a> & <a href="Toolheads/Toolheads.md">Toolhead Backplate</a></h3>
 The shuttle replaces your Voron shuttle with one that has bushings to connect to the backplate of each toolhead. Backplates and docks are available for the following toolheads:<br>
 <ul>
@@ -91,12 +92,15 @@ Klipper needs to be toolchanger aware with added code.
 </td><td valign="top" width="50%">
 <img src="media/Logos/klipper_toolchanger_logo.png" width="180">
 </td></tr>
-
+</tbody>
 </table>
 
 ## Cost calculator
 
-[This](https://docs.google.com/spreadsheets/d/1cjlZ4xi84sUbo09nV3CDkOrLjz3leInTZ9sxwSzPscE) is an approximate cost calculator for building a StealtChanger with x number of toolheads. This does not include top hat extrusions,panels.
+[This](https://docs.google.com/spreadsheets/d/1cjlZ4xi84sUbo09nV3CDkOrLjz3leInTZ9sxwSzPscE) is an approximate cost calculator for building a StealthChanger with x number of toolheads. It assumes you have a working Voron 2.4 and this does not include top hat extrusions,panels.
+
+
+
 
 
 
