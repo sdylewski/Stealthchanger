@@ -94,6 +94,9 @@ Klipper needs to be toolchanger aware with added code.
 
 </table>
 
+## Cost calculator
+
+[This](https://docs.google.com/spreadsheets/d/1cjlZ4xi84sUbo09nV3CDkOrLjz3leInTZ9sxwSzPscE) is an approximate cost calculator for building a StealtChanger with x number of toolheads. This does not include top hat extrusions,panels.
 
 
 
