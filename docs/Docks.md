@@ -123,7 +123,11 @@ For a crossbar between the frame you can use 90 degree corner brackets to mount 
 ### How high should I mount the crossbar?
 That depends, with DoorBuffer you have a fixed height (unless you modify the CAD). Between the frame if you use the top parts to mount the docks to the top frame that will also determine the crossbar position. With crabby/one piece docks that only mount to the crossbar you have more freedom and it will depend on the height of your tallest toolhead + some margin to pick up the tool from out of the dock.
 
+### Do I need to disassemble the whole gantry to install MiniBFI?
+Thankfully no, your gantry can stay in place, you just need to disconnect the front Z belts and AB belts, replace the idlers, route the belts and tighten everything up. Do one side at a time, that will keep the gantry hanging. You can support the gantry with a stack of books.
+
 ### I installed MiniBFI but I don't have enough margin to tension the belts correctly
 Make sure you keep tension in the belts while installing the shuttle with the [belt helper](https://github.com/DraftShift/StealthChanger/tree/main/STLs/Extras/BeltHelper)
 ![PXL_20241210_083455271_preview](media/Shuttle/beltkeeper.jpg)
+
 
