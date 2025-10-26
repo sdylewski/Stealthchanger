@@ -45,7 +45,7 @@ A crossbar is recommended for stability, but there are options for how to mount 
 
 <tr><td><h3>Crossbar mounted <em>between</em> front extrusions</h3>
 			<ul><li>No need for <a href="https://github.com/DraftShift/DoorBuffer">door buffer</a></li>
-         <li>Needs tight bolts to keep from rotating</li>
+         <li>Needs tight bolts or 90° corner brackets to keep from rotating</li>
          <li>An other tips from people who've done this?</li>
          <li>For existing builds with 2020 sides, front idlers will hit the crossbar, so you need to change idlers to use the <a href="https://github.com/DraftShift/StealthChanger/tree/main/UserMods/BT123/MiniBFI%20%2B%20MicroBFI">MiniBFI</a>.</li>
 			<li>20mm less Y build space unless you use shorter "stubby" docks.  Even with stubby docks, the Y build space is 10mm less than the outside-mounted crossbar?</li>
@@ -67,19 +67,22 @@ A crossbar is recommended for stability, but there are options for how to mount 
 
 Crossbar mounted <em>outside</em> front extrusions:
 
+With Doorbuffer adapters you can use the same length as crossbars between the frame (see below), without they need to be a bit larger so you can mount them directly to the frame:
+
 | Voron Size | Outer Crossbar length | Mitsumi link |
 | ---		|		---				|	---		|
-|	250	|		|
-|	300	|		|
-|	350	|		|
+|	250	|  400	|
+|	300	|  450	|
+|	350	|  500	|
 
-Crossbar mounted <em>between</em> front extrusions:
+
+Crossbar mounted <em>between</em> front extrusions (they are the same length as your frame extrusions):
 
 | Voron Size | Inner Crossbar length | Mitsumi link |
 | ---		|		---				|	---		|
-|	250	|		|
-|	300	|		|
-|	350	|		|
+|	250	|	370	|
+|	300	|	420	|
+|	350	|	470	|
 
 
 ## Door Buffer
@@ -110,4 +113,17 @@ Make sure your nozzle blocker cup isn't pushing the tool out of its flush positi
 
 ### My tool is going straight into the dock, I had to emergency stop
 Make sure the `[rounded_path]` is added to your printer cfg, without it it will ignore the rounded paths in the pickup/dropoff sequence and go straight to the pickup position and the dock will be in the way.
+
+### I can't for the life of me get my crossbar between my frame
+Loosen the frame bolt at one corner a bit so you have more play and slide it into position, then tighten the frame again
+
+### I don't want to tap and drill holes for my crossbar, do I need to?
+For a crossbar between the frame you can use 90 degree corner brackets to mount it, these will also prevent the crossbar from rotating. For a crossbar outside the frame you can use the Doorbuffer adapters.
+
+### How high should I mount the crossbar?
+That depends, with DoorBuffer you have a fixed height (unless you modify the CAD). Between the frame if you use the top parts to mount the docks to the top frame that will also determine the crossbar position. With crabby/one piece docks that only mount to the crossbar you have more freedom and it will depend on the height of your tallest toolhead + some margin to pick up the tool from out of the dock.
+
+### I installed MiniBFI but I don't have enough margin to tension the belts correctly
+Make sure you keep tension in the belts while installing the shuttle with the [belt helper](https://github.com/DraftShift/StealthChanger/tree/main/STLs/Extras/BeltHelper)
+![PXL_20241210_083455271_preview](media/Shuttle/beltkeeper.jpg)
 
