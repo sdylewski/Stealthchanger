@@ -5,9 +5,6 @@ parent: StealthChanger Components
 ---
 <!-- Use the page layout at TOC.md:  https://github.com/sdylewski/StealthChanger/blob/main/docs/TOC.md -->
 # Probes
-
-## What
-
 There are 2 types of probes used in StealthChanger. One is the familiar Z-probe to do Z homing and find the bed position at Z=0 (along with `z-offset`, the distance from the bed to the trigger point of the probe). The other is used for inter-tool offsets (`gcode_offset` in `[tool]` section), as each nozzle will be ever so slightly different in terms of X,Y,Z position, the offsets relative to the first tool (T0) have to be taken into account so the printer prints in the expected location after a tool swap.
 
 ## 1. Z-probes
@@ -16,7 +13,7 @@ There are 2 types of probes used in StealthChanger. One is the familiar Z-probe 
 Each toolhead of Stealthchanger has a OctoTap PCB boards, this can be used for homing with the nozzle just like Voron TAP. Even if you use a different z-probe, you still need an OctoTap PCB per toolhead as it is also used to detect which tool is active on the shuttle and whether the pickup of a new tool has succeeded.
 Note that the z-offset will be negative for TAP as the motors will continue to go below the zero (= bed level) point to trigger the OctoTap sensor by pushing the toolhead up out of the shuttle until it triggers the OctoTap.
 
-Installing a wiper near the bed and have a CLEAN_NOZZLE call after the initial home and before QGL and re-home is recommended, any leftover filament will throw off gantry levelling and actual bed height.
+Installing a wiper near the bed and have a CLEAN_NOZZLE macro after the initial home and before QGL and re-home is recommended, any leftover filament will throw off gantry levelling and actual bed height.
 
 ### Beacon/Carto
 The beacon/carto is mounted on the shuttle, so the shuttle will require an extra umbilical
@@ -52,8 +49,17 @@ https://www.printables.com/model/201707-x-y-and-z-calibration-tool-for-idex-dual
 ### My sexball probe doesn't work, it's always triggered
 If you're using sensorless homing you have set the diag jumper to detect a stall. Make sure to plug endstops or other micro switches into endstop ports that do not share the pins with the corresponding motor diag pin, e.g. one that corresponds with the Z motors. Check your mainboard manual which ports match which motors.
 
+### My OctoTAP board doesn't trigger reliably
+1. Make sure your OctoTAP PCB is mounted as low as possible, or it might not be triggered by the shuttle flag. Push it down and then tighten the screws, depending on the board there is some play in the screw holes causing it to sit higher than it should.
+2. Make sure the optical sensor on the board is straight, some boards have the optical sensor bent and not perpendicular with the board
 
+### Do I need to cut the trace on the OctoTAP board?
+Generally not, if you supply it 5v from the toolhead board it should work just fine. The trace is to cut out the 24v -> 5v linear regulator in case that interferes but that also means your board is now 5v only.
 
+### Can I still use `SAVE_CONFIG` after `PROBE`?
+No, `SAVE_CONFIG` will save your z-offset at the bottom of your printer, not in the tool probe section of the tool that's active, it won't be applied if you do. The z-offset is fetched from the tool that's homing and applied in homing_override. 
+
+---
 
 (below from BOM page)
 
@@ -87,6 +93,7 @@ Image by BT123
 Due to QC issues, this is an [Alternative bushing](https://s.click.aliexpress.com/e/_DFJQgtN) which has also been tested and works fine.
 
 Alternatively you can purchase check on our official [vendors list](Building/Vendors-and-Kits.md)
+
 
 
 
