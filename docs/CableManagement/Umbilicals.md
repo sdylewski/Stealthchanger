@@ -35,3 +35,4 @@ See Cable management for how to manage them at the back of the printer and conne
 ## Mods
 
 * [Umbilical Sock for NiteHawks36](https://github.com/DraftShift/StealthChanger/tree/main/UserMods/Nic335/NH36Sock)
+* [PCB mounts for SHT36 v1, SHT36 v2, SHT36 v3, Nitehawk v1, Nitehawk v2, EBB and CNC HGX Sherpa, Orbitor2 extruders](https://github.com/DraftShift/StealthChanger/tree/main/UserMods/TheSin-/PCB36_Mount)
