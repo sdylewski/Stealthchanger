@@ -54,6 +54,10 @@ Due to QC issues, this is an [Alternative bushing](https://s.click.aliexpress.co
 
 Alternatively you can purchase check on our official [vendors list](Building/Vendors-and-Kits.md)
 
+#### Mods
+
+* [Sexball top mount](https://github.com/DraftShift/StealthChanger/tree/main/UserMods/Dumplap/SexBolt%202020%20Top%20Mount)
+
 ### [Axiscope](https://github.com/nic335/Axiscope)
 [Axiscope](https://github.com/nic335/Axiscope) uses a camera instead of a physical probe to align each toolhead nozzle. With its provided web interface it's really easy to go through the toolheads, align them and determine the offsets. It also supports a physical endstop to determine the gcode Z offsets (make sure your nozzle is clean).
 
@@ -100,6 +104,7 @@ No, `SAVE_CONFIG` will save your z-offset at the bottom of your printer.cfg, not
 
 ### My Nudge reports "endstop triggered before contact"
 Bad electrical connections. You need to use copper SHCS at least.  Check the resistance between the two output pins.
+
 
 
 
