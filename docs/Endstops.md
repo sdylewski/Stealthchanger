@@ -20,10 +20,11 @@ Most common, easiest, just fiddly to get right, especially with TMC5160 drivers.
 https://docs.vorondesign.com/tuning/sensorless.html
 
 
-## X,Y relocation mod
+## Relocation mod
+This moves X and Y endstops to the motor mount, there are a couple of options:
 
-// TODO 
-https://github.com/DraftShift/StealthChanger/tree/main/STLs/Endstops
+* [DraftShift Design](https://github.com/DraftShift/StealthChanger/tree/main/STLs/Endstops)
+* [Endstop by Vin-Y](https://github.com/sdylewski/StealthChanger/tree/main/UserMods/VIN-y/Endstops)
 
 ## Endstop repeatability macro 
 By @Contomo
@@ -64,6 +65,7 @@ gcode:
 {% endraw %}
 
 Depending on how strong the umbilical affects the toolhead in the corners, it might be more accurate to return to the center position before homing the other axis, that way the homing is always done in the middle of the gantry and any effect of umbilicals or gantry being racked does not affect the homing precision.
+
 
 
 
