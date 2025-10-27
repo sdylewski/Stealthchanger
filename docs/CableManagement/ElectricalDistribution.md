@@ -23,6 +23,9 @@ There is also this Hexa backpack from @MikeYankeeOscarBeta for general mounting 
 [<img src="../media/CableManagement/fystec_hexa_fusion_backpack.png" width=200>](https://www.printables.com/model/1366367-fysetc-hexa-distro-fusion-backpack)<br>
 Another mod by @drakarah to mount a Fystec Distro Fusion board to the back of your printer.
 
+### [Modular backpack](https://github.com/onsimon/modular-backpack)
+
+
 # Distribution Boards
 You need to be able to talk to all your toolheads. CAN bus is recommended. It seems USB is possible also with the Fystec Hexa Distro Fusion board. Pick one of these below.
 ## Typical boards
@@ -81,6 +84,7 @@ If you have SB2209s however you might need to add more termination resistors. Ad
 Other common issues are usually resolved by going through [Esoterical's CAN guide](https://canbus.esoterical.online/), it's the same process for each toolhead.
 
 The Fystec USB-CAN adapter is recommended over the BTT one if you need to add CAN to your main board.
+
 
 
 
