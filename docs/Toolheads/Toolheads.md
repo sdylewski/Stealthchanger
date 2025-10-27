@@ -12,78 +12,49 @@ Note that toolheads go hand-in-hand with their associated docks, and the options
 
 Each toolhead page will contain specifics for the backplate, dock, and modifications for that toolhead.
 
-<table>
-<tr><th>Toolhead</th><th align="left">Quick Summary</th></tr>
-<tr><td valign=top><strong><a href="Anthead.md">AntHead<br>
-	<img src="../media/Toolheads/Anthead.png" width=200></a></strong></td>
-	<td valign=top><ul>
-		<li>Uses 60mm wide docks</li>
-    <li>Can use stubby docks?</li>
-    <li>Default cowl and dock has built-in magnet holes for better docking</li>
-	</ul></td></tr>
-	
-<tr>
-	<td valign=top><strong><a href="A4T.md">A4T<br>
-	<img src="../media/Toolheads/A4t.png" width=200></a></strong>
-	</td>
-	<td valign=top><ul>
-	<li>Uses XX wide docks</li>
-	<li>Requires Shorter Z joints like <a href="https://github.com/VoronDesign/VoronUsers/tree/main/printer_mods/hartk1213/Voron2.4_GE5C">Ge5C z-joints</a> so you don't bottom out your carriage when homing.</li>
-		<li>Requires new smaller front idlers like the <a href="https://github.com/clee/VoronBFI">BFI</a> or <a href="https://github.com/DraftShift/StealthChanger/tree/main/UserMods/BT123/MiniBFI%20%2B%20MicroBFI">Mini BFI</a></li>
-	</ul></td></tr>
-	
-<tr>
-	<td valign=top><strong><a href="Dragonburner.md">Dragonburner & Rapidburner<br>
-    <img src="../media/Toolheads/Dragonburner.png" width=200></a></strong>
-	</td>
-	<td valign=top><ul><li>Uses 60mm wide docks.</li>
-	<li>Can use stubby docks. </li>
-	</ul>
-  
-  </td></tr>
-	
-<tr>
-	<td valign=top><strong><a href="Stealthburner.md">Stealthburner<br>
-    <img src="../media/Toolheads/Stealthburner.png" width=200></a></strong>
-	</td>
-	<td valign=top><ul>
-	<li>76mm wide dock. </li>
-	<li>Docking is a bit harder? </li>
-		</ul></td></tr>
-		
-<tr>
-	<td valign=top><strong><a href="SV08.md">SV08<br>
-	<img src="../media/Toolheads/SV08.png" width=200></a></strong>
-	</td>
-	<td valign=top>
-	<ul>
-	<li></li>
-	<li></li>
-	</ul>
-	</td></tr>
-		
-<tr>
-	<td valign=top><strong><a href="XOL.md">XOL<br>
-	<img src="../media/Toolheads/Xol.png" width=200></a></strong>
-	</td>
-	<td valign=top>
-	<ul>
-	<li></li>
-	<li></li>
-	</ul>
-	</td></tr>
-<tr>
-	<td valign=top><strong><a href="Yavoth.md">Yavoth<br>
-	<img src="../media/Toolheads/yavoth.png" width=200></a></strong>
-	</td>
-	<td valign=top>
-	<ul>
-	<li></li>
-	<li></li>
-	</ul>
-	</td></tr>
+## <a href="Anthead.md">AntHead
+<img src="../media/Toolheads/Anthead.png" width=100></a>
 
-</table>
+* Uses 60mm wide docks
+* Can use stubby docks? 
+* Default cowl and dock has built-in magnet holes for better docking
+
+
+## <a href="A4T.md">A4T
+<img src="../media/Toolheads/A4t.png" width=100></a>
+
+* Uses XX wide docks
+* Requires Shorter Z joints like <a href="https://github.com/VoronDesign/VoronUsers/tree/main/printer_mods/hartk1213/Voron2.4_GE5C">Ge5C z-joints</a> so you don't bottom out your carriage when homing.
+* Requires new smaller front idlers like the <a href="https://github.com/clee/VoronBFI">BFI</a> or <a href="https://github.com/DraftShift/StealthChanger/tree/main/UserMods/BT123/MiniBFI%20%2B%20MicroBFI">Mini BFI</a>
+
+	
+## <a href="Dragonburner.md">Dragonburner & Rapidburner
+<img src="../media/Toolheads/Dragonburner.png" width=100></a>
+
+* Uses 60mm wide docks.
+* Can use stubby docks.
+
+## <a href="Stealthburner.md">Stealthburner
+<img src="../media/Toolheads/Stealthburner.png" width=100></a>
+
+* 76mm wide dock
+* Docking is a bit harder? 
+		
+## <a href="SV08.md">SV08
+<img src="../media/Toolheads/SV08.png" width=100></a>
+
+* TBD
+		
+## <a href="XOL.md">XOL
+<img src="../media/Toolheads/Xol.png" width=100></a>
+
+ * TBD
+
+## <a href="Yavoth.md">Yavoth
+<img src="../media/Toolheads/yavoth.png" width=200></a>
+
+* TBD
+
 
 ## Selecting a new toolhead?
 
