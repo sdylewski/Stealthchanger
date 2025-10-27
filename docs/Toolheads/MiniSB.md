@@ -8,7 +8,7 @@ parent: Toolheads
 
 ## Backplate
 
-[Backplate by @jdm](../UserMods/jdmontgomer/MiniSB_SC/README.md)
+[Backplate by @jdm](https://github.com/DraftShift/StealthChanger/tree/main/UserMods/jdmontgomer/MiniSB_SC)
 
 
 ## Dock
