@@ -40,8 +40,10 @@ Having magnets that keep the toolhead in place in the docks and nicely aligned w
 * Original Draftshift Design [Stealthburner Back and Base](https://github.com/DraftShift/ModularDock/tree/main/STLs/Stealthburner)
 * [Stealthburner magnetic dock](https://www.printables.com/model/1346474-stealthchanger-stealthburner-backplate-v11-magnet/files)
 * [Happy Crab docks](https://www.printables.com/model/994635-stealthchanger-stealthburner-minimal-docks-aka-hap) (no verticals, crossbar attachment only)
+* [Screw docks](https://www.printables.com/model/911717-stealthchanger-screw-docks) (for hooking on toolheads)
 
 
 ## Tips & Suggestions
 * TBD
+
 
