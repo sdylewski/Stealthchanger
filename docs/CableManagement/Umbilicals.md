@@ -31,3 +31,7 @@ Put the toolhead on the shuttle and move the gantry to the furthest position the
 
 See Cable management for how to manage them at the back of the printer and connect the umbilicals to the host.
 
+
+## Mods
+
+* [Umbilical Sock for NiteHawks36](https://github.com/DraftShift/StealthChanger/tree/main/UserMods/Nic335/NH36Sock)
