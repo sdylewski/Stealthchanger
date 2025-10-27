@@ -19,9 +19,9 @@ Extended Y so you don't lose build space by the docks
 * [Vorlong (+100 Y) Voron v2.4r2 builds](https://github.com/DraftShift/StealthChanger/tree/main/UserMods/TheSin-/Vorlong_%2B100y)
 * [Modifications for Vorlong +100y with StealthChanger](https://github.com/DraftShift/StealthChanger/tree/main/UserMods/Tavroswyn/Vorlong_%2B100y)
   
+## SV08
+* [SV08 Top Dockbar Brackets](https://github.com/DraftShift/StealthChanger/tree/main/UserMods/TheSin-/SV08_Dockbar_Brackets)
 
 ## Other
 
 * [Draftshift Design Calibration Cube](https://www.printables.com/model/1395530-draftshift-design-calibration-cube)
-
-* 
