@@ -20,103 +20,76 @@ Mounting of the toolhead to the shuttle is done by using bushings and pins, with
 
 StealthChanger draws from many different projects including [tapchanger](https://github.com/viesturz/tapchanger), and involves the contributions of many people who work together to make it better. 
 
-## Stealthchanger Components
+# Stealthchanger Components
 The stealthchanger system consists of multiple parts. Some are essential, some have many different options, and some are optional. 
-<br />
-<img src="media/CableManagement/LDO_Stealthchanger_back_annotated.png" width="400"/>
-<br />
-<table>
- <tbody>
-  <tr>
-   <td valign="top" width="50%"><h3><a href="Shuttle.md">Shuttle</a> & <a href="Toolheads/Toolheads.md">Toolhead Backplate</a></h3>
-    The shuttle replaces your Voron shuttle with one that has bushings to connect to the backplate of each toolhead. Backplates and docks are available for the following toolheads:
-    <br />
-    <ul>
-     <li><a href="Toolheads/Anthead.md">Anthead</a></li>
-     <li><a href="Toolheads/Stealthburner.md">Stealthburner</a></li>
-     <li><a href="Toolheads/Dragonburner.md">Dragonburner/Rapidburner</a></li>
-     <li><a href="Toolheads/A4T.md">A4T</a></li>
-     <li><a href="Toolheads/SV08.md">SV08</a></li>
-     <li><a href="Toolheads/Yavoth.md">Yavoth</a></li>
-     <li><a href="Toolheads/XOL.md">XOL</a></li>
-    </ul>
-    See the <a href="Toolheads/Toolheads.md">Toolheads</a> page for a comparison of each toolhead.
-   </td>
-   <td valign="top" width="50%">
-    <img src="media/Shuttle/shuttle.jpg" width="200" />
-   </td>
-  </tr>
-  
-  <tr>
-   <td valign="top" width="50%">
-    <h3><a href="Docks.md">Modular Dock</a></h3>
-    This mounts to the top front of your printer to hold/dock the toolheads when not in use. May also contain a crossbar at the bottom of the dock. Some docks just use the crossbar.
-    <br />
-    <ul>
-     <li><a href="Docks.md">Modular Dock</a></li>
-     <li><a href="Crossbar.md">Crossbar [optional]</a></li>
-     <li><a href="DoorBuffer.md">Door buffer [optional].</a> Needed if mounting crossbar to front of frame.</li>
-    </ul>
-   </td>
-   <td valign="top" width="50%">
-    <img src="media/Dock/dock_front.png" width="400" />
-   </td>
-  </tr>
- 
-  <tr>
-   <td valign="top" width="50%"><h3>Electronics & Cable Management</h3>
-    Lots of toolheads mean lots of extra wires and filament that needs to be managed properly. With the umbilicals going to the exhaust port there are several options to connect them and to clean up the bundle with a "backpack" mounted on the back of the printer.
-    Power and data needs to be distributed from your main board to each toolhead, along with your filament.  
-    <ul>
-     <li><a href="CableManagement/ElectricalDistribution.md">Backpack & Electrical Distribution</a></li>
-     <li><a href="CableManagement/Umbilicals.md">Umbilicals</a> and exhaust plates</li>
-     <li><a href="Electronics_CablesPower.md">Power Supply</a></li>
-     <li><a href="CableManagement/FilamentManagement.md">Filament management</a></li>
-    </ul>
-    </td><td valign="top" width="50%">
-    <img src="media/CableManagement/wire_management.jpg" width="180" />
-   </td>
-  </tr>
-  
-  <tr>
-   <td valign="top" width="50%">
-    <h3><a href="TopHat.md">Top Hat</a></h3>
-    With the dock at the top of the printer and umbilicals extending upward, enclosed printers will want to extend the top of the printer using a top hat.  
-    </td><td valign="top" width="50%">
-    <img src="media/TopHat/printed_tophat.png" width="180" />
-   </td>
-  </tr>
-  
-  <tr>
-   <td valign="top" width="50%"><h3><a href="Probes.md">Probes</a></h3>
-    Physical probes are used to measure the X and Y offsets of your tools relative to Tool 0. Endstop switches are included here also
-    <ul>
-     <li><a href="Probes.md">Probes</a> for determing offsets</li>
-     <li><a href="Endstops.md">Endstops</a> for X and Y gantry endstops</li>
-    </ul>
-    </td><td valign="top" width="50%">
-    <img src="media/Probes/sexball-probe.jpg" width="180" />
-   </td>
-  </tr>
-   
-  <tr>
-   <td valign="top" width="50%">
-    <h3><a href="Software.md">Klipper Toolchanger</a></h3>
-    Klipper needs to be toolchanger aware with added code.
-    <ul>
-     <li><a href="Installation.md">Klipper Toolchanger Installation</a></li>
-     <li><a href="Configuration.md">Configuration</a></li>
-     <li><a href="Calibration.md">Calibration</a></li>
-     <li><a href="Slicers.md">Slicers</a></li>
-    </ul>
-    </td><td valign="top" width="50%">
-    <img src="media/Logos/klipper_toolchanger_logo.png" width="180" />
-   </td>
-  </tr>
- </tbody>
-</table>
 
-## Cost calculator
+<img src="media/CableManagement/LDO_Stealthchanger_back_annotated.png" width="400"/>
+
+## [Shuttle](Shuttle.md) & [Toolhead Backplate](Toolheads.md)
+<img src="media/Shuttle/shuttle.jpg" width="200" />
+
+The shuttle replaces your Voron shuttle with one that has bushings to connect to the backplate of each toolhead. Backplates and docks are available for the following toolheads:
+
+* [Anthead](Toolheads/Anthead.md)
+* [Stealthburner](Toolheads/Stealthburner.md)
+* [Dragonburner/Rapidburner](Toolheads/Dragonburner.md)
+* [A4T](Toolheads/A4T.md)
+* [SV08](Toolheads/SV08.md)
+* [Yavoth](Toolheads/Yavoth.md)
+* [XOL](Toolheads/XOL.md)
+
+See the <a href="Toolheads/Toolheads.md">Toolheads</a> page for a comparison of each toolhead.
+   
+## [Modular Dock](Docks.md)
+<img src="media/Dock/dock_front.png" width="400" />
+
+This mounts to the top front of your printer to hold/dock the toolheads when not in use. May also contain a crossbar at the bottom of the dock. Some docks just use the crossbar.
+
+* [Modular Dock](Docks.md)
+* [Crossbar (optional)](Docks.md)
+* [Door buffer (optional)](Docks) Needed if mounting crossbar to front of frame.  
+  
+## [Electronics & Cable Management]()
+<img src="media/CableManagement/wire_management.jpg" width="180" />
+
+Lots of toolheads mean lots of extra wires and filament that needs to be managed properly. With the umbilicals going to the exhaust port there are several options to connect them and to clean up the bundle with a "backpack" mounted on the back of the printer.
+Power and data needs to be distributed from your main board to each toolhead, along with your filament.  
+
+* [Backpack & Electrical Distribution](CableManagement/ElectricalDistribution.md)
+* [Umbilicals](CableManagement/Umbilicals.md) and exhaust plates
+* [Power Supply](Electronics_CablesPower.md)
+* [Filament management](CableManagement/FilamentManagement.md)
+  
+## [Top Hat](TopHat.md)
+[<img src="media/TopHat/printed_tophat.png" width="300" />](TopHat.md)
+
+With the dock at the top of the printer and umbilicals extending upward, enclosed printers will want to extend the top of the printer using a top hat.  
+  
+## [Probes](Probes.md)
+<img src="media/Probes/sexball-probe.jpg" width="180" />
+
+Physical probes are used to measure the X and Y offsets of your tools relative to Tool 0. Endstop switches are included here also.
+
+* [Probes](Probes.md) for determing offsets
+* [Endstops](Endstops.md) for X and Y gantry endstops
+    
+   
+## [Klipper Toolchanger](Software.md)
+<img src="media/Logos/klipper_toolchanger_logo.png" width="180" />
+
+Klipper needs to be toolchanger aware with added code.
+
+* [Klipper Toolchanger Installation](Installation.md)
+* [Configuration](Configuration.md)
+* [Calibration](Calibration.md)
+* [Slicers](Slicers.md)
+
+
+# Building
+### Vendors and Kits
+### Checklist
+### Pringing
+### Cost calculator
 
 [This](https://docs.google.com/spreadsheets/d/1cjlZ4xi84sUbo09nV3CDkOrLjz3leInTZ9sxwSzPscE) is an approximate cost calculator for building a StealthChanger with x number of toolheads. It assumes you have a working Voron 2.4 and this does not include top hat extrusions,panels.
 

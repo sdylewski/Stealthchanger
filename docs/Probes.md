@@ -23,26 +23,59 @@ The beacon/carto is mounted on the shuttle, so the shuttle will require an extra
 // TODO (requires modification to Klipper code iirc)
 
 
-## 2. Calibration probes
+## 2. XY Calibration probes
 // todo:  add pros/cons for different methods
 
 ### Sexball
-// TODO
 
-### Nudge
-// TODO
-https://github.com/zruncho3d/nudge
+<img src="media/Probes/sexball-probe.jpg" width="200">
+Image By asoli
 
-### Axiscope
+Calibration probe option that just replaces the shaft on a sexbolt.
+- [Probe](https://s.click.aliexpress.com/e/_oB1egOH)
+- [12mm Ball with M5 Threads](https://s.click.aliexpress.com/e/_o2DGfvf)
+- [M5x30mm External Thread Pin](https://s.click.aliexpress.com/e/_omw2qxX)
+
+**NOTE:** For micron M5x25mm Pin is tall enough
+
+**NOTE:** Only use the hartk style bodies with the sleeves, knockoffs have too much slop.
+
+<img src="media/Probes/sexball-probe-types.jpg" width="300"> Image by BT123
+
+
+#### Affiliate Links
+
+| Parts   	  | Link 1     | Link 2    | Link 3    |
+|-----------  |------------|-----------|-----------|
+| Bushing 	  | [AliExpress](https://s.click.aliexpress.com/e/_Dmsh3LJ) | [US Amazon](https://amzn.to/3RAjKtY) | [UK Amazon](https://amzn.to/48jnoPO) | 
+| Pin     	  | [AliExpress](https://s.click.aliexpress.com/e/_DCQkrFP) | [US Amazon](https://amzn.to/3GZBSZn) | [UK Amazon](https://amzn.to/488gP2v) |
+
+Due to QC issues, this is an [Alternative bushing](https://s.click.aliexpress.com/e/_DFJQgtN) which has also been tested and works fine.
+
+Alternatively you can purchase check on our official [vendors list](Building/Vendors-and-Kits.md)
+
+### [Axiscope](https://github.com/nic335/Axiscope)
 [Axiscope](https://github.com/nic335/Axiscope) uses a camera instead of a physical probe to align each toolhead nozzle. With its provided web interface it's really easy to go through the toolheads, align them and determine the offsets. It also supports a physical endstop to determine the gcode Z offsets (make sure your nozzle is clean).
 
 Physical probes only works if the bore hole of your nozzle is exactly in the center, which is not always the case with very cheap nozzles. If it's not it will introduce a bias and thus the nozzles will remain misaligned. With a camera you remove the reliance of good tolerances out of the equation, you visually align the nozzle bore hole and those offsets will be perfect. It also has the added benefit that you inspect your nozzle closely so you don't forget to remove crud when determining the gcode Z-offsets.
 
 While it requires more manual alignment than a physical probe, aligning 5 toolheads is still done in a couple of minutes.
 
-### Using test print instead
-// TODO
-https://www.printables.com/model/201707-x-y-and-z-calibration-tool-for-idex-dual-extruder
+### [Nudge](https://github.com/zruncho3d/nudge)
+<img src="media/Probes/Nudge.jpg" width="200"> Image from Nudge site.
+
+A buildable probe. @MajorHack built one with SS screws that didn't work, so copper SHCS are required. 
+
+// see calibration section for how to use it
+
+
+### Using a printable calibration
+
+<img src="media/Probes/xy_print_cal.jpg" width="300">
+
+There are a few different printable XY calibration methods that work well: 
+
+* [X, Y and Z calibration tool for IDEX](https://www.printables.com/model/201707-x-y-and-z-calibration-tool-for-idex-dual-extruder)
 
 # FAQ
 
@@ -57,42 +90,10 @@ If you're using sensorless homing you have set the diag jumper to detect a stall
 Generally not, if you supply it 5v from the toolhead board it should work just fine. The trace is to cut out the 24v -> 5v linear regulator in case that interferes but that also means your board is now 5v only.
 
 ### Can I still use `SAVE_CONFIG` after `PROBE`?
-No, `SAVE_CONFIG` will save your z-offset at the bottom of your printer, not in the tool probe section of the tool that's active, it won't be applied if you do. The z-offset is fetched from the tool that's homing and applied in homing_override. 
+No, `SAVE_CONFIG` will save your z-offset at the bottom of your printer.cfg, not in the tool probe section of the tool that's active, it won't be applied if you do. The z-offset is fetched from the tool that's homing and applied in homing_override. 
 
----
-
-(below from BOM page)
-
-## Sexball probe
-
-![Sexball probe](https://github.com/DraftShift/StealthChanger/blob/main/media/sexball-probe.jpg?raw=true)
-
-Image By asoli
-
-Calibration probe option that just replaces the shaft on a sexbolt.
-- [Probe](https://s.click.aliexpress.com/e/_oB1egOH)
-- [12mm Ball with M5 Threads](https://s.click.aliexpress.com/e/_o2DGfvf)
-- [M5x30mm External Thread Pin](https://s.click.aliexpress.com/e/_omw2qxX)
-
-**NOTE:** For micron M5x25mm Pin is tall enough
-
-**NOTE:** Only use the hartk style bodys with the sleeves, knockoffs have too much slop.
-
-![Sexball probe types](https://github.com/DraftShift/StealthChanger/blob/main/media/sexball-probe-types.jpg?raw=true)
-
-Image by BT123
-
-
-## Affiliate Links
-
-| Parts   	  | Link 1     | Link 2    | Link 3    |
-|-----------  |------------|-----------|-----------|
-| Bushing 	  | [AliExpress](https://s.click.aliexpress.com/e/_Dmsh3LJ) | [US Amazon](https://amzn.to/3RAjKtY) | [UK Amazon](https://amzn.to/48jnoPO) | 
-| Pin     	  | [AliExpress](https://s.click.aliexpress.com/e/_DCQkrFP) | [US Amazon](https://amzn.to/3GZBSZn) | [UK Amazon](https://amzn.to/488gP2v) |
-
-Due to QC issues, this is an [Alternative bushing](https://s.click.aliexpress.com/e/_DFJQgtN) which has also been tested and works fine.
-
-Alternatively you can purchase check on our official [vendors list](Building/Vendors-and-Kits.md)
+### My Nudge reports "endstop triggered before contact"
+Bad electrical connections. You need to use copper SHCS at least.  Check the resistance between the two output pins.
 
 
 

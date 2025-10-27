@@ -12,46 +12,46 @@ Note that toolheads go hand-in-hand with their associated docks, and the options
 
 Each toolhead page will contain specifics for the backplate, dock, and modifications for that toolhead.
 
-## <a href="Anthead.md">AntHead
-<img src="../media/Toolheads/Anthead.png" width=100></a>
+## [Anthead](Anthead.md)
+[<img src="../media/Toolheads/Anthead.png" width=100>](Anthead.md)
 
 * Uses 60mm wide docks
 * Can use stubby docks? 
 * Default cowl and dock has built-in magnet holes for better docking
 
 
-## <a href="A4T.md">A4T
-<img src="../media/Toolheads/A4t.png" width=100></a>
+## [A4T](A4T.md)
+[<img src="../media/Toolheads/A4t.png" width=100>](A4T.md)
 
 * Uses XX wide docks
 * Requires Shorter Z joints like <a href="https://github.com/VoronDesign/VoronUsers/tree/main/printer_mods/hartk1213/Voron2.4_GE5C">Ge5C z-joints</a> so you don't bottom out your carriage when homing.
 * Requires new smaller front idlers like the <a href="https://github.com/clee/VoronBFI">BFI</a> or <a href="https://github.com/DraftShift/StealthChanger/tree/main/UserMods/BT123/MiniBFI%20%2B%20MicroBFI">Mini BFI</a>
 
 	
-## <a href="Dragonburner.md">Dragonburner & Rapidburner
-<img src="../media/Toolheads/Dragonburner.png" width=100></a>
+## [Dragonburner & Rapidburner](Dragonburner.md)
+[<img src="../media/Toolheads/Dragonburner.png" width=100>](Dragonburner.md)
 
 * Uses 60mm wide docks.
 * Can use stubby docks.
 
-## <a href="Stealthburner.md">Stealthburner
-<img src="../media/Toolheads/Stealthburner.png" width=100></a>
+## [Stealthburner](Stealthburner.md)
+[<img src="../media/Toolheads/Stealthburner.png" width=100>](Stealthburner.md)
 
 * 76mm wide dock
 * Docking is a bit harder? 
 		
-## <a href="SV08.md">SV08
-<img src="../media/Toolheads/SV08.png" width=100></a>
+## [SV08](SV08.md)
+[<img src="../media/Toolheads/SV08.png" width=100>](SV08.md)
 
 * TBD
 		
-## <a href="XOL.md">XOL
-<img src="../media/Toolheads/Xol.png" width=100></a>
+## [XOL](XOL.md)
+[<img src="../media/Toolheads/Xol.png" width=100>](XOL.md)
 
  * TBD
 
-## <a href="Yavoth.md">Yavoth
-<img src="../media/Toolheads/yavoth.png" width=200></a>
+## [Yavoth](Yavoth.md)
+[<img src="../media/Toolheads/yavoth.png" width=200>](Yavoth.md)
 
 * TBD
 
@@ -69,10 +69,10 @@ Each toolhead page will contain specifics for the backplate, dock, and modificat
 ### Hotends
 * TBD
 
-# FAQ
+# Toolheads FAQ
 
 ### Can I mix and match different toolheads and hotends?
-Yes to a certain degree. The parking position of the various toolheads has to be more or less the same, if one toolhead is significantly higher or lower then the gantry will bump into the pins of its backplate when trying to pick up other tools. You would need to add dock spacers to ensure that all the pins of each backplate are somewhat on the same height.
+Yes to a certain degree. The parking position of the various toolheads has to be more or less the same, if one toolhead is significantly higher or lower then the gantry will bump into the pins of its backplate when trying to pick up other tools. You would need to add dock spacers to ensure that all the pins of each backplate are somewhat on the same height. Calibration for things like pressure advance is also more difficult, but possible.
 
 ### What about different hotends that have higher/lower flow rates
 Yes, you would need to configure that in your slicer per extruder. If you can't you would need to make a filament profile per extruder (PLA - T0, PLA - T1) and configure it that way, assigning the correct filament profile to the right tool.
@@ -82,6 +82,7 @@ Yes, if your slicer supports it. Orca slicer does.
 
 ### What is ooze prevention and pre-heating
 Orca slicer has a feature to prevent oozing of tools that are actively being used, by dropping their temperature to an idle temperature. It also can ramp up the temperature back up by a set amount of seconds before the tool is actually being called to make sure the toolhead is ready to go without waiting. This also has the added benefit of not cooking your filament for long periods of time and preventing heat creep, so it's definitely recommended.
+(add link for how to enable)
 
 ### It picks up the tool and then waits for a long time before continuing
 This is likely Klipper waiting for the temperature of the hotend to settle to the target temperature. If your hotend is not well PID tuned it can sometimes oscillate indefinitely around the target temperature. By default this margin is quite small, only 0.5°C. This is usually not a problem for single toolhead printers as your hotend only heats up once, but with a toolchanger where it heats up the tool every tool call this can introduce a lot of delay. Depending on your klipper-toolchanger version you can mitigate this by increasing the deadband, the amount of °C around the target temperature that is considered "good enough to continue".
