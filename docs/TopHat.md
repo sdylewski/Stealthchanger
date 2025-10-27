@@ -33,9 +33,11 @@ Depending on your situation, you can build your own with existing materials, or 
 With hinges you can open and close the top hat like a box
 
 * [2020 & 1515 Tophat hinges](https://discord.com/channels/1226846451028725821/1279707532893360203) // TODO this is a discord link to user mod
+* [LDO Top hat hinge](https://github.com/MotorDynamicsLab/LDOStealthChanger/tree/master/STLs)
 
 ### Latches
 Latches ensure the top hat stays on the printer securely and tightly, squishing the foam between the top hat and the frame to create an air tight seal.
 
 * [2020 Extrusion Latch for Voron Top-Hat or Fridge Door with M3 Screw ](https://www.printables.com/model/1271104-2020-extrusion-latch-for-voron-top-hat-or-fridge-d)
 * 
+
