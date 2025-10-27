@@ -27,6 +27,11 @@ DraftShift Design has a <a href="https://github.com/DraftShift/Tophat">printed t
 Depending on your situation, you can build your own with existing materials, or order extrusions from places like [Mitsumi USA](https://us.misumi-ec.com/vona2/detail/110302683830/?CategorySpec=unitType%3a%3a1%0900000042747%3a%3amig00000001423216%0900000042730%3a%3amig00000001495349%0900000042733%3a%3aa%0900000042720%3a%3aa&list=PageCategory) 
 (add Mitsumi BOM for Voron 300, 350?) 
 
+## Other
+
+* [Panorama top hat](https://github.com/Theaninova/panorama-tophat)
+  
+
 ## Top Hat Accessories
 
 ### Hinges
@@ -45,4 +50,5 @@ Latches ensure the top hat stays on the printer securely and tightly, squishing 
 
 * [Top hat SC logo](https://github.com/DraftShift/StealthChanger/tree/main/UserMods/EddieSha04/Tophat%20SC%20LED%20Logo)
 * [Top hat panel clips](https://github.com/DraftShift/StealthChanger/tree/main/UserMods/EddieSha04/Tophat)
+
 
