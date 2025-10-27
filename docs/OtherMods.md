@@ -14,6 +14,11 @@ This lists user mods made for StealthChanger that don't fit in other sections su
 * [Z-belt cover with StealthChanger logo](https://github.com/sdylewski/StealthChanger/tree/main/UserMods/TheSin-/Z_Belt_Cover)
 * [DraftShift Design Fan Grille (suits Voron Skirt)](https://www.printables.com/model/1381254-draftshift-design-fan-grille-suits-voron-skirt)
 
+## Vorlong
+Extended Y so you don't lose build space by the docks
+* [Vorlong (+100 Y) Voron v2.4r2 builds](https://github.com/DraftShift/StealthChanger/tree/main/UserMods/TheSin-/Vorlong_%2B100y)
+* [Modifications for Vorlong +100y with StealthChanger](https://github.com/DraftShift/StealthChanger/tree/main/UserMods/Tavroswyn/Vorlong_%2B100y)
+  
 
 ## Other
 
