@@ -8,7 +8,7 @@ parent: Toolheads
 
 ## Backplate
 
-[Backplate by @jdm](../../UserMods/jdmontgomer/MiniSB_SC/README.md)
+[Backplate by @jdm](../UserMods/jdmontgomer/MiniSB_SC/README.md)
 
 
 ## Dock
