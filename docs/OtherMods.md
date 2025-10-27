@@ -11,7 +11,7 @@ This lists user mods made for StealthChanger that don't fit in other sections su
 ## Cosmetic
 
 * [Skirt parts with StealthChanger Logo](https://github.com/sdylewski/StealthChanger/tree/main/UserMods/Tavroswyn/Skirt)
-* [Z-belt cover with StealthChanger logo](https://github.com/sdylewski/StealthChanger/tree/main/UserMods/TheSin-/Z_Belt_Cover)
+* [Z-belt cover with StealthChanger logo](https://github.com/sdylewski/StealthChanger/tree/main/UserMods/TheSin-/Z_Belt_Cover) or [alternative](https://www.printables.com/model/951239-stealthchanger-z-belt-covers)
 * [DraftShift Design Fan Grille (suits Voron Skirt)](https://www.printables.com/model/1381254-draftshift-design-fan-grille-suits-voron-skirt)
 * [2.4 Filament latch with SC logo](https://www.printables.com/model/1146327-voron-24-filament-latch-stealthchanger-logo)
 
