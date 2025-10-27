@@ -29,17 +29,20 @@ parent: Toolheads
 ## Toolhead Options & Mods
 
 * [PCB Mounting solution for Anthead with Sherpa Mini and EBB36](https://github.com/DraftShift/StealthChanger/tree/main/UserMods/MugenMicko/Anthead%20Sherpa%20Mini%20EBB%2036%20PCB%20Mount)
+* [PCB Mount for EBB36 with Sherpa Mini](https://github.com/DraftShift/StealthChanger/tree/main/UserMods/Tavroswyn/Anthead) (improves on the previous link)
 * [Anthead nozzle led fixes](https://github.com/DraftShift/StealthChanger/tree/main/UserMods/Dweenz/Anthead%20nozzle%20led%20fixes)
 * [Anthead Orbiter spacer](https://github.com/DraftShift/StealthChanger/tree/main/UserMods/Dweenz/AntheadOrbiterSpacer)
 * [Anthead sherpa mini spacer](https://github.com/DraftShift/StealthChanger/tree/main/UserMods/Dweenz/AntheadSherpaMiniSpacer)
 * [Collection of Anthead mods by @N3MI](https://github.com/DraftShift/StealthChanger/tree/main/UserMods/N3MI-DG/Anthead_Mods)
 * [Improvements by @BrewNinja](https://github.com/DraftShift/StealthChanger/tree/main/UserMods/BrewNinja/Anthead)
 
+
 ## Dock
 * Dock width: 60mm
 
 ## Dock options
 * Original Draftshift Design [Anthead Back and Base](https://github.com/DraftShift/ModularDock/tree/main/STLs/Anthead)
+
 
 
 
