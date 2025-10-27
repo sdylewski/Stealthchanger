@@ -14,23 +14,14 @@ All parts (screws, magnets, etc) are Voron, and Voron Tap standards.
 5. [Sexball Probe](#sexball-probe)
 6. [Affiliate Links](#affiliate-links)
 
-## Shuttle
-
-- [3] 6x3mm magnets (N52 Highly recommended to counter the pull from the umbilicals)
-- [2] m3x6 BHCS (tap sensor)
-- [4] m3x6 BHCS head (mgn bolts) `m3x12 if used with the shuttle keeper`
-- [3] 4x6x6mm brass bushing (4mm id x 6mm od x 6mm tall)
-- [2] m3x40 SHCS (Optional: to stiffen the shuttle, **Fully threaded, no shoulder**)
-
 
 ## Backplates
 
 x1 per toolhead
 
+**The list bellow is in addition to the Stealthburner BOM above.**
 
-### All Tools
-
-**Note:** heatsets on the SB version in from the opposite side as the Voron instructions, slightly longer screws on the CW2 attachment may be required
+## Backplate BOM for All Tools
 
 - [4] m3 heat inserts
 - [3] Ø4x12mm ssRod (dowel pin) with a rounded end **(if it has female threads on the back it will be listed as an M3, but make sure the pin is 4mm OD, that is what is important. We recommend the threaded pins for better fixing)**
@@ -38,9 +29,6 @@ x1 per toolhead
 - [2] m3x6 or m3x8 FHCS (Flat head countersunk screw, MUST BE MAGNETIC. no stainless, as per TAP)
 - [1] [OptoTap](https://s.click.aliexpress.com/e/_DEGsGTV) (only the sensor PCB is required)
 - [1] m3x8 BHCS (optional in v1.1)
-
-
-**The list bellow is in addition to the Stealthburner BOM above.**
 
 
 ### Dragonburner/Rapidburner/Yavoth

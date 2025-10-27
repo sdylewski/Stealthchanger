@@ -19,7 +19,26 @@ parent: Toolheads
 * [Backplate assembly instructions](https://github.com/DraftShift/StealthChanger/blob/main/Manual/Stealthchanger_Assembly_Guide.pdf)
 * Requires supports. [Printing instructions](../Building/Printing.md)
 
+### Backplate BOM for All Tools
+
+- [4] m3 heat inserts
+- [3] Ø4x12mm ssRod (dowel pin) with a rounded end **(if it has female threads on the back it will be listed as an M3, but make sure the pin is 4mm OD, that is what is important. We recommend the threaded pins for better fixing)**
+- [1] 6x3mm magnet (N52 Highly recommended to counter the pull from the umbilicals. Note that most magnets not from a reputable source may say N52 but aren't actually. Recommend one of the two links below.)
+- [2] m3x6 or m3x8 FHCS (Flat head countersunk screw, MUST BE MAGNETIC. no stainless, as per TAP)
+- [1] [OptoTap](https://s.click.aliexpress.com/e/_DEGsGTV) (only the sensor PCB is required)
+- [1] m3x8 BHCS (optional in v1.1)
+
+### BOM Additions for Dragonburner
+- [1] m3x12 BHCS (optional to keep spacer in place)
+- [2] m3x35 SHCS
+- [2] m3 heat inserts
+- [2] m3x8 BHCS (optional in v1.1)
+- Several 5x2 or 5x3 N52 magnets to hold toolhead to dock (Highly recommended for non-magnetic docks)
+
+
 ## Toolhead Options & Mods
+**Note:** Dragonburner [extended mount](https://github.com/chirpy2605/voron/tree/main/general/Alternative_Voron_Mounts/Extended_Extruder_Mounts) is required depending on extruder
+
 * [TheSin's PCB36 mount and backplate](https://github.com/DraftShift/StealthChanger/tree/main/UserMods/TheSin-/PCB36_Mount) for Orbiter 2.5 and HGX Sherpa extruders. Needs [22mm standoffs](https://www.printables.com/model/1440113-m3-heatset-standoffs-10mm-30mm) for Oribiter 2 extruders. 
 * [NH36 Sock](https://github.com/DraftShift/StealthChanger/tree/main/UserMods/Nic335/NH36Sock) for board using theSin's PCB36 mount.
 * [Dragonburner numbered cowls](https://github.com/DraftShift/StealthChanger/tree/main/UserMods/traxman25) (non-magnetic)
@@ -44,7 +63,7 @@ parent: Toolheads
 ## Tips & Suggestions
 * NOTE: If you plan on using the Tapchanger Dragonburner dock you must use the [custom cowl by OstroMa](https://github.com/DraftShift/StealthChanger/blob/main/UserMods/OstroMa/DB_Cowl_v8_with_TapChanger_Dock_Hooks.stl). 
 
-We always recommend to use the original cowls when possible and the [Modular Dock](https://github.com/DraftShift/ModularDock) does not require any special Cowl, print the original from the Dragonburner repo.
+* We always recommend to use the original cowls when possible and the [Modular Dock](https://github.com/DraftShift/ModularDock) does not require any special Cowl, print the original from the Dragonburner repo.
 
 
 
