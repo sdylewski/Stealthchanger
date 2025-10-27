@@ -29,7 +29,7 @@ Depending on your situation, you can build your own with existing materials, or 
 
 ## Other
 
-* [Panorama top hat](https://github.com/Theaninova/panorama-tophat)
+* [Panorama top hat](https://github.com/Theaninova/panorama-tophat) ([discord link](https://discord.com/channels/1226846451028725821/1281961080771448943))
   
 
 ## Top Hat Accessories
@@ -50,5 +50,6 @@ Latches ensure the top hat stays on the printer securely and tightly, squishing 
 
 * [Top hat SC logo](https://github.com/DraftShift/StealthChanger/tree/main/UserMods/EddieSha04/Tophat%20SC%20LED%20Logo)
 * [Top hat panel clips](https://github.com/DraftShift/StealthChanger/tree/main/UserMods/EddieSha04/Tophat)
+
 
 
