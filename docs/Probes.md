@@ -61,6 +61,8 @@ Physical probes only works if the bore hole of your nozzle is exactly in the cen
 
 While it requires more manual alignment than a physical probe, aligning 5 toolheads is still done in a couple of minutes.
 
+The USB cable of the camera is not very long, you might want to consider adding a [USB keystone insert](https://www.printables.com/model/609433-voron-skirt-keystone-for-usbethernet) at the front to plug it in more easily.
+
 ### [Nudge](https://github.com/zruncho3d/nudge)
 <img src="media/Probes/Nudge.jpg" width="200"> Image from Nudge site.
 
@@ -94,6 +96,7 @@ No, `SAVE_CONFIG` will save your z-offset at the bottom of your printer.cfg, not
 
 ### My Nudge reports "endstop triggered before contact"
 Bad electrical connections. You need to use copper SHCS at least.  Check the resistance between the two output pins.
+
 
 
 
