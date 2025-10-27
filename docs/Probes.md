@@ -70,6 +70,10 @@ A buildable probe. @MajorHack built one with SS screws that didn't work, so copp
 
 // see calibration section for how to use it
 
+#### Mods
+
+* [2.4 Dockable Nudge Mount](https://github.com/DraftShift/StealthChanger/tree/main/UserMods/MRSalguod/2.4%20Dockable%20Nudge%20Mount)
+
 
 ### Using a printable calibration
 
@@ -96,6 +100,7 @@ No, `SAVE_CONFIG` will save your z-offset at the bottom of your printer.cfg, not
 
 ### My Nudge reports "endstop triggered before contact"
 Bad electrical connections. You need to use copper SHCS at least.  Check the resistance between the two output pins.
+
 
 
 
