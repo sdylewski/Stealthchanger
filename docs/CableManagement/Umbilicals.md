@@ -40,7 +40,8 @@ See Cable management for how to manage them at the back of the printer and conne
 * [PCB mounts for SHT36 v1, SHT36 v2, SHT36 v3, Nitehawk v1, Nitehawk v2, EBB and CNC HGX Sherpa, Orbitor2 extruders](https://github.com/DraftShift/StealthChanger/tree/main/UserMods/TheSin-/PCB36_Mount)
 * [Orbiter V2 BTT EBB36 carrier](https://github.com/DraftShift/StealthChanger/blob/main/UserMods/onsimon/README.md)
 * [EBB36 and Galileo 2 Standalone User Mod](https://github.com/DraftShift/StealthChanger/tree/main/UserMods/seenit783)
-* Pcb36 mount for ProtoXtruder 2.0 ([discord link](https://discord.com/channels/1226846451028725821/1373573718017708114))
+* [Pcb36 mount for ProtoXtruder 2.0](https://www.printables.com/model/1460801-ebb36-mount-protoextruder2stealthchanger) ([discord link](https://discord.com/channels/1226846451028725821/1373573718017708114))
+
 
 
 
