@@ -25,7 +25,7 @@ Extended Y so you don't lose build space by the docks
 
 ## Other
 
-* [Draftshift Design Calibration Cube](https://www.printables.com/model/1395530-draftshift-design-calibration-cube)
+* [Draftshift Design Calibration Cube](https://www.printables.com/model/1395530-draftshift-design-calibration-cube) or [similar](https://www.printables.com/model/1354713-stealthchanger-toolchanger-voron-design-calibratio)
 
 * [Mainsail toolchanger integration by @fackior](https://github.com/fakcior/mainsail), [extended with axiscope preview](https://github.com/drake7707/mainsail). ([discord link](https://discord.com/channels/1226846451028725821/1336074255078653963))
   
