@@ -30,6 +30,7 @@ parent: Toolheads
 
 * [PCB Mounting solution for Anthead with Sherpa Mini and EBB36](https://github.com/DraftShift/StealthChanger/tree/main/UserMods/MugenMicko/Anthead%20Sherpa%20Mini%20EBB%2036%20PCB%20Mount)
 * [PCB Mount for EBB36 with Sherpa Mini](https://github.com/DraftShift/StealthChanger/tree/main/UserMods/Tavroswyn/Anthead) (improves on the previous link)
+* [EBB36 mount for G2E extruder](https://github.com/MakerMylo/G2E_EBB36_Mount) ([discord link](https://discord.com/channels/1226846451028725821/1322647877197103146))
 * [Anthead nozzle led fixes](https://github.com/DraftShift/StealthChanger/tree/main/UserMods/Dweenz/Anthead%20nozzle%20led%20fixes)
 * [Anthead Orbiter spacer](https://github.com/DraftShift/StealthChanger/tree/main/UserMods/Dweenz/AntheadOrbiterSpacer)
 * [Anthead sherpa mini spacer](https://github.com/DraftShift/StealthChanger/tree/main/UserMods/Dweenz/AntheadSherpaMiniSpacer)
@@ -44,6 +45,7 @@ parent: Toolheads
 ## Dock options
 * Original Draftshift Design [Anthead Back and Base](https://github.com/DraftShift/ModularDock/tree/main/STLs/Anthead)
 * [Experimental dock](https://www.printables.com/model/1441043-stealthchanger-anthead-dock-for-corexy-experimenta) ([discord link](https://discord.com/channels/1226846451028725821/1426882245037391872))
+
 
 
 
