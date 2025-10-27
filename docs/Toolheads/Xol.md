@@ -6,6 +6,8 @@ parent: Toolheads
 <!-- Use the page layout at TOC.md:  https://github.com/sdylewski/StealthChanger/blob/main/docs/TOC.md -->
 # Xol Toolhead
 
+<img src="../media/Toolheads/Xol.png" width="150">
+
 ## Reference
 [Xol reference page](https://github.com/Armchair-Heavy-Industries/Xol-Toolhead)
 

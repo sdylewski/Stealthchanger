@@ -6,17 +6,12 @@ parent: Toolheads
 
 # Anthead
 
-<table>
-<tr><th>Toolhead</th><th>Details</th></tr>
-<tr><td valign=top><strong><a href="Anthead.md">AntHead<br>
-	<img src="../media/Toolheads/Anthead/Anthead.png" width=200></a></strong></td>
-	<td valign=top><ul><li>Popular and modern.</li>
-		<li>Uses 60mm wide docks</li>
-    <li>Can use stubby docks?</li>
-    <li>Default cowl and dock has built-in magnet holes for better docking</li>
-	</ul></td></tr>
+<img src="../media/Toolheads/Anthead.png" width=200>
 
-  </table>
+* Popular and modern.
+* Uses 60mm wide docks
+* Can use stubby docks?
+* Default cowl and dock has built-in magnet holes for better docking
 
 ## References
 [Anthead reference page](https://github.com/PrintersForAnts/AntHead)

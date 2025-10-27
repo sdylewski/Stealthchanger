@@ -6,6 +6,8 @@ parent: Toolheads
 <!-- Use the page layout at TOC.md:  https://github.com/sdylewski/StealthChanger/blob/main/docs/TOC.md -->
 # Yavoth Toolhead
 
+<img src="../media/Toolheads/Yavoth.png" width="200">
+
 ## Reference
 [Yavoth reference page](https://github.com/chirpy2605/voron/tree/main/V0/Yavoth)
 

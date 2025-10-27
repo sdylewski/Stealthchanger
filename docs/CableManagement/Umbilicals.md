@@ -6,18 +6,17 @@ parent: Electronics & Cable Management
 <!-- Use the page layout at TOC.md:  https://github.com/sdylewski/StealthChanger/blob/main/docs/TOC.md -->
 # Umbilicals
 
-## What
-
 Each tool uses a separate toolhead PCB that provides power and communication (either via CAN or USB). With several toolheads this quickly adds up in terms of spaghetti and can hook behind the frame or each other, tossing toolheads out of their docks or out of the shuttle if they are not properly managed.
 
-The current recommended option is [Umbilical plates V2](https://github.com/DraftShift/CableManagement/tree/main/UserMods/N3MI-DG/Umbilical_plates_V2) by @N3MI: . It replaces the exhaust plate with a plate configured for your specific setup, that way the umbilicals start their journey to the toolhead in the proper arc. A proper arc is necessary to separate each umbilical and prevent yanking the toolhead side to side, which is especially important when the tool gets dropped off into its dock. The umbilical should not yank the toolhead out of its dock or push the toolhead side to side which would misalign its pins with the shuttle and thus fail to pick up.
+[<img src="../media/CableManagement/N3MI_plate.jpg" width="400">](https://github.com/DraftShift/CableManagement/tree/main/UserMods/N3MI-DG/Umbilical_plates_V2)
+
+The current recommended option is [Umbilical plates V2](https://github.com/DraftShift/CableManagement/tree/main/UserMods/N3MI-DG/Umbilical_plates_V2) by @N3MI. It replaces the exhaust plate with a plate configured for your specific setup, that way the umbilicals start their journey to the toolhead in the proper arc. A proper arc is necessary to separate each umbilical and prevent yanking the toolhead side to side, which is especially important when the tool gets dropped off into its dock. The umbilical should not yank the toolhead out of its dock or push the toolhead side to side which would misalign its pins with the shuttle and thus fail to pick up.
 
 While piano wire was initially recommended to stiffen the umbilicals and keep its shape into an arc, 3mm x 0.3mm spring steel works much better at preventing torsion, the umbilicals sways to the side much less, which is very important when the tools are parked close together. Any entanglement will jostle the parked toolheads out of their dock position.
 
 Depending on your toolhead you want to find a cable relief for the umbilical to clamp to. You can terminate the spring steel at the toolhead, resulting in a stiffer arc, but induce more force on the toolhead which might push the nozzle forward or backwards. If you terminate the spring steel above the toolhead the force won't be on the toolhead itself but it might also not be stiff enough to prevent sway.
 
-// TODO what is recommended here anyway?
-
+## Toolhead cable attachment
 // TODO list common toolhead cable relief here
 
 

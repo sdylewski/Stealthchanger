@@ -43,17 +43,25 @@ Each toolhead page will contain specifics for the backplate, dock, and modificat
 ## [SV08](SV08.md)
 [<img src="../media/Toolheads/SV08.png" width=100>](SV08.md)
 
-* TBD
 		
 ## [XOL](XOL.md)
 [<img src="../media/Toolheads/Xol.png" width=100>](XOL.md)
 
- * TBD
+* 76mm wide dock
 
 ## [Yavoth](Yavoth.md)
-[<img src="../media/Toolheads/yavoth.png" width=200>](Yavoth.md)
+[<img src="../media/Toolheads/yavoth.png" width=100>](Yavoth.md)
 
-* TBD
+* 60mm wide dock
+
+## [Mini StealthBurner](MiniSB.md)
+[<img src="../media/Toolheads/MiniSB.png" width=80>](MiniSB.md)
+
+* 60mm wide dock
+
+## [Blackbird](Blackbird.md)
+
+* 76mm wide dock
 
 
 ## Selecting a new toolhead?

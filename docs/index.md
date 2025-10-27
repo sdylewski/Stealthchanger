@@ -25,8 +25,9 @@ The stealthchanger system consists of multiple parts. Some are essential, some h
 
 <img src="media/CableManagement/LDO_Stealthchanger_back_annotated.png" width="400"/>
 
-## [Shuttle](Shuttle.md) & [Toolhead Backplate](Toolheads.md)
-<img src="media/Shuttle/shuttle.jpg" width="200" />
+## [Shuttle](Shuttle.md) & [Toolhead Backplate](Toolheads/Toolheads.md)
+<img src="media/Shuttle/shuttle.jpg" width="200" /> &nbsp;
+<img src="media/Shuttle/shuttle_manual_docking.gif" width="350">
 
 The shuttle replaces your Voron shuttle with one that has bushings to connect to the backplate of each toolhead. Backplates and docks are available for the following toolheads:
 
@@ -37,17 +38,19 @@ The shuttle replaces your Voron shuttle with one that has bushings to connect to
 * [SV08](Toolheads/SV08.md)
 * [Yavoth](Toolheads/Yavoth.md)
 * [XOL](Toolheads/XOL.md)
+* [Mini Stealthburner](Toolheads/MiniSB.md)
+* [Blackbird](Toolheads/Blackbird.md)
 
 See the <a href="Toolheads/Toolheads.md">Toolheads</a> page for a comparison of each toolhead.
    
-## [Modular Dock](Docks.md)
+## [Dock, Crossbar, and Door Buffer](Docks.md)
 <img src="media/Dock/dock_front.png" width="400" />
 
-This mounts to the top front of your printer to hold/dock the toolheads when not in use. May also contain a crossbar at the bottom of the dock. Some docks just use the crossbar.
+The modular dock mounts to the top front of your printer to hold/dock the toolheads when not in use. May also contain a crossbar at the bottom of the dock. Some docks just use the crossbar.
 
 * [Modular Dock](Docks.md)
 * [Crossbar (optional)](Docks.md)
-* [Door buffer (optional)](Docks) Needed if mounting crossbar to front of frame.  
+* [Door buffer (optional)](Docks.md) Needed if mounting crossbar to front of frame.  
   
 ## [Electronics & Cable Management]()
 <img src="media/CableManagement/wire_management.jpg" width="180" />
@@ -57,7 +60,7 @@ Power and data needs to be distributed from your main board to each toolhead, al
 
 * [Backpack & Electrical Distribution](CableManagement/ElectricalDistribution.md)
 * [Umbilicals](CableManagement/Umbilicals.md) and exhaust plates
-* [Power Supply](Electronics_CablesPower.md)
+* [Power Supply](CableManagement/Power.md)
 * [Filament management](CableManagement/FilamentManagement.md)
   
 ## [Top Hat](TopHat.md)
@@ -74,27 +77,34 @@ Physical probes are used to measure the X and Y offsets of your tools relative t
 * [Endstops](Endstops.md) for X and Y gantry endstops
     
    
-## [Klipper Toolchanger](Software.md)
+## [Klipper Toolchanger](SoftwareAndConfig/Software.md)
 <img src="media/Logos/klipper_toolchanger_logo.png" width="180" />
 
 Klipper needs to be toolchanger aware with added code.
 
-* [Klipper Toolchanger Installation](Installation.md)
-* [Configuration](Configuration.md)
-* [Calibration](Calibration.md)
-* [Slicers](Slicers.md)
+* [Klipper Toolchanger Installation](SoftwareAndConfig/Installation.md)
+* [Configuration](SoftwareAndConfig/Configuration.md)
+* [Calibration](SoftwareAndConfig/Calibration.md)
+* [Slicers](SoftwareAndConfig/Slicers.md)
 
 
 # Building
-### Vendors and Kits
-### Checklist
-### Pringing
-### Cost calculator
+This is a challenging build/conversion, even for existing experienced Voron owners. Expect it to take a while, to re-print things frequently, and have to order random parts that you forgot the first time. 
 
-[This](https://docs.google.com/spreadsheets/d/1cjlZ4xi84sUbo09nV3CDkOrLjz3leInTZ9sxwSzPscE) is an approximate cost calculator for building a StealthChanger with x number of toolheads. It assumes you have a working Voron 2.4 and this does not include top hat extrusions,panels.
+### [Vendors and Kits](Building/Building.md)
+### [Checklist](Building/Checklist.md)
+### [Printing](Building/Printing.md)
+### [Cost calculator](https://docs.google.com/spreadsheets/d/1cjlZ4xi84sUbo09nV3CDkOrLjz3leInTZ9sxwSzPscE)
+
+MikeyMike created an [approximate cost calculator](https://docs.google.com/spreadsheets/d/1cjlZ4xi84sUbo09nV3CDkOrLjz3leInTZ9sxwSzPscE) for building a StealthChanger with x number of toolheads. It assumes you have a working Voron 2.4 and this does not include top hat extrusions,panels.
 
 
+# [Support](Support/Support.md)
 
+* [Contributing & Donating](Support/Contributing-and-Donating.md)
+* [Serials](Support/Serials.md)
+* [Team & Credits](Support/Team-and-Credits.md)
+* What to tell your partner 
 
 
 

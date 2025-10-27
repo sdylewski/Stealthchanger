@@ -17,7 +17,7 @@ parent: Toolheads
 * Draftshift Design [Dragonburner Backplate](https://github.com/DraftShift/StealthChanger/blob/main/STLs/Backplates/DragonBurner.stl) (no connection to toolhead board)
 * [Dragonburner spacer](https://github.com/DraftShift/StealthChanger/blob/main/STLs/Backplates/DragonBurner_Spacer.stl) (Required. goes between backplate and toolhead).
 * [Backplate assembly instructions](https://github.com/DraftShift/StealthChanger/blob/main/Manual/Stealthchanger_Assembly_Guide.pdf)
-* Requires supports. [Printing instructions](../Printing.md)
+* Requires supports. [Printing instructions](../Building/Printing.md)
 
 ## Toolhead Options & Mods
 * [TheSin's PCB36 mount and backplate](https://github.com/DraftShift/StealthChanger/tree/main/UserMods/TheSin-/PCB36_Mount) for Orbiter 2.5 and HGX Sherpa extruders. Needs [22mm standoffs](https://www.printables.com/model/1440113-m3-heatset-standoffs-10mm-30mm) for Oribiter 2 extruders. 
@@ -29,7 +29,7 @@ parent: Toolheads
 
 ## Dock
 * Dock width: 60mm
-* Common components for [your dock type](.../Dock.md)
+* Common components for [your dock type](../Docks.md)
 * [Modular dock assembly guide](https://github.com/DraftShift/ModularDock/blob/main/Manual/ModularDock_Assembly_Guide.pdf)
 * Dragonburner can use stubby docks
 
