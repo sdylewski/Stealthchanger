@@ -11,7 +11,7 @@ parent: StealthChanger Components
 The team has created their own dock as a solution. It allows for mounting from both the top bar, as well as a crossbar (or both). Currently all docks used with [Viesturz's Tapchanger](https://github.com/viesturz/tapchanger) are compatible.
 
 ### References
-* Modular dock: [Draftshift Modular Dock](https://github.com/DraftShift/ModularDock">Draftshift Modular Dock)
+* Modular dock: [Draftshift Modular Dock](https://github.com/DraftShift/ModularDock)
 * [Modular Dock Assembly Guide](https://github.com/DraftShift/ModularDock/blob/main/Manual/ModularDock_Assembly_Guide.pdf)
 
 
@@ -60,7 +60,10 @@ A crossbar is recommended for stability, but there are options for how to mount 
 * Requires several printed braces & links to help stabilize the docks
 * No need for <a href="https://github.com/DraftShift/DoorBuffer">door buffer</a>
 
+### Other crossbar mods
 
+* [Monolith crossbar](https://github.com/DraftShift/ModularDock/tree/main/UserMods/MikeYankeeOscarBeta/Monolith_Crossbar)
+  
 ## Crossbar dimensions
 
 #### Crossbar mounted <em>outside</em> front extrusions:
@@ -128,5 +131,6 @@ Thankfully no, your gantry can stay in place, you just need to disconnect the fr
 ### I installed MiniBFI but I don't have enough margin to tension the belts correctly
 Make sure you keep tension in the belts while installing the shuttle with the [belt helper](https://github.com/DraftShift/StealthChanger/tree/main/STLs/Extras/BeltHelper)
 ![PXL_20241210_083455271_preview](media/Shuttle/beltkeeper.jpg)
+
 
 
