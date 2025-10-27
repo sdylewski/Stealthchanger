@@ -8,6 +8,18 @@ nav_order: 3
 
 # Software
 
+Congratulations!  You've built a StealthChanger with at least 1 toolhead and/or dock, and you're ready for the *real* fun?  This will guide you through the process of installing, configuring, and calibrating your printer to get your first multi-colored print.
+
+##Process
+
+### 1. [Install](Installation.md) Klilpper-toolchanger
+### 2. [Configure](Configuration.md) all your parameters for each toolhead
+### 3. [Calibrate](Calibration.md) your Z offsets, toolhead XY offsets, and dock locations.
+### 4. [Setup your slicer](Slicers.md) and print-start macros
+### 5. Print!
+
+
+
 this page should give an overview of the software, plus:
 * Detailed klipper-toolchanger and/or KTE install instructions
 * Any configureation needed for the SW
@@ -24,6 +36,7 @@ Sounds like I should use "Klipper-toolchanger-easy" instead of the default repo.
 * LEDs: [Example from Draftshift](https://github.com/DraftShift/klipper-toolchanger?tab=readme-ov-file) designs page
 * [LED Effects](https://github.com/julianschill/klipper-led_effect) TBD
 
+# FAQ
 SW Setup issues:
 * if using "fan0 or fan2" from slicer, need to change those back to named fans.
 

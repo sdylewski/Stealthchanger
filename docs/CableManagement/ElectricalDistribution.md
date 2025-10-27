@@ -79,6 +79,11 @@ Make sure that the V_in and GND wire that goes from the PSU to your wago's or di
 
 Unless the toolheads are daisy chained together the CAN bus is more of a CAN star network. That is out of spec but is usually fine. Terminate the CAN bus with 2 termination resistors (usually you have jumpers for that) as usual, one on the main board, one on one of the toolheads. Omit the jumper on the rest of the toolheads to prevent reducing the resistance between CAN L and CAN H.
 
+
+**Example CANbus layout**
+
+![Example CANbus Layout](../media/CableManagement/can_example.jpg)
+
 If you have SB2209s however you might need to add more termination resistors. Add one termination resistor at the time and test if all the boards get picked up, if not add more or move them around, it's unclear what's causing the SB2209 to be more sensitive to reflections, other boards don't have this issue.
 
 Other common issues are usually resolved by going through [Esoterical's CAN guide](https://canbus.esoterical.online/), it's the same process for each toolhead.

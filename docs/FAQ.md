@@ -5,7 +5,8 @@ parent: Support
 ---
 <!-- Use the page layout at TOC.md:  https://github.com/sdylewski/StealthChanger/blob/main/docs/TOC.md -->
 
-(original page, needs to be updated)
+FAQs have been added to the end of individual pages.  This page may go away ???
+
 
 1. [Methods](#methods)
 2. [FAQs](#faqs)

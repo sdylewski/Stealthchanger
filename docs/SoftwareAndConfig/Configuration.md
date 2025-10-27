@@ -9,7 +9,8 @@ parent: Software & Configuration
 
 
 
-Toolchangers start with number 0, and count up. So for all the configs, make sure you change all sections. IE, in your T1 config, make sure its extruder1, fan1, etc. See the examples.  **NOTE: The only except to this rule is T0 extruder has no number.**
+Toolchangers start with number 0, and count up. So for all the configs, make sure you change all sections. IE, in your T1 config, make sure its extruder1, fan1, etc. See the examples.  
+**NOTE: The only exception to this rule is T0 extruder has no number.**
 
 1. [Toolhead Configuration](#toolheads-configuration)
 2. [CANbus](#canbus)
@@ -30,13 +31,6 @@ You need to have a separate toolhead config for each toolhead, then link those i
 
 **NOTE:** `_PARK_ON_COOLING_PAD` is a useless macro in `PRINT_START` in `macros.cfg` please make sure to comment out or remove that line, currently it is line 129.
 
-## CANbus
-
-[Esoterical CANbus](https://github.com/Esoterical/voron_canbus) this is a pretty definitive guide for canbus implementation on klipper.
-
-**Example CANbus layout**
-
-![Example CANbus Layout](https://github.com/DraftShift/StealthChanger/blob/main/media/can_example.jpg?raw=true)
 
 ## Offsets
 
