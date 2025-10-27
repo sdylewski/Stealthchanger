@@ -1,6 +1,6 @@
 ---
 title: Other mods
-nav_order: 1
+nav_order: 8
 parent: StealthChanger Components
 ---
 
