@@ -19,6 +19,8 @@ Installing a wiper near the bed and have a CLEAN_NOZZLE macro after the initial 
 The beacon/carto is mounted on the shuttle, so the shuttle will require an extra umbilical
 // TODO
 
+* [Carto mounts for CNC shuttles](https://github.com/DraftShift/StealthChanger/tree/main/UserMods/N3MI-DG/Carto_Mounts)
+
 ### Eddy
 // TODO (requires modification to Klipper code iirc)
 
@@ -104,6 +106,7 @@ No, `SAVE_CONFIG` will save your z-offset at the bottom of your printer.cfg, not
 
 ### My Nudge reports "endstop triggered before contact"
 Bad electrical connections. You need to use copper SHCS at least.  Check the resistance between the two output pins.
+
 
 
 
