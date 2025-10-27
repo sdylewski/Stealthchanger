@@ -25,6 +25,7 @@ parent: Toolheads
 * [Dragonburner numbered cowls](https://github.com/DraftShift/StealthChanger/tree/main/UserMods/traxman25) (non-magnetic)
 * [Dragonburner cowl mods](https://github.com/DraftShift/StealthChanger/blob/main/UserMods/OstroMa/README.md)
 * [Dragon Burner EBB36 mount for the Orbiter2.0 extruder](https://github.com/DraftShift/StealthChanger/blob/main/UserMods/cekim/Readme.md)
+* [Dragonburner Orbiter  EBB36 mount](https://github.com/DraftShift/StealthChanger/tree/main/UserMods/traxman25/Dragonburner_EBB36_SC_Mount)
 
 ## Dock
 * Dock width: 60mm
@@ -42,4 +43,5 @@ parent: Toolheads
 * NOTE: If you plan on using the Tapchanger Dragonburner dock you must use the [custom cowl by OstroMa](https://github.com/DraftShift/StealthChanger/blob/main/UserMods/OstroMa/DB_Cowl_v8_with_TapChanger_Dock_Hooks.stl). 
 
 We always recommend to use the original cowls when possible and the [Modular Dock](https://github.com/DraftShift/ModularDock) does not require any special Cowl, print the original from the Dragonburner repo.
+
 
