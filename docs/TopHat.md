@@ -44,12 +44,13 @@ With hinges you can open and close the top hat like a box
 Latches ensure the top hat stays on the printer securely and tightly, squishing the foam between the top hat and the frame to create an air tight seal.
 
 * [2020 Extrusion Latch for Voron Top-Hat or Fridge Door with M3 Screw ](https://www.printables.com/model/1271104-2020-extrusion-latch-for-voron-top-hat-or-fridge-d)
-* 
+* [Annex style tophat connector](https://www.printables.com/model/931249-annex-style-extrusion-connector) ([discord link](https://discord.com/channels/1226846451028725821/1257927419596116040))
 
 ### Other mods
 
 * [Top hat SC logo](https://github.com/DraftShift/StealthChanger/tree/main/UserMods/EddieSha04/Tophat%20SC%20LED%20Logo)
 * [Top hat panel clips](https://github.com/DraftShift/StealthChanger/tree/main/UserMods/EddieSha04/Tophat)
+
 
 
 
