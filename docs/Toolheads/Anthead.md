@@ -45,6 +45,8 @@ parent: Toolheads
 ## Dock options
 * Original Draftshift Design [Anthead Back and Base](https://github.com/DraftShift/ModularDock/tree/main/STLs/Anthead)
 * [Experimental dock](https://www.printables.com/model/1441043-stealthchanger-anthead-dock-for-corexy-experimenta) ([discord link](https://discord.com/channels/1226846451028725821/1426882245037391872))
+* [Minimal docks](https://www.printables.com/model/1110182-stealthchanger-anthead-minimal-docks)
+
 
 
 
