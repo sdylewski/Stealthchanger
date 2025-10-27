@@ -6,17 +6,15 @@ parent: Toolheads
 <!-- Use the page layout at TOC.md:  https://github.com/sdylewski/StealthChanger/blob/main/docs/TOC.md -->
 # MiniSB Toolhead
 
-
-## References
-// TODO more info
-
 ## Backplate
 
-[Backplate by @jdm](../UserMods/jdmontgomer/MiniSB_SC/README.md)
+[Backplate by @jdm](../../UserMods/jdmontgomer/MiniSB_SC/README.md)
 
-
-## Toolhead Options & Mods
-// TODO more info
 
 ## Dock
-// TODO more info
+* Dock width: 60mm
+
+## Dock options:
+
+* Original Drafshift Design [MiniSB Back and base](https://github.com/DraftShift/ModularDock/tree/main/STLs/MiniSB)
+  
