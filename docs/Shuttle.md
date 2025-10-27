@@ -112,5 +112,6 @@ Sometimes the bushings aren't debured or do not slide well when you recieve them
 
 * [Split keeper for 9mm belts/monolith](https://github.com/DraftShift/StealthChanger/tree/main/UserMods/BT123/Split%20Keeper)
 * [Belt helper 3mm spacing for Micron/V0](https://github.com/DraftShift/StealthChanger/tree/main/UserMods/N3MI-DG/Belt_Helper_3mm)
-* [Shuttle with 5.5mm OD bushings](https://github.com/DraftShift/StealthChanger/blob/main/UserMods/traxman25/Bushings_5.5/README.md)
+* [Belt lock](https://github.com/MikeYankeeOscarBeta/belt_lock)
+* DO NOT USE, REQUIRES UPDATE TO V1.1: ~~[Shuttle with 5.5mm OD bushings](https://github.com/DraftShift/StealthChanger/blob/main/UserMods/traxman25/Bushings_5.5/README.md)~~
   
