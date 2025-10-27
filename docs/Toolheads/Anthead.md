@@ -35,6 +35,7 @@ parent: Toolheads
 * [Anthead sherpa mini spacer](https://github.com/DraftShift/StealthChanger/tree/main/UserMods/Dweenz/AntheadSherpaMiniSpacer)
 * [Collection of Anthead mods by @N3MI](https://github.com/DraftShift/StealthChanger/tree/main/UserMods/N3MI-DG/Anthead_Mods)
 * [Improvements by @BrewNinja](https://github.com/DraftShift/StealthChanger/tree/main/UserMods/BrewNinja/Anthead)
+* [Numbered cowls](https://github.com/DraftShift/StealthChanger/tree/main/UserMods/traxman25/Ant%20Head)
 
 
 ## Dock
@@ -42,6 +43,7 @@ parent: Toolheads
 
 ## Dock options
 * Original Draftshift Design [Anthead Back and Base](https://github.com/DraftShift/ModularDock/tree/main/STLs/Anthead)
+
 
 
 
