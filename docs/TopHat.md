@@ -44,3 +44,5 @@ Latches ensure the top hat stays on the printer securely and tightly, squishing 
 ### Other mods
 
 * [Top hat SC logo](https://github.com/DraftShift/StealthChanger/tree/main/UserMods/EddieSha04/Tophat%20SC%20LED%20Logo)
+* [Top hat panel clips](https://github.com/DraftShift/StealthChanger/tree/main/UserMods/EddieSha04/Tophat)
+
