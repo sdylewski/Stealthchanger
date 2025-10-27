@@ -111,4 +111,5 @@ Sometimes the bushings aren't debured or do not slide well when you recieve them
 ## Mods
 
 * [Split keeper for 9mm belts/monolith](https://github.com/DraftShift/StealthChanger/tree/main/UserMods/BT123/Split%20Keeper)
+* [Belt helper 3mm spacing for Micron/V0](https://github.com/DraftShift/StealthChanger/tree/main/UserMods/N3MI-DG/Belt_Helper_3mm)
   
