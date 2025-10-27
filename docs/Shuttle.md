@@ -108,4 +108,7 @@ Sometimes the bushings aren't debured or do not slide well when you recieve them
   
 [![Bushing Cleaning](https://img.youtube.com/vi/AHlydBsMJro/0.jpg)](https://www.youtube.com/watch?v=AHlydBsMJro)
 
+## Mods
 
+* [Split keeper for 9mm belts/monolith](https://github.com/DraftShift/StealthChanger/tree/main/UserMods/BT123/Split%20Keeper)
+  
