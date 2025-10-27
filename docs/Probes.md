@@ -59,6 +59,7 @@ Alternatively you can purchase check on our official [vendors list](Building/Ven
 #### Mods
 
 * [Sexball top mount](https://github.com/DraftShift/StealthChanger/tree/main/UserMods/Dumplap/SexBolt%202020%20Top%20Mount)
+* [Sexball rest mount](https://www.printables.com/model/1094209-sexball-probe-rest-mount-for-stealthchanger-calibr)
 * [Alternative with 4mm dowels instead of ball](https://www.printables.com/model/1073728-shorter-multi-tool-calibration-probe-with-4mm-dowe) ([discord link](https://discord.com/channels/1226846451028725821/1306506750509449258))
 
 ### [Axiscope](https://github.com/nic335/Axiscope)
@@ -107,6 +108,7 @@ No, `SAVE_CONFIG` will save your z-offset at the bottom of your printer.cfg, not
 
 ### My Nudge reports "endstop triggered before contact"
 Bad electrical connections. You need to use copper SHCS at least.  Check the resistance between the two output pins.
+
 
 
 
