@@ -38,12 +38,14 @@ parent: Toolheads
 * [Dragonburner magnetic dock](https://www.printables.com/model/1431016-stealthchanger-dragon-burner-modular-dock-6-mag) (no uprights needed)
 * DraftShift official [Stubby base](https://github.com/DraftShift/ModularDock/tree/main/STLs/Dragonburner)
 * Angry docks for magnetic Dragonburner ([discord link](https://discord.com/channels/1226846451028725821/1372881432187506739))
+* [Screw docks](https://www.printables.com/model/911717-stealthchanger-screw-docks) (for hooking on toolheads)
 
 
 ## Tips & Suggestions
 * NOTE: If you plan on using the Tapchanger Dragonburner dock you must use the [custom cowl by OstroMa](https://github.com/DraftShift/StealthChanger/blob/main/UserMods/OstroMa/DB_Cowl_v8_with_TapChanger_Dock_Hooks.stl). 
 
 We always recommend to use the original cowls when possible and the [Modular Dock](https://github.com/DraftShift/ModularDock) does not require any special Cowl, print the original from the Dragonburner repo.
+
 
 
 
