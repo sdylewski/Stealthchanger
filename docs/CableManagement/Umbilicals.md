@@ -17,7 +17,9 @@ While piano wire was initially recommended to stiffen the umbilicals and keep it
 Depending on your toolhead you want to find a cable relief for the umbilical to clamp to. You can terminate the spring steel at the toolhead, resulting in a stiffer arc, but induce more force on the toolhead which might push the nozzle forward or backwards. If you terminate the spring steel above the toolhead the force won't be on the toolhead itself but it might also not be stiff enough to prevent sway.
 
 ## Toolhead cable attachment
-// TODO list common toolhead cable relief here
+Most toolhead boards will have an area to zip-tie your cable to. 
+ 
+* [Umbilical Sock for NiteHawks36](https://github.com/DraftShift/StealthChanger/tree/main/UserMods/Nic335/NH36Sock)
 
 
 ## Length of the umbilical
@@ -34,9 +36,7 @@ See Cable management for how to manage them at the back of the printer and conne
 ## Mods
 
 * [N3MI 4-port Exhaust Plate for Stealthchanger with 7 segment LED](https://www.printables.com/model/1452047-n3mi-4-port-exhaust-plate-for-stealthchanger-with)
-  
-* [Umbilical Sock for NiteHawks36](https://github.com/DraftShift/StealthChanger/tree/main/UserMods/Nic335/NH36Sock)
-* [PCB mounts for SHT36 v1, SHT36 v2, SHT36 v3, Nitehawk v1, Nitehawk v2, EBB and CNC HGX Sherpa, Orbitor2 extruders](https://github.com/DraftShift/StealthChanger/tree/main/UserMods/TheSin-/PCB36_Mount)
+* (Recommended) [PCB mounts for SHT36 v1, SHT36 v2, SHT36 v3, Nitehawk v1, Nitehawk v2, EBB and CNC HGX Sherpa, Orbitor2 extruders](https://github.com/DraftShift/StealthChanger/tree/main/UserMods/TheSin-/PCB36_Mount)
 * [Orbiter V2 BTT EBB36 carrier](https://github.com/DraftShift/StealthChanger/blob/main/UserMods/onsimon/README.md)
 * [EBB36 and Galileo 2 Standalone User Mod](https://github.com/DraftShift/StealthChanger/tree/main/UserMods/seenit783)
 * [Pcb36 mount for ProtoXtruder 2.0](https://www.printables.com/model/1460801-ebb36-mount-protoextruder2stealthchanger) ([discord link](https://discord.com/channels/1226846451028725821/1373573718017708114))

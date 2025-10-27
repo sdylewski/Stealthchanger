@@ -52,7 +52,7 @@ The modular dock mounts to the top front of your printer to hold/dock the toolhe
 * [Crossbar (optional)](Docks.md)
 * [Door buffer (optional)](Docks.md) Needed if mounting crossbar to front of frame.  
   
-## [Electronics & Cable Management]()
+## [Electronics & Cable Management](CableManagement/CableManagement.md)
 <img src="media/CableManagement/wire_management.jpg" width="180" />
 
 Lots of toolheads mean lots of extra wires and filament that needs to be managed properly. With the umbilicals going to the exhaust port there are several options to connect them and to clean up the bundle with a "backpack" mounted on the back of the printer.
@@ -91,8 +91,9 @@ Klipper needs to be toolchanger aware with added code.
 # Building
 This is a challenging build/conversion, even for existing experienced Voron owners. Expect it to take a while, to re-print things frequently, and have to order random parts that you forgot the first time. 
 
-### [Vendors and Kits](Building/Building.md)
 ### [Checklist](Building/Checklist.md)
+### [Vendors and Kits](Building/Vendors-and-Kits.md)
+### [Bill of Materials](Building/Bill-of-Materials.md)
 ### [Printing](Building/Printing.md)
 ### [Cost calculator](https://docs.google.com/spreadsheets/d/1cjlZ4xi84sUbo09nV3CDkOrLjz3leInTZ9sxwSzPscE)
 
@@ -101,10 +102,9 @@ MikeyMike created an [approximate cost calculator](https://docs.google.com/sprea
 
 # [Support](Support/Support.md)
 
-* [Contributing & Donating](Support/Contributing-and-Donating.md)
-* [Serials](Support/Serials.md)
-* [Team & Credits](Support/Team-and-Credits.md)
-* What to tell your partner 
-
+### [Contributing & Donating](Support/Contributing-and-Donating.md)
+### [Serials](Support/Serials.md)
+### [Team & Credits](Support/Team-and-Credits.md)
+### TBD: How to convince your partner to go along with this project.
 
 

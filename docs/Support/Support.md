@@ -17,6 +17,7 @@ Also, see the FAQ at the bottom of individual topics throughout this web page.
 
 ## User Logs
 * [Drakara has some great notes](https://github.com/drake7707/Drakarah3DPrinter/blob/main/README.md) from their build
+* [Cergs How to StealthChanger](https://github.com/EasterWorks/Cergs-Stealthchanger/tree/main) 
 
 ## What to tell your partner 
 ... about why they haven't come out of your work area in a month.

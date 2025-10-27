@@ -6,7 +6,7 @@ parent: StealthChanger Components
 <!-- Use the page layout at TOC.md:  https://github.com/sdylewski/StealthChanger/blob/main/docs/TOC.md -->
 <!-- This page has the liquid html rendering image off so the gcode renders properly -->
 
-# What 
+# XY Endstops
 
 The gantry needs to home its X and Y position, preferably with repeated accuracy as the X,Y position becomes important to pick up and drop off toolheads properly.
 
@@ -16,16 +16,34 @@ The X endstop on a toolhead will no longer work so that needs to be relocated or
 
 ## Sensorless homing
 
-Most common, easiest, just fiddly to get right, especially with TMC5160 drivers.
-https://docs.vorondesign.com/tuning/sensorless.html
+Most common, easiest, just fiddly to get right, especially with TMC5160 drivers. It's easier to get X working first, and use a microswitch for Y.
+
+[https://docs.vorondesign.com/tuning/sensorless.html](https://docs.vorondesign.com/tuning/sensorless.html)
 
 
 ## Relocation mod
 This moves X and Y endstops to the motor mount, there are a couple of options:
+(show pictures of each?)
 
-* [DraftShift Design](https://github.com/DraftShift/StealthChanger/tree/main/STLs/Endstops)
-* [Endstop by Vin-Y](https://github.com/sdylewski/StealthChanger/tree/main/UserMods/VIN-y/Endstops)
-* [Endstop mounts for printed and CNC shuttle](https://github.com/DraftShift/StealthChanger/tree/main/UserMods/N3MI-DG/Endstop_Mounts)
+### [Endstop mounts for printed and CNC shuttle (N3MI)](https://github.com/DraftShift/StealthChanger/tree/main/UserMods/N3MI-DG/Endstop_Mounts)
+[<img src="media/Probes/N3MI_XY_endstop_switch.jpg" width="200">]
+(https://github.com/DraftShift/StealthChanger/tree/main/UserMods/N3MI-DG/Endstop_Mounts)
+
+Relocates the X and Y endstop switches to the A motor
+
+### [DraftShift Design](https://github.com/DraftShift/StealthChanger/tree/main/STLs/Endstops)
+[<img src="media/Probes/DraftShift_a_motor_switches.jpg" width="200">]
+(https://github.com/DraftShift/StealthChanger/tree/main/STLs/Endstops)
+
+Relocates the X and Y endstop switches to the A motor 
+
+### [Endstop by Vin-Y](https://github.com/DraftShift/StealthChanger/tree/main/UserMods/VIN-y/Endstops)
+[<img src="media/Probes/Endstop_assembly_Vin-Y.jpg" width="200">]
+(https://github.com/DraftShift/StealthChanger/tree/main/UserMods/VIN-y/Endstops)
+
+Relocates the X and Y endstop switches to the A motor
+
+
   
 ## Endstop repeatability macro 
 By @Contomo

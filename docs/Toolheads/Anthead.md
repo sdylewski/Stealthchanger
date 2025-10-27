@@ -14,7 +14,8 @@ parent: Toolheads
 * Default cowl and dock has built-in magnet holes for better docking
 
 ## References
-[Anthead reference page](https://github.com/PrintersForAnts/AntHead)
+* [Anthead reference page](https://github.com/PrintersForAnts/AntHead)
+* [N3MI's build guide for Anthead](https://github.com/N3MI-DG/sc-guides/tree/main/Anthead)
 
 
 ## Backplate

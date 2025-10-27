@@ -18,8 +18,8 @@ Lots of toolheads mean lots of extra wires and filament that needs to be managed
 
 # FAQ
 
-### I'm getting a lot of TTCs, what gives
-There are several possible reasons for Timer Too Close errors from Klipper:
+### I'm getting a lot of "Timer Too Close" errors, what gives?
+There are several possible reasons for Timer Too Close (TTC) errors from Klipper:
 
 1. Your host is doing too much work: **CPU load is high** and Klipper can't process messages in time. Make sure you don't run too many things, assign Klipper to a separate core and run the host with the performance governor so CPU doesn't scale down in speed. Also make sure your host isn't overheating, the CPU throttles if it does.
 
@@ -35,7 +35,7 @@ LED effects will greatly increase the number of messages the CAN bus has to proc
 Make sure you have 60ohms (if possible) between CAN high and CAN low, any less and noise might muddy up the signals, causing retransmits and potentially not having messages processed in time. Have only 2 termination resistors on the bus (unless you have SB2209s which might need more). See [CAN termination layout and common issues](../CableManagement/ElectricalDistribution.md#can-termination-layout-and-common-issues).
   
 6. You've angered the 3d printer gods:
-Try praying?
+Try praying or sacrifice an Ender3 in the parking lot.
 
 
 
