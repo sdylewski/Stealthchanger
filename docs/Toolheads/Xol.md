@@ -22,4 +22,5 @@ parent: Toolheads
 ## Dock options:
 
 * Original Drafshift Design [Xol Back and base](https://github.com/DraftShift/ModularDock/tree/main/STLs/XOL)
+* [Xol Magdock adapter](https://github.com/DraftShift/ModularDock/tree/main/UserMods/MikeYankeeOscarBeta/Xol_magdock_adapter) and [Xol Magdock feet](https://github.com/DraftShift/ModularDock/tree/main/UserMods/MikeYankeeOscarBeta/Xol_magdock_feet)
   
