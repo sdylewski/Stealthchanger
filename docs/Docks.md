@@ -99,6 +99,10 @@ For crossbars mounted outside the front extrusions, you need to use the door buf
 * Door buffer for [2-hinge CNC doors](https://github.com/DraftShift/DoorBuffer/tree/main/UserMods/Dumplap) from CHAOTICLAB
 * [Other user mods](https://github.com/DraftShift/DoorBuffer/tree/main/UserMods)
 
+
+## Other Dock mods
+* [Parallel dock for Trident SC](https://github.com/angelassie/Parallel-Dock-for-Trident-Stealthchanger)
+  
 # FAQ
 
 ### Moving from and to the dock is so slow
@@ -131,6 +135,7 @@ Thankfully no, your gantry can stay in place, you just need to disconnect the fr
 ### I installed MiniBFI but I don't have enough margin to tension the belts correctly
 Make sure you keep tension in the belts while installing the shuttle with the [belt helper](https://github.com/DraftShift/StealthChanger/tree/main/STLs/Extras/BeltHelper)
 ![PXL_20241210_083455271_preview](media/Shuttle/beltkeeper.jpg)
+
 
 
 
