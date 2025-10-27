@@ -28,3 +28,4 @@ Extended Y so you don't lose build space by the docks
 
 * [Mainsail toolchanger integration by @fackior](https://github.com/fakcior/mainsail), [extended with axiscope preview](https://github.com/drake7707/mainsail). ([discord link](https://discord.com/channels/1226846451028725821/1336074255078653963))
   
+* [Clicky clack side door](https://github.com/DraftShift/DoorBuffer/tree/main/UserMods/MikeYankeeOscarBeta/Doorbuffer_Clicky-Clack_Side_Door) to get your large prints out through the side
