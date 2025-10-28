@@ -25,25 +25,33 @@ The beacon/carto is mounted on the shuttle, so the shuttle will require an extra
 // TODO (requires modification to Klipper code iirc)
 
 
-## 2. XY Calibration probes
-// todo:  add pros/cons for different methods
+## 2. Inter tool offset calibration probes
 
 ### Sexball
+A sexball is a mod of [sexbolt](https://mods.vorondesign.com/details/t1DBVlcUBbdEK6habEsVzg) that replaces the flat top with a ball. This allows the tool calibration to self center with a nozzle by [probing](https://www.youtube.com/watch?v=gKaL7Oxud2c) the ball on each side until it triggers. By having a common center point the nozzle X,Y,Z offsets of each tool relative to a tool (T0) can be determined. These are the `gcode_offset` you need to save in `[tool]` so they can be applied after a tool is swapped out. That way the 
 
 <img src="media/Probes/sexball-probe.jpg" width="200">
 Image By asoli
+<br/>
+Pro:
+ - Easy to set up though you might need to move the bed a bit so all of the tools can reach the sexball from each side
+ - Does X,Y and Z offset calibration
+   
+Con:
+ - Relies on a physical contact, which means this requires tight tolerances: the sexball shouldn't have any play. The toolhead nozzles should also be concentric (the bore hole has to be in the exact middle of the nozzle), cheap nozzles often aren't, which means the determined offsets be inaccurate due to a a bias
 
+See [tool calibration configuration](https://github.com/viesturz/klipper-toolchanger/blob/main/tools_calibrate.md) to set up calibration config and macros.
+
+#### BOM
 Calibration probe option that just replaces the shaft on a sexbolt.
 - [Probe](https://s.click.aliexpress.com/e/_oB1egOH)
 - [12mm Ball with M5 Threads](https://s.click.aliexpress.com/e/_o2DGfvf)
 - [M5x30mm External Thread Pin](https://s.click.aliexpress.com/e/_omw2qxX)
 
 **NOTE:** For micron M5x25mm Pin is tall enough
-
 **NOTE:** Only use the hartk style bodies with the sleeves, knockoffs have too much slop.
 
 <img src="media/Probes/sexball-probe-types.jpg" width="300"> Image by BT123
-
 
 #### Affiliate Links
 
@@ -65,12 +73,21 @@ Alternatively you can purchase check on our official [vendors list](Building/Ven
 ### [Axiscope](https://github.com/nic335/Axiscope)
 [Axiscope](https://github.com/nic335/Axiscope) uses a camera instead of a physical probe to align each toolhead nozzle. With its provided web interface it's really easy to go through the toolheads, align them and determine the offsets. It also supports a physical endstop to determine the gcode Z offsets (make sure your nozzle is clean).
 
-Physical probes only works if the bore hole of your nozzle is exactly in the center, which is not always the case with very cheap nozzles. If it's not it will introduce a bias and thus the nozzles will remain misaligned. With a camera you remove the reliance of good tolerances out of the equation, you visually align the nozzle bore hole and those offsets will be perfect. It also has the added benefit that you inspect your nozzle closely so you don't forget to remove crud when determining the gcode Z-offsets.
-
-While it requires more manual alignment than a physical probe, aligning 5 toolheads is still done in a couple of minutes.
+Pro:
+ * Visual approach, which eliminates potential tolerance issues and inaccuracies in (cheap) nozzles
+ * You inspect the nozzle with a close up, detecting potential issues (such as filament stuck throwing off Z)
+   
+Con: 
+ * A bit more manual work to align the nozzles manually (but not more than a couple of minutes)
+ * Gcode Z offset still requires an endstop, it also requires you to set X,Y gcode offsets before calibrating Z (so the endstop is pushed at the exact sample place with each nozzle)  
 
 The USB cable of the camera is not very long, you might want to consider adding a [USB keystone insert](https://www.printables.com/model/609433-voron-skirt-keystone-for-usbethernet) at the front to plug it in more easily.
 
+#### BOM
+ - OV9726 camera module
+ - 5V 3mm round white6000-6500k LEDS x 4
+ - [3D printed camera module holder](https://www.printables.com/model/1099576-xy-nozzle-alignment-camera)
+   
 ### [Nudge](https://github.com/zruncho3d/nudge)
 <img src="media/Probes/Nudge.jpg" width="200"> Image from Nudge site.
 
@@ -84,13 +101,21 @@ A buildable probe. @MajorHack built one with SS screws that didn't work, so copp
 
 
 ### Using a printable calibration
-
+You don't need extra hardware to do a proper tool offset calibration, you can print a calibration print, it's just a lot more work. If you don't know your gcode_z_offsets, then make sure your nozzles gcode_z_offsets are somewhat high enough before you print or all the tools that have lower nozzles than T0 will dig into the bed!
+<br/>
 <img src="media/Probes/xy_print_cal.jpg" width="300">
 
 There are a few different printable XY calibration methods that work well: 
 
 * [X, Y and Z calibration tool for IDEX](https://www.printables.com/model/201707-x-y-and-z-calibration-tool-for-idex-dual-extruder)
 
+Pro: 
+ - Visual approach, what you see is what you're going to get
+
+Con:
+ - It's a ton of work to calibrate a single toolhead this way, let alone 5 or 6.
+ - A bad gcode Z offset is going to dig into your bed and amage your PEI plate.
+   
 # FAQ
 
 ### My sexball probe doesn't work, it's always triggered
@@ -108,6 +133,9 @@ No, `SAVE_CONFIG` will save your z-offset at the bottom of your printer.cfg, not
 
 ### My Nudge reports "endstop triggered before contact"
 Bad electrical connections. You need to use copper SHCS at least.  Check the resistance between the two output pins.
+
+### Do I need to calibrate the offsets on every print?
+No, the offsets should remain the same unless you change something hardware related, like disassembling and reassembling a toolhead, changing the preload screws on its backplate, swapping out a nozzle, etc. Basically anything that can move a nozzle in a different location. It's a good idea to check the offsets periodically to make sure there's no drift, especially before a long multicolor print to ensure the best quality.
 
 
 
