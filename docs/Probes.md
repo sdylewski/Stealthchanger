@@ -73,6 +73,17 @@ Alternatively you can purchase check on our official [vendors list](Building/Ven
 ### [Axiscope](https://github.com/nic335/Axiscope)
 [Axiscope](https://github.com/nic335/Axiscope) uses a camera instead of a physical probe to align each toolhead nozzle. With its provided web interface it's really easy to go through the toolheads, align them and determine the offsets. It also supports a physical endstop to determine the gcode Z offsets (make sure your nozzle is clean).
 
+<table>
+<tr>
+ <td><img src="media/Probes/axiscope_camera.jpg" width="200"></td>
+ <td><img src="media/Probes/axiscope_aligment.gif" width="600"></td>
+</tr>
+ <tr><td colspan="2">Images from <a href="https://www.printables.com/model/1099576-xy-nozzle-alignment-camera">printables</a></td></tr>
+</table>
+
+
+
+
 Pro:
  * Visual approach, which eliminates potential tolerance issues and inaccuracies in (cheap) nozzles
  * You inspect the nozzle with a close up, detecting potential issues (such as filament stuck throwing off Z)
@@ -136,6 +147,7 @@ Bad electrical connections. You need to use copper SHCS at least.  Check the res
 
 ### Do I need to calibrate the offsets on every print?
 No, the offsets should remain the same unless you change something hardware related, like disassembling and reassembling a toolhead, changing the preload screws on its backplate, swapping out a nozzle, etc. Basically anything that can move a nozzle in a different location. It's a good idea to check the offsets periodically to make sure there's no drift, especially before a long multicolor print to ensure the best quality.
+
 
 
 
