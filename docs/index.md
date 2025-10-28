@@ -99,6 +99,8 @@ This is a challenging build/conversion, even for existing experienced Voron owne
 
 MikeyMike created an [approximate cost calculator](https://docs.google.com/spreadsheets/d/1cjlZ4xi84sUbo09nV3CDkOrLjz3leInTZ9sxwSzPscE) for building a StealthChanger with x number of toolheads. It assumes you have a working Voron 2.4 and this does not include top hat extrusions,panels.
 
+### [Reference CAD (.step) by N3MI](https://github.com/N3MI-DG/sc-guides)
+N3MI created a [reference CAD file](https://github.com/N3MI-DG/sc-guides) of a StealthChanger with Anthead toolheads, docks with crossbar, top hat, umbilicals and fanny pack.
 
 # [Support](Support/Support.md)
 
