@@ -15,14 +15,31 @@ Note that the z-offset will be negative for TAP as the motors will continue to g
 
 Installing a wiper near the bed and have a CLEAN_NOZZLE macro after the initial home and before QGL and re-home is recommended, any leftover filament will throw off gantry levelling and actual bed height.
 
+This is the default way how StealthChanger homes and QGLs.
+
+Pro: 
+ * You already have the OctoTAPs to detect which tool is active so it's basically free
+ * Accurate enough *if* your nozzle is clean
+
+Con:
+ * Does not allow for toolless homing, a tool needs to be present on the shuttle to home
+ * Is pretty slow, especially for QGL and large bed meshes
+ * Can dimple the PEI plate, especially a smooth one if you use N52 magnets in the shuttle and backplate
+   
 ### Beacon/Carto
-The beacon/carto is mounted on the shuttle, so the shuttle will require an extra umbilical
 // TODO
+
+Pro:
+ * Toolless homing
+ * Much faster than TAP
+
+Con:
+ * Requires an extra umbilical to the shuttle
 
 * [Carto mounts for CNC shuttles](https://github.com/DraftShift/StealthChanger/tree/main/UserMods/N3MI-DG/Carto_Mounts)
 
 ### Eddy
-// TODO (requires modification to Klipper code iirc)
+// TODO
 
 
 ## 2. Inter tool offset calibration probes
@@ -147,6 +164,7 @@ Bad electrical connections. You need to use copper SHCS at least.  Check the res
 
 ### Do I need to calibrate the offsets on every print?
 No, the offsets should remain the same unless you change something hardware related, like disassembling and reassembling a toolhead, changing the preload screws on its backplate, swapping out a nozzle, etc. Basically anything that can move a nozzle in a different location. It's a good idea to check the offsets periodically to make sure there's no drift, especially before a long multicolor print to ensure the best quality.
+
 
 
 
