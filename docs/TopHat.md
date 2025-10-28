@@ -51,6 +51,12 @@ Latches ensure the top hat stays on the printer securely and tightly, squishing 
 * [Top hat SC logo](https://github.com/DraftShift/StealthChanger/tree/main/UserMods/EddieSha04/Tophat%20SC%20LED%20Logo)
 * [Top hat panel clips](https://github.com/DraftShift/StealthChanger/tree/main/UserMods/EddieSha04/Tophat)
 
+## FAQ
+
+### Do I need a top hat?
+If you are going to print with filament that requires chamber temperatures above room temperature then yes, otherwise no.
+
+
 
 
 
