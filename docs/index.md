@@ -25,14 +25,64 @@ The stealthchanger system consists of multiple parts. Some are essential, some h
 
 <img src="media/CableManagement/LDO_Stealthchanger_back_annotated.png" width="400"/>
 
-| |
-| ---------------------------------------------- |
-| <h2>[Shuttle](Shuttle.md) & [Toolhead Backplate](Toolheads/Toolheads.md)</h2> <img src="media/Shuttle/shuttle_manual_docking.gif" width="350" align="right" > The shuttle replaces your Voron shuttle with one that has bushings to connect to the backplate of each toolhead. Backplates and docks are available for the following toolheads: <ul><li>[Anthead](Toolheads/Anthead.md)</li><li>[Stealthburner](Toolheads/Stealthburner.md)</li><li>[Dragonburner/Rapidburner](Toolheads/Dragonburner.md)</li><li>[A4T](Toolheads/A4T.md)</li><li>[SV08](Toolheads/SV08.md)</li><li>[Yavoth](Toolheads/Yavoth.md)</li><li>[XOL](Toolheads/XOL.md)</li><li>[Mini Stealthburner](Toolheads/MiniSB.md)</li><li>[Blackbird](Toolheads/Blackbird.md)</li></ul><br>See the <a href="Toolheads/Toolheads.md">Toolheads</a> page for a comparison of each toolhead. |   
-| <h2>[Dock, Crossbar, and Door Buffer](Docks.md)</h2> <img src="media/Dock/dock_front.png" width="400" align="right" /> The modular dock mounts to the top front of your printer to hold/dock the toolheads when not in use. May also contain a crossbar at the bottom of the dock. Some docks just use the crossbar.<ul><li>[Modular Dock](Docks.md)</li><li>[Crossbar (optional)](Docks.md)</li><li>[Door buffer (optional)](Docks.md) Needed if mounting crossbar to front of frame.</ul>|
-| <h2>[Electronics & Cable Management](CableManagement/CableManagement.md)</h2> <img src="media/CableManagement/wire_management.jpg" width="180" align="right" /> Lots of toolheads mean lots of extra wires and filament that needs to be managed properly. With the umbilicals going to the exhaust port there are several options to connect them and to clean up the bundle with a "backpack" mounted on the back of the printer.<br>Power and data needs to be distributed from your main board to each toolhead, along with your filament.<ul><li>[Backpack & Electrical Distribution](CableManagement/ElectricalDistribution.md)</li><li>[Umbilicals](CableManagement/Umbilicals.md) and exhaust plates</li><li>[Power Supply](CableManagement/Power.md)</li><li>[Filament management](CableManagement/FilamentManagement.md)</li></ul>|
-| <h2>[Top Hat](TopHat.md)</h2>[<img src="media/TopHat/printed_tophat.png" width="300" align="right"/>](TopHat.md) With the dock at the top of the printer and umbilicals extending upward, enclosed printers will want to extend the top of the printer using a top hat. <br>There is a printable top hat or you can use 2020 railing with clear panels.  |
-|<h2>[Probes](Probes.md)</h2><img src="media/Probes/sexball-probe.jpg" width="180" align="right"/> Physical probes are used to measure the X and Y offsets of your tools relative to Tool 0. Endstop switches are included here also.<ul><li>[Probes](Probes.md) for determing offsets</li><li>[Endstops](Endstops.md) for X and Y gantry endstops</li><ul>|
-| <h2>[Klipper Toolchanger](SoftwareAndConfig/Software.md)</h2><img src="media/Logos/klipper_toolchanger_logo.png" width="180" align="right"/> Klipper needs to be toolchanger aware with added code.<ul><li>[Klipper Toolchanger Installation](SoftwareAndConfig/Installation.md)</li><li>[Configuration](SoftwareAndConfig/Configuration.md)</li><li>[Calibration](SoftwareAndConfig/Calibration.md)</li><li>[Slicers](SoftwareAndConfig/Slicers.md)</li></ul>|
+## [Shuttle](Shuttle.md) & [Toolhead Backplate](Toolheads/Toolheads.md)
+<img src="media/Shuttle/shuttle_manual_docking.gif" width="350" align="right" > The shuttle replaces your Voron shuttle with one that has bushings to connect to the backplate of each toolhead. Backplates and docks are available for the following toolheads: 
+
+* [Anthead](Toolheads/Anthead.md)
+* [Stealthburner](Toolheads/Stealthburner.md)
+* [Dragonburner/Rapidburner](Toolheads/Dragonburner.md)
+* [A4T](Toolheads/A4T.md)
+* [SV08](Toolheads/SV08.md)
+* [Yavoth](Toolheads/Yavoth.md)
+* [XOL](Toolheads/XOL.md)
+* [Mini Stealthburner](Toolheads/MiniSB.md)
+* [Blackbird](Toolheads/Blackbird.md)
+
+See the <a href="Toolheads/Toolheads.md">Toolheads</a> page for a comparison of each toolhead.
+
+## [Dock, Crossbar, and Door Buffer](Docks.md)
+<img src="media/Dock/dock_front.png" width="400" align="right" /> 
+The modular dock mounts to the top front of your printer to hold/dock the toolheads when not in use. May also contain a crossbar at the bottom of the dock. Some docks just use the crossbar.
+
+* [Modular Dock](Docks.md)
+* [Crossbar (optional)](Docks.md)
+* [Door buffer (optional)](Docks.md) Needed if mounting crossbar to front of frame.
+
+
+## [Electronics & Cable Management](CableManagement/CableManagement.md)
+<img src="media/CableManagement/wire_management.jpg" width="180" align="right" /> 
+Lots of toolheads mean lots of extra wires and filament that needs to be managed properly. With the umbilicals going to the exhaust port there are several options to connect them and to clean up the bundle with a "backpack" mounted on the back of the printer.<br>Power and data needs to be distributed from your main board to each toolhead, along with your filament.
+
+* [Backpack & Electrical Distribution](CableManagement/ElectricalDistribution.md)
+* [Umbilicals](CableManagement/Umbilicals.md) and exhaust plates
+* [Power Supply](CableManagement/Power.md)
+* [Filament management](CableManagement/FilamentManagement.md)
+
+
+## [Top Hat](TopHat.md)
+[<img src="media/TopHat/printed_tophat.png" width="200" align="right"/>](TopHat.md) 
+
+With the dock at the top of the printer and umbilicals extending upward, enclosed printers will want to extend the top of the printer using a top hat. <br>
+
+There is a printable top hat or you can use 2020 railing with clear panels.
+
+## [Probes](Probes.md)
+<img src="media/Probes/sexball-probe.jpg" width="180" align="right"/> 
+
+Physical probes are used to measure the X and Y offsets of your tools relative to Tool 0. Endstop switches are included here also.
+
+* [Probes](Probes.md) for determing offsets
+* [Endstops](Endstops.md) for X and Y gantry endstops
+
+## [Klipper Toolchanger](SoftwareAndConfig/Software.md)
+<img src="media/Logos/klipper_toolchanger_logo.png" width="180" align="right"/> 
+
+Klipper needs to be toolchanger aware with added code.
+
+* [Klipper Toolchanger Installation](SoftwareAndConfig/Installation.md)
+* [Configuration](SoftwareAndConfig/Configuration.md)
+* [Calibration](SoftwareAndConfig/Calibration.md)
+* [Slicers](SoftwareAndConfig/Slicers.md)
 
 
 # Building
