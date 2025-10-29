@@ -93,6 +93,7 @@ For crossbars mounted outside the front extrusions, you need to use the door buf
 
 ### References:
 * [DraftShift Door Buffer](https://github.com/DraftShift/DoorBuffer)
+* [LDO Door Buffer](https://github.com/MotorDynamicsLab/LDOStealthChanger/blob/master/STLs/Readme.md) is different than the DraftShfit one!
 
 ### User Mods:
 * [BTT HDMI display mount](https://www.printables.com/model/1419633-btt-hdmi5-v10v12-mount-for-voron-with-clicky-clack) for Clicky Clacky and door buffer
