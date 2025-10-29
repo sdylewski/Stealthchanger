@@ -16,6 +16,7 @@ This is the part that goes on your X carriage to mate and pickup each tool. It w
 	<ul>
 		<li>It comes with pins, N52 magnets, and screws for 6 backplates also!</li>
 		<li>No instructions are included, so you need to use the printed shuttle build instructions</li>
+		<li>Tip: There's also a bundle option that comes with 6 OctoTAPs, depending on the number of toolheads you want this is far cheaper than sourcing OctoTap boards seperately</li>
 	</ul></td>
 	<td valign="top">
 	<img src="media/Shuttle/Fystec_CNC_Shuttle.jpg" width=200>
@@ -71,8 +72,9 @@ In order to get proper matching set you should:
 **NOTE: Currently pins may feel very loose, this is by design to allow for room for glue or epoxy (recommended) to set.  Normally press fit is good enough for testing, but for actual use make sure to secure the pins properly.**
   
 ## Installing Shuttle
-Print <a href="https://github.com/DraftShift/StealthChanger/tree/main/STLs/Extras/BeltHelper">BeltHelper</a> to help make this easier!<br>
-See the excellent Draftshift <a href="https://github.com/DraftShift/StealthChanger/blob/main/Manual/Stealthchanger_Assembly_Guide.pdf">assembly guide</a> for installation instructions.
+Print [Belt Helper](https://github.com/DraftShift/StealthChanger/tree/main/STLs/Extras/BeltHelper) to help make this easier! This is especially necessary if you will change the front idlers to MiniBFI, which do not have a lot of margin for adjustment, so you need to keep tension in the belts while installing the shuttle.
+
+See the excellent Draftshift [assembly guide](https://github.com/DraftShift/StealthChanger/blob/main/Manual/Stealthchanger_Assembly_Guide.pdf) for installation instructions.
 
 ## Backplate Preload
 (move this to backplate section?)
@@ -81,6 +83,7 @@ Every backplate needs to be adjusted. Preload is meant remove all the wiggle whe
 You can use a piece of paper per side to make sure they both have the same pressure.
 Big thank you to `ButtSlark` on Discord for this technique.
 
+Not having a good preload is one of the reasons your input shaper graphs might look bad. Even if there is no more wiggle by hand, making small adjustments in the preload screws often improves input shaper graphs considerably.
 
 ## Tips and Tricks
 
@@ -114,4 +117,33 @@ Sometimes the bushings aren't debured or do not slide well when you recieve them
 * [Belt helper 3mm spacing for Micron/V0](https://github.com/DraftShift/StealthChanger/tree/main/UserMods/N3MI-DG/Belt_Helper_3mm)
 * [Belt lock](https://github.com/MikeYankeeOscarBeta/belt_lock) ([discord link](https://discord.com/channels/1226846451028725821/1236046337359872000))
 * DO NOT USE, REQUIRES UPDATE TO V1.1: ~~[Shuttle with 5.5mm OD bushings](https://github.com/DraftShift/StealthChanger/blob/main/UserMods/traxman25/Bushings_5.5/README.md)~~
-  
+
+# FAQ
+
+### Do I need an OctoTAP board per toolhead?
+Yes, in order to detect which tool is actively on the shuttle each toolhead should have an OctoTAP board. It has an optical sensor whose beam gets broken by the flag of the shuttle (the little protrusion at the top of the shuttle). That's how the software knows which tool is actively on the shuttle and it can also detect whether a tool change has been succesfully performed (= crash detection).
+
+### My magnets don't fit in my backplate
+Measure your magnets with a caliper, cheaply sourced magnets often are not exact 6x3mm. Check your print settings and make sure your printer has calibrated the filament shrinkage to perfection.
+
+### My shuttle and backplate don't mate well
+If you have have a CNC shuttle it's absolutely critical that you calibrate your filament shrinkage. With a printed shuttle you can kind of get away with it because both shuttle and backplate will have the same amount of shrinkage, but with a CNC shuttle the backplate pins have to line up exactly. If you measure the distance between the outsides of the pins you should have exactly 39mm, even 0.1mm off can cause the backplate to bind.
+
+### My dimensions are spot on but it still doesn't mate smoothly
+If you have pins that are held in by screws, mate with the shuttle and then tighten the pin screws, that way the pins are perfectly aligned with the bushings of the shuttle. Then bed in your shuttle and backplate by running a probe over and over again with `PROBE_ACCURACY SAMPLES=100` (put something hard under the nozzle so you don't dimple the PEI plate).
+
+### Do I really need N52 magnets?
+N52 magnets are much stronger than N35 and will make the shuttle/toolhead more rigid. N35 magnets might cause reliability issues and introduce more play.
+
+### How do I install the magnets?
+If you have screw in magnets just screw them in place. If you have normal magnets use two component epoxy that doesn't immediately set, that way you can press in the magnet and adjust and align the magnet perfectly flush with the backplate or shuttle. Do not use CA glue (=super glue) if you have an enclosed printer, the heat will make it loose its bond over time and the magnet will pop out. Two component epoxy is usually rated for higher temperatures.
+
+### I have a lot of variance when I run `PROBE_ACCURACY`, sometimes my QGL even fails to level
+- Make sure your shuttle screws are tight in the X-rail carriage, they might loosen over time. 
+- Make sure your OctoTAP board is not loose on the backplate of the tool
+- Make sure the screws holding the backplate to the toolhead are tight
+- If you have a printed shuttle, make sure the shuttle hasn't cracked anywhere, especially near the bushings at the top. Any play in the bushings will cause the toolhead to be less consistent in probing.
+
+
+
+
