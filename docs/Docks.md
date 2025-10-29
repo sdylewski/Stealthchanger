@@ -42,7 +42,7 @@ A crossbar is recommended for stability, but there are options for how to mount 
 
 ### Crossbar mounted <em>between</em> front extrusions
 
-<img src="media/Dock/Dock_crabby.png" width=300>
+<img src="media/Dock/Dock_crossbarbetween.png" width=400>
 
 * No need for <a href="https://github.com/DraftShift/DoorBuffer">door buffer</a>
 * Needs tight bolts or 90° corner brackets to keep from rotating
@@ -136,6 +136,7 @@ Thankfully no, your gantry can stay in place, you just need to disconnect the fr
 ### I installed MiniBFI but I don't have enough margin to tension the belts correctly
 Make sure you keep tension in the belts while installing the shuttle with the [belt helper](https://github.com/DraftShift/StealthChanger/tree/main/STLs/Extras/BeltHelper)
 ![PXL_20241210_083455271_preview](media/Shuttle/beltkeeper.jpg)
+
 
 
 
