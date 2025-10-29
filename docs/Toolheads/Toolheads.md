@@ -61,7 +61,7 @@ Each toolhead page will contain specifics for the backplate, dock, and modificat
 * 60mm wide dock
 
 ## [Blackbird](Blackbird.md)
-
+[<img src="../media/Toolheads/Blackbird.jpg" width=80>](Blackbird.md)
 * 76mm wide dock
 
 
@@ -100,6 +100,7 @@ This is likely Klipper waiting for the temperature of the hotend to settle to th
 Either shorten your wires, tuck them away with zip ties or use a pcb cover if your toolhead has one
 <br/>
 <img src="../media/Toolheads/toolhead_pcbcover.jpg" width=200>
+
 
 
 
