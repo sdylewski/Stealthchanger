@@ -68,23 +68,25 @@ A crossbar is recommended for stability, but there are options for how to mount 
 
 #### Crossbar mounted <em>outside</em> front extrusions:
 
-With Doorbuffer adapters you can use the same length as crossbars between the frame (see below), without they need to be a bit larger so you can mount them directly to the frame:
+With Doorbuffer adapters you can use the same length as crossbars between the frame (see below), without they need to be a bit larger so you can mount them directly to the frame.  
 
-| Voron Size | Outer Crossbar length | Mitsumi link |
+***NOTE*** For the Mitsumi part numbers below, they are for black annodized, and you will need to drill your own holes 5mm in from the ends (for Voron 2.4).  See the [Door Buffer assembly guide](https://github.com/DraftShift/DoorBuffer/tree/main/Manual) for details.
+
+| Voron Size | Outer Crossbar length | Mitsumi Part |
 | ---		|		---				|	---		|
-|	250	|  400	|
-|	300	|  450	|
-|	350	|  500	|
+|	250	|  400	| HFSB5-2020-400 |
+|	300	|  450	| HFSB5-2020-450 |
+|	350	|  500	| HFSB5-2020-500 |
 
 
 #### Crossbar mounted <em>between</em> front extrusions 
 (they are the same length as your frame extrusions):
 
-| Voron Size | Inner Crossbar length | Mitsumi link |
+| Voron Size | Inner Crossbar length | Mitsumi Part |
 | ---		|		---				|	---		|
-|	250	|	370	|
-|	300	|	420	|
-|	350	|	470	|
+|	250	|	370	| HFSB5-2020-370 | 
+|	300	|	420	| HFSB5-2020-420 |
+|	350	|	470	| HFSB5-2020-470 |
 
 
 ## Door Buffer

@@ -26,20 +26,17 @@ This moves X and Y endstops to the motor mount, there are a couple of options:
 (show pictures of each?)
 
 ### [Endstop mounts for printed and CNC shuttle (N3MI)](https://github.com/DraftShift/StealthChanger/tree/main/UserMods/N3MI-DG/Endstop_Mounts)
-[<img src="media/Probes/N3MI_XY_endstop_switch.jpg" width="200">]
-(https://github.com/DraftShift/StealthChanger/tree/main/UserMods/N3MI-DG/Endstop_Mounts)
+[<img src="media/Probes/N3MI_XY_endstop_switch.jpg" width="200">](https://github.com/DraftShift/StealthChanger/tree/main/UserMods/N3MI-DG/Endstop_Mounts)
 
 Relocates the X and Y endstop switches to the A motor
 
 ### [DraftShift Design](https://github.com/DraftShift/StealthChanger/tree/main/STLs/Endstops)
-[<img src="media/Probes/DraftShift_a_motor_switches.jpg" width="200">]
-(https://github.com/DraftShift/StealthChanger/tree/main/STLs/Endstops)
+[<img src="media/Probes/DraftShift_a_motor_switches.jpg" width="200">](https://github.com/DraftShift/StealthChanger/tree/main/STLs/Endstops)
 
 Relocates the X and Y endstop switches to the A motor 
 
 ### [Endstop by Vin-Y](https://github.com/DraftShift/StealthChanger/tree/main/UserMods/VIN-y/Endstops)
-[<img src="media/Probes/Endstop_assembly_Vin-Y.jpg" width="200">]
-(https://github.com/DraftShift/StealthChanger/tree/main/UserMods/VIN-y/Endstops)
+[<img src="media/Probes/Endstop_assembly_Vin-Y.jpg" width="200">](https://github.com/DraftShift/StealthChanger/tree/main/UserMods/VIN-y/Endstops)
 
 Relocates the X and Y endstop switches to the A motor
 
@@ -50,6 +47,7 @@ By @Contomo
 
 Run with `TEST_ENDSTOP_REPEATABILITY AXIS=X`
 
+<!-- raw / endraw is needed to render the html correctly -->
 {% raw %}
 ```
 [gcode_macro TEST_ENDSTOP_REPEATABILITY]

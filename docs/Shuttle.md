@@ -17,6 +17,7 @@ This is the part that goes on your X carriage to mate and pickup each tool. It w
 		<li>It comes with pins, N52 magnets, and screws for 6 backplates also!</li>
 		<li>No instructions are included, so you need to use the printed shuttle build instructions</li>
 		<li>Tip: There's also a bundle option that comes with 6 OctoTAPs, depending on the number of toolheads you want this is far cheaper than sourcing OctoTap boards seperately</li>
+		<li><a href="https://www.printables.com/model/1244888-stealthchanger-fysetc-shuttle-guide">Optional alignment guide</a></li>
 	</ul></td>
 	<td valign="top">
 	<img src="media/Shuttle/Fystec_CNC_Shuttle.jpg" width=200>
