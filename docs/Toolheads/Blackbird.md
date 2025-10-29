@@ -7,6 +7,9 @@ parent: Toolheads
 # Blackbird Toolhead
 
 
+<img src="../media/Toolheads/Blackbird.jpg" width=200>
+
+
 ## Reference
 * [Blackbird Github page](https://github.com/Armchair-Heavy-Industries/Archetype/tree/main/Archetype%20-%20Blackbird)
 * [Archetype web page](https://docs.armchairheavyindustries.com/docs/archetype)
@@ -28,6 +31,7 @@ parent: Toolheads
 - [1] m3x12 BHCS (to hold the sherpa mount in place)
 - [2] m3 heat inserts
 - [2] m3x8 BHCS (optional in v1.1)
+
 
 
 ## Toolhead Options & Mods
