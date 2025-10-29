@@ -32,6 +32,17 @@ Put the toolhead on the shuttle and move the gantry to the furthest position the
 
 See Cable management for how to manage them at the back of the printer and connect the umbilicals to the host.
 
+## Examples
+Here are some examples of how umbilicals should look like, forming an arc and spaced out evenly between the toolheads.
+
+<img src="../media/CableManagement/umbilicals_jdm.jpg" width="400">
+<img src="../media/CableManagement/umbilicals_jdm2.jpg" width="400">
+Images by @JDM
+<br/>
+
+<img src="../media/CableManagement/umbilicals_tooks.jpg" width="400">
+Image by @Tooks
+
 
 ## Mods
 
@@ -40,6 +51,7 @@ See Cable management for how to manage them at the back of the printer and conne
 * [Orbiter V2 BTT EBB36 carrier](https://github.com/DraftShift/StealthChanger/blob/main/UserMods/onsimon/README.md)
 * [EBB36 and Galileo 2 Standalone User Mod](https://github.com/DraftShift/StealthChanger/tree/main/UserMods/seenit783)
 * [Pcb36 mount for ProtoXtruder 2.0](https://www.printables.com/model/1460801-ebb36-mount-protoextruder2stealthchanger) ([discord link](https://discord.com/channels/1226846451028725821/1373573718017708114))
+
 
 
 
