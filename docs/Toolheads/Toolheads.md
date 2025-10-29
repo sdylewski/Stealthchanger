@@ -96,9 +96,10 @@ Orca slicer has a feature to prevent oozing of tools that are actively being use
 ### It picks up the tool and then waits for a long time before continuing
 This is likely Klipper waiting for the temperature of the hotend to settle to the target temperature. If your hotend is not well PID tuned it can sometimes oscillate indefinitely around the target temperature. By default this margin is quite small, only 0.5°C. This is usually not a problem for single toolhead printers as your hotend only heats up once, but with a toolchanger where it heats up the tool every tool call this can introduce a lot of delay. Depending on your klipper-toolchanger version you can mitigate this by increasing the deadband, the amount of °C around the target temperature that is considered "good enough to continue".
 
-
-
-
+### The wires of my toolboard get snagged when doing a tool change
+Either shorten your wires, tuck them away with zip ties or use a pcb cover if your toolhead has one
+<br/>
+<img src="../media/Toolheads/toolhead_pcbcover.jpg" width=200>
 
 
 
