@@ -27,12 +27,25 @@ DraftShift Design has a <a href="https://github.com/DraftShift/Tophat">printed t
 Depending on your situation, you can build your own with existing materials, or order extrusions from places like [Mitsumi USA](https://us.misumi-ec.com/vona2/detail/110302683830/?CategorySpec=unitType%3a%3a1%0900000042747%3a%3amig00000001423216%0900000042730%3a%3amig00000001495349%0900000042733%3a%3aa%0900000042720%3a%3aa&list=PageCategory) 
 (add Mitsumi BOM for Voron 300, 350?) 
 
+### Dimensions
+Assuming the vertical extrusions are the corners, like a stock Voron frame has, you require four verticals, four horizontal X and four horizontal Y.
+
+| Printer |   Z    | Stock X and Y |   Panels   |
+|  ---    |  ---   |      ---      |     ---    |
+|  250mm  | 180 x4 |     370 x8    | 385x155 x4 |
+|  350mm  | 200 x4 |     420 x8    | 435x175 x4 |
+|  350mm  | 200 x4 |     470 x8    | 485x175 x4 |
+
+
 ## Other
 
 * [Panorama top hat](https://github.com/Theaninova/panorama-tophat) ([discord link](https://discord.com/channels/1226846451028725821/1281961080771448943))
   
 
 ## Top Hat Accessories
+
+### Foam
+It is a good idea to line the bottom of your tophat (or the top of your frame) with foam to help reduce air leaks. Thicker foam can be held in compression using latches for a superior seal.
 
 ### Hinges
 With hinges you can open and close the top hat like a box
@@ -51,12 +64,17 @@ Latches ensure the top hat stays on the printer securely and tightly, squishing 
 * [Top hat SC logo](https://github.com/DraftShift/StealthChanger/tree/main/UserMods/EddieSha04/Tophat%20SC%20LED%20Logo)
 * [Top hat panel clips](https://github.com/DraftShift/StealthChanger/tree/main/UserMods/EddieSha04/Tophat)
 
+
 ## FAQ
 
 ### Do I need a top hat?
-If you are going to print with filament that requires chamber temperatures above room temperature then yes, otherwise no.
+If you are going to print with filament that requires chamber temperatures above room temperature then yes, otherwise no. You cannot enclose the printer without a hat.
 
+### Can I move the umbilical exits to the tophat back panel?
+Generally not. The geometry of the umbilical means it wants to be below the original top frame, and curve up into the tophat space.
 
+### Can I install a new exhaust plate on the tophat back panel?
+Often asked in the context of wanting to add a charcoal filter and/or fan to the tophat. Entirely do-able, just be careful not to snag the umbilicals and have a plan for how to unplug any wires when removing the tophat.
 
 
 
