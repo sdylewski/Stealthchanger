@@ -45,7 +45,7 @@ parent: Toolheads
 * [Collection of Anthead mods by @N3MI](https://github.com/DraftShift/StealthChanger/tree/main/UserMods/N3MI-DG/Anthead_Mods)
 * [Improvements by @BrewNinja](https://github.com/DraftShift/StealthChanger/tree/main/UserMods/BrewNinja/Anthead)
 * [Numbered cowls](https://github.com/DraftShift/StealthChanger/tree/main/UserMods/traxman25/Ant%20Head)
-
+* [AntHead Hotend Mount – CHCB-V V6DM Edition](https://github.com/DraftShift/StealthChanger/tree/main/UserMods/Nic335/CHCB-V-Mount)
 
 ## Dock
 * Dock width: 60mm
@@ -57,6 +57,7 @@ parent: Toolheads
 * [Single piece crabby ish dock](https://www.printables.com/model/1337129-anthead-single-piece-dock-crabby-ish)
 * [Stealthchanger anthead uhf dock and ducts](https://www.printables.com/model/1413162-stealthchanger-anthead-uhf-dock-and-ducts)
 * [Experimental dock](https://www.printables.com/model/1441043-stealthchanger-anthead-dock-for-corexy-experimenta) ([discord link](https://discord.com/channels/1226846451028725821/1426882245037391872))
+
 
 
 
