@@ -39,7 +39,6 @@ A crossbar is recommended for stability, but there are options for how to mount 
 * Requires a <a href="https://github.com/DraftShift/DoorBuffer">door buffer</a> so your door will still have something flat on the front of the printer
 * This option is what comes with the LDO kit
 
-
 ### Crossbar mounted <em>between</em> front extrusions
 
 <img src="media/Dock/Dock_crossbarbetween.png" width=400>
@@ -50,7 +49,10 @@ A crossbar is recommended for stability, but there are options for how to mount 
 * For existing builds with 2020 sides, front idlers will hit the crossbar, so you need to change idlers to use the <a href="https://github.com/DraftShift/StealthChanger/tree/main/UserMods/BT123/MiniBFI%20%2B%20MicroBFI">MiniBFI</a>
 * 20mm less Y build space unless you use shorter "stubby" docks.  Even with stubby docks, the Y build space is 10mm less than the outside-mounted crossbar?
 * Another option for new builds is to use 2040 front extrusions, and a 2020 crossbar this way.
-* Image from @drakarah and <a href="https://www.printables.com/model/994635-stealthchanger-stealthburner-minimal-docks-aka-hap/comments">Happy Crab Docks</a>
+* Image from @drakarah with MiniBFI and <a href="https://www.printables.com/model/994635-stealthchanger-stealthburner-minimal-docks-aka-hap/comments">Happy Crab Docks</a>, crossbar held in place with 90deg corner brackets.
+
+#### Mods
+   * [Symmetric MiniBFI](https://github.com/DraftShift/StealthChanger/tree/main/UserMods/jimmyjon711/Symmetric%20MiniBFI)
 
    
 ### No crossbar / Top mount
@@ -139,6 +141,7 @@ Thankfully no, your gantry can stay in place, you just need to disconnect the fr
 ### I installed MiniBFI but I don't have enough margin to tension the belts correctly
 Make sure you keep tension in the belts while installing the shuttle with the [belt helper](https://github.com/DraftShift/StealthChanger/tree/main/STLs/Extras/BeltHelper)
 ![PXL_20241210_083455271_preview](media/Shuttle/beltkeeper.jpg)
+
 
 
 
