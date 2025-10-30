@@ -10,8 +10,8 @@ There are 2 types of probes used in StealthChanger. One is the familiar Z-probe 
 ## 1. Z-probes
 
 ### TAP
-Each toolhead of Stealthchanger has a OctoTap PCB boards, this can be used for homing with the nozzle just like Voron TAP. Even if you use a different z-probe, you still need an OctoTap PCB per toolhead as it is also used to detect which tool is active on the shuttle and whether the pickup of a new tool has succeeded.
-Note that the z-offset will be negative for TAP as the motors will continue to go below the zero (= bed level) point to trigger the OctoTap sensor by pushing the toolhead up out of the shuttle until it triggers the OctoTap.
+Each toolhead of Stealthchanger has a OctoTap PCB board: required for detecting which tool is active on the shuttle and whether the pickup of a new tool has succeeded. Since it is required anyway, this can also be used for homing with the nozzle just like Voron TAP. Even if you use a different z-probe, you still need an OctoTap PCB per toolhead.
+Note that the z-offset will be negative for TAP as the motors will continue to go below the zero (= bed level) point to trigger the OctoTap sensor by pushing the toolhead up out of the shuttle until it triggers the OctoTap. Since the trigger is after the nozzle contacts the bed, the z-offset is negative. Simple.
 
 Installing a wiper near the bed and have a CLEAN_NOZZLE macro after the initial home and before QGL and re-home is recommended, any leftover filament will throw off gantry levelling and actual bed height.
 
@@ -27,14 +27,16 @@ Con:
  * Can dimple the PEI plate, especially a smooth one if you use N52 magnets in the shuttle and backplate
    
 ### Beacon/Carto
-// TODO
+A magnetic field sensor that can detect the metal of the build plate without contacting it, and also while the toolhead is moving.
 
 Pro:
  * Toolless homing
  * Much faster than TAP
 
 Con:
+ * (Klipper does not tolerate the sensor PCB appearing/disappearing at runtime, so either one per tool ($$$) or shuttle mount)
  * Requires an extra umbilical to the shuttle
+ * Not all variants are stable across temperatures, especially for elevated chambers (read, fancy filaments)
 
 * [Carto mounts for CNC shuttles](https://github.com/DraftShift/StealthChanger/tree/main/UserMods/N3MI-DG/Carto_Mounts)
 
@@ -43,6 +45,7 @@ Con:
 
 
 ## 2. Inter tool offset calibration probes
+(note that buying hardware is not required, you can calibrate X, Y and even Z just by printing reference plates. But buying / building a dedicated calibration probe will generally yield better results, faster and with less colourful language. Details below:)
 
 ### Sexball
 A sexball is a mod of [sexbolt](https://mods.vorondesign.com/details/t1DBVlcUBbdEK6habEsVzg) that replaces the flat top with a ball. This allows the tool calibration to self center with a nozzle by [probing](https://www.youtube.com/watch?v=gKaL7Oxud2c) the ball on each side until it triggers. By having a common center point the nozzle X,Y,Z offsets of each tool relative to a tool (T0) can be determined. These are the `gcode_offset` you need to save in `[tool]` so they can be applied after a tool is swapped out. That way the 
@@ -50,12 +53,15 @@ A sexball is a mod of [sexbolt](https://mods.vorondesign.com/details/t1DBVlcUBbd
 <img src="media/Probes/sexball-probe.jpg" width="200">
 Image By asoli
 <br/>
+
 Pro:
- - Easy to set up though you might need to move the bed a bit so all of the tools can reach the sexball from each side
- - Does X,Y and Z offset calibration
+ * Easy to set up though you might need to move the bed a bit so all of the tools can reach the sexball from each side
+ * Offers X,Y and Z offset calibration - now with handy scripts
    
 Con:
- - Relies on a physical contact, which means this requires tight tolerances: the sexball shouldn't have any play. The toolhead nozzles should also be concentric (the bore hole has to be in the exact middle of the nozzle), cheap nozzles often aren't, which means the determined offsets be inaccurate due to a a bias
+ * Requires 6mm of travel past the centre of the bolt on all four sides, which can limit valid mounting locations
+ * Relies on a physical contact, which means this requires tight tolerances: the sexball shouldn't have any play. The toolhead nozzles should also be concentric (the bore hole has to be in the exact middle of the nozzle), cheap nozzles often aren't, which means the determined offsets be inaccurate due to a a bias
+ * Pushes sideways on a sphere to generate vertical movement, so that can go wrong
 
 See [tool calibration configuration](https://github.com/viesturz/klipper-toolchanger/blob/main/tools_calibrate.md) to set up calibration config and macros.
 
@@ -99,8 +105,6 @@ Alternatively you can purchase check on our official [vendors list](Building/Ven
 </table>
 
 
-
-
 Pro:
  * Visual approach, which eliminates potential tolerance issues and inaccuracies in (cheap) nozzles
  * You inspect the nozzle with a close up, detecting potential issues (such as filament stuck throwing off Z)
@@ -119,9 +123,18 @@ The USB cable of the camera is not very long, you might want to consider adding 
 ### [Nudge](https://github.com/zruncho3d/nudge)
 <img src="media/Probes/Nudge.jpg" width="200"> Image from Nudge site.
 
-A buildable probe. @MajorHack built one with SS screws that didn't work, so copper SHCS are required. 
+A buildable probe. A vertical pole that is held against a series of bolts by spring tension completing a circuit. Any push on the top of the pole breaks the circuit at the bottom of the pole, registering the contact
 
 // see calibration section for how to use it
+
+Pro:
+ * Mostly 3d printed, using parts many of us have laying about
+ * Less translation of horizontal motion to vertical thrust as compared to Sexball
+
+Con:
+ * Requires tuning to avoid driving the pole too far in Z and jamming the mechanism
+ * Consider using Copper SHCS Screws: @MajorHack built one with SS screws that didn't work
+
 
 #### Mods
 
@@ -142,7 +155,7 @@ Pro:
 
 Con:
  - It's a ton of work to calibrate a single toolhead this way, let alone 5 or 6.
- - A bad gcode Z offset is going to dig into your bed and amage your PEI plate.
+ - A bad gcode Z offset is going to dig into your bed and damage your PEI plate.
    
 # FAQ
 
@@ -164,15 +177,5 @@ Bad electrical connections. You need to use copper SHCS at least.  Check the res
 
 ### Do I need to calibrate the offsets on every print?
 No, the offsets should remain the same unless you change something hardware related, like disassembling and reassembling a toolhead, changing the preload screws on its backplate, swapping out a nozzle, etc. Basically anything that can move a nozzle in a different location. It's a good idea to check the offsets periodically to make sure there's no drift, especially before a long multicolor print to ensure the best quality.
-
-
-
-
-
-
-
-
-
-
 
 
