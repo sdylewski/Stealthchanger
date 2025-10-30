@@ -47,13 +47,16 @@ To mitigate that do the following:
 1. Enable multitool ramming in your slicer. The slicer will move to the prime tower to do so
 2. Restore not just Z but also X and Y, `t_command_restore_axis: XYZ`  in `[toolchanger]`. This will return the toolhead back from where the previous tool was in all 3 axes.
 3. The pickup_gcode in `[toolchanger]` runs the restore path at the end. Raise the Z travel by a fixed amount, e.g. 5mm
+  {% raw %}
    ```
     {% if 'Z' in restore_position %}
       #Travel with Z 5 higher to the restore position
       ROUNDED_G0 Z={restore_position.Z + 5} F={fast} D=150
     {% endif %}
    ```
+   {% endraw %}
    After the pickup gcode has ran the toolchanging software will move the toolhead to the correct Z so no further change is necessary.
+
 
 
 
