@@ -73,6 +73,12 @@ Make sure all of your `extruder` references are correct per tool and you didn't 
  ### I'm getting errors about a T3, I don't even have a T3
  Disable the chamber exhaust fan in your slicer, slicers use P3 as chamber fan and it gets interpreted as T3 by the software.
 
+### My pressure advance doesn't work
+Make sure to put the PA values in your filament settings in the slicer. If you have multitool ramming enabled it will set pressure advance to 0 when ramming on the wipe tower and if it's not in the filament settings it can't put it back to what it's supposed to be during the print.
+
+### My tool pickup failed and it halted klipper so the print is lost. Can I just not make it pause so it can recover and resume?
+// Todo answer this
+
 
 
 
