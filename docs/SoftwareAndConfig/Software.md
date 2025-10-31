@@ -61,7 +61,7 @@ To mitigate that do the following:
 No, Klipper requires sequential numbering starting from 0. Skipping a number will make it complain.
 
 ### The wrong tool heats up
-Make sure all of your `extruder` references are correct per tool and you didn't forget to change one. Use `extruder` for T0, `extruder1` for T1 and so on. Unfortunately the different naming scheme makes it easy to gloss over `extruder` references.
+Make sure *all* of your `extruder` references are correct per tool and you didn't forget to change one. Use `extruder` for T0, `extruder1` for T1 and so on. E.g. `[tmc2209 extruder]` becomes `[tmc2209 extruder1]` for T1 and so on. Unfortunately the different naming scheme of extruders for T0 makes it easy to gloss over `extruder` references. 
 
 ### I'm getting some weird behaviour where the wrong tool gets selected, heated, part cooling fan is wrong, etc.
 Make sure you don't accidentally have overridden any macros. If you copy T0 cfg to T1 and forget to change any reference to T0 you'll run into weird behavior. Read through T1 cfg closely and make sure you don't have anything still referencing T0. Gcode macro definitions will override the previously defined one (in T0 cfg). If you've forgotten to change the name of the gcode macro but have changed all references to T1 inside that macro then when that macro is called for T0 it will do all the things it's supposed to with T1 instead of T0.
