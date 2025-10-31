@@ -6,7 +6,7 @@ parent: StealthChanger Components
 <!-- Use the page layout at TOC.md:  https://github.com/sdylewski/StealthChanger/blob/main/docs/TOC.md -->
 # Shuttle
 
-This is the part that goes on your X carriage to mate and pickup each tool. It will mate with a BACKPLATE that's made specifically for your toolhead. All shuttles have a vertical flag at the top that interacts with an OptoTap sensor mounted on the backplate to detect the tool and register taps on the build plate<br>
+This is the part that bolts onto your X carriage to mate and pickup each tool. You will need One Shuttle for the Printer. It will mate with a BACKPLATE that's made specifically for your toolhead. You will need one Backplate per tool. All shuttle designs have a vertical flag at the top that interacts with an OptoTap sensor mounted on the backplate to detect the tool and register taps on the build plate<br>
 
 ## Shuttle Options
 <table>
@@ -28,6 +28,7 @@ This is the part that goes on your X carriage to mate and pickup each tool. It w
 	<h3><a href="https://kb-3d.com/store/voron/6008-ldo-motors-stealth-changer-cnc-shuttle-kit-6975415159350.html">LDO Kit CNC Shuttle</a></h3><br>
 	<ul>
 	<li>Not sure what comes with this kit; shuttle seems similar to the Fystec</li>
+	<li>might use glue to hold parts together</li>
 	</ul></td>
 	<td valign="top">
 	<img src="media/Shuttle/LDO_CNC_shuttle.jpg" width=200>
@@ -36,7 +37,7 @@ This is the part that goes on your X carriage to mate and pickup each tool. It w
 <tr>
 	<td valign="top" width="50%">
 	<h3><a href="https://github.com/DraftShift/StealthChanger?tab=readme-ov-file">Print your own</a></h3><br>
-	<ul><li>These are thicker so you loose a bit more Y in print volume, and they are less rigid than CNC shuttles</li>
+	<ul><li>These are thicker so you lose a bit more Y in print volume, and they are less rigid than CNC shuttles</li>
 	</ul>
   	<h3>Bill of materials</h3>
   	<ul>
@@ -74,6 +75,7 @@ In order to get proper matching set you should:
   
 ## Installing Shuttle
 Print [Belt Helper](https://github.com/DraftShift/StealthChanger/tree/main/STLs/Extras/BeltHelper) to help make this easier! This is especially necessary if you will change the front idlers to MiniBFI, which do not have a lot of margin for adjustment, so you need to keep tension in the belts while installing the shuttle.
+* Consider taking the Shuttle _off_ the rail carriage before installing belts. When using the BeltHelper to maintain tension, removing the shuttle from the rail will allow rotating the shuttle to thread the belts through from the rear without requiring as much fowl language
 
 See the excellent Draftshift [assembly guide](https://github.com/DraftShift/StealthChanger/blob/main/Manual/Stealthchanger_Assembly_Guide.pdf) for installation instructions.
 
@@ -81,7 +83,8 @@ See the excellent Draftshift [assembly guide](https://github.com/DraftShift/Stea
 (move this to backplate section?)
 Every backplate needs to be adjusted. Preload is meant remove all the wiggle when it's fully seated by preloading the pins onto the bushings. To set your preload you want to back the FSCS screws till they are just touching the magnest on the shuttle. 
 
-You can use a piece of paper per side to make sure they both have the same pressure.
+You can use a piece of paper per side to make sure they both have the same pressure. (Remove backplate, hold paper on screw, install backplate to shuttle, test how much friction it takes to remove paper. Adjust screws so both sides have equal friction, that the paper does not fall out unaided, and that the force required to pull it out is not unreasonable)
+
 Big thank you to `ButtSlark` on Discord for this technique.
 
 Not having a good preload is one of the reasons your input shaper graphs might look bad. Even if there is no more wiggle by hand, making small adjustments in the preload screws often improves input shaper graphs considerably.
@@ -94,7 +97,7 @@ If you printed the shuttle and backplate and things are just not smooth or you h
 - Set your heat bed to 100-110°C
 - Once at temperature, mate both parts fully, and set them on the bed with the backplate (tool side) down
 - After 20+ minutes pick them up and slide them 3-4 times, then fully mate them once again
-- With both parts still fully mated, set them down with the backplate (tool side) down someplace flat and at room temperature and let them fully cool without touching them for 5+ hours
+- With both parts still fully mated, set them down with the backplate (tool side) down someplace flat and at room temperature and let them fully cool without touching them for 5+ hours (i.e. turn the bed heater off and walk away)
 - Try and slide them again and you should feel an improvement, you can try this multiple times if you are still not satisfied
 
 Big thank you to `unguided-wanderer` on Discord for this technique.
@@ -128,7 +131,7 @@ Yes, in order to detect which tool is actively on the shuttle each toolhead shou
 Measure your magnets with a caliper, cheaply sourced magnets often are not exact 6x3mm. Check your print settings and make sure your printer has calibrated the filament shrinkage to perfection.
 
 ### My shuttle and backplate don't mate well
-If you have have a CNC shuttle it's absolutely critical that you calibrate your filament shrinkage. With a printed shuttle you can kind of get away with it because both shuttle and backplate will have the same amount of shrinkage, but with a CNC shuttle the backplate pins have to line up exactly. If you measure the distance between the outsides of the pins you should have exactly 39mm, even 0.1mm off can cause the backplate to bind.
+If you have have a CNC shuttle it's absolutely critical that you calibrate your filament shrinkage. With a printed shuttle you have more tolerance for part dimensionality because both shuttle and backplate will have the same amount of shrinkage, but with a CNC shuttle the backplate pins have to line up exactly. If you measure the distance between the outsides of the pins you should have exactly 39mm, even 0.1mm off can cause the backplate to bind.
 
 ### My dimensions are spot on but it still doesn't mate smoothly
 If you have pins that are held in by screws, mate with the shuttle and then tighten the pin screws, that way the pins are perfectly aligned with the bushings of the shuttle. Then bed in your shuttle and backplate by running a probe over and over again with `PROBE_ACCURACY SAMPLES=100` (put something hard under the nozzle so you don't dimple the PEI plate).
@@ -144,7 +147,5 @@ If you have screw in magnets just screw them in place. If you have normal magnet
 - Make sure your OctoTAP board is not loose on the backplate of the tool
 - Make sure the screws holding the backplate to the toolhead are tight
 - If you have a printed shuttle, make sure the shuttle hasn't cracked anywhere, especially near the bushings at the top. Any play in the bushings will cause the toolhead to be less consistent in probing.
-
-
-
+- Check your umbilical is not pulling on the toolhead - especially at the front corners - causing the optotap to activate earlier or later than in the bed centre
 

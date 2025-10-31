@@ -52,6 +52,7 @@ The modular dock mounts to the top front of your printer to hold/dock the toolhe
 ## [Electronics & Cable Management](CableManagement/CableManagement.md)
 <img src="media/CableManagement/wire_management.jpg" width="180" align="right" /> 
 Lots of toolheads mean lots of extra wires and filament that needs to be managed properly. With the umbilicals going to the exhaust port there are several options to connect them and to clean up the bundle with a "backpack" mounted on the back of the printer.<br>Power and data needs to be distributed from your main board to each toolhead, along with your filament.
+Almost every StealthChanger will use either CAN or USB for controlling the toolheads. It is not impossible to build a Stealthchanger without CAN and USB, but it is not particularly practical.
 
 * [Backpack & Electrical Distribution](CableManagement/ElectricalDistribution.md)
 * [Umbilicals](CableManagement/Umbilicals.md) and exhaust plates
@@ -62,14 +63,14 @@ Lots of toolheads mean lots of extra wires and filament that needs to be managed
 ## [Top Hat](TopHat.md)
 [<img src="media/TopHat/printed_tophat.png" width="200" align="right"/>](TopHat.md) 
 
-With the dock at the top of the printer and umbilicals extending upward, enclosed printers will want to extend the top of the printer using a top hat. <br>
+With the dock at the top of the printer and umbilicals extending upward, enclosed printers will need to extend the top of the printer using a top hat. Room temperature printing only need a top hat for reasons of style.
 
-There is a printable top hat or you can use 2020 railing with clear panels.
+There is a printable top hat or you can use 2020 extrusions with clear panels.
 
 ## [Probes](Probes.md)
 <img src="media/Probes/sexball-probe.jpg" width="180" align="right"/> 
 
-Physical probes are used to measure the X and Y offsets of your tools relative to Tool 0. Endstop switches are included here also.
+Physical probes are used to measure the X and Y offsets of your tools relative to Tool 0. Endstop switches are included here also. While tools can be aligned without added hardware by using a series of reference prints and manual effort, adding a probe greatly accelerates inter-tool alignment.
 
 * [Probes](Probes.md) for determing offsets
 * [Endstops](Endstops.md) for X and Y gantry endstops
@@ -77,7 +78,7 @@ Physical probes are used to measure the X and Y offsets of your tools relative t
 ## [Klipper Toolchanger](SoftwareAndConfig/Software.md)
 <img src="media/Logos/klipper_toolchanger_logo.png" width="180" align="right"/> 
 
-Klipper needs to be toolchanger aware with added code.
+Klipper needs to be toolchanger aware with added code and configuration.
 
 * [Klipper Toolchanger Installation](SoftwareAndConfig/Installation.md)
 * [Configuration](SoftwareAndConfig/Configuration.md)
@@ -86,7 +87,8 @@ Klipper needs to be toolchanger aware with added code.
 
 
 # Building
-This is a challenging build/conversion, even for existing experienced Voron owners. Expect it to take a while, to re-print things frequently, and have to order random parts that you forgot the first time. 
+This is a challenging build/conversion, even for existing experienced Voron owners. Expect it to take a while, to re-print things frequently, and have to order random parts that you forgot the first time. Making the printer work reliably also requires tuning, fiddling, and sometimes even replacing parts.
+The concept of StealthChanger is also growing and evolving, often rapidly, with improvements and suggestions and UserMods. The best set of components to build the best toolchanging printer will be different when you read this sentence from when I wrote this sentence. Consider joining the Discord and hanging out to see what is new.
 
 ### [Checklist](Building/Checklist.md)
 ### [Vendors and Kits](Building/Vendors-and-Kits.md)
@@ -94,7 +96,7 @@ This is a challenging build/conversion, even for existing experienced Voron owne
 ### [Printing](Building/Printing.md)
 ### [Cost calculator](https://docs.google.com/spreadsheets/d/1cjlZ4xi84sUbo09nV3CDkOrLjz3leInTZ9sxwSzPscE)
 
-MikeyMike created an [approximate cost calculator](https://docs.google.com/spreadsheets/d/1cjlZ4xi84sUbo09nV3CDkOrLjz3leInTZ9sxwSzPscE) for building a StealthChanger with x number of toolheads. It assumes you have a working Voron 2.4 and this does not include top hat extrusions,panels.
+MikeyMike created an [approximate cost calculator](https://docs.google.com/spreadsheets/d/1cjlZ4xi84sUbo09nV3CDkOrLjz3leInTZ9sxwSzPscE) for building a StealthChanger with x number of toolheads. It assumes you have a working Voron 2.4 and this does not include top hat extrusions,panels. The DraftShiftDesign team cannot be held responsible for anything that results from your significant other finding this calculator.
 
 ### [Reference CAD (.step) by N3MI](https://github.com/N3MI-DG/sc-guides)
 N3MI created a [reference CAD file](https://github.com/N3MI-DG/sc-guides) of a StealthChanger with Anthead toolheads, docks with crossbar, top hat, umbilicals and fanny pack.
@@ -105,5 +107,4 @@ N3MI created a [reference CAD file](https://github.com/N3MI-DG/sc-guides) of a S
 ### [Serials](Support/Serials.md)
 ### [Team & Credits](Support/Team-and-Credits.md)
 ### TBD: How to convince your partner to go along with this project.
-
 
