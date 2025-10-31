@@ -57,6 +57,22 @@ To mitigate that do the following:
    {% endraw %}
    After the pickup gcode has ran the toolchanging software will move the toolhead to the correct Z so no further change is necessary.
 
+### Can I skip a number in the tool numbering?
+No, Klipper requires sequential numbering starting from 0. Skipping a number will make it complain.
+
+### The wrong tool heats up
+Make sure all of your `extruder` references are correct per tool and you didn't forget to change one. Use `extruder`
+ for T0, `extruder1` for T1 and so on. Unfortunately the different naming scheme makes it easy to gloss over `extruder` references.
+
+ ### What are these T0, T1, ... macros?
+ The slicer uses these macros to initiate a tool change to the given tool. `T1` is the equivalent of `SELECT_TOOL T=1`.
+
+ ### Can I park the active tool and not select a new one?
+ Yes with `UNSELECT_TOOL`. If the macro is not available make sure you have set `require_tool: False` in `[toolchanger]`.
+
+ ### I'm getting errors about a T3, I don't even have a T3
+ Disable the chamber exhaust fan in your slicer, slicers use P3 as chamber fan and it gets interpreted as T3 by the software.
+
 
 
 
