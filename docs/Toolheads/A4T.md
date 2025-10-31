@@ -38,7 +38,7 @@ parent: Toolheads
 * Requires new smaller front idlers like the <a href="https://github.com/clee/VoronBFI">BFI</a> or <a href="https://github.com/DraftShift/StealthChanger/tree/main/UserMods/BT123/MiniBFI%20%2B%20MicroBFI">Mini BFI</a> so it doesn't collide with the idlers.
 
 ## Dock
-* Dock width: 76mm?
+* Dock width: 76mm
 * Common components for [your dock type](.../Dock.md)
 * [Modular dock assembly guide](https://github.com/DraftShift/ModularDock/blob/main/Manual/ModularDock_Assembly_Guide.pdf)
 * A4T not compatible with stubby docks
@@ -52,3 +52,4 @@ parent: Toolheads
 
 ## Tips & Suggestions
 * TBD
+
