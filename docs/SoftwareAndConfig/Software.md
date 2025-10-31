@@ -68,7 +68,7 @@ Make sure all of your `extruder` references are correct per tool and you didn't 
  The slicer uses these macros to initiate a tool change to the given tool. `T1` is the equivalent of `SELECT_TOOL T=1`.
 
  ### Can I park the active tool and not select a new one?
- Yes with `UNSELECT_TOOL`. If the macro is not available make sure you have set `require_tool: False` in `[toolchanger]`.
+ Yes with `UNSELECT_TOOL`. If the macro is not available make sure you have set `require_tool_present: False` in `[toolchanger]`.
 
  ### I'm getting errors about a T3, I don't even have a T3
  Disable the chamber exhaust fan in your slicer, slicers use P3 as chamber fan and it gets interpreted as T3 by the software.
@@ -78,6 +78,7 @@ Make sure to put the PA values in your filament settings in the slicer. If you h
 
 ### My tool pickup failed and it halted klipper so the print is lost. Can I just not make it pause so it can recover and resume?
 // Todo answer this
+
 
 
 
