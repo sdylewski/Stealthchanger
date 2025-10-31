@@ -24,10 +24,13 @@ parent: Toolheads
 - [1] m3x8 BHCS (optional in v1.1)
 
 ## Dock
-* TBD
-* 
+* Dock width: 76mm
+* Common components for [your dock type](.../Dock.md)
+* [Modular dock assembly guide](https://github.com/DraftShift/ModularDock/blob/main/Manual/ModularDock_Assembly_Guide.pdf)
+  
+
 ### Dock options
-* TBD
+* Original Draftshift Design [Jabberwocky Back and Base](https://github.com/DraftShift/ModularDock/tree/main/STLs/Jabberwocky)
 
 ## Tips & Suggestions
 * TBD
