@@ -33,9 +33,13 @@ LED effects will greatly increase the number of messages the CAN bus has to proc
 
 5. Your CAN bus is **not having enough resistance between CAN High and CAN Low**:
 Make sure you have 60ohms (if possible) between CAN high and CAN low, any less and noise might muddy up the signals, causing retransmits and potentially not having messages processed in time. Have only 2 termination resistors on the bus (unless you have SB2209s which might need more). See [CAN termination layout and common issues](../CableManagement/ElectricalDistribution.md#can-termination-layout-and-common-issues).
-  
-6. You've angered the 3d printer gods:
+
+6. Your MCU and host version of Klipper is too different
+This is usually not a problem and Klipper is generally pretty good at keeping compatibility with older firmware versions but it's always possible that something fundamentally changed that the old Klipper firmware does not know how to deal with well. Make sure your firmware and host Klipper versions are in sync.
+
+7. You've angered the 3d printer gods:
 Try praying or sacrifice an Ender3 in the parking lot.
+
 
 
 
