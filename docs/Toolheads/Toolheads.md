@@ -17,7 +17,7 @@ Each toolhead page will contain specifics for the backplate, dock, and modificat
 [<img src="../media/Toolheads/Anthead.png" width=100>](Anthead.md)
 
 * Uses 60mm wide docks
-* Can use stubby docks? 
+* Can use stubby docks
 * Default cowl and dock has built-in magnet holes for better docking
 
 
@@ -39,11 +39,11 @@ Each toolhead page will contain specifics for the backplate, dock, and modificat
 [<img src="../media/Toolheads/Stealthburner.png" width=100>](Stealthburner.md)
 
 * 76mm wide dock
-* Docking is a bit harder? 
 		
 ## [SV08](SV08.md)
 [<img src="../media/Toolheads/SV08.png" width=100>](SV08.md)
 
+* 60mm wide dock
 		
 ## [XOL](XOL.md)
 [<img src="../media/Toolheads/Xol.png" width=100>](XOL.md)
@@ -62,6 +62,11 @@ Each toolhead page will contain specifics for the backplate, dock, and modificat
 
 ## [Blackbird](Blackbird.md)
 [<img src="../media/Toolheads/Blackbird.jpg" width=80>](Blackbird.md)
+* 76mm wide dock
+
+
+## [Jabberwocky](Jabberwocky.md)
+[<img src="../media/Toolheads/Jabberwocky.png" width=100>](Jabberwocky.md)
 * 76mm wide dock
 
 
@@ -100,6 +105,7 @@ This is likely Klipper waiting for the temperature of the hotend to settle to th
 Either shorten your wires, tuck them away with zip ties or use a pcb cover if your toolhead has one
 <br/>
 <img src="../media/Toolheads/toolhead_pcbcover.jpg" width=200>
+
 
 
 
