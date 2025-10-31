@@ -6,18 +6,16 @@ parent: Building
 <!-- Use the page layout at TOC.md:  https://github.com/sdylewski/StealthChanger/blob/main/docs/TOC.md -->
 
 (original page, needs to be updated)
+## Printer Calibration
+The SteatlthChanger shuttle and backplate need to mate together with good tolerances, especially when using the recommended CNC-machined shuttles.  In order to not drive yourself crazy, please calibrate and tune your printer settings before starting this project. [Don't just use a calibration cube](https://www.youtube.com/watch?v=H7OsnMLDIMwa)!
 
+#### E-steps, Pressure Advance, and Flow ratio:
 
-1. [Parts](#parts)
-2. [Settings](#settings)
-3. [Orientation](#orientation)
+* Ellis's Print Tuning guide (for E-steps, PA, flow ratio)
 
-## Parts
-
-**NOTE: If you plan on using the Tapchanger Dragonburner dock you must use the [custom cowl by OstroMa](https://github.com/DraftShift/StealthChanger/blob/main/UserMods/OstroMa/DB_Cowl_v8_with_TapChanger_Dock_Hooks.stl). We always recommend to use the original cowls when possible and the [Modular Dock](https://github.com/DraftShift/ModularDock) does not require any special Cowl, print the original from the Dragonburner repo.**
-
-
-Coming Soon
+#### Shrinkage and Skew
+* [Cauliflower](https://www.printables.com/model/682023-califlower-calibration-stl-calculator-mk1) (paid original)
+* [Calistar](https://www.printables.com/model/778188-calistar-parametric-open-source-alternative-to-cal/files) open source alternative to Cauliflower
 
 
 ## Settings
