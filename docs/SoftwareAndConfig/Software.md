@@ -80,10 +80,18 @@ Disable the chamber exhaust fan and auxilary cooling in your slicer, slicers use
 Make sure to put the PA values in your filament settings in the slicer. If you have multitool ramming enabled it will set pressure advance to 0 when ramming on the wipe tower and if it's not in the filament settings it can't put it back to what it's supposed to be during the print.
 
 ### My tool pickup failed and it halted klipper so the print is lost. Can I just not make it pause so it can recover and resume?
-// Todo answer this
+You can use the `error_gcode ` and `recover_gcode` of toolchanger for this.
+
+1. The tool is not being detected by the VERIFY_TOOL call in the pickup gcode (assuming your path has a 'verify': 1 somewhere)
+2. It runs the `error_gcode` and puts the toolchanger software in an error state. Adding `PAUSE_BASE` in `error_gcode` will pause the printer. Do not use `PAUSE` if you have mainsail, mainsail overrides it to move the toolhead to the back and you don't want that.
+3. Fix the toolhead issue and do everything to prepare the printer to continue. Put the toolhead on the shuttle and move the gantry to a safe position. It will move in a straight line (`G0`) to where the toolhead is supposed to go after the pickup so be careful!
+4. Run `INITIALIZE_TOOLCHANGER RECOVER=1` to return to its normal state and run the `recover_gcode` section. Adding `RESUME_BASE` will resume in `recover_gcode` will resure the printer. Do not use `RESUME` if you have mainsail for the same reason as above.
+5. The printer should now continue the print with the tool that failed to pick up.
+
 
 ### I'm getting a Klipper error about multi_fan or fan_generic
 You likely had an older install or copied the config from an older install. This was changed and a fan reference each tool section `[tool]` is now `fan: Tx_partfan`.
+
 
 
 
