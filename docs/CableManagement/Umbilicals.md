@@ -12,9 +12,11 @@ Each tool uses a separate toolhead PCB that provides power and communication (ei
 
 The current recommended option is [Umbilical plates V2](https://github.com/DraftShift/CableManagement/tree/main/UserMods/N3MI-DG/Umbilical_plates_V2) by @N3MI. It replaces the exhaust plate with a plate configured for your specific setup, that way the umbilicals start their journey to the toolhead in the proper arc. A proper arc is necessary to separate each umbilical and prevent yanking the toolhead side to side, which is especially important when the tool gets dropped off into its dock. The umbilical should not yank the toolhead out of its dock or push the toolhead side to side which would misalign its pins with the shuttle and thus fail to pick up.
 
-While piano wire was initially recommended to stiffen the umbilicals and keep its shape into an arc, 3mm x 0.3mm spring steel works much better at preventing torsion, the umbilicals sways to the side much less, which is very important when the tools are parked close together. Any entanglement will jostle the parked toolheads out of their dock position.
+While piano wire was initially recommended to stiffen the umbilicals and keep its shape into an arc, [3mm x 0.3mm spring steel](https://aliexpress.com/item/1005006731615186.html) works much better at preventing torsion, the umbilicals sways to the side much less, which is very important when the tools are parked close together. Any entanglement will jostle the parked toolheads out of their dock position.
 
 Depending on your toolhead you want to find a cable relief for the umbilical to clamp to. You can terminate the spring steel at the toolhead, resulting in a stiffer arc, but induce more force on the toolhead which might push the nozzle forward or backwards. If you terminate the spring steel above the toolhead the force won't be on the toolhead itself but it might also not be stiff enough to prevent sway.
+
+Tip: heating up the spring steel end with a lighter makes it much more bendable without snapping
 
 ## Toolhead cable attachment
 Most toolhead boards will have an area to zip-tie your cable to. 
@@ -51,6 +53,7 @@ Image by @Tooks
 * [Orbiter V2 BTT EBB36 carrier](https://github.com/DraftShift/StealthChanger/blob/main/UserMods/onsimon/README.md)
 * [EBB36 and Galileo 2 Standalone User Mod](https://github.com/DraftShift/StealthChanger/tree/main/UserMods/seenit783)
 * [Pcb36 mount for ProtoXtruder 2.0](https://www.printables.com/model/1460801-ebb36-mount-protoextruder2stealthchanger) ([discord link](https://discord.com/channels/1226846451028725821/1373573718017708114))
+
 
 
 
