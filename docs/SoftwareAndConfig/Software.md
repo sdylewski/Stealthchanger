@@ -61,17 +61,20 @@ To mitigate that do the following:
 No, Klipper requires sequential numbering starting from 0. Skipping a number will make it complain.
 
 ### The wrong tool heats up
-Make sure all of your `extruder` references are correct per tool and you didn't forget to change one. Use `extruder`
- for T0, `extruder1` for T1 and so on. Unfortunately the different naming scheme makes it easy to gloss over `extruder` references.
+Make sure all of your `extruder` references are correct per tool and you didn't forget to change one. Use `extruder` for T0, `extruder1` for T1 and so on. Unfortunately the different naming scheme makes it easy to gloss over `extruder` references.
 
- ### What are these T0, T1, ... macros?
- The slicer uses these macros to initiate a tool change to the given tool. `T1` is the equivalent of `SELECT_TOOL T=1`.
+### I'm getting some weird behaviour where the wrong tool gets selected, heated, part cooling fan is wrong, etc.
+Make sure you don't accidentally have overridden any macros. If you copy T0 cfg to T1 and forget to change any reference to T0 you'll run into weird behavior. Read through T1 cfg closely and make sure you don't have anything still referencing T0. Gcode macro definitions will override the previously defined one (in T0 cfg). If you've forgotten to change the name of the gcode macro but have changed all references to T1 inside that macro then when that macro is called for T0 it will do all the things it's supposed to with T1 instead of T0.
 
- ### Can I park the active tool and not select a new one?
- Yes with `UNSELECT_TOOL`. If the macro is not available make sure you have set `require_tool_present: False` in `[toolchanger]`.
+### What are these T0, T1, ... macros?
+The slicer uses these macros to initiate a tool change to the given tool. `T1` is the equivalent of `SELECT_TOOL T=1`.
 
- ### I'm getting errors about a T3, I don't even have a T3
- Disable the chamber exhaust fan in your slicer, slicers use P3 as chamber fan and it gets interpreted as T3 by the software.
+### Can I park the active tool and not select a new one?
+Yes with `UNSELECT_TOOL`. If the macro is not available make sure you have set `require_tool_present: False` in `[toolchanger]`.
+
+### I'm getting errors about a T3, I don't even have a T3
+This happens when your slicer emits a `M106 P3 S0` or ` M106 P2 S0` (if you have a T2 not assigned error).
+Disable the chamber exhaust fan and auxilary cooling in your slicer, slicers use P2 as auxilary cooling fan P3 as chamber fan and it gets interpreted as T2 or T3 by the software. 
 
 ### My pressure advance doesn't work
 Make sure to put the PA values in your filament settings in the slicer. If you have multitool ramming enabled it will set pressure advance to 0 when ramming on the wipe tower and if it's not in the filament settings it can't put it back to what it's supposed to be during the print.
@@ -79,7 +82,8 @@ Make sure to put the PA values in your filament settings in the slicer. If you h
 ### My tool pickup failed and it halted klipper so the print is lost. Can I just not make it pause so it can recover and resume?
 // Todo answer this
 
-
+### I'm getting a Klipper error about multi_fan or fan_generic
+You likely had an older install or copied the config from an older install. This was changed and a fan reference each tool section `[tool]` is now `fan: Tx_partfan`.
 
 
 
