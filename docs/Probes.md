@@ -41,6 +41,7 @@ Con:
 #### Mounts
 * [Carto mounts for CNC shuttles](https://github.com/DraftShift/StealthChanger/tree/main/UserMods/N3MI-DG/Carto_Mounts)
 * [Beacon/Carto Mount for Fystec/LDO CNC Shuttle with Top Brace](https://github.com/DraftShift/StealthChanger/tree/main/UserMods/cekim-git/CNCShuttleMount/)
+* [Fysect Shuttle Cartograper Mount](https://www.printables.com/model/1455180-fysect-shuttle-cartograper-mount/files)
 
 ### Eddy
 // TODO
@@ -179,6 +180,7 @@ Bad electrical connections. You need to use copper SHCS at least.  Check the res
 
 ### Do I need to calibrate the offsets on every print?
 No, the offsets should remain the same unless you change something hardware related, like disassembling and reassembling a toolhead, changing the preload screws on its backplate, swapping out a nozzle, etc. Basically anything that can move a nozzle in a different location. It's a good idea to check the offsets periodically to make sure there's no drift, especially before a long multicolor print to ensure the best quality.
+
 
 
 
