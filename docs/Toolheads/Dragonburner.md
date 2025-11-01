@@ -45,7 +45,7 @@ parent: Toolheads
   
 ### PCB mounts
 * [recommended] [TheSin's PCB36 mount and backplate](https://github.com/DraftShift/StealthChanger/tree/main/UserMods/TheSin-/PCB36_Mount) for Orbiter 2.5 and HGX Sherpa extruders. Needs [22mm standoffs](https://www.printables.com/model/1440113-m3-heatset-standoffs-10mm-30mm) for Oribiter 2 extruders. 
-* [Dragon Burner EBB36 mount for the Orbiter2.0 extruder](https://github.com/DraftShift/StealthChanger/blob/main/UserMods/cekim/Readme.md)
+* [Dragon Burner EBB36 mount for the Orbiter2.0 extruder](https://github.com/DraftShift/StealthChanger/tree/main/UserMods/cekim-git/EBB36Mount)
 * [Dragonburner Orbiter  EBB36 mount](https://github.com/DraftShift/StealthChanger/tree/main/UserMods/traxman25/Dragonburner_EBB36_SC_Mount)
 
 ### Umbilical attachment
@@ -71,6 +71,7 @@ parent: Toolheads
 * NOTE: If you plan on using the Tapchanger Dragonburner dock you must use the [custom cowl by OstroMa](https://github.com/DraftShift/StealthChanger/blob/main/UserMods/OstroMa/DB_Cowl_v8_with_TapChanger_Dock_Hooks.stl). 
 
 * We always recommend to use the original cowls when possible and the [Modular Dock](https://github.com/DraftShift/ModularDock) does not require any special Cowl, print the original from the Dragonburner repo.
+
 
 
 
