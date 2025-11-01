@@ -39,13 +39,14 @@ Having magnets that keep the toolhead in place in the docks and nicely aligned w
 ## Toolhead Options & Mods
 * [Stealthburner numbered cowls](https://github.com/sdylewski/StealthChanger/tree/main/UserMods/Dumplap/Stealthburner%20Number%20Cowls)
 * [SC Barf LED for Stealthburner](https://github.com/sdylewski/StealthChanger/tree/main/UserMods/N3MI-DG/StealthBurner_SC_Barf) (note that SC Barf needs RGB nozzle LEDs, not RGBW for SW compatability)
-* [FilaMAtrix](https://github.com/thunderkeys/FilamATrix) for runout sensor, cutter and ECAS fitting
+* [FilamAtrix](https://github.com/thunderkeys/FilamATrix) for runout sensor, cutter and ECAS fitting
 
 ## Umbilical
 If using the recommended N3MI umbilical plate, you probably want to terminate your umbilical at the toolhead using some sort of cable anchor at the toolhead:
 * [Stealthburner cable bridge mod](https://www.printables.com/model/608471-stealthburner-cable-bridge-mod/files) (EBB SB2240/2209)
 * [Stealthburner Umbilical SB2040 CAN Bus cable anchor](https://www.printables.com/model/407336-voron-stealthburner-umbilical-sb2040-can-bus-cable/files)
-
+* [EBB36 v1.2 CW2 mount with PUG](https://www.printables.com/model/1126741-ebb36-v12-cw2-mount-with-pug) mount with PUG instead of PG7, also has PCB cover that uses existing mounting holes of the CW2
+  
 ## Dock
 * Dock width: 76mm
 * Common components for [your dock type](.../Dock.md)
@@ -62,6 +63,7 @@ If using the recommended N3MI umbilical plate, you probably want to terminate yo
 
 ## Tips & Suggestions
 * Add multiple magnets so the dock screws don't get caught on the cowl.  
+
 
 
 
