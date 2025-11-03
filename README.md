@@ -1,2 +1,2 @@
-#[Documentation available here ](docs/index.md)
+#[Documentation available here ](https://sdylewski.github.io/StealthChanger/)
 
