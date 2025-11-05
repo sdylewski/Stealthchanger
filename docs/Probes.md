@@ -7,11 +7,15 @@ parent: StealthChanger Components
 # Probes
 There are 2 types of probes used in StealthChanger. One is the familiar Z-probe to do Z homing and find the bed position at Z=0 (along with `z-offset`, the distance from the bed to the trigger point of the probe). The other is used for inter-tool offsets (`gcode_offset` in `[tool]` section), as each nozzle will be ever so slightly different in terms of X,Y,Z position, the offsets relative to the first tool (T0) have to be taken into account so the printer prints in the expected location after a tool swap.
 
+### Problems
+With most of these probes, your nozzle needs to be clean to be measured correctly. That requires manual cleaning or a wipe/brush system. 
+The XY probe also needs to be mounted on your bed extrusions or temporarily securely attached to your bed during calibration. Mounting the SexBall to your bed so that it's accessible from all sides may require moving of the bed.
+
 ## 1. Z-probes
 
 ### TAP
 Each toolhead of Stealthchanger has a OctoTap PCB board: required for detecting which tool is active on the shuttle and whether the pickup of a new tool has succeeded. Since it is required anyway, this can also be used for homing with the nozzle just like Voron TAP. Even if you use a different z-probe, you still need an OctoTap PCB per toolhead.
-Note that the z-offset will be negative for TAP as the motors will continue to go below the zero (= bed level) point to trigger the OctoTap sensor by pushing the toolhead up out of the shuttle until it triggers the OctoTap. Since the trigger is after the nozzle contacts the bed, the z-offset is negative. Simple.
+Note that the z-offset will be negative for TAP as the motors will continue to go below the zero (= bed level) point to trigger the OctoTap sensor by pushing the toolhead up out of the shuttle until it triggers the OctoTap. Since the trigger is after the nozzle contacts the bed, the z-offset is negative.
 
 Installing a wiper near the bed and have a CLEAN_NOZZLE macro after the initial home and before QGL and re-home is recommended, any leftover filament will throw off gantry levelling and actual bed height.
 
@@ -24,7 +28,7 @@ Pro:
 Con:
  * Does not allow for toolless homing, a tool needs to be present on the shuttle to home
  * Is pretty slow, especially for QGL and large bed meshes
- * Can dimple the PEI plate, especially a smooth one if you use N52 magnets in the shuttle and backplate
+ * May dimple the PEI plate, especially a smooth one if you use N52 magnets in the shuttle and backplate
    
 ### Beacon/Carto
 A magnetic field sensor that can detect the metal of the build plate without contacting it, and also while the toolhead is moving.
@@ -66,7 +70,7 @@ Con:
  * Relies on a physical contact, which means this requires tight tolerances: the sexball shouldn't have any play. The toolhead nozzles should also be concentric (the bore hole has to be in the exact middle of the nozzle), cheap nozzles often aren't, which means the determined offsets be inaccurate due to a a bias
  * Pushes sideways on a sphere to generate vertical movement, so that can go wrong
 
-See [tool calibration configuration](https://github.com/viesturz/klipper-toolchanger/blob/main/tools_calibrate.md) to set up calibration config and macros.
+See [tool calibration configuration](../SoftwareAndConfig/Calibration.md) to set up calibration config and macros.
 
 #### BOM
 Calibration probe option that just replaces the shaft on a sexbolt.
@@ -95,6 +99,7 @@ Alternatively you can purchase check on our official [vendors list](Building/Ven
 * [Sexball top mount](https://github.com/DraftShift/StealthChanger/tree/main/UserMods/Dumplap/SexBolt%202020%20Top%20Mount)
 * [Sexball rest mount](https://www.printables.com/model/1094209-sexball-probe-rest-mount-for-stealthchanger-calibr)
 * [Alternative with 4mm dowels instead of ball](https://www.printables.com/model/1073728-shorter-multi-tool-calibration-probe-with-4mm-dowe) ([discord link](https://discord.com/channels/1226846451028725821/1306506750509449258))
+* [Dockable bed-top mount](https://www.printables.com/model/1453289-stealthchanger-dockable-nudge-or-sexbolt-mount)
 
 ### [Axiscope](https://github.com/nic335/Axiscope)
 [Axiscope](https://github.com/nic335/Axiscope) uses a camera instead of a physical probe to align each toolhead nozzle. With its provided web interface it's really easy to go through the toolheads, align them and determine the offsets. It also supports a physical endstop to determine the gcode Z offsets (make sure your nozzle is clean).
@@ -141,6 +146,7 @@ Con:
 
 #### Mods
 
+* [Stronger Dockable bed-top mount](https://www.printables.com/model/1453289-stealthchanger-dockable-nudge-or-sexbolt-mount)
 * [2.4 Dockable Nudge Mount](https://github.com/DraftShift/StealthChanger/tree/main/UserMods/MRSalguod/2.4%20Dockable%20Nudge%20Mount)
 
 

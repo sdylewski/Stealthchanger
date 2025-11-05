@@ -5,15 +5,13 @@ parent: Building
 ---
 <!-- Use the page layout at TOC.md:  https://github.com/sdylewski/StealthChanger/blob/main/docs/TOC.md -->
 
+
+[Kits are are now available](Vendors-and-Kits.md) for parts, but check which components are included!
+
 All parts (screws, magnets, etc) are Voron, and Voron Tap standards.
 
-1. [Shuttle](#shuttle)
-2. [BackPlates](#backplates)
-3. [Endstops](#endstops)
-4. [Options](#options)
-5. [Sexball Probe](#sexball-probe)
-6. [Affiliate Links](#affiliate-links)
-
+## Shuttle
+One [shuttle](../Shuttle.md) is required.  
 
 ## Backplates
 
@@ -30,6 +28,25 @@ x1 per toolhead
 - [1] [OptoTap](https://s.click.aliexpress.com/e/_DEGsGTV) (only the sensor PCB is required)
 - [1] m3x8 BHCS (optional in v1.1)
 
+## Toolheads
+Individual toolhead BOMs are listed on each [toolhead page](../Toolheads/Toolheads.md). These are just a few examples.
+
+### Tools
+* Good ratcheting crimpers for JST-XH and other types of connectors
+* Fine soldering iron for LEDs
+
+### General toolhead BOM
+* part cooling blowers, often 4010 blower
+* Toolhead hotend fan, often 2510 axial
+* Toolhead boards
+* Backplate for each toolhead
+* high-temp epoxy
+* LEDs, often WS2812B individual LEDs
+* Tons of M3x4x5 heatset inserts
+* M3 SHCS and BHCS assorted screws
+
+### Anthead
+* TBD
 
 ### Dragonburner/Rapidburner/Yavoth
 
@@ -37,8 +54,6 @@ x1 per toolhead
 - [2] m3x35 SHCS
 - [2] m3 heat inserts
 - [2] m3x8 BHCS (optional in v1.1)
-
-**Note:** Dragonburner [extended mount](https://github.com/chirpy2605/voron/tree/main/general/Alternative_Voron_Mounts/Extended_Extruder_Mounts) is required depending on extruder
 
 
 ### Archetype Blackbird
@@ -64,13 +79,15 @@ x1 per toolhead
 - You will **not be able** to use stock 2.4 Z joints with Xol or A4T. See links in Xol section above for links to alternative suggestions.
 
 
-## Endstops
+## Electronics
+see [CableManagement](../CableManagement/CableManagment.md)
 
-Optional
+## Tophat
+You can print your own, build a kit, or source your own parts.  See the [TopHat page](../TopHat.md) for more info.
 
-- [1] m3x6 BHCS
-- [1] m3 heat insert
-- [1] 6x3mm magnet (Hall Effect Sensor ONLY, Voron spec)
+## X or Y Endstops
+
+See [Endstops page](../Endstops.md).  Depends on your preferences
 
 
 ## Options
@@ -106,6 +123,6 @@ Image by BT123
 | Pin     	  | [AliExpress](https://s.click.aliexpress.com/e/_DCQkrFP) | [US Amazon](https://amzn.to/3GZBSZn) | [UK Amazon](https://amzn.to/488gP2v) |
 | N52 Magnets | [US KB-3D](https://kb-3d.com/store/magnets-bearings/995-disccylinder-magnet-high-temp-n52h-6x3mm-1696789934996.html) | [UK Printy Please](https://www.printyplease.uk/N52H) | |
 
-Due to QC issues, this is an [Alternative bush](https://s.click.aliexpress.com/e/_DFJQgtN) which has also been tested and works fine.
+Due to QC issues, this is an [Alternative bushing](https://s.click.aliexpress.com/e/_DFJQgtN) which has also been tested and works fine.
 
-Alternatively you can purchase check on our official [vendors list](Vendors-and-Kits.md)
+

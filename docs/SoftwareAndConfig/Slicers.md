@@ -1,5 +1,5 @@
 ---
-title: Slicers
+title: Slicers & Printing
 nav_order: 4
 parent: Software & Configuration
 ---

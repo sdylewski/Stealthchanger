@@ -20,7 +20,15 @@ The SteatlthChanger shuttle and backplate need to mate together with good tolera
 
 ## Settings
 
-All print settings are the same as [Voron Standards](https://docs.vorondesign.com/sourcing.html#print-settings) or better.
+All print settings are the same as [Voron Standards](https://docs.vorondesign.com/sourcing.html#print-settings) or better:
+
+* Layer height: 0.2mm
+* Extrusion width: 0.4mm, forced
+* Infill percentage: 40%
+* Infill type: grid, gyroid, honeycomb, triangle, or cubic
+* Wall count: 4
+* Solid top/bottom layers: 5
+* Supports: NONE
 
 Since every filament shrinks at a different rate and our tolerances are too tight to allow for "pre-scalling".  You need to calibrate the shrinkage for each and every filament you use, even the same brand but different colour can shrink at a different rate.  We recommend using Califlower for each filament.
 
@@ -31,5 +39,6 @@ Since every filament shrinks at a different rate and our tolerances are too tigh
 Print orientation is flat on the parts back with supports enabled currently, we are working on models with integrated supports.
 
 - All stls are in the proper print orientation
+- Please check any user mods for requirements
 
 ![Print Orientation](https://github.com/DraftShift/StealthChanger/blob/main/media/Print_orientation.jpg?raw=true)

@@ -12,29 +12,12 @@ Congratulations!  You've built a StealthChanger with at least 1 toolhead and/or 
 
 ##Process
 
-### 1. [Install](Installation.md) Klipper-toolchanger
+### 1. [Install](Installation.md) Klipper-toolchanger-Easy
 ### 2. [Configure](Configuration.md) all your parameters for each toolhead
 ### 3. [Calibrate](Calibration.md) your Z offsets, toolhead XY offsets, and dock locations.
 ### 4. [Setup your slicer](Slicers.md) and print-start macros
 ### 5. Print!
 
-
-
-this page should give an overview of the software, plus:
-* Detailed klipper-toolchanger and/or KTE install instructions
-* Any configureation needed for the SW
-* links to next pages for config or calibration?
-
-Previous notes:
-
-Sounds like I should use "Klipper-toolchanger-easy" instead of the default repo.  
-* https://github.com/jwellman80/klipper-toolchanger-easy?tab=readme-ov-file
-* Even when using klipper-toolchanger-easy, use the examples in the [Draftshift Klipper-toolchanger folder](https://github.com/DraftShift/klipper-toolchanger)
-* Klipper-toolchanger-easy is just for installation.  After installing that, still follow the [stealthchanger wiki](https://github.com/DraftShift/StealthChanger/wiki/Calibration) for configuration and setup!
-* Nudge XY calibration
-* [Dock Tuner macro]((https://github.com/Contomo/klipper-toolchanger-hard/blob/main/examples/dock%20location/fixed/dock_tuner.cfg)  how to install?
-* LEDs: [Example from Draftshift](https://github.com/DraftShift/klipper-toolchanger?tab=readme-ov-file) designs page
-* [LED Effects](https://github.com/julianschill/klipper-led_effect) TBD
 
 # FAQ
 SW Setup issues:
