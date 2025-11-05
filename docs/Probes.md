@@ -181,6 +181,11 @@ Bad electrical connections. You need to use copper SHCS at least.  Check the res
 ### Do I need to calibrate the offsets on every print?
 No, the offsets should remain the same unless you change something hardware related, like disassembling and reassembling a toolhead, changing the preload screws on its backplate, swapping out a nozzle, etc. Basically anything that can move a nozzle in a different location. It's a good idea to check the offsets periodically to make sure there's no drift, especially before a long multicolor print to ensure the best quality.
 
+### What is toolless homing?
+Toolless homing allows you to home with just the shuttle and there is no tool on the shuttle required. This has a number of advantages:
+ * You can park your last tool at the end of the print in its dock, preventing ooze and keeping the umbilicals in the arc shape when the printer is not used.
+ * You can move the empty shuttle to the back and down behind the bed as it won't interfere with the bed area, instead of having to keep the tool up above the print. That means the gantry is out of the way and ready for homing quickly for the next print.
+
 
 
 
