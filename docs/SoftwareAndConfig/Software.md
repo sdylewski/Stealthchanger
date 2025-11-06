@@ -77,6 +77,9 @@ You likely had an older install or copied the config from an older install. This
 ### Can I use Kalico instead of mainline Klipper?
 No, not at the moment.
 
+### I'm getting "invalid syntax"
+Make sure you are using at least python 3.
+
 
 
 
