@@ -80,7 +80,7 @@ Individual toolhead BOMs are listed on each [toolhead page](../Toolheads/Toolhea
 
 
 ## Electronics
-see [CableManagement](../CableManagement/CableManagment.md)
+see [CableManagement](../CableManagement/CableManagement.md)
 
 ## Tophat
 You can print your own, build a kit, or source your own parts.  See the [TopHat page](../TopHat.md) for more info.

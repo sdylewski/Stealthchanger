@@ -25,7 +25,7 @@ parent: Toolheads
 
 ## Dock
 * Dock width: 76mm
-* Common components for [your dock type](.../Dock.md)
+* Common components for [your dock type](../Docks.md)
 * [Modular dock assembly guide](https://github.com/DraftShift/ModularDock/blob/main/Manual/ModularDock_Assembly_Guide.pdf)
   
 

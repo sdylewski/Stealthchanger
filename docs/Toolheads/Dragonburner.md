@@ -13,7 +13,7 @@ parent: Toolheads
 * [Dragonburner Reference Page](https://github.com/chirpy2605/voron)
 
 ## Backplate
-* [recommended] [theSin Dragonburner backplate]() for ebb36-style boards with Orbiter 2.5 or HGX Sherpa.
+* [recommended] [theSin Dragonburner backplate](https://github.com/DraftShift/StealthChanger/tree/main/UserMods/TheSin-/Dragonburner_Backplate) for ebb36-style boards with Orbiter 2.5 or HGX Sherpa.
 * Draftshift Design [Dragonburner Backplate](https://github.com/DraftShift/StealthChanger/blob/main/STLs/Backplates/DragonBurner.stl) (no connection to toolhead board)
 * [Dragonburner spacer](https://github.com/DraftShift/StealthChanger/blob/main/STLs/Backplates/DragonBurner_Spacer.stl) (Required. goes between backplate and toolhead).
 * [Backplate assembly instructions](https://github.com/DraftShift/StealthChanger/blob/main/Manual/Stealthchanger_Assembly_Guide.pdf)

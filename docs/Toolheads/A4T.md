@@ -14,7 +14,7 @@ parent: Toolheads
 ## Backplate
 * [A4T Backplate](https://github.com/sdylewski/StealthChanger/blob/main/STLs/Backplates/A4T.stl)
 * [Backplate assembly instructions](https://github.com/sdylewski/StealthChanger/blob/main/Manual/Stealthchanger_Assembly_Guide.pdf)
-* Requires supports. [Printing instructions](../Printing.md)
+* Requires supports. [Printing instructions](../Building/Printing.md)
 
 ### Backplate BOM for All Tools
 
@@ -39,7 +39,7 @@ parent: Toolheads
 
 ## Dock
 * Dock width: 76mm
-* Common components for [your dock type](.../Dock.md)
+* Common components for [your dock type](../Docks.md)
 * [Modular dock assembly guide](https://github.com/DraftShift/ModularDock/blob/main/Manual/ModularDock_Assembly_Guide.pdf)
 * A4T not compatible with stubby docks
 

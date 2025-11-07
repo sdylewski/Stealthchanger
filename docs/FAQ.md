@@ -26,7 +26,7 @@ FAQs have been added to the end of individual pages.  This page may go away ???
 After printing the parts make sure that the hex holes look to be proper hexes and that they are very uniform.  If they are misshapen chances are you need to reprint as you will have alignment issues.  It doesn't take much to be out by a lot.  Try printing at a slower speed if you have issues.
 
 ### What probes can be use with SC?
-TAP is baked in to each tool as part of SC. As of right now no other probes are compatible with the printed parts or with klipper since only open probe can exist at a time.  Thus only TAP can be used.
+[TAP](../Probes.md#tap) is baked in to each [tool](../Toolheads/Toolheads.md) as part of SC. As of right now no other probes are compatible with the printed parts or with klipper since only open probe can exist at a time.  Thus only TAP can be used. See the [Probes](../Probes.md) page for more information.
 
 ### How many tool will fit on my printer?
 Calculating available size for tools (number of tools you can fit)
@@ -40,7 +40,7 @@ If you only want to print PLA or filaments that dont require an enclosure there 
 **How tall should it be?** for a 350 build we found 250mm, 300 build 225mm and 250 build 200mm additional z height works out well though might need to be higher depending on where you pass through umbilicals. It needs only be enough so that the cables can have a nice arch from back to front so not to collide with others and tangle, while being long enough to reach the farthest corner on the buildplate at layer 1.
 
 ### Adjust preload
-Preload is created with the 2 countersunk screws in the tool plate.  These 2 screws need to be magnetic and will make contact with the magnets in the shuttle.  This adds 2 more wider points of contact at the base while also pre loading the sleeves/bearings.  To adjust them screw them all the way in, then slowly unscrew them 1/4 turn at a time (keeping each side even) until the tool no longer engages its self right away.  Once you reach a point where this happens, screw them back in 1/4 turn.  Each tool needs to be adjusted separately as printing irregularities can happen and this will allow you to compensate for it.  You may want to test and readjust these from time to time.
+Preload is created with the 2 countersunk screws in the [tool](../Toolheads/Toolheads.md) plate.  These 2 screws need to be magnetic and will make contact with the magnets in the [shuttle](../Shuttle.md). See [Shuttle preload section](../Shuttle.md#backplate-preload) for detailed instructions.  This adds 2 more wider points of contact at the base while also pre loading the sleeves/bearings.  To adjust them screw them all the way in, then slowly unscrew them 1/4 turn at a time (keeping each side even) until the tool no longer engages its self right away.  Once you reach a point where this happens, screw them back in 1/4 turn.  Each tool needs to be adjusted separately as printing irregularities can happen and this will allow you to compensate for it.  You may want to test and readjust these from time to time.
 
 ### QGL won't finish
 If you run homing on Z or QGL and you are getting lots of restarts or excessive runs.  Make sure you are using **N52** magnets, and check that your umbilicals are properly support and the right length.  If these 3 things aren't checked it will affect the tap precision.

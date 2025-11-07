@@ -5,61 +5,88 @@ parent: Software & Configuration
 ---
 <!-- Use the page layout at TOC.md:  https://github.com/sdylewski/StealthChanger/blob/main/docs/TOC.md -->
 
-(original page, needs to be updated)
-
+# Installation
 
 All sections are required, so please follow all steps carefully.
 
-1. [Klipper Addon](#klipper-addon)
-2. [Toolchanger Configuration](#toolchanger-configuration)
+**Prerequisites:**
+- **Klipper version:** Must be newer than Jun 14, 2024 (commit 1591a51)
+- **DangerKlipper:** Not currently supported
+- **Before starting:** Remove your existing `PRINT_START` and `PRINT_END` macros from your config, as klipper-toolchanger-easy provides specific versions required for toolchanging
 
-**NOTE:** DangerKlipper is not currently supported
+## Installing klipper-toolchanger-easy
 
+[klipper-toolchanger-easy](https://github.com/jwellman80/klipper-toolchanger-easy) is the recommended toolchanger software for StealthChanger. The original [klipper-toolchanger](https://github.com/viesturz/klipper-toolchanger/) is no longer maintained and the "easy" fork is actively developed.
 
-**NOTE:** Your klipper version eneds to be newer than Jun 14, 2024 (1591a51)
+### Installation Methods
 
+#### Method 1: Installation Script (Recommended)
 
-**NOTE:** Before you start remove your `PRINT_START` and `PRINT_END` macros out of the config as toolchanging requires a specific version of these to initialize and start printing.
+The easiest way to install klipper-toolchanger-easy is using the provided installation script:
 
-## Klipper Addon
-
-You must install [klipper-toolchanger-easy](https://github.com/jwellman80/klipper-toolchanger-easy), Follow instruction on the linked page.
-
-***Note*** The original [klipper-toolchanger](https://github.com/viesturz/klipper-toolchanger/) isn't working and the "easy" fork is recommended.
-
-
-## Toolchanger Configuration
-
-* update your config file for each tool in toolchanger/tools/Tx.cfg (T0.cfg, T1.cfg, etc)
-* look through toolchanger-config.cfg and update
-	* homing_override_config
-	* _CALIBRATION_SWITCH section
-	* tools_calibrate
-
-
-
-**NOTE:** when using sensorless Y make sure that the `homing_retract_dist` in the `[stepper_y]` section is set to 0 as per [Voron Docs](https://docs.vorondesign.com/community/howto/clee/sensorless_xy_homing.html)
-
-You can either add them manually to your klipper install, or alternatively, you can integrate them to your config so that moonraker keeps them up to date with your other software if they change. Below are the steps for the integrated way. If you make any changes to the files though, they will be overwritten if you update. If you choose to manually add them, make sure your printer.cfg reflects the location of them.
-
-**On the Klipper System** 
-```
+**On your Klipper host system:**
+```bash
 cd ~
-git clone https://github.com/viesturz/tapchanger.git --no-checkout --depth 1 --filter=blob:none
-cd tapchanger
-git sparse-checkout init --cone
-git sparse-checkout set Klipper
-git checkout
-cd ~
-ln -s ~/tapchanger/Klipper/config-example ~/printer_data/config/tapchanger
+git clone https://github.com/jwellman80/klipper-toolchanger-easy.git
+cd klipper-toolchanger-easy
+./install.sh
 ```
 
-**Add to moonraker.conf**
+The installation script will:
+- Install the toolchanger files to your Klipper config directory
+- Set up the necessary directory structure
+- Configure Moonraker for automatic updates (optional)
+
+#### Method 2: Manual Installation
+
+If you prefer manual installation or need more control:
+
+**On your Klipper host system:**
+```bash
+cd ~
+git clone https://github.com/jwellman80/klipper-toolchanger-easy.git
+cd klipper-toolchanger-easy
+# Copy files to your config directory
+cp -r stealthchanger ~/printer_data/config/
 ```
-[update_manager tapchanger]
+
+### Moonraker Update Manager (Recommended)
+
+To keep klipper-toolchanger-easy automatically updated, add this to your `moonraker.conf`:
+
+```ini
+[update_manager klipper-toolchanger-easy]
 type: git_repo
-path: ~/tapchanger
-origin: https://github.com/viesturz/tapchanger.git
+path: ~/klipper-toolchanger-easy
+origin: https://github.com/jwellman80/klipper-toolchanger-easy.git
 primary_branch: main
 managed_services: klipper
 ```
+
+**Note:** If you make manual changes to the installed files, they will be overwritten when Moonraker updates. Use the configuration override files instead (see [Configuration](Configuration.md)).
+
+### Include in printer.cfg
+
+Add this line to your `printer.cfg` to include the toolchanger configuration:
+
+```ini
+[include stealthchanger/toolchanger-config.cfg]
+```
+
+## Post-Installation Configuration
+
+After installation, you need to:
+
+1. **Configure tool files:** Update `stealthchanger/tools/Tx.cfg` for each tool (T0.cfg, T1.cfg, etc.)
+2. **Update toolchanger-config.cfg:** Configure:
+   - `homing_override_config` - Your homing sequence
+   - `_CALIBRATION_SWITCH` section - If using a calibration probe
+   - `tools_calibrate` - Tool calibration settings
+3. **Set up tool configurations:** See [Configuration](Configuration.md) for detailed instructions
+
+**Important Notes:**
+- When using sensorless Y homing, ensure `homing_retract_dist` in `[stepper_y]` is set to `0` as per [Voron Docs](https://docs.vorondesign.com/community/howto/clee/sensorless_xy_homing.html)
+- The installation creates a `stealthchanger` directory in your config folder with all necessary files
+- Tool configuration files are located in `stealthchanger/tools/`
+
+See [Configuration](Configuration.md) for the next steps.

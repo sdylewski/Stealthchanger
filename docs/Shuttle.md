@@ -6,7 +6,7 @@ parent: StealthChanger Components
 <!-- Use the page layout at TOC.md:  https://github.com/sdylewski/StealthChanger/blob/main/docs/TOC.md -->
 # Shuttle
 
-This is the part that bolts onto your X carriage to mate and pickup each tool. You will need One Shuttle for the Printer. It will mate with a BACKPLATE that's made specifically for your toolhead. You will need one Backplate per tool. All shuttle designs have a vertical flag at the top that interacts with an OptoTap sensor mounted on the backplate to detect the tool and register taps on the build plate<br>
+This is the part that bolts onto your X carriage to mate and pickup each [tool](../Toolheads/Toolheads.md). You will need One Shuttle for the Printer. It will mate with a BACKPLATE that's made specifically for your [toolhead](../Toolheads/Toolheads.md). You will need one Backplate per tool. All shuttle designs have a vertical flag at the top that interacts with an [OctoTap](../Probes.md#tap) sensor mounted on the backplate to detect the tool and register taps on the build plate<br>
 
 ## Shuttle Options
 <table>
@@ -53,7 +53,7 @@ This is the part that bolts onto your X carriage to mate and pickup each tool. Y
 <tr><td valign="top">
 	<h3>Printing shuttle</h3>
 	<ul>
-    	<li>See <a href="Printing.md">Printing</a> before printing the shuttle</li>
+    	<li>See <a href="../Building/Printing.md">Printing</a> before printing the shuttle</li>
     	<li>Shuttle orientation is flat on the back with supports enabled</li>
   	</ul>
 	</td><td valign="top">
@@ -147,5 +147,5 @@ If you have screw in magnets just screw them in place. If you have normal magnet
 - Make sure your OctoTAP board is not loose on the backplate of the tool
 - Make sure the screws holding the backplate to the toolhead are tight
 - If you have a printed shuttle, make sure the shuttle hasn't cracked anywhere, especially near the bushings at the top. Any play in the bushings will cause the toolhead to be less consistent in probing.
-- Check your umbilical is not pulling on the toolhead - especially at the front corners - causing the optotap to activate earlier or later than in the bed centre
+- Check your [umbilical](../CableManagement/Umbilicals.md) is not pulling on the toolhead - especially at the front corners - causing the optotap to activate earlier or later than in the bed centre
 

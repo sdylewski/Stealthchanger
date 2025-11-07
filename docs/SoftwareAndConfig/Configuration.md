@@ -5,32 +5,71 @@ parent: Software & Configuration
 ---
 <!-- Use the page layout at TOC.md:  https://github.com/sdylewski/StealthChanger/blob/main/docs/TOC.md -->
 
-(original page, needs to be updated)
+# Configuration
 
+After installing [klipper-toolchanger-easy](Installation.md), you need to configure it for your specific setup. This guide covers the essential configuration steps.
 
+**Important:** Tool numbering starts at 0 and counts up. For all configs, ensure you change all sections accordingly. For example, in your T1 config, use `extruder1`, `fan1`, etc. **The only exception is T0 - the extruder has no number (just `extruder`, not `extruder0`).**
 
-Toolchangers start with number 0, and count up. So for all the configs, make sure you change all sections. IE, in your T1 config, make sure its extruder1, fan1, etc. See the examples.  
-**NOTE: The only exception to this rule is T0 extruder has no number.**
+## Configuration Overview
 
-1. [Toolhead Configuration](#toolheads-configuration)
-2. [CANbus](#canbus)
+1. [Toolhead Configuration](#toolhead-configuration)
+2. [Toolchanger Settings](#toolchanger-settings)
 3. [Offsets](#offsets)
 4. [Dock Positions](#dock-positions)
 5. [close_y and safe_y](#close_y-and-safe_y)
-6. [Docking Path](#Path)
+6. [Docking Path](#docking-path)
+7. [Print Start Macro](#print-start-macro)
 
-## Toolheads Configuration
+## Toolhead Configuration
 
-Please see the repo files for more info on these. [Configuration Files Repo](https://github.com/DraftShift/StealthChanger/blob/main/Klipper)
+Each toolhead needs its own configuration file. These are located in `stealthchanger/tools/Tx.cfg` (e.g., `T0.cfg`, `T1.cfg`, etc.).
 
-You need to add the info in `printer.cfg` from our repo to your `printer.cfg`
+### Example Configuration Files
 
-You need to have a separate toolhead config for each toolhead, then link those in your `printer.cfg`, as well as removing/moving the current extruder/hotend config from your `printer.cfg` file. See the examples in the repo for more information and a starting place. You will have to edit them with your own values.
+Reference configuration files are available in the [StealthChanger Klipper repo](https://github.com/DraftShift/StealthChanger/tree/main/Klipper). Use these as starting points and customize them with your specific values.
 
-**NOTE:** for some odd reason `t_command_restore_axis` was set to blank recently, this should be `t_command_restore_axis: z` please make sure that is your setting.
+### Setting Up Tool Files
 
-**NOTE:** `_PARK_ON_COOLING_PAD` is a useless macro in `PRINT_START` in `macros.cfg` please make sure to comment out or remove that line, currently it is line 129.
+1. **Copy the example tool config** from the StealthChanger repo or klipper-toolchanger-easy
+2. **Rename and number appropriately:** `T0.cfg`, `T1.cfg`, `T2.cfg`, etc.
+3. **Update all references:**
+   - T0: `extruder`, `heater`, `fan`, etc. (no numbers)
+   - T1: `extruder1`, `heater1`, `fan1`, etc.
+   - T2: `extruder2`, `heater2`, `fan2`, etc.
+4. **Include in printer.cfg:**
+   ```ini
+   [include stealthchanger/tools/T0.cfg]
+   [include stealthchanger/tools/T1.cfg]
+   # ... etc for each tool
+   ```
 
+5. **Remove or move** your existing extruder/hotend config from `printer.cfg` (it's now in the tool files)
+
+### Important Tool Configuration Notes
+
+- **`t_command_restore_axis`:** Should be set to `z` (or `XYZ` if you want to restore all axes). If blank, set it to `z`.
+- **Tool detection:** Each tool needs an `[tool_probe]` section with the OctoTap sensor configured
+- **Fans:** Use `fan: Tx_partfan` format in the `[tool]` section (not `multi_fan` or `fan_generic`)
+
+## Toolchanger Settings
+
+The main toolchanger configuration is in `stealthchanger/toolchanger-config.cfg`. Key settings to configure:
+
+### Homing Override
+
+Configure `homing_override_config` to match your homing sequence. This typically includes:
+- X and Y homing (sensorless or endstops)
+- Z homing using the tool probe
+- Quad gantry leveling (QGL)
+
+### Calibration Switch (Optional)
+
+If using a calibration probe (Sexball, Nudge, etc.), configure the `_CALIBRATION_SWITCH` section with your probe's endstop pin.
+
+### Tool Calibration Settings
+
+Configure `tools_calibrate` section if you want to use automatic calibration routines.
 
 ## Offsets
 
@@ -53,19 +92,57 @@ It is important to get this right. If you don't, you will have changing issues, 
 
 IE, if you Y park position is -15. Your close Y should be 15. If your Y park position is 0, it should be 30. Safe Y should be slighty further out. 
 
-## Path
+## Docking Path
 
-The docking path can be confusing for people to understand. Let's try to disect it. Take this path:
+The docking path (`params_sc_path` or `params_path`) defines the movement sequence when picking up or dropping off tools. This can be confusing, so let's break it down.
 
-params_sc_path: [{'y':9.5 ,'z':4}, {'y':9.5, 'z':2}, {'y':5.5, 'z':0}, {'z':0, 'y':0, 'f':0.5}, {'z':-10, 'y':0}, {'z':-10, 'y':16}]
+### Path Format
 
-When looking at this, understand that the movements are relative to the park position. When dropping off a tool, it will go left to right, and when picking up a tool, it will go right to left on movements. Let's say your park position is x=20 y=-10, z=240 and close_y=20. When dropping off a tool, it will move up and start the sequence essentially at x=20 y=20 z=240. Now add in the first set of items. 
+The path is a list of relative movements from the park position. Movements are executed **left to right** when dropping off, and **right to left** when picking up.
 
-*  {'y':9.5 ,'z':4} Move to x=20 y=-0.5 z=244
-*  {'y':9.5, 'z':2} Move to x=20 y=-0.5 z=242
-*  {'y':5.5, 'z':0} Move to x=20 y=-4.5 z=240
-*  {'z':0, 'y':0, 'f':0.5}. This will slowly move you (f is speed in gcode) to docking position of x=20 y=-10, z=240
-*  {'z':-10, 'y':0} Drop the z down to z=230 so that it starts unhooking.
-*  {'z':-10, 'y':16}. Move to z=230 y=6, we are clear of the tool.
+### Example Path
 
-It will then move to the close_y and x of the tool its picking up, and run in reverse order.
+```python
+params_sc_path: [
+    {'y':9.5, 'z':4}, 
+    {'y':9.5, 'z':2}, 
+    {'y':5.5, 'z':0}, 
+    {'z':0, 'y':0, 'f':0.5}, 
+    {'z':-10, 'y':0}, 
+    {'z':-10, 'y':16}
+]
+```
+
+### Path Breakdown
+
+Assuming your park position is `x=20, y=-10, z=240` and `close_y=20`:
+
+**When dropping off (left to right):**
+1. `{'y':9.5, 'z':4}` → Move to `x=20, y=-0.5, z=244` (approach from above)
+2. `{'y':9.5, 'z':2}` → Move to `x=20, y=-0.5, z=242` (lower slightly)
+3. `{'y':5.5, 'z':0}` → Move to `x=20, y=-4.5, z=240` (get closer)
+4. `{'z':0, 'y':0, 'f':0.5}` → Slowly move to park position `x=20, y=-10, z=240` (f is feedrate/speed)
+5. `{'z':-10, 'y':0}` → Lower to `z=230` to start unhooking
+6. `{'z':-10, 'y':16}` → Move to `z=230, y=6` to clear the tool
+
+**When picking up (right to left):**
+The sequence runs in reverse, starting from the tool's dock position and ending at `close_y`.
+
+### Tips for Path Configuration
+
+- Start with the example path and adjust based on your dock positions
+- Use small movements near the dock to avoid collisions
+- The `f` parameter controls speed (0.5 = 50% of configured speed)
+- Test paths carefully using `TEST_TOOL_DOCKING` before printing
+
+## Print Start Macro
+
+klipper-toolchanger-easy provides a `PRINT_START` macro that must be used. It initializes the toolchanger and handles tool selection. Your slicer should call it with parameters:
+
+```gcode
+PRINT_START TOOL_TEMP={temperature} BED_TEMP={bed_temp} TOOL={tool_number}
+```
+
+**Important:** Do not override the `PRINT_START` macro. If you need custom startup behavior, modify the macro in `stealthchanger/macros.cfg` or use the provided hooks.
+
+**Note:** The `_PARK_ON_COOLING_PAD` macro in `PRINT_START` is not needed for StealthChanger and can be commented out or removed if present.

@@ -8,7 +8,7 @@ parent: StealthChanger Components
 
 ## [Modular Dock](https://github.com/DraftShift/ModularDock/tree/main)
 [<img src="media/Dock/dock_back.png" width="400">](https://github.com/DraftShift/ModularDock/tree/main)<br>
-Tools have to sit somewhere when they are not being used to print. The team has created their own dock as a solution. It allows for mounting from both the top bar, as well as a crossbar (or both). Currently all docks used with [Viesturz's Tapchanger](https://github.com/viesturz/tapchanger) are compatible.
+[Toolheads](../Toolheads/Toolheads.md) have to sit somewhere when they are not being used to print. The team has created their own dock as a solution. It allows for mounting from both the top bar, as well as a crossbar (or both). Currently all docks used with [Viesturz's Tapchanger](https://github.com/viesturz/tapchanger) are compatible.
 
 ### References
 * Modular dock: [Draftshift Modular Dock](https://github.com/DraftShift/ModularDock)

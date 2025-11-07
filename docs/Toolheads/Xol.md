@@ -25,7 +25,7 @@ parent: Toolheads
 - [1] m3x8 BHCS (optional in v1.1)
 
 
-### BOM Additions for Stealthburner
+### BOM Additions for Xol
 - [2] m3x6 BHCS (backplate lower mounting screws. m3x8 will be too long)
 - [2] m3x20 BHCS (backplate upper mounting screws)
 - [2] m3x8 BHCS (extruder mount to backplate)

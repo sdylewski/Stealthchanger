@@ -5,11 +5,14 @@ parent: Software & Configuration
 ---
 <!-- Use the page layout at TOC.md:  https://github.com/sdylewski/StealthChanger/blob/main/docs/TOC.md -->
 
-(original page, needs to be updated)
+# Slicers & Printing
 
+After [installing](Installation.md) and [configuring](Configuration.md) klipper-toolchanger-easy, you need to set up your slicer to work with the toolchanger system.
 
-1. [Slicer Software](#slicer-software)
-2. [Slicer GCODEs](#slicer-gcodes)
+## Overview
+
+1. [Slicer Software](#slicer-software) - Supported slicers for multi-tool printing
+2. [Slicer GCODEs](#slicer-gcodes) - Required start G-code and tool change G-code for each slicer
 
 ## Slicer Software
 

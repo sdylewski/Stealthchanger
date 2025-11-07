@@ -17,11 +17,11 @@ parent: Building
  - [ ] Visit the [BOM](Bill-of-Materials.md) to make sure you have ordered everything you need for the convertion
  - [ ] Visit our [Printing](Printing.md) guide and start printing
  - [ ] At this point please inspect your prints, take extra note that your hexes are very uniform, if the tops are flat you will have alignment issues, it doesn't take much for things to start off wrong here.
- - [ ] [Assemble](Shuttle.md) the shuttle and backplates
- - [ ] [Install](Installation.md) software
- - [ ] [Configure](Configuration.md) software
- - [ ] Calibrate [Z Offsets](../Software/Calibration.md#z-offset)
- - [ ] Calibrate [Dock Parking](../Software/Calibration.md#dock-parking)
- - [ ] Calibrate [X/Y Offsets](../Software/Calibration.md#xy-offset)
+ - [ ] [Assemble](../Shuttle.md) the shuttle and backplates
+ - [ ] [Install](../SoftwareAndConfig/Installation.md) software
+ - [ ] [Configure](../SoftwareAndConfig/Configuration.md) software
+ - [ ] Calibrate [Z Offsets](../SoftwareAndConfig/Calibration.md#z-offset)
+ - [ ] Calibrate [Dock Parking](../SoftwareAndConfig/Calibration.md#dock-parking)
+ - [ ] Calibrate [X/Y Offsets](../SoftwareAndConfig/Calibration.md#xy-offset)
  - [ ] Registrer for a [serial](../Support/Serials.md)
  - [ ] Visit our [sponsor](https://github.com/sponsors/DraftShift) page

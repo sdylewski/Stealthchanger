@@ -10,8 +10,8 @@ A multi-tool printer requires a lot of calibration. This page explains what to c
 # Preparing to calibrate
 
 Make sure you [set the preload
-screws](/StealthChanger/Shuttle.html#backplate-preload) on each backplate
-before calibrating, since this affects the Z position of each tool. If you find
+screws](../Shuttle.md#backplate-preload) on each backplate
+before calibrating, since this affects the Z position of each [tool](../Toolheads/Toolheads.md). If you find
 your Z calibration is drifting, it’s likely that one of the preload screws has
 come loose.
 
@@ -167,59 +167,69 @@ FIXME: write about these
 
 FIXME: This section is copied over from the old docs. It should be cleaned up and merged with the above.
 
-## Z Offset
+## Z Offset (Probe Offset)
 
-**NOTE:** Tn is the tool on the shuttle, ie T0
+**NOTE:** Tn is the tool on the shuttle (e.g., T0, T1, etc.)
 
-1. Put a tool on the shuttle and run `INITIALIZE_TOOLCHANGER`
-2. Run `G28`
-3. Run `QUAD_GANTRY_LEVEL`
-4. Run `G28`
-5. Do a [Manual Paper Test](https://www.klipper3d.org/Bed_Level.html#the-paper-test) as normal like a single toolhead head printer and adjust the Z
-5. Copy the offset and save this to `z_offset` in `[tool_probe Tn]` of the tool conf file
-6. Repeat from `step 1` for all tools (`step 2` and `step 3` are optional after first tool)
-7. Run `FIRMWARE_RESTART`
+This sets the `z_offset` in the `[tool_probe Tn]` section, which determines where Z=0 is when homing with that tool.
+
+1. Put a tool on the [shuttle](../Shuttle.md) and run `INITIALIZE_TOOLCHANGER`
+2. Run `G28` to home all axes
+3. Run `QUAD_GANTRY_LEVEL` to level the gantry
+4. Run `G28` again to re-home after QGL
+5. Do a [Manual Paper Test](https://www.klipper3d.org/Bed_Level.html#the-paper-test) as normal (like a single toolhead printer) and adjust the Z
+6. Copy the offset value and save it to `z_offset` in `[tool_probe Tn]` of the tool config file (`stealthchanger/tools/Tn.cfg`)
+7. Repeat from step 1 for all tools (steps 2 and 3 are optional after the first tool)
+8. Run `FIRMWARE_RESTART` to apply changes
 
 
 ## GCODE Z Offset
 
-**NOTE:** Tn is the tool on the shuttle, ie T1
+**NOTE:** Tn is the tool being calibrated (e.g., T1, T2, etc.)
 
-**NOTE:** only home or probe with T0 during this calibration
+**IMPORTANT:** 
+- Only home or probe with T0 during this calibration
+- `gcode_z_offset` on Tool 0 is always 0 (T0 is the reference tool)
+- Set [z_offset](#z-offset-probe-offset) for all tools first before doing GCODE offsets
 
-**NOTE:** `gcode_z_offset` on Tool 0 is always 0.
+This sets the `gcode_z_offset` in the `[tool Tn]` section, which compensates for differences in nozzle height between tools.
 
-1. Set [z_offset](#z-offset) for all tools first
+1. Set [z_offset](#z-offset-probe-offset) for all tools first
 2. Make sure T0 is on the shuttle and run `INITIALIZE_TOOLCHANGER`
-3. Run `G28`
-4. `QUAD_GANTRY_LEVEL` 
-5. Run `G28`
-6. Run `G1 Z10 F600`
-7. Manually remove current tool and place the next tool in its place on the shuttle
-8. Do a [Manual Paper Test](https://www.klipper3d.org/Bed_Level.html#the-paper-test) as normal like a single toolhead head printer and adjust the Z
-9. Once done run `M114` and copy the Z value to `gcode_z_offset` in `[tool Tn]` of the tool conf file
-10. Repeat from `step 6` for all tools
-11. Run `FIRMWARE_RESTART`
+3. Run `G28` to home all axes
+4. Run `QUAD_GANTRY_LEVEL` to level the gantry
+5. Run `G28` again to re-home after QGL
+6. Run `G1 Z10 F600` to move to a safe height
+7. Manually remove the current tool and place the next tool (T1, T2, etc.) on the shuttle
+8. Do a [Manual Paper Test](https://www.klipper3d.org/Bed_Level.html#the-paper-test) as normal and adjust the Z
+9. Once done, run `M114` and copy the Z value to `gcode_z_offset` in `[tool Tn]` of the tool config file (`stealthchanger/tools/Tn.cfg`)
+10. Repeat from step 6 for all remaining tools
+11. Run `FIRMWARE_RESTART` to apply changes
 
 
 ## Dock Parking
 
-**NOTE:** Set the `params_close_y` to your highest `params_park_y` + 30, and set `params_safe_y` to `params_close_y` + the thickness of your thickest tool + 10 in the `toolchanger.cfg` and **remove them from the tool config files**
+**IMPORTANT:** 
+- Set `params_close_y` to your highest `params_park_y` + 30 in `toolchanger-config.cfg`
+- Set `params_safe_y` to `params_close_y` + the thickness of your thickest tool + 10 in `toolchanger-config.cfg`
+- **Remove these parameters from individual tool config files** - they should only be in the main toolchanger config
 
-**NOTE:** For `params_safe_y` you could also just make sure when you have a tool on the shuttle you can move freely behind the dock and not hit any other docked tools and note that `y` position.
+**Alternative for `params_safe_y`:** With a tool on the shuttle, move freely behind the dock without hitting any docked tools and note that Y position.
+
+This sets the dock park position (`params_park_x`, `params_park_y`, `params_park_z`) for each tool in `stealthchanger/tools/Tn.cfg`.
 
 1. Put a tool on the shuttle and run `INITIALIZE_TOOLCHANGER`
 2. Run `G28` and `QUAD_GANTRY_LEVEL` 
-3. Remove the tool from the shuttle and place it in the dock
-4. Move the gantry as if to pick up the tool, as soon as the light on the optotap pcb changes
-5. Raise Z by 1
-6. Run `M114` and record the values to `params_park_x`, `params_park_y` and `params_park_z` in `[Tool Tn]` of the tool conf file
-7. Run `G28`
-8. Run `SET_TOOL_PARAMETER PARAMETER='params_path_speed' VALUE=300`
-9. Run `TEST_TOOL_DOCKING RESTORE_AXIS=XYZ`
-10. Run `RESET_TOOL_PARAMETER PARAMETER='params_path_speed'`
-11. Repeat this for all tools
-12. Run `FIRMWARE_RESTART`
+3. Remove the tool from the shuttle and place it in its [dock](../Docks.md)
+4. Move the gantry as if to pick up the tool - watch for the [OctoTap](../Probes.md#tap) LED to change state (indicates tool detection)
+5. Raise Z by 1mm to ensure clearance
+6. Run `M114` and record the values to `params_park_x`, `params_park_y`, and `params_park_z` in `[tool Tn]` of the tool config file (`stealthchanger/tools/Tn.cfg`)
+7. Run `G28` to return to home
+8. Test the docking path: Run `SET_TOOL_PARAMETER PARAMETER='params_path_speed' VALUE=300`
+9. Run `TEST_TOOL_DOCKING RESTORE_AXIS=XYZ` to verify the path works
+10. Run `RESET_TOOL_PARAMETER PARAMETER='params_path_speed'` to restore normal speed
+11. Repeat this process for all tools
+12. Run `FIRMWARE_RESTART` to apply changes
 
 ### Docking/Undocking
 

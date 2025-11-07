@@ -4,19 +4,29 @@ nav_order: 3
 ---
 <!-- Use the page layout at TOC.md:  https://github.com/sdylewski/StealthChanger/blob/main/docs/TOC.md -->
 
-(Scott's notes page, needs to be updated)
+# Software & Configuration
 
-# Software
+Congratulations! You've built a StealthChanger with at least one toolhead and dock, and you're ready for the *real* fun. This section will guide you through installing, configuring, and calibrating your printer to get your first multi-colored print.
 
-Congratulations!  You've built a StealthChanger with at least 1 toolhead and/or dock, and you're ready for the *real* fun?  This will guide you through the process of installing, configuring, and calibrating your printer to get your first multi-colored print.
+## Process Overview
 
-##Process
+Follow these steps in order:
 
-### 1. [Install](Installation.md) Klipper-toolchanger-Easy
-### 2. [Configure](Configuration.md) all your parameters for each toolhead
-### 3. [Calibrate](Calibration.md) your Z offsets, toolhead XY offsets, and dock locations.
-### 4. [Setup your slicer](Slicers.md) and print-start macros
-### 5. Print!
+1. **[Install](Installation.md)** klipper-toolchanger-easy - Set up the toolchanger software
+2. **[Configure](Configuration.md)** all your parameters for each toolhead - Set up tool files, offsets, and dock positions
+3. **[Calibrate](Calibration.md)** your Z offsets, toolhead XY offsets, and dock locations - Ensure accurate tool alignment
+4. **[Setup your slicer](Slicers.md)** and print-start macros - Configure your slicer for multi-tool printing
+5. **Print!** - Start your first multi-color print
+
+## About klipper-toolchanger-easy
+
+StealthChanger uses [klipper-toolchanger-easy](https://github.com/jwellman80/klipper-toolchanger-easy) for toolchanging functionality. This is a maintained fork of the original klipper-toolchanger project, specifically designed to be easier to install and configure.
+
+**Key features:**
+- Simple installation script
+- Automatic Moonraker update management
+- Comprehensive configuration examples
+- Active development and support
 
 
 # FAQ

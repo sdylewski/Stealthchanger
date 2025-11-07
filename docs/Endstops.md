@@ -10,7 +10,7 @@ parent: StealthChanger Components
 
 The gantry needs to home its X and Y position, preferably with repeated accuracy as the X,Y position becomes important to pick up and drop off toolheads properly.
 
-The X endstop on a toolhead will no longer work so that needs to be relocated or discarded altogether. The rise in popularity of Beacon/Carto/etc on the Shuttle with a second umbilical means an X endstop on the shuttle may be viable, just fiddly.
+The X endstop on a [toolhead](../Toolheads/Toolheads.md) will no longer work so that needs to be relocated or discarded altogether. The rise in popularity of [Beacon/Carto](../Probes.md#beaconcarto) on the [Shuttle](../Shuttle.md) with a second [umbilical](../CableManagement/Umbilicals.md) means an X endstop on the shuttle may be viable, just fiddly.
 
 # Options
 
@@ -107,5 +107,5 @@ GET_POSITION
 If, for example, you have 32 microsteps, and the first line returned by GET_POSITION (such as `stepper_x:-301 stepper_y:297 stepper_z:88 stepper_z1:98 stepper_z2:68 stepper_z3:78`) differs by more than 32 values from the second set of values, then your sensorless homing needs more tuning
 
 ### What about Z Offset?
-Has an entire section [Probes](Probes.md) to cover Homing Z, finding a Z Offset for the first tool, and then finding differences between tools.
+See the calibration section which covers Homing Z, finding a Z Offset for the first tool, and then finding differences between tools.
 

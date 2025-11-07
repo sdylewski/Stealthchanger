@@ -12,99 +12,131 @@ has_children: true
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <a href="https://github.com/sponsors/DraftShift" target="_blank" alt="Sponsor Us">![GitHub Sponsors](https://img.shields.io/github/sponsors/DraftShift?logo=githubsponsors&label=Sponsors&labelColor=rgb(246%2C%20248%2C%20250)&color=rgb(191%2C%2057%2C%20137))</a>
 
+## Overview
 
-## Stealthchanger Overview
-StealthChanger is a project to convert a Voron 2.4 printer into one with multiple toolheads.
+StealthChanger converts a Voron 2.4 (and other front-mount motion systems) into a multi-tool printer. The shuttle exchanges toolheads that are mounted on backplates and docks at the front of the machine. Bushings, pins, and magnets create a rigid connection, while OctoTap sensing provides TAP-style Z probing.
 
-Mounting of the toolhead to the shuttle is done by using bushings and pins, with magnets to help create a strong mounting connection for high-speed printing, and uses the same principles as [TAP](https://github.com/VoronDesign/Voron-Tap) to measure Z offsets.
-
-StealthChanger draws from many different projects including [tapchanger](https://github.com/viesturz/tapchanger), and involves the contributions of many people who work together to make it better. 
-
-# Stealthchanger Components
-The stealthchanger system consists of multiple parts. Some are essential, some have many different options, and some are optional. 
+StealthChanger builds on projects such as [tapchanger](https://github.com/viesturz/tapchanger) and the work of many community contributors. Join the community on [Discord](https://discord.gg/draftshift) to see what is new and share your build.
 
 <img src="media/CableManagement/LDO_Stealthchanger_back_annotated.png" width="400"/>
 
-## [Shuttle](Shuttle.md) & [Toolhead Backplate](Toolheads/Toolheads.md)
-<img src="media/Shuttle/shuttle_manual_docking.gif" width="350" align="right" > The shuttle replaces your Voron shuttle with one that has bushings to connect to the backplate of each toolhead. Backplates and docks are available for the following toolheads: 
-
-* [Anthead](Toolheads/Anthead.md)
-* [Stealthburner](Toolheads/Stealthburner.md)
-* [Dragonburner/Rapidburner](Toolheads/Dragonburner.md)
-* [A4T](Toolheads/A4T.md)
-* [SV08](Toolheads/SV08.md)
-* [Yavoth](Toolheads/Yavoth.md)
-* [XOL](Toolheads/XOL.md)
-* [Mini Stealthburner](Toolheads/MiniSB.md)
-* [Blackbird](Toolheads/Blackbird.md)
-
-See the <a href="Toolheads/Toolheads.md">Toolheads</a> page for a comparison of each toolhead.
-
-## [Dock, Crossbar, and Door Buffer](Docks.md)
-<img src="media/Dock/dock_front.png" width="400" align="right" /> 
-The modular dock mounts to the top front of your printer to hold/dock the toolheads when not in use. May also contain a crossbar at the bottom of the dock. Some docks just use the crossbar.
-
-* [Modular Dock](Docks.md)
-* [Crossbar (optional)](Docks.md)
-* [Door buffer (optional)](Docks.md) Needed if mounting crossbar to front of frame.
 
 
-## [Electronics & Cable Management](CableManagement/CableManagement.md)
-<img src="media/CableManagement/wire_management.jpg" width="180" align="right" /> 
-Lots of toolheads mean lots of extra wires and filament that needs to be managed properly. With the umbilicals going to the exhaust port there are several options to connect them and to clean up the bundle with a "backpack" mounted on the back of the printer.<br>Power and data needs to be distributed from your main board to each toolhead, along with your filament.
-Almost every StealthChanger will use either CAN or USB for controlling the toolheads. It is not impossible to build a Stealthchanger without CAN and USB, but it is not particularly practical.
-
-* [Backpack & Electrical Distribution](CableManagement/ElectricalDistribution.md)
-* [Umbilicals](CableManagement/Umbilicals.md) and exhaust plates
-* [Power Supply](CableManagement/Power.md)
-* [Filament management](CableManagement/FilamentManagement.md)
+This is a challenging conversion, even for experienced Voron builders. Expect reprints, tuning, and iteration. Start with these resources:
 
 
-## [Top Hat](TopHat.md)
-[<img src="media/TopHat/printed_tophat.png" width="200" align="right"/>](TopHat.md) 
 
-With the dock at the top of the printer and umbilicals extending upward, enclosed printers will need to extend the top of the printer using a top hat. Room temperature printing only need a top hat for reasons of style.
+## Hardware
 
-There is a printable top hat or you can use 2020 extrusions with clear panels.
+### Shuttle & Toolheads
 
-## [Probes](Probes.md)
-<img src="media/Probes/sexball-probe.jpg" width="180" align="right"/> 
+<table>
+<tr>
+<td valign="top">
+The shuttle replaces the stock Voron carriage with a bushing-and-pin interface that mates to each toolhead backplate. Backplates and docks exist for many toolheads (Anthead, Stealthburner, Dragonburner/Rapidburner, A4T, SV08, Yavoth, XOL, Mini Stealthburner, Blackbird, and more). 
 
-Physical probes are used to measure the X and Y offsets of your tools relative to Tool 0. Endstop switches are included here also. While tools can be aligned without added hardware by using a series of reference prints and manual effort, adding a probe greatly accelerates inter-tool alignment.
+See the [Toolheads overview](Toolheads/Toolheads.md) for comparisons and BOMs.
+</td>
+<td valign="top" width="320">
+<img src="media/Shuttle/shuttle_manual_docking.gif" width="300" />
+</td>
+</tr>
+</table>
 
-* [Probes](Probes.md) for determing offsets
-* [Endstops](Endstops.md) for X and Y gantry endstops
+### Docks & Mounting Hardware
 
-## [Klipper Toolchanger](SoftwareAndConfig/Software.md)
-<img src="media/Logos/klipper_toolchanger_logo.png" width="180" align="right"/> 
+<table>
+<tr>
+<td valign="top">
+The modular dock holds tools when they are not in use. It can mount to a front crossbar, door buffer, or top frame. 
 
-Klipper needs to be toolchanger aware with added code and configuration.
+Learn about options and mounting strategies in [Docks, Crossbar, and Door Buffer](Docks.md).
+</td>
+<td valign="top" width="300">
+<img src="media/Dock/dock_front.png" width="280" />
+</td>
+</tr>
+</table>
 
-* [Klipper Toolchanger Installation](SoftwareAndConfig/Installation.md)
-* [Configuration](SoftwareAndConfig/Configuration.md)
-* [Calibration](SoftwareAndConfig/Calibration.md)
-* [Slicers](SoftwareAndConfig/Slicers.md)
+### Electronics & Cable Management
+
+<table>
+<tr>
+<td valign="top">
+Multiple toolheads mean more wiring, CAN/USB connections, and filament paths. Key resources:
+
+- [Electronics & Cable Management](CableManagement/CableManagement.md)
+- [Backpack & Electrical Distribution](CableManagement/ElectricalDistribution.md)
+- [Umbilicals](CableManagement/Umbilicals.md)
+- [Power](CableManagement/Power.md)
+- [Filament Management](CableManagement/FilamentManagement.md)
+</td>
+<td valign="top" width="220">
+<img src="media/CableManagement/wire_management.jpg" width="200" />
+</td>
+</tr>
+</table>
+
+### Enclosure / Top Hat
+
+<table>
+<tr>
+<td valign="top">
+With docks mounted high and umbilicals arcing upward, most enclosed printers need a taller top enclosure. Options include printable top hats and 2020 extrusion frames. See [Top Hat](TopHat.md).
+</td>
+<td valign="top" width="220">
+<a href="TopHat.md"><img src="media/TopHat/printed_tophat.png" width="200" /></a>
+</td>
+</tr>
+</table>
+
+### Probes & Endstops
+
+<table>
+<tr>
+<td valign="top">
+Physical probes (Sexball, Nudge, Axiscope, etc.) and relocated endstops simplify tool alignment and gantry homing. Hardware details are covered in [Probes](Probes.md) and [Endstops](Endstops.md).
+</td>
+<td valign="top" width="220">
+<img src="media/Probes/sexball-probe.jpg" width="200" />
+</td>
+</tr>
+</table>
+
+## Software & Configuration
+
+<img src="media/Logos/klipper_toolchanger_logo.png" width="160" align="right" />
+
+Klipper must be toolchanger-aware for StealthChanger. The typical flow looks like this:
 
 
-# Building
-This is a challenging build/conversion, even for existing experienced Voron owners. Expect it to take a while, to re-print things frequently, and have to order random parts that you forgot the first time. Making the printer work reliably also requires tuning, fiddling, and sometimes even replacing parts.
-The concept of StealthChanger is also growing and evolving, often rapidly, with improvements and suggestions and UserMods. The best set of components to build the best toolchanging printer will be different when you read this sentence from when I wrote this sentence. Consider joining the Discord and hanging out to see what is new.
+1. [Installation](SoftwareAndConfig/Installation.md) – install klipper-toolchanger-easy to add StealthChanger macros and configs
+2. [Configuration](SoftwareAndConfig/Configuration.md) – set up tool files and toolchanger settings for your hardware
+3. [Calibration](SoftwareAndConfig/Calibration.md) – set probe offsets, tool alignment, and dock positionions
+4. [Slicers & Printing](SoftwareAndConfig/Slicers.md) – configure slicer and macros for multi-tool printing
+5. [LEDs](SoftwareAndConfig/LEDs.md) – optional post-install lighting effects and status indicators
 
-### [Checklist](Building/Checklist.md)
-### [Vendors and Kits](Building/Vendors-and-Kits.md)
-### [Bill of Materials](Building/Bill-of-Materials.md)
-### [Printing](Building/Printing.md)
-### [Cost calculator](https://docs.google.com/spreadsheets/d/1cjlZ4xi84sUbo09nV3CDkOrLjz3leInTZ9sxwSzPscE)
 
-MikeyMike created an [approximate cost calculator](https://docs.google.com/spreadsheets/d/1cjlZ4xi84sUbo09nV3CDkOrLjz3leInTZ9sxwSzPscE) for building a StealthChanger with x number of toolheads. It assumes you have a working Voron 2.4 and this does not include top hat extrusions,panels. The DraftShiftDesign team cannot be held responsible for anything that results from your significant other finding this calculator.
 
-### [Reference CAD (.step) by N3MI](https://github.com/N3MI-DG/sc-guides)
-N3MI created a [reference CAD file](https://github.com/N3MI-DG/sc-guides) of a StealthChanger with Anthead toolheads, docks with crossbar, top hat, umbilicals and fanny pack.
+## Building
+1. **Plan the build** – [Checklist](Building/Checklist.md) and [Bill of Materials](Building/Bill-of-Materials.md)
+2. **Order parts** – [Vendors and Kits](Building/Vendors-and-Kits.md)
+3. **Print components** – [Printing guide](Building/Printing.md)
+4. **Estimate cost** – [Approximate cost calculator](https://docs.google.com/spreadsheets/d/1cjlZ4xi84sUbo09nV3CDkOrLjz3leInTZ9sxwSzPscE)
+5. **Visualize the assembly** – [Reference CAD (.step) by N3MI](https://github.com/N3MI-DG/sc-guides)
 
-#[Support](Support/Support.md)
+## Support & Resources
 
-### [Contributing & Donating](Support/Contributing-and-Donating.md)
-### [Serials](Support/Serials.md)
-### [Team & Credits](Support/Team-and-Credits.md)
-### TBD: How to convince your partner to go along with this project.
+
+
+
+<a href="https://discord.gg/draftshift" target="_blank" alt="Join our Discord">![Discord](https://img.shields.io/discord/1226846451028725821?logo=discord&logoColor=%23ffffff&label=Join%20our%20Discord&labelColor=%237785cc&color=%23adf5ff)</a>&nbsp;&nbsp; <a href="https://github.com/sponsors/DraftShift" target="_blank" alt="Sponsor Us">![GitHub Sponsors](https://img.shields.io/github/sponsors/DraftShift?logo=githubsponsors&label=Sponsors&labelColor=rgb(246%2C%20248%2C%20250)&color=rgb(191%2C%2057%2C%20137))</a>
+
+- [Support](Support/Support.md)
+- [Contributing & Donating](Support/Contributing-and-Donating.md)
+- [Serials](Support/Serials.md)
+- [Team & Credits](Support/Team-and-Credits.md)
+
+
+
 

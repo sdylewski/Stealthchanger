@@ -49,7 +49,7 @@ If using the recommended N3MI umbilical plate, you probably want to terminate yo
   
 ## Dock
 * Dock width: 76mm
-* Common components for [your dock type](.../Dock.md)
+* Common components for [your dock type](../Docks.md)
 * [Modular dock assembly guide](https://github.com/DraftShift/ModularDock/blob/main/Manual/ModularDock_Assembly_Guide.pdf)
 * Stealthburner is not compatible with stubby docks.
 
