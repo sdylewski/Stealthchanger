@@ -11,6 +11,7 @@ This is an example `PRINT_START` macro compatible with klipper-toolchanger-easy.
 
 **Note:** The `_PARK_ON_COOLING_PAD` macro call (if present) is not needed for StealthChanger and can be commented out or removed.
 
+{% raw %}
 ```ini
 [gcode_macro PRINT_START]
 description: "Initialize toolchanger, home, QGL, and prepare for printing"
@@ -69,6 +70,7 @@ gcode:
     # G1 X10 Y10 E5 F1000
     # G92 E0
 ```
+{% endraw %}
 
 ## Parameters
 
