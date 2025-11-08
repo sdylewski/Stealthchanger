@@ -154,6 +154,9 @@ Thankfully no, your gantry can stay in place, you just need to disconnect the fr
 Make sure you keep tension in the belts while installing the shuttle with the [belt helper](https://github.com/DraftShift/StealthChanger/tree/main/STLs/Extras/BeltHelper)
 ![PXL_20241210_083455271_preview](media/Shuttle/beltkeeper.jpg)
 
+### Can Y be negative to reach the docks?
+Yes, in fact it will be in its recommended configuration. Keep 0,0 as the left, front corner of the bed by adjusting the max X and max Y. Having 0,0 as a bed corner makes it a lot more straightforward in the slicer and makes coordinates more intuitive ("anything between 0-350 is on the bed" for a 350 printer). To reach the parking position in the docks the toolhead will have to travel beyond the bed, so park Y will be negative. Note that if you move the bed and adjust the 0,0 point you will have to update all the dock positions with the same delta change, as well as any coordinates you are using in macros for e.g. wipers, sexball, etc.
+
 
 
 
