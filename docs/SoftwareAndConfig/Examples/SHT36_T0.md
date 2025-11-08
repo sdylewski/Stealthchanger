@@ -1,31 +1,45 @@
-# Example tool configuration file for T0 (Tool 0)
+---
+title: SHT36 T0 Configuration Example
+parent: Examples
+---
+
+# SHT36 T0 Configuration Example
+
+This is an example tool configuration file for T0 (Tool 0) using an **SHT36** toolhead board, compatible with klipper-toolchanger-easy.
+
+**Important:** This is an example only. Copy the configuration below to `stealthchanger/tools/T0.cfg` and customize with your values. DO NOT use this file directly.
+
+**Note:** Pin names may vary between SHT36 board revisions. Verify pin assignments against your board's documentation or schematic.
+
+```ini
+# Example tool configuration file for T0 (Tool 0) - SHT36 Board
 # This example is compatible with klipper-toolchanger-easy
-# Copy this file to stealthchanger/tools/T0.cfg and customize with your values
+# Copy this to stealthchanger/tools/T0.cfg and customize with your values
 # DO NOT use this file directly - it's an example only
 
 # MCU Configuration (CAN bus example - adjust for your setup)
-[mcu EBBT0]
+[mcu SHT36T0]
 canbus_uuid: xxxxxxxxxxx  # Replace with your CAN bus UUID
 
 # Extruder Configuration
 # NOTE: T0 uses "extruder" (no number), T1+ use "extruder1", "extruder2", etc.
 [extruder]
-step_pin: EBBT0:PD0
-dir_pin: !EBBT0:PD1
-enable_pin: !EBBT0:PD2
+step_pin: SHT36T0:PB12
+dir_pin: !SHT36T0:PB13
+enable_pin: !SHT36T0:PB14
 microsteps: 16
 full_steps_per_rotation: 200
 rotation_distance: 22.67895  # Calibrate this value for your extruder
 gear_ratio: 50:10  # Adjust for your extruder (BMG is 50:17, Galileo is 7.5:1)
 nozzle_diameter: 0.400
 filament_diameter: 1.750
-heater_pin: EBBT0:PB13
+heater_pin: SHT36T0:PA8
 sensor_type: MAX31865  # Adjust for your thermistor type
 spi_bus: spi1
 rtd_nominal_r: 100
 rtd_reference_r: 430
 rtd_num_of_wires: 2
-sensor_pin: EBBT0:PA4
+sensor_pin: SHT36T0:PA0
 max_power: 1.0
 min_temp: -235
 max_temp: 500
@@ -42,7 +56,7 @@ max_extrude_only_accel: 1500
 
 # TMC Driver Configuration
 [tmc2209 extruder]
-uart_pin: EBBT0:PA15
+uart_pin: SHT36T0:PA9
 interpolate: False
 run_current: 0.6
 sense_resistor: 0.110
@@ -51,14 +65,14 @@ stealthchop_threshold: 0
 # Part Cooling Fan
 # NOTE: klipper-toolchanger-easy uses fan_generic, not multi_fan
 [fan_generic T0_partfan]
-pin: EBBT0:PA1
+pin: SHT36T0:PA1
 max_power: 1.0
 kick_start_time: 0.5
 off_below: 0.0
 
 # Hotend Fan
 [heater_fan T0_hotend_fan]
-pin: EBBT0:PA0
+pin: SHT36T0:PA2
 heater: extruder
 heater_temp: 50.0
 kick_start_time: 0.5
@@ -113,7 +127,7 @@ params_input_shaper_damping_ratio_y: 0.01
 
 # Tool Probe (OctoTap) Configuration
 [tool_probe T0]
-pin: ^EBBT0:PB6  # OctoTap sensor pin
+pin: ^SHT36T0:PB0  # OctoTap sensor pin
 tool: 0
 x_offset: 0  # Nozzle is the probe, so X/Y offsets are 0
 y_offset: 0
@@ -129,9 +143,10 @@ activate_gcode:
 
 # ADXL345 Accelerometer (optional, for input shaper)
 [adxl345 T0]
-cs_pin: EBBT0:PB12
-spi_software_sclk_pin: EBBT0:PB10
-spi_software_mosi_pin: EBBT0:PB11
-spi_software_miso_pin: EBBT0:PB2
+cs_pin: SHT36T0:PB1
+spi_software_sclk_pin: SHT36T0:PB10
+spi_software_mosi_pin: SHT36T0:PB11
+spi_software_miso_pin: SHT36T0:PB2
 axes_map: x,z,y
+```
 

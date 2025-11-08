@@ -20,8 +20,8 @@ parent: Building
  - [ ] [Assemble](../Shuttle.md) the shuttle and backplates
  - [ ] [Install](../SoftwareAndConfig/Installation.md) software
  - [ ] [Configure](../SoftwareAndConfig/Configuration.md) software
- - [ ] Calibrate [Z Offsets](../SoftwareAndConfig/Calibration.md#z-offset)
- - [ ] Calibrate [Dock Parking](../SoftwareAndConfig/Calibration.md#dock-parking)
- - [ ] Calibrate [X/Y Offsets](../SoftwareAndConfig/Calibration.md#xy-offset)
+ - [ ] Calibrate [Z Offsets](../SoftwareAndConfig/Calibration.md#probe-z-offset-tool_probe-offsets)
+ - [ ] Calibrate [Dock Parking](../SoftwareAndConfig/DockCalibration.md)
+ - [ ] Calibrate [G-code Offsets](../SoftwareAndConfig/Calibration.md#g-code-offsets-t0---tn-offsets)
  - [ ] Registrer for a [serial](../Support/Serials.md)
  - [ ] Visit our [sponsor](https://github.com/sponsors/DraftShift) page

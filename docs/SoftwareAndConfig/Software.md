@@ -14,9 +14,10 @@ Follow these steps in order:
 
 1. **[Install](Installation.md)** klipper-toolchanger-easy - Set up the toolchanger software
 2. **[Configure](Configuration.md)** all your parameters for each toolhead - Set up tool files, offsets, and dock positions
-3. **[Calibrate](Calibration.md)** your Z offsets, toolhead XY offsets, and dock locations - Ensure accurate tool alignment
-4. **[Setup your slicer](Slicers.md)** and print-start macros - Configure your slicer for multi-tool printing
-5. **Print!** - Start your first multi-color print
+3. **[Calibrate Toolheads](Calibration.md)** your Z offsets and toolhead XY offsets - Ensure accurate tool alignment
+4. **[Calibrate Docks](DockCalibration.md)** your dock locations - Set up reliable tool changes
+5. **[Setup your slicer](Slicers.md)** and print-start macros - Configure your slicer for multi-tool printing
+6. **Print!** - Start your first multi-color print
 
 ## About klipper-toolchanger-easy
 

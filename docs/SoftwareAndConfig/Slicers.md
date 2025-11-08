@@ -1,6 +1,6 @@
 ---
 title: Slicers & Printing
-nav_order: 4
+nav_order: 6
 parent: Software & Configuration
 ---
 <!-- Use the page layout at TOC.md:  https://github.com/sdylewski/StealthChanger/blob/main/docs/TOC.md -->
@@ -41,6 +41,8 @@ PRINT_START TOOL=0 TOOL_TEMP=220 BED_TEMP=60 T0_TEMP=220 T1_TEMP=230
 **Important:** Do not override the `PRINT_START` macro. If you need custom startup behavior, modify the macro in `stealthchanger/macros.cfg` or use the provided hooks.
 
 **Note:** The `_PARK_ON_COOLING_PAD` macro in `PRINT_START` is not needed for StealthChanger and can be commented out or removed if present.
+
+**Example:** See the [PRINT_START macro example](Examples/PRINT_START.md) for a complete reference implementation.
 
 ## Overview
 

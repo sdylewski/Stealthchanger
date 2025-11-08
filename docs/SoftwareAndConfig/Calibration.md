@@ -15,8 +15,14 @@ StealthChanger requires several types of calibration:
 
 1. **[Probe Z Offset](#probe-z-offset-tool_probe-offsets)** - Sets where Z=0 is for each tool when homing
 2. **[G-code Offsets](#g-code-offsets)** - Aligns nozzle positions between tools (X, Y, Z)
-3. **[Dock Positions](#dock-positions)** - Sets where each tool docks when not in use
-4. **[Tool Offset Calibration](#tool-offset-calibration)** - Measure and set X, Y, and Z offsets between tools
+3. **[Tool Offset Calibration](#tool-offset-calibration)** - Measure and set X, Y, and Z offsets between tools
+4. **[Dock Calibration](DockCalibration.md)** - Sets where each tool docks when not in use
+
+<div style="background-color: #fff3cd; border-left: 4px solid #ffc107; padding: 12px; margin: 12px 0;">
+
+**⚠️ WARNING - Dock Calibration:** When setting dock locations for T1, T2, or any non-T0 tool, you **MUST** home with T0 first, then **manually** switch to the tool you're calibrating. **DO NOT** run `G28` or home with Tn (non-T0 tools) during dock calibration. Homing with Tn applies that tool's offsets, which will make your dock positions incorrect. Always home with T0, then manually place or pick up Tn using T0 before calibrating its dock position.
+
+</div>
 
 # Preparing to calibrate
 
@@ -48,6 +54,10 @@ With this probing method, the tool will move downward until the nozzle contacts 
 
 A more negative probe Z offset means less squish; a less negative (closer to zero) value means more squish, as the tool will not rise as far from the trigger point.
 
+**Important:** If you always home Z with your primary tool (typically T0), then other tools' probe Z offsets do **not** affect print height. Only the primary tool's probe Z offset determines where Z=0 is set, and then `gcode_z_offset` values align the other tools' nozzles to match. Non-primary tools' probe Z offsets only need to be "close enough" for any initial Z homing that might occur before picking up the primary tool.
+
+**Why do I need probe Z offset for Tn?** Even though non-primary tools' probe Z offsets don't affect print height, you still need to set them. This is because tools are often left on the printer at the end of a print. When you restart the printer, it needs to home with whatever tool is currently on the shuttle before it can safely switch to T0. With the tool's X, Y, and Z offsets configured, the printer can calculate where the dock locations are relative to T0's position, allowing it to properly park the current tool and pick up T0 for the final QGL and Z homing.
+
 ### Z_offset Calibration Procedure
 
 1. Manually put a tool on the [shuttle](../Shuttle.md) and run `INITIALIZE_TOOLCHANGER`
@@ -64,7 +74,7 @@ A more negative probe Z offset means less squish; a less negative (closer to zer
 
 **Tip:** Follow [Ellis's method](https://ellis3dp.com/Print-Tuning-Guide/articles/first_layer_squish.html) or the [paper test](https://www.klipper3d.org/Bed_Level.html#the-paper-test) to get the right amount of first-layer squish.
 
-## G-code Offsets
+## G-code Offsets (T0 - Tn offsets)
 
 G-code offsets align nozzle positions between tools so that parts of a model printed with different tools will line up correctly. This is necessary even with "identical" tools because of tolerances in parts and assembly.
 
@@ -77,7 +87,9 @@ G-code offsets align nozzle positions between tools so that parts of a model pri
 - **Specified by:** `gcode_x_offset`, `gcode_y_offset`, and `gcode_z_offset` in `[tool Tn]`
 - **Stable from print to print** - but may need adjustment if you rebuild a tool or have a crash
 
-By convention, these offsets are set to 0 for T0. The offsets for other tools specify the distance that tool needs to move to place its nozzle in exactly the same position that T0's would be. This can be either positive or negative on each axis.
+By convention, these offsets are set to 0 for T0. The offsets for other tools specify the distance that tool needs to move to place its nozzle in exactly the same position that T0's would be. This can be either positive or negative on each axis. 
+
+**Note:** For Z offsets specifically, `gcode_z_offset` is independent of the tool's probe Z offset. If you always home Z with T0, then T0's probe Z offset sets Z=0, and T2's `gcode_z_offset` aligns T2's nozzle to match T0's position. T2's probe Z offset doesn't affect print height in this case - it's only used if T2 ever homes Z.
 
 ### Setup Process
 
@@ -92,11 +104,10 @@ By convention, these offsets are set to 0 for T0. The offsets for other tools sp
 4. Calibrate other tools' `gcode_*_offset` to match primary tool position
 5. Always home with the primary tool
 
-<div style="background-color: #e7f3ff; border-left: 4px solid #2196F3; padding: 12px; margin: 12px 0;">
 
-**Note:** You can setup your printer to home with TN if you're only using that one tool during printing, but it requires a more advanced print_start macro (add link to example)
 
-</div>
+**Note:** You can setup your printer to home with Tn if you're only using that one tool during printing, but it requires a more advanced print_start macro. See the [PRINT_START macro example](Examples/PRINT_START.md) for reference.
+
 
 ### G-code Z Offset Calibration Procedure
 
@@ -159,46 +170,6 @@ Another approach for XY offsets is to use a camera looking up at the nozzle.
 - **[IDEX Nozzle Calibration Tool](https://github.com/Life0fBrian/Brians-IDEX-Nozzle-Calibration-tool)** - Another camera-based calibration tool
 - **[Axiscope](https://github.com/nic335/Axiscope)** - Provides a web interface for manually locating nozzles. This involves more manual effort than kTAMV, but is simpler and can be more reliable. Axiscope can also interact with a Sexbolt or other Z endstop to calculate Z offsets.
 
-## Dock Positions
-
-Dock positions define where each tool parks when not in use. This is critical for reliable tool changes.
-
-### Setting Dock Positions
-
-When setting your dock position in your tool config, X and Y are pretty self explanatory - put the tool in the right spot for it to sit. However, Z should be the point where 1 more mm down will untrigger the tap module.
-
-### Dock Parking Calibration Procedure
-
-**IMPORTANT:** 
-- Set `params_close_y` to your highest `params_park_y` + 30 in `toolchanger-config.cfg`
-- Set `params_safe_y` to `params_close_y` + the thickness of your thickest tool + 10 in `toolchanger-config.cfg`
-- **Remove these parameters from individual tool config files** - they should only be in the main toolchanger config
-
-**Alternative for `params_safe_y`:** With a tool on the shuttle, move freely behind the dock without hitting any docked tools and note that Y position.
-
-This sets the dock park position (`params_park_x`, `params_park_y`, `params_park_z`) for each tool in `stealthchanger/tools/Tn.cfg`.
-
-1. Put a tool on the shuttle and run `INITIALIZE_TOOLCHANGER`
-2. Run `G28` and `QUAD_GANTRY_LEVEL` 
-3. Remove the tool from the shuttle and place it in its [dock](../Docks.md)
-4. Move the gantry as if to pick up the tool - watch for the [OctoTap](../Probes.md#tap) LED to change state (indicates tool detection)
-5. Raise Z by 1mm to ensure clearance
-6. Run `M114` and record the values to `params_park_x`, `params_park_y`, and `params_park_z` in `[tool Tn]` of the tool config file (`stealthchanger/tools/Tn.cfg`)
-7. Run `G28` to return to home
-8. Test the docking path: Run `SET_TOOL_PARAMETER PARAMETER='params_path_speed' VALUE=300`
-9. Run `TEST_TOOL_DOCKING RESTORE_AXIS=XYZ` to verify the path works
-10. Run `RESET_TOOL_PARAMETER PARAMETER='params_path_speed'` to restore normal speed
-11. Repeat this process for all tools
-12. Run `FIRMWARE_RESTART` to apply changes
-
-### Docking/Undocking Movement
-
-The movement using config parameters is as follows:
-
-| Current tool | No tool | Next tool |
-|--------------|---------|-----------|
-| `safe_y`, `park_x` -> `park_z` -> `close_y` -> `path` | `close_y` -> `park_x` | `path` -> `safe_y` -> `t_command_restore_axis` |
-
 ## Tool Offset Calibration
 
 A calibration probe (Sexball, Nudge, Axiscope, etc.) automatically measures the position differences between tools and sets the `gcode_x_offset`, `gcode_y_offset`, and `gcode_z_offset` values in your tool configuration files. This provides more accurate and repeatable tool alignment than manual calibration methods.
@@ -217,12 +188,137 @@ For information on available calibration probes and how to use them, see the [Me
 
 Additional calibration that may be needed per tool:
 
-- **PID Tuning** - Each tool's heater may need PID tuning
-- **E-steps** - Extruder steps per mm calibration
-- **Input Shaper** - Vibration compensation (typically done once for the machine, not per tool)
+### PID Tuning
 
-These follow standard Klipper calibration procedures and are not specific to StealthChanger.
+Each tool's heater may need PID tuning to maintain stable temperatures. PID tuning should be done for each tool's extruder heater.
+
+**Important:** The heater name differs between T0 and other tools:
+- **T0** uses `extruder` (no number)
+- **T1** uses `extruder1`
+- **T2** uses `extruder2`
+- And so on...
+
+**Procedure:**
+
+1. Select the tool you want to tune (e.g., `T0` or `SELECT_TOOL T=0`)
+2. Heat the nozzle to your typical printing temperature (e.g., 220°C for PLA, 250°C for ABS)
+3. Run the PID calibration command:
+   
+   **For T0:**
+   ```
+   PID_CALIBRATE HEATER=extruder TARGET=220
+   ```
+   
+   **For T1:**
+   ```
+   PID_CALIBRATE HEATER=extruder1 TARGET=220
+   ```
+   
+   **For T2:**
+   ```
+   PID_CALIBRATE HEATER=extruder2 TARGET=220
+   ```
+   
+   Adjust `TARGET` to your desired temperature.
+4. Wait for the calibration to complete
+5. The console will display the PID values (Kp, Ki, Kd). Copy these values.
+6. Manually add the PID values to your tool configuration file:
+   
+   **For T0** - Add to `stealthchanger/tools/T0.cfg` in the `[extruder]` section:
+   ```ini
+   [extruder]
+   control: pid
+   pid_Kp: <Kp_value>
+   pid_Ki: <Ki_value>
+   pid_Kd: <Kd_value>
+   ```
+   
+   **For T1** - Add to `stealthchanger/tools/T1.cfg` in the `[extruder1]` section:
+   ```ini
+   [extruder1]
+   control: pid
+   pid_Kp: <Kp_value>
+   pid_Ki: <Ki_value>
+   pid_Kd: <Kd_value>
+   ```
+   
+   **For T2+** - Add to `stealthchanger/tools/Tn.cfg` in the corresponding `[extrudern]` section.
+7. Run `FIRMWARE_RESTART` to apply the changes.
+
+**Note:** Each tool's PID values are independent and should be tuned separately for optimal temperature stability.
+
+### E-steps Calibration
+
+Extruder steps per mm calibration ensures accurate filament extrusion. This should be done for each tool's extruder.
+
+**Procedure:**
+
+1. Select the tool you want to calibrate
+2. Heat the nozzle to your typical printing temperature
+3. Mark the filament 120mm from the extruder entrance
+4. Extrude 100mm of filament:
+   ```
+   G1 E100 F300
+   ```
+5. Measure the actual distance the filament moved
+6. Calculate the new steps per mm:
+   ```
+   New steps = (Current steps × 100) / Actual distance moved
+   ```
+7. Update the `rotation_distance` in your extruder config for T0:
+   ```
+   [extruder] # for T0
+   rotation_distance: <calculated_value>
+   ```
+   - For T1, update `[extruder1]`
+   - For T2, update `[extruder2]`
+8. Run `SAVE_CONFIG` to save the changes
+
+**Note:** If using `rotation_distance`, the formula is: `New rotation_distance = (Current rotation_distance × Actual distance) / 100`
+
+### Input Shaper Calibration
+
+Input shaper compensates for printer vibrations to reduce ringing and improve print quality. This is typically done once if you have the same exact toolheads.  If you have different toolhead types, you should run this for each tool.
+
+**Procedure:**
+
+1. Install an accelerometer on your toolhead (e.g., ADXL345, MPU-9250, or LIS2DW compatible)
+2. Configure the accelerometer in your `printer.cfg`:
+   ```ini
+   [adxl345]
+   cs_pin: <your_pin>
+   spi_speed: 5000000
+   
+   [resonance_tester]
+   accel_chip: adxl345
+   probe_points:
+       100, 100, 20  # Center of bed, 20mm above
+   ```
+3. Run the resonance test for X axis:
+   ```
+   TEST_RESONANCES AXIS=X
+   ```
+4. Run the resonance test for Y axis:
+   ```
+   TEST_RESONANCES AXIS=Y
+   ```
+5. Calculate input shaper parameters:
+   ```
+   SHAPER_CALIBRATE
+   ```
+6. Review the recommended shaper and frequency in the console output
+7. Apply the recommended settings or manually configure:
+   ```ini
+   [input_shaper]
+   shaper_freq_x: <recommended_frequency>
+   shaper_type_x: <recommended_shaper>  # e.g., mzv, ei, 2hump_ei
+   shaper_freq_y: <recommended_frequency>
+   shaper_type_y: <recommended_shaper>
+   ```
+8. Run `FIRMWARE_RESTART` to apply the changes
+
+
 
 ---
 
-**Next:** [Slicers & Printing](Slicers.md) → Configure your slicer for multi-tool printing
+**Next:** [Dock Calibration](DockCalibration.md) → Set up dock positions for reliable tool changes

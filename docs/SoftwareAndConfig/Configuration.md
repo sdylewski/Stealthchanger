@@ -46,16 +46,25 @@ Each toolhead needs its own configuration file. These are located in `stealthcha
 ### Example Configuration Files
 
 **For klipper-toolchanger-easy:** Example tool configuration files compatible with klipper-toolchanger-easy are available in the [Examples directory](Examples/):
-- [T0.cfg example](Examples/T0.cfg) - Tool 0 configuration template
-- [T1.cfg example](Examples/T1.cfg) - Tool 1+ configuration template
+
+**Generic Examples (EBB36 pin names):**
+- [T0 configuration example](Examples/T0.md) - Tool 0 configuration template
+- [T1 configuration example](Examples/T1.md) - Tool 1+ configuration template
+
+**Board-Specific Examples (with correct pin names for each board):**
+- **EBB36:** [T0](Examples/EBB36_T0.md) | [T1](Examples/EBB36_T1.md)
+- **Nighthawk36:** [T0](Examples/Nighthawk36_T0.md) | [T1](Examples/Nighthawk36_T1.md)
+- **SHT36:** [T0](Examples/SHT36_T0.md) | [T1](Examples/SHT36_T1.md)
 
 **Note:** The examples in the [StealthChanger Klipper repo](https://github.com/DraftShift/StealthChanger/tree/main/Klipper) use the older klipper-toolchanger format (`multi_fan`, `params_sc_path`) and are not compatible with klipper-toolchanger-easy. Use the examples in the Examples directory instead.
 
 ### Setting Up Tool Files
 
-1. **Copy the example tool config** from the [Examples directory](Examples/):
-   - Use [T0.cfg](Examples/T0.cfg) as a template for Tool 0
-   - Use [T1.cfg](Examples/T1.cfg) as a template for Tool 1 and higher
+1. **Copy the example tool config** from the [Examples directory](Examples/) based on your toolhead board type:
+   - **EBB36:** Use [EBB36 T0](Examples/EBB36_T0.md) and [EBB36 T1](Examples/EBB36_T1.md) examples
+   - **Nighthawk36:** Use [Nighthawk36 T0](Examples/Nighthawk36_T0.md) and [Nighthawk36 T1](Examples/Nighthawk36_T1.md) examples
+   - **SHT36:** Use [SHT36 T0](Examples/SHT36_T0.md) and [SHT36 T1](Examples/SHT36_T1.md) examples
+   - **Other boards or generic:** Use [T0 configuration example](Examples/T0.md) and [T1 configuration example](Examples/T1.md) (uses EBB36 pin names as default)
 2. **Copy to your config directory:** Place the files in `stealthchanger/tools/` as `T0.cfg`, `T1.cfg`, `T2.cfg`, etc.
 3. **Update all references for each tool:**
    - T0: `extruder` (no number), `fan: T0_partfan`, `heater: extruder`, etc.
@@ -105,7 +114,7 @@ If using a calibration probe (Sexball, Nudge, etc.), configure the `_CALIBRATION
 
 When setting your dock position in your tool config, X and Y are pretty self explanatory. Put the tool in the right spot for it to sit. However, Z should be the point where 1 more mm down will untrigger the tap module.
 
-**Note:** Detailed instructions for calibrating dock positions are covered in the [Calibration](Calibration.md#dock-positions) section. You'll configure `params_park_x`, `params_park_y`, and `params_park_z` for each tool during calibration. 
+**Note:** Detailed instructions for calibrating dock positions are covered in the [Dock Calibration](DockCalibration.md) section. You'll configure `params_park_x`, `params_park_y`, and `params_park_z` for each tool during calibration. 
 
 ## close_y and safe_y
 
@@ -122,7 +131,7 @@ For example, if your Y park position is -15. Your close Y should be 15. If your 
 - `close_y = 15` (park_y + 30 = -15 + 30 = 15)
 - `safe_y = 25+` (park_y + tool thickness + buffer, e.g., -15 + 40 = 25)
 
-**Note:** These values are configured in `stealthchanger/toolchanger-config.cfg` and are covered in detail in the [Calibration](Calibration.md#dock-positions) section. 
+**Note:** These values are configured in `stealthchanger/toolchanger-config.cfg` and are covered in detail in the [Dock Calibration](DockCalibration.md) section. 
 
 ## Docking Path
 
@@ -209,4 +218,4 @@ params_pickup_path: [
 
 ---
 
-**Next:** [Calibration](Calibration.md) → Set up probe offsets, G-code offsets, and dock positions
+**Next:** [Toolhead Calibration](Calibration.md) → Set up probe offsets and G-code offsets

@@ -1,6 +1,6 @@
 ---
 title: Advanced LEDs
-nav_order: 6
+nav_order: 8
 parent: Software & Configuration
 ---
 <!-- Use the page layout at TOC.md:  https://github.com/sdylewski/StealthChanger/blob/main/docs/TOC.md -->
@@ -97,4 +97,5 @@ Some toolheads have mods for SC Barf LEDs:
 
 - [SC Barf LED Repository](https://github.com/DraftShift/StealthChanger/tree/main/UserMods/N3MI-DG/SC_Barf)
 - [Stealthburner SC Barf Mod](https://github.com/DraftShift/StealthChanger/tree/main/UserMods/N3MI-DG/StealthBurner_SC_Barf)
+
 

@@ -1,6 +1,6 @@
 ---
 title: LEDs
-nav_order: 5
+nav_order: 7
 parent: Software & Configuration
 ---
 <!-- Use the page layout at TOC.md:  https://github.com/sdylewski/StealthChanger/blob/main/docs/TOC.md -->

@@ -118,9 +118,10 @@ Klipper must be toolchanger-aware for StealthChanger. The typical flow looks lik
 
 1. [Installation](SoftwareAndConfig/Installation.md) – install klipper-toolchanger-easy to add StealthChanger macros and configs
 2. [Configuration](SoftwareAndConfig/Configuration.md) – set up tool files and toolchanger settings for your hardware
-3. [Calibration](SoftwareAndConfig/Calibration.md) – set probe offsets, tool alignment, and dock positionions
-4. [Slicers & Printing](SoftwareAndConfig/Slicers.md) – configure slicer and macros for multi-tool printing
-5. [LEDs](SoftwareAndConfig/LEDs.md) – optional post-install lighting effects and status indicators
+3. [Toolhead Calibration](SoftwareAndConfig/Calibration.md) – set probe offsets and tool alignment
+4. [Dock Calibration](SoftwareAndConfig/DockCalibration.md) – set dock positions for reliable tool changes
+5. [Slicers & Printing](SoftwareAndConfig/Slicers.md) – configure slicer and macros for multi-tool printing
+6. [LEDs](SoftwareAndConfig/LEDs.md) – optional post-install lighting effects and status indicators
 
 
 
