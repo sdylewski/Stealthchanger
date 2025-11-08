@@ -153,30 +153,30 @@ No hardware required—print reference plates for calibration (more work, but fr
 - Very time-consuming (especially for 5-6 [tools](../Toolheads/Toolheads.md))
 - Bad Z offset can damage PEI plate
    
-# FAQ
+## FAQ
 
-**Q: My sexball probe doesn't work, it's always triggered**  
-A: With [sensorless homing](../Endstops.md#sensorless-homing), ensure [endstops](../Endstops.md)/micro switches use ports that don't share pins with motor diag pins (e.g., use Z motor ports). Check your mainboard manual for pin assignments.
+### My sexball probe doesn't work, it's always triggered
+With [sensorless homing](../Endstops.md#sensorless-homing), ensure [endstops](../Endstops.md)/micro switches use ports that don't share pins with motor diag pins (e.g., use Z motor ports). Check your mainboard manual for pin assignments.
 
-**Q: My OctoTAP board doesn't trigger reliably**  
-A: See [Shuttle FAQ](../Shuttle.md#do-i-need-an-octotap-board-per-toolhead) for details. Common fixes:
+### My OctoTAP board doesn't trigger reliably
+See [Shuttle FAQ](../Shuttle.md#do-i-need-an-octotap-board-per-toolhead) for details. Common fixes:
 1. Mount PCB as low as possible—push down before tightening screws (screw holes have play)
 2. Ensure optical sensor is straight and perpendicular to the board
 
-**Q: Do I need to cut the trace on the OctoTAP board?**  
-A: Generally no. If supplying 5V from the [toolhead](../Toolheads/Toolheads.md) board, it works fine. Cutting the trace disables the 24V→5V regulator (makes board 5V-only) and is only needed if the regulator interferes.
+### Do I need to cut the trace on the OctoTAP board?
+Generally no. If supplying 5V from the [toolhead](../Toolheads/Toolheads.md) board, it works fine. Cutting the trace disables the 24V→5V regulator (makes board 5V-only) and is only needed if the regulator interferes.
 
-**Q: Can I use `SAVE_CONFIG` after `PROBE`?**  
-A: No. `SAVE_CONFIG` saves z-offset at the bottom of printer.cfg, not in the tool's probe section. Z-offset is fetched from the active tool and applied in homing_override. See [calibration configuration](../SoftwareAndConfig/Calibration.md) for proper setup.
+### Can I use `SAVE_CONFIG` after `PROBE_CALIBRATE`?
+No. `SAVE_CONFIG` saves z-offset at the bottom of printer.cfg, not in the tool's probe section. Z-offset is fetched from the active tool and applied in homing_override. See [calibration configuration](../SoftwareAndConfig/Calibration.md) for proper setup.
 
-**Q: My Nudge reports "endstop triggered before contact"**  
-A: Bad electrical connections. Use copper SHCS screws and check resistance between output pins.
+### My Nudge reports "endstop triggered before contact"
+Bad electrical connections. Use copper SHCS screws and check resistance between output pins.
 
-**Q: Do I need to calibrate offsets on every print?**  
-A: No. Offsets remain stable unless hardware changes ([toolhead](../Toolheads/Toolheads.md) disassembly, [backplate preload screws](../Shuttle.md#backplate-preload), nozzle swap, etc.). Check periodically for drift, especially before long multicolor prints.
+### Do I need to calibrate offsets on every print?
+No. Offsets remain stable unless hardware changes ([toolhead](../Toolheads/Toolheads.md) disassembly, [backplate preload screws](../Shuttle.md#backplate-preload), nozzle swap, etc.). Check periodically for drift, especially before long multicolor prints.
 
-**Q: What is toolless homing?**  
-A: Homing with just the [shuttle](../Shuttle.md) (no tool required). Benefits:
+### What is toolless homing?
+Homing with just the [shuttle](../Shuttle.md) (no tool required). Benefits:
 - Park last tool in [dock](../Docks.md) (prevents ooze, keeps [umbilicals](../CableManagement/Umbilicals.md) in arc shape)
 - Move empty shuttle behind bed (gantry out of the way, ready for next print)
 

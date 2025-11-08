@@ -100,3 +100,21 @@ Before using dock_tuner, ensure you have:
 
 **Related:** [Dock Calibration](DockCalibration.md) → Manual calibration method
 
+## FAQ
+
+### dock_tuner doesn't detect my tool
+Make sure:
+- The OctoTAP board is properly mounted and the optical sensor is aligned
+- The tool is properly seated on the shuttle
+- Your `params_pickup_path` includes a step with `verify:1` parameter
+- The tool detection is working (you can test with `DETECT_ACTIVE_TOOL_PROBE`)
+
+### Can I use dock_tuner with non-T0 tools?
+Yes, but you must manually place the tool on the shuttle first. **DO NOT** run `G28` or `INITIALIZE_TOOLCHANGER` with non-T0 tools during calibration. Home with T0 first, then manually switch to the tool you want to calibrate.  
+
+### dock_tuner moves too fast/slow
+You can adjust the speed multiplier using the `SPD` parameter. For example, `DOCK_TUNER SPD=0.5` will run at 50% speed, or `DOCK_TUNER SPD=2.0` will run at 200% speed. Be careful with higher speeds to avoid collisions.
+
+### The dock positions from dock_tuner don't match my manual calibration
+This is normal - dock_tuner provides an interactive way to fine-tune positions. The values should be close to your manual calibration, but may need slight adjustments. Use dock_tuner to refine the positions for optimal tool changes.
+

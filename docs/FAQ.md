@@ -57,7 +57,7 @@ There's a few options to solve this:
 A lot of people are asking which toolhead/extruder is recommended. The answer is whatever you want. The changer and tools are completely separate. That being said, using something that is officially supported is going to be the easiest.
 
 ### CAN setup
-You are definitely going to want to use CAN to connect your toolheads. Its only 4 wires and much lighter. You don't need anything fancy to split out the signal. Simple WAGO connectors work just fine. Of course, there are options for boards that will split the signal as well if you want something that looks a little more professional. Run wires up to the umbilical from your controller and power supply, then use WAGO's there to split the signal. See the guide [here](Configuration.md#canbus) for a lot more CAN information.
+You are definitely going to want to use CAN to connect your toolheads. Its only 4 wires and much lighter. You don't need anything fancy to split out the signal. Simple WAGO connectors work just fine. Of course, there are options for boards that will split the signal as well if you want something that looks a little more professional. Run wires up to the umbilical from your controller and power supply, then use WAGO's there to split the signal. See the guide [here](SoftwareAndConfig/ToolConfiguration.md) for a lot more CAN information.
    
 ### Make sure you have a good PID
 If you try to change tools during a print (or when the hotends are active) and it drops off one tool, then waits behind another tool and does nothing, the issue is that its probably waiting for the tool temp to stabilize. Make sure you run a PID tune for each tool and place the info in the corresponding tool config.

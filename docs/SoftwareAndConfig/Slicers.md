@@ -7,7 +7,7 @@ parent: Software & Configuration
 
 # Slicers & Printing
 
-After [installing](Installation.md), [configuring](Configuration.md), and [calibrating](Calibration.md) klipper-toolchanger-easy, you need to set up your slicer to work with the toolchanger system.
+After [installing](Installation.md), [configuring](ToolConfiguration.md), and [calibrating](Calibration.md) klipper-toolchanger-easy, you need to set up your slicer to work with the toolchanger system.
 
 ## Print Start Macro
 
@@ -119,3 +119,20 @@ M104 S{material_print_temperature} T{extruder_nr}
 
 **Optional Next Steps:**
 - [LEDs](LEDs.md) → Configure color LEDs and lighting effects
+
+## FAQ
+
+### PrusaSlicer wipe tower position error after upgrading to 2.9.0
+If you use `G1 X{wipe_tower_x} Y{wipe_tower_y} F{travel_speed*60}` in your Tool change G-code, it won't work in PrusaSlicer 2.9.0. They dropped the option to choose your wipe tower position, and the above command will give an error. Either don't use the wipe tower positions, or stick with PrusaSlicer 2.8.1 until it's fixed.
+
+### OrcaSlicer sets pressure advance to zero with prime tower
+There is a bug in OrcaSlicer where it sets the pressure advance to zero when using a prime tower. See [OrcaSlicer issue #7594](https://github.com/SoftFever/OrcaSlicer/issues/7594). You can use a post-processing script to remove `SET_PRESSURE_ADVANCE ADVANCE=0` from the g-code, or ensure your pressure advance values are set in your filament settings.
+
+### My tool waits a long time to heat up before continuing
+This is likely Klipper waiting for the temperature of the hotend to settle to the target temperature. If your hotend is not well PID tuned, it can sometimes oscillate indefinitely around the target temperature. By default, this margin is quite small (only 0.5°C). This is usually not a problem for single toolhead printers, but with a toolchanger where it heats up the tool every tool call, this can introduce a lot of delay. Ensure your PID values are properly tuned for each tool.
+
+### How do I decrease the prime amount in OrcaSlicer?
+Decreasing the Prime volume and width should work, but decreasing width just makes it longer. Adjust the Prime volume setting in your slicer's multi-material settings.
+
+### Can I use ooze prevention and pre-heating?
+Yes! OrcaSlicer has a feature to prevent oozing of tools that are actively being used by dropping their temperature to an idle temperature. It can also ramp up the temperature back up by a set amount of seconds before the tool is actually being called to make sure the toolhead is ready to go without waiting. This also has the added benefit of not cooking your filament for long periods of time and preventing heat creep, so it's definitely recommended.

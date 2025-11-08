@@ -117,7 +117,7 @@ For crossbars mounted outside the front extrusions, you will need to use the doo
 * [Parallel dock for Trident SC](https://github.com/angelassie/Parallel-Dock-for-Trident-Stealthchanger)
 * [Screw docks](https://www.printables.com/model/911717-stealthchanger-screw-docks) (for hooking toolheads) ([discord link](https://discord.com/channels/1226846451028725821/1244583842841362493))
   
-# FAQ
+## FAQ
 
 ### Moving from and to the dock is so slow
 You can increase the printer Z speed `max_z_velocity` and acceleration `max_z_accel`, depending on your motors, motor drivers. It's recommended to increase this in small steps because lost steps due to a loose belt will violently skew the gantry and might break your motor mounts.

@@ -63,7 +63,7 @@ primary_branch: main
 managed_services: klipper
 ```
 
-**Note:** If you make manual changes to the installed files, they will be overwritten when Moonraker updates. Use the configuration override files instead (see [Configuration](Configuration.md)).
+**Note:** If you make manual changes to the installed files, they will be overwritten when Moonraker updates. Use the configuration override files instead (see [Tool Configuration](ToolConfiguration.md)).
 
 ### Include in printer.cfg
 
@@ -75,4 +75,18 @@ Add this line to your `printer.cfg` to include the toolchanger configuration:
 
 ---
 
-**Next:** [Configuration](Configuration.md) → Set up tool files and toolchanger settings
+**Next:** [Tool Configuration](ToolConfiguration.md) → Set up tool files and toolchanger settings
+
+## FAQ
+
+### Installation fails with "invalid syntax" error
+Make sure you are using at least Python 3. The installation script requires Python 3 to run properly.
+
+### Can I use Kalico instead of mainline Klipper?
+No, klipper-toolchanger-easy is not currently compatible with Kalico. You must use mainline Klipper.
+
+### Do I need to remove my existing PRINT_START macro?
+Yes, klipper-toolchanger-easy provides its own `PRINT_START` macro that is required for toolchanging. Remove or rename your existing `PRINT_START` macro before installation to avoid conflicts.
+
+### Will Moonraker updates overwrite my customizations?
+Yes, if you make manual changes to files in the `stealthchanger/` directory, they will be overwritten when Moonraker updates. Use configuration override files or modify the files in your config directory instead of modifying the installed files directly.

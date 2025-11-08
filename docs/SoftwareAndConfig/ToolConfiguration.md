@@ -1,11 +1,11 @@
 ---
-title: Configuration
+title: Tool Configuration
 nav_order: 2
 parent: Software & Configuration
 ---
 <!-- Use the page layout at TOC.md:  https://github.com/sdylewski/StealthChanger/blob/main/docs/TOC.md -->
 
-# Configuration
+# Tool Configuration
 
 After installing [klipper-toolchanger-easy](Installation.md), you need to configure it for your specific setup. This guide covers the essential configuration steps.
 
@@ -219,3 +219,26 @@ params_pickup_path: [
 ---
 
 **Next:** [Toolhead Calibration](Calibration.md) → Set up probe offsets and G-code offsets
+
+## FAQ
+
+### Can I skip a number in the tool numbering?
+No, Klipper requires sequential numbering starting from 0. Skipping a number (e.g., having T0 and T2 but no T1) will cause Klipper to complain. Tools must be numbered sequentially: T0, T1, T2, etc.
+
+### The wrong tool heats up
+Make sure *all* of your `extruder` references are correct per tool and you didn't forget to change one. Use `extruder` for T0, `extruder1` for T1 and so on. For example, `[tmc2209 extruder]` becomes `[tmc2209 extruder1]` for T1. Unfortunately, the different naming scheme of extruders for T0 (no number) makes it easy to miss `extruder` references when copying configurations.
+
+### I'm getting weird behavior where the wrong tool gets selected, heated, part cooling fan is wrong, etc.
+Make sure you don't accidentally have overridden any macros. If you copy T0.cfg to T1.cfg and forget to change any reference to T0, you'll run into weird behavior. Read through T1.cfg closely and make sure you don't have anything still referencing T0. G-code macro definitions will override the previously defined one (in T0.cfg). If you've forgotten to change the name of the g-code macro but have changed all references to T1 inside that macro, then when that macro is called for T0, it will do all the things it's supposed to with T1 instead of T0.
+
+### What are these T0, T1, ... macros?
+The slicer uses these macros to initiate a tool change to the given tool. `T1` is the equivalent of `SELECT_TOOL T=1`. These macros are automatically created by klipper-toolchanger-easy for each tool you configure.
+
+### Can I park the active tool and not select a new one?
+Yes, with `UNSELECT_TOOL`. If the macro is not available, make sure you have set `require_tool_present: False` in `[toolchanger]` in your `toolchanger-config.cfg`.
+
+### I'm getting errors about a T3, I don't even have a T3
+This happens when your slicer emits a `M106 P3 S0` or `M106 P2 S0` (if you have a T2 not assigned error). Disable the chamber exhaust fan and auxiliary cooling in your slicer. Slicers use P2 as auxiliary cooling fan and P3 as chamber fan, and these get interpreted as T2 or T3 by the software.
+
+### I'm getting a Klipper error about multi_fan or fan_generic
+You likely had an older install or copied the config from an older install. This was changed and the fan reference in each tool section `[tool]` is now `fan: Tx_partfan` (e.g., `fan: T0_partfan` for T0, `fan: T1_partfan` for T1).

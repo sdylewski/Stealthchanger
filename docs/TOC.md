@@ -24,9 +24,10 @@
 	4. Printing
 3. Software & Configuration:
 	1. Installation: Installation.md
-	2. Configuration: Configuration.md
-	3. Calibration: Calibration.md
-	4. Slicers: Slicers.md
+	2. Tool Configuration: ToolConfiguration.md
+	3. Toolhead Calibration: Calibration.md
+	4. Dock Calibration: DockCalibration.md
+	5. Slicers: Slicers.md
 4. Support:
 	1. FAQ
 	2. Serials

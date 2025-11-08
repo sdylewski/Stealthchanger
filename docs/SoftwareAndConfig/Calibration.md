@@ -322,3 +322,32 @@ Input shaper compensates for printer vibrations to reduce ringing and improve pr
 ---
 
 **Next:** [Dock Calibration](DockCalibration.md) → Set up dock positions for reliable tool changes
+
+## FAQ
+
+### Do I need to calibrate offsets on every print?
+No. Offsets remain stable unless hardware changes occur (toolhead disassembly, backplate preload screws adjustment, nozzle swap, etc.). Check periodically for drift, especially before long multicolor prints.
+
+### Can I use `SAVE_CONFIG` after `PROBE_CALIBRATE`?
+No. `SAVE_CONFIG` saves z-offset at the bottom of printer.cfg, not in the tool's probe section. Z-offset is fetched from the active tool and applied in homing_override. You must manually add the probe Z offset values to your tool configuration files (e.g., `stealthchanger/tools/T0.cfg`).
+
+### My pressure advance doesn't work
+Make sure to put the PA values in your filament settings in the slicer. If you have multitool ramming enabled, it will set pressure advance to 0 when ramming on the wipe tower, and if it's not in the filament settings, it can't put it back to what it's supposed to be during the print.
+
+### Input Shaper shows "peak too far right" - what does this mean?
+This usually means the accelerometer data is not being read correctly, or the toolhead is too light/heavy for the test. Try:
+- Ensuring the accelerometer is properly mounted and connected
+- Running the test with a different toolhead if available
+- Checking that the accelerometer configuration matches your toolhead board
+- Verifying the accelerometer is working with `ACCELEROMETER_QUERY`
+
+### Do I need to run Input Shaper calibration for each tool?
+If your toolheads are significantly different in weight or mass distribution, you may need to run Input Shaper calibration for each tool. If all toolheads are identical, you can typically use the same input shaper settings for all tools.
+
+### My PID tuning values keep changing
+PID values should stabilize after a few tuning cycles. If they keep changing significantly, check:
+- Heater wiring connections
+- Thermistor connections
+- Heater block thermal paste/contact
+- Ambient temperature stability
+- Power supply stability

@@ -122,7 +122,7 @@ Sometimes the bushings aren't debured or do not slide well when you recieve them
 * [Belt lock](https://github.com/MikeYankeeOscarBeta/belt_lock) ([discord link](https://discord.com/channels/1226846451028725821/1236046337359872000))
 * DO NOT USE, REQUIRES UPDATE TO V1.1: ~~[Shuttle with 5.5mm OD bushings](https://github.com/DraftShift/StealthChanger/blob/main/UserMods/traxman25/Bushings_5.5/README.md)~~
 
-# FAQ
+## FAQ
 
 ### Do I need an OctoTAP board per toolhead?
 Yes, in order to detect which tool is actively on the shuttle each toolhead should have an OctoTAP board. It has an optical sensor whose beam gets broken by the flag of the shuttle (the little protrusion at the top of the shuttle). That's how the software knows which tool is actively on the shuttle and it can also detect whether a tool change has been succesfully performed (= crash detection).

@@ -13,7 +13,7 @@ Congratulations! You've built a StealthChanger with at least one toolhead and do
 Follow these steps in order:
 
 1. **[Install](Installation.md)** klipper-toolchanger-easy - Set up the toolchanger software
-2. **[Configure](Configuration.md)** all your parameters for each toolhead - Set up tool files, offsets, and dock positions
+2. **[Configure](ToolConfiguration.md)** all your parameters for each toolhead - Set up tool files, offsets, and dock positions
 3. **[Calibrate Toolheads](Calibration.md)** your Z offsets and toolhead XY offsets - Ensure accurate tool alignment
 4. **[Calibrate Docks](DockCalibration.md)** your dock locations - Set up reliable tool changes
 5. **[Setup your slicer](Slicers.md)** and print-start macros - Configure your slicer for multi-tool printing
@@ -29,10 +29,12 @@ StealthChanger uses [klipper-toolchanger-easy](https://github.com/jwellman80/kli
 - Comprehensive configuration examples
 - Active development and support
 
+---
 
-# FAQ
-SW Setup issues:
-* if using "fan0 or fan2" from slicer, need to change those back to named fans.
+## FAQ
+
+### If using "fan0 or fan2" from slicer, need to change those back to named fans
+If your slicer is using "fan0" or "fan2" for fan control, you need to change those back to named fans. klipper-toolchanger-easy uses named fans like `T0_partfan`, `T1_partfan`, etc. Update your slicer settings to use the correct fan names.
 
 ### After a tool change the ooze of my toolhead gets deposited onto my print / the picked up tool drags over the print to the prime tower
 By default after a tool change only the Z axis gets restored, that means whichever tool you pick up will return to center Y and X whatever your dock position of that tool is. If your print is in the path to the next move from the slicer it will not Z-hop (the slicer does not change Z) and drag over it, depositing any ooze the nozzle has on the print.

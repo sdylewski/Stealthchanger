@@ -80,3 +80,20 @@ The movement using config parameters is as follows:
 
 **Next:** [Slicers & Printing](Slicers.md) → Configure your slicer for multi-tool printing
 
+## FAQ
+
+### Moving from and to the dock is so slow
+You can increase the printer Z speed `max_z_velocity` and acceleration `max_z_accel`, depending on your motors and motor drivers. It's recommended to increase this in small steps because lost steps due to a loose belt will violently skew the gantry and might break your motor mounts. For example, 24V Moons motors with TMC2209 drivers can reliably get `max_z_velocity: 200` and `max_z_accel: 750` if the rest of the hardware is fine. That speed reduces dropoff/pickup to ~10 seconds.
+
+### I can't seem to get past 50mm/s Z velocity before it makes really angry noises and skips steps
+Make sure you have [StealthChop](https://www.klipper3d.org/TMC_Drivers.html#setting-spreadcycle-vs-stealthchop-mode) disabled on all of the Z motors. SpreadCycle is louder but gives much more torque that's required to run the Z velocity at a higher speed. If you have TMC autotune, make sure to set the Z motors profile to `performance` - by default Z motors will be on the silent profile.
+
+### My tool pickup failed and it halted Klipper so the print is lost. Can I make it pause so it can recover and resume?
+You can use the `error_gcode` and `recover_gcode` of toolchanger for this:
+
+1. The tool is not being detected by the VERIFY_TOOL call in the pickup gcode (assuming your path has a 'verify': 1 somewhere)
+2. It runs the `error_gcode` and puts the toolchanger software in an error state. Adding `PAUSE_BASE` in `error_gcode` will pause the printer. Do not use `PAUSE` if you have Mainsail, as Mainsail overrides it to move the toolhead to the back and you don't want that.
+3. Fix the toolhead issue and do everything to prepare the printer to continue. Put the toolhead on the shuttle and move the gantry to a safe position. It will move in a straight line (`G0`) to where the toolhead is supposed to go after the pickup, so be careful!
+4. Run `INITIALIZE_TOOLCHANGER RECOVER=1` to return to its normal state and run the `recover_gcode` section. Adding `RESUME_BASE` in `recover_gcode` will resume the printer. Do not use `RESUME` if you have Mainsail for the same reason as above.
+5. The printer should now continue the print with the tool that failed to pick up.
+

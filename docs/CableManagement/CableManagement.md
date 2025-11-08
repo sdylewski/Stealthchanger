@@ -16,7 +16,7 @@ Lots of toolheads mean lots of extra wires and filament that needs to be managed
 * [Power Requirements](Power.md) - Make sure you're getting enough power.
 * [Filament management](FilamentManagement.md) - Options for how to manage 2-6 spools and tubes going everywhere.
 
-# FAQ
+## FAQ
 
 ### I'm getting a lot of "Timer Too Close" errors, what gives?
 There are several possible reasons for Timer Too Close (TTC) errors from Klipper:
