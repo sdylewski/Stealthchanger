@@ -7,7 +7,7 @@ parent: Software & Configuration
 
 # Slicers & Printing
 
-After [installing](Installation.md), [configuring](ToolConfiguration.md), and [calibrating](Calibration.md) klipper-toolchanger-easy, you need to set up your slicer to work with the toolchanger system.
+After [installing](Installation.md), [configuring](Configuration.md), and [calibrating](ToolCalibration.md) klipper-toolchanger-easy, you need to set up your slicer to work with the toolchanger system.
 
 ## Print Start Macro
 

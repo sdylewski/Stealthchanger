@@ -1,11 +1,11 @@
 ---
-title: Tool Calibration
+title: Toolhead Calibration
 nav_order: 3
 parent: Software & Configuration
 ---
 <!-- Use the page layout at TOC.md:  https://github.com/sdylewski/StealthChanger/blob/main/docs/TOC.md -->
 
-# Tool Calibration
+# Toolhead Calibration
 
 A multi-tool printer requires calibration. This page explains what to calibrate, and describes some of the useful tools and techniques.
 

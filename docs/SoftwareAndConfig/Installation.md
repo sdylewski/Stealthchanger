@@ -63,7 +63,7 @@ primary_branch: main
 managed_services: klipper
 ```
 
-**Note:** If you make manual changes to the installed files, they will be overwritten when Moonraker updates. Use the configuration override files instead (see [Tool Configuration](ToolConfiguration.md)).
+**Note:** If you make manual changes to the installed files, they will be overwritten when Moonraker updates. Use the configuration override files instead (see [Configuration](Configuration.md)).
 
 ### Include in printer.cfg
 
@@ -75,7 +75,7 @@ Add this line to your `printer.cfg` to include the toolchanger configuration:
 
 ---
 
-**Next:** [Tool Configuration](ToolConfiguration.md) → Set up tool files and toolchanger settings
+**Next:** [Configuration](Configuration.md) → Set up tool files and toolchanger settings
 
 ## FAQ
 

@@ -7,8 +7,8 @@ parent: StealthChanger Components
 # Probes
 
 StealthChanger uses two types of probes:
-1. **Z-probes** - For Z homing and [bed leveling](../SoftwareAndConfig/Calibration.md#bed-probing) (determines Z=0 and `z-offset`)
-2. **Inter-tool offset probes** - For calibrating X,Y,Z offsets between tools (`gcode_offset` in `[tool]` section). See [calibration guide](../SoftwareAndConfig/Calibration.md) for setup.
+1. **Z-probes** - For Z homing and [bed leveling](../SoftwareAndConfig/ToolCalibration.md#bed-probing) (determines Z=0 and `z-offset`)
+2. **Inter-tool offset probes** - For calibrating X,Y,Z offsets between tools (`gcode_offset` in `[tool]` section). See [calibration guide](../SoftwareAndConfig/ToolCalibration.md) for setup.
 
 **Note:** Keep nozzles clean for accurate measurements. XY probes must be mounted on bed extrusions or securely attached to the bed during calibration.
 
@@ -17,7 +17,7 @@ StealthChanger uses two types of probes:
 ### TAP
 Uses the [OctoTap PCB](../Shuttle.md#do-i-need-an-octotap-board-per-toolhead) (required for [tool detection](../Shuttle.md)) for Z homing via nozzle contact, similar to Voron TAP. **Note:** You need an OctoTap PCB per [toolhead](../Toolheads/Toolheads.md) even if using a different Z-probe.
 
-**Important:** Z-offset will be negative since the trigger occurs after nozzle contact. Install a wiper and use a `CLEAN_NOZZLE` macro after initial home and before [QGL](../SoftwareAndConfig/Calibration.md#bed-probing)—any leftover filament affects accuracy.
+**Important:** Z-offset will be negative since the trigger occurs after nozzle contact. Install a wiper and use a `CLEAN_NOZZLE` macro after initial home and before [QGL](../SoftwareAndConfig/ToolCalibration.md#bed-probing)—any leftover filament affects accuracy.
 
 **Pros:**
 - Free (OctoTap already required)
@@ -25,7 +25,7 @@ Uses the [OctoTap PCB](../Shuttle.md#do-i-need-an-octotap-board-per-toolhead) (r
 
 **Cons:**
 - Requires tool on [shuttle](../Shuttle.md) (no toolless homing)
-- Slow for [QGL](../SoftwareAndConfig/Calibration.md#bed-probing) and large bed meshes
+- Slow for [QGL](../SoftwareAndConfig/ToolCalibration.md#bed-probing) and large bed meshes
 - May dimple PEI plates (especially smooth ones with N52 magnets)
    
 ### Beacon/Carto
@@ -64,7 +64,7 @@ A [sexbolt](https://mods.vorondesign.com/details/t1DBVlcUBbdEK6habEsVzg) mod wit
 - Needs tight tolerances: no play in sexball, concentric nozzles required (cheap nozzles often aren't)
 - Sideways force on sphere can cause issues
 
-See [tool calibration configuration](../SoftwareAndConfig/Calibration.md) to set up calibration config and macros.
+See [tool calibration configuration](../SoftwareAndConfig/ToolCalibration.md) to set up calibration config and macros.
 
 #### BOM
 Replaces the shaft on a sexbolt:
@@ -128,7 +128,7 @@ Buildable probe: vertical pole held against bolts by spring tension, completing 
 - Requires tuning to avoid jamming (driving pole too far in Z)
 - Use copper SHCS screws (SS screws don't work reliably)
 
-See [calibration section](../SoftwareAndConfig/Calibration.md) for usage.
+See [calibration section](../SoftwareAndConfig/ToolCalibration.md) for usage.
 
 
 #### Mods
@@ -140,7 +140,7 @@ See [calibration section](../SoftwareAndConfig/Calibration.md) for usage.
 ### Using a printable calibration
 No hardware required—print reference plates for calibration (more work, but free).
 
-**⚠️ Warning:** If gcode_z_offsets are unknown, set them high before printing to prevent lower nozzles from digging into the bed. See [calibration guide](../SoftwareAndConfig/Calibration.md) for proper setup.
+**⚠️ Warning:** If gcode_z_offsets are unknown, set them high before printing to prevent lower nozzles from digging into the bed. See [calibration guide](../SoftwareAndConfig/ToolCalibration.md) for proper setup.
 
 <img src="media/Probes/xy_print_cal.jpg" width="300">
 
@@ -167,7 +167,7 @@ See [Shuttle FAQ](../Shuttle.md#do-i-need-an-octotap-board-per-toolhead) for det
 Generally no. If supplying 5V from the [toolhead](../Toolheads/Toolheads.md) board, it works fine. Cutting the trace disables the 24V→5V regulator (makes board 5V-only) and is only needed if the regulator interferes.
 
 ### Can I use `SAVE_CONFIG` after `PROBE_CALIBRATE`?
-No. `SAVE_CONFIG` saves z-offset at the bottom of printer.cfg, not in the tool's probe section. Z-offset is fetched from the active tool and applied in homing_override. See [calibration configuration](../SoftwareAndConfig/Calibration.md) for proper setup.
+No. `SAVE_CONFIG` saves z-offset at the bottom of printer.cfg, not in the tool's probe section. Z-offset is fetched from the active tool and applied in homing_override. See [calibration configuration](../SoftwareAndConfig/ToolCalibration.md) for proper setup.
 
 ### My Nudge reports "endstop triggered before contact"
 Bad electrical connections. Use copper SHCS screws and check resistance between output pins.

@@ -1,11 +1,11 @@
 ---
-title: Tool Configuration
+title: Configuration
 nav_order: 2
 parent: Software & Configuration
 ---
 <!-- Use the page layout at TOC.md:  https://github.com/sdylewski/StealthChanger/blob/main/docs/TOC.md -->
 
-# Tool Configuration
+# Configuration
 
 After installing [klipper-toolchanger-easy](Installation.md), you need to configure it for your specific setup. This guide covers the essential configuration steps.
 
@@ -108,7 +108,7 @@ See [toolchanger-config.cfg example](Examples/toolchanger-config.cfg) for a refe
 
 ### Calibration Switch (Optional but recommended)
 
-If using a calibration probe (Sexball, Nudge, etc.), configure the `_CALIBRATION_SWITCH` section with your probe's endstop pin. See [Calibration](Calibration.md) for detailed calibration setup and procedures.
+If using a calibration probe (Sexball, Nudge, etc.), configure the `_CALIBRATION_SWITCH` section with your probe's endstop pin. See [Toolhead Calibration](ToolCalibration.md) for detailed calibration setup and procedures.
 
 ## Dock Positions
 
@@ -218,7 +218,7 @@ params_pickup_path: [
 
 ---
 
-**Next:** [Toolhead Calibration](Calibration.md) → Set up probe offsets and G-code offsets
+**Next:** [Toolhead Calibration](ToolCalibration.md) → Set up probe offsets and G-code offsets
 
 ## FAQ
 

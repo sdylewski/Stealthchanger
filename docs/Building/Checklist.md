@@ -32,12 +32,12 @@ parent: Building
 ## Software & Configuration
 
  - [ ] [Install](../SoftwareAndConfig/Installation.md) klipper-toolchanger-easy
- - [ ] [Configure](../SoftwareAndConfig/ToolConfiguration.md) tool files and toolchanger settings
+ - [ ] [Configure](../SoftwareAndConfig/Configuration.md) tool files and toolchanger settings
 
 ## Calibration
 
- - [ ] [Calibrate Probe Z Offsets](../SoftwareAndConfig/Calibration.md#probe-z-offset-tool_probe-offsets) for each tool
- - [ ] [Calibrate G-code Offsets](../SoftwareAndConfig/Calibration.md#g-code-offsets-t0---tn-offsets) (X, Y, Z) between tools
+ - [ ] [Calibrate Probe Z Offsets](../SoftwareAndConfig/ToolCalibration.md#probe-z-offset-tool_probe-offsets) for each tool
+ - [ ] [Calibrate G-code Offsets](../SoftwareAndConfig/ToolCalibration.md#g-code-offsets-t0---tn-offsets) (X, Y, Z) between tools
  - [ ] [Calibrate Dock Positions](../SoftwareAndConfig/DockCalibration.md) - Use [Dock Tuner](../SoftwareAndConfig/DockTuner.md) (recommended) or manual method
 
 ## Slicer Setup
