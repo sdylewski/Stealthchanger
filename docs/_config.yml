@@ -9,7 +9,7 @@ plugins:
   - jekyll-remote-theme
 
 # If your site is at https://<user>.github.io/<repo>
-url: https://sdylewski.github.io/StealthChanger
+url: https://sdylewski.github.io
 baseurl: /StealthChanger
 
 # Just the Docs options (examples)
