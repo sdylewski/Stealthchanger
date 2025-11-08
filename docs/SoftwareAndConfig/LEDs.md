@@ -9,11 +9,72 @@ parent: Software & Configuration
 
 StealthChanger supports various types of addressable RGB LEDs for both functional lighting and aesthetic effects. This guide covers how to configure and control color LEDs on your StealthChanger.
 
+## Multi-Toolhead LED Control
+
+Since StealthChanger has multiple toolheads, controlling LEDs works differently than on a single-toolhead machine:
+
+### No Different Libraries Required
+
+**You don't need different libraries** - StealthChanger uses the same Klipper `[neopixel]` support that works on any Klipper printer. The LED Effects plugin also works the same way across all your LEDs.
+
+### Key Differences
+
+1. **Per-Tool Configuration**: Each toolhead can have its own LED configuration defined in its tool config file (`stealthchanger/tools/Tx.cfg`). This means:
+   - T0 might have 3 nozzle LEDs
+   - T1 might have 5 LEDs (nozzle + additional lighting)
+   - Each tool's LEDs are independent
+
+2. **CAN Bus Control**: Toolhead LEDs are typically controlled via CAN bus using the `toolhead:PB3` pin format, while frame/logo LEDs use direct GPIO pins on the main board.
+
+3. **Active Tool LEDs**: When a tool is active on the shuttle, you control that tool's LEDs. When you switch tools, you're now controlling a different set of LEDs.
+
+4. **Multiple LED Sections**: You'll have multiple `[neopixel]` sections:
+   - One (or more) for frame/logo LEDs in `printer.cfg`
+   - One for each toolhead's LEDs in their respective `Tx.cfg` files
+
+### Example Setup
+
+```ini
+# In printer.cfg - Frame/Logo LEDs
+[neopixel rgb_logo]
+pin: PB3
+chain_count: 21
+color_order: GRB
+
+# In stealthchanger/tools/T0.cfg - T0 toolhead LEDs
+[neopixel T0_nozzle_leds]
+pin: toolhead:PB3
+chain_count: 3
+color_order: GRB
+
+# In stealthchanger/tools/T1.cfg - T1 toolhead LEDs  
+[neopixel T1_nozzle_leds]
+pin: toolhead:PB3
+chain_count: 3
+color_order: GRB
+```
+
+### LED Effects with Multiple Toolheads
+
+The LED Effects plugin can control LEDs from multiple toolheads simultaneously. Simply reference all the LED sections you want in your effect:
+
+```ini
+[led_effect all_tools]
+leds:
+    neopixel:rgb_logo          # Frame/logo LEDs
+    neopixel:T0_nozzle_leds     # T0 LEDs (when T0 is active)
+    neopixel:T1_nozzle_leds     # T1 LEDs (when T1 is active)
+layers:
+    rainbow 5 1 top
+```
+
+**Note:** Toolhead LEDs are only accessible when that tool is active on the shuttle. If you want effects that work regardless of which tool is active, focus on frame/logo LEDs or create separate effects for each tool.
+
 ## Overview
 
 StealthChanger can use addressable RGB LEDs in several locations:
 - **Toolhead LEDs** - Nozzle LEDs and part cooling fan LEDs on each toolhead
-- **Logo LEDs** - StealthChanger logo PCBs with integrated LEDs (Rainbow Barf)
+- **Logo LEDs** - Custom logo PCBs with integrated LEDs (see [Advanced LEDs](LEDsAdvanced.md))
 - **Frame LEDs** - Optional LED strips for frame lighting
 - **Status Indicators** - Functional LEDs for printer status
 
@@ -73,52 +134,9 @@ SET_LED LED=my_leds RED=0.5 GREEN=0.5 BLUE=0.5
 SET_LED LED=my_leds RED=0 GREEN=0 BLUE=0
 ```
 
-## Rainbow Barf LEDs (SC Barf)
+## Advanced LED Options
 
-Rainbow Barf LEDs are custom PCBs with 1.5mm RGB LEDs arranged in the StealthChanger logo pattern. Available in both Voron and Micron styles.
-
-### Hardware
-
-- **PCB Source:** [SC Barf LEDs](https://github.com/DraftShift/StealthChanger/tree/main/UserMods/N3MI-DG/SC_Barf)
-- **LED Type:** SK6805-EC15 (1.5mm RGB LEDs)
-- **LED Count:** 
-  - 21 LEDs for Voron style
-  - 19 LEDs for Micron style
-
-### Configuration
-
-Add this to your `printer.cfg`:
-
-```ini
-[neopixel rgb_logo]
-pin: PB3                    # GPIO pin (adjust to your setup)
-color_order: GRB            # SK6805 uses GRB order
-chain_count: 21             # 21 for Voron, 19 for Micron
-initial_RED: 0.3
-initial_GREEN: 0.3
-initial_BLUE: 0.0
-```
-
-### Ordering PCBs
-
-The SC Barf PCBs can be ordered from JLCPCB:
-
-1. Add the Gerber zip file from the [SC Barf repository](https://github.com/DraftShift/StealthChanger/tree/main/UserMods/N3MI-DG/SC_Barf)
-2. Select PCB quantity and color
-3. Select `Order Number(Specify Position)`
-4. Enable PCB Assembly
-5. Select `Added by Customer` in Tooling holes section
-6. Add BOM file `BOM-JLC.csv`
-7. Add CPL file `CPL-JLC.csv`
-8. Process BOM & CPL and verify component placement
-9. Complete checkout
-
-**Note:** If `SK6805-EC15` is out of stock, `DY-S1515065/RGBC/6805-5T` by TONYU is compatible but the JLC footprint is rotated 180 degrees. Verify correct orientation during placement.
-
-### Toolhead-Specific Rainbow Barf
-
-Some toolheads have mods for SC Barf LEDs:
-- [Stealthburner SC Barf](https://github.com/DraftShift/StealthChanger/tree/main/UserMods/N3MI-DG/StealthBurner_SC_Barf) - Note: Requires RGB nozzle LEDs, not RGBW
+For custom logo PCBs including Rainbow Barf (Voron/Micron logo) and SC Barf (StealthChanger logo) LEDs, see [Advanced LEDs](LEDsAdvanced.md).
 
 ## LED Effects Plugin
 
@@ -313,5 +331,4 @@ For more complex effects and full documentation, see the [LED Effects GitHub rep
 
 - [LED Effects Documentation](https://github.com/julianschill/klipper-led_effect)
 - [Klipper Neopixel Documentation](https://www.klipper3d.org/Config_Reference.html#neopixel)
-- [SC Barf LED Repository](https://github.com/DraftShift/StealthChanger/tree/main/UserMods/N3MI-DG/SC_Barf)
-- [Stealthburner SC Barf Mod](https://github.com/DraftShift/StealthChanger/tree/main/UserMods/N3MI-DG/StealthBurner_SC_Barf)
+- [Advanced LEDs](LEDsAdvanced.md) - Custom logo PCBs and advanced LED options

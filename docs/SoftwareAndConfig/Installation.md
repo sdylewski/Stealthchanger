@@ -73,20 +73,6 @@ Add this line to your `printer.cfg` to include the toolchanger configuration:
 [include stealthchanger/toolchanger-config.cfg]
 ```
 
-## Post-Installation Configuration
+---
 
-After installation, you need to:
-
-1. **Configure tool files:** Update `stealthchanger/tools/Tx.cfg` for each tool (T0.cfg, T1.cfg, etc.)
-2. **Update toolchanger-config.cfg:** Configure:
-   - `homing_override_config` - Your homing sequence
-   - `_CALIBRATION_SWITCH` section - If using a calibration probe
-   - `tools_calibrate` - Tool calibration settings
-3. **Set up tool configurations:** See [Configuration](Configuration.md) for detailed instructions
-
-**Important Notes:**
-- When using sensorless Y homing, ensure `homing_retract_dist` in `[stepper_y]` is set to `0` as per [Voron Docs](https://docs.vorondesign.com/community/howto/clee/sensorless_xy_homing.html)
-- The installation creates a `stealthchanger` directory in your config folder with all necessary files
-- Tool configuration files are located in `stealthchanger/tools/`
-
-See [Configuration](Configuration.md) for the next steps.
+**Next:** [Configuration](Configuration.md) → Set up tool files and toolchanger settings

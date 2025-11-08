@@ -5,7 +5,18 @@ parent: Software & Configuration
 ---
 <!-- Use the page layout at TOC.md:  https://github.com/sdylewski/StealthChanger/blob/main/docs/TOC.md -->
 
-A multi-tool printer requires a lot of calibration. This page explains what to calibrate, and describes some of the useful tools and techniques.
+# Calibration
+
+A multi-tool printer requires calibration. This page explains what to calibrate, and describes some of the useful tools and techniques.
+
+## Calibration Overview
+
+StealthChanger requires several types of calibration:
+
+1. **[Probe Z Offset](#probe-z-offset-tool_probe-offsets)** - Sets where Z=0 is for each tool when homing
+2. **[G-code Offsets](#g-code-offsets)** - Aligns nozzle positions between tools (X, Y, Z)
+3. **[Dock Positions](#dock-positions)** - Sets where each tool docks when not in use
+4. **[Tool Offset Calibration](#tool-offset-calibration)** - Measure and set X, Y, and Z offsets between tools
 
 # Preparing to calibrate
 
@@ -15,186 +26,86 @@ before calibrating, since this affects the Z position of each [tool](../Toolhead
 your Z calibration is drifting, it’s likely that one of the preload screws has
 come loose.
 
-FIXME: what to do about this
 
-**Before you start calibrating you must "break in" each tool probe.  Heat-soak
+**Before you start calibrating you should "break in" each tool probe.  Heat-soak
 your machine and run a couple `PROBE_ACCURACY SAMPLES=100` per tool.**
 
-# Bed probing
+## Probe Z Offset (`[tool_probe]` Offsets)
 
-A Voron 2.4-style printer needs a bed probe in order to perform quad gantry
-leveling (QGL). Typically, the probe is also used as the Z endstop, and to
-calculate a bed mesh if desired.
+A Voron 2.4-style printer needs a bed probe in order to perform quad gantry leveling (QGL). The default on StealthChanger is to use the OptoTap board on each tool as the bed probe.
 
-The default on StealthChanger is to use the OptoTap board on each tool as the
-bed probe. This board is needed anyway to detect which tool is active, and to
-detect toolchange failures.
+### How It Works
 
-With this probing method, the tool will move downward until the nozzle contacts
-the bed. As the gantry continues to lower, the tool will slide upwards on the
-shuttle until the OptoTap board no longer registers the presence of the
-shuttle, at which point the probe is considered triggered. This is conceptually
-the same as [Voron Tap](https://github.com/VoronDesign/Voron-Tap), with the
-StealthChanger pins and bushings taking the place of the Tap linear rail.
+With this probing method, the tool will move downward until the nozzle contacts the bed. As the gantry continues to lower, the tool will slide upwards on the shuttle until the OptoTap board no longer registers the presence of the shuttle, at which point the probe is considered triggered. This is conceptually the same as [Voron Tap](https://github.com/VoronDesign/Voron-Tap), with the StealthChanger pins and bushings taking the place of the Tap linear rail.
 
-FIXME: Something about nozzle temperatures and cleaning
+### Understanding Probe Z Offset
 
-X and Y probe offsets are zero, because the nozzle is the probe. The probe Z
-offset will be equal to the distance the shuttle had to travel after the tool
-made contact with the bed and before the OptoTap triggered. It is specified by
-the `z_offset` parameter within `[tool_probe Tn]` (where Tn = T0, T1, …). It is
-always a negative number, because the trigger point is “below” the bed. As with
-any printer, this value must be tuned to get the right amount of first-layer
-squish. Follow [Ellis's
-method](https://ellis3dp.com/Print-Tuning-Guide/articles/first_layer_squish.html),
-the [paper test](https://www.klipper3d.org/Bed_Level.html#the-paper-test) or
-any other method you prefer; there is nothing really special about
-StealthChanger here. A more negative probe Z offset means less squish; a less
-negative (closer to zero) value means more squish, as the tool will not rise as
-far from the trigger point.
+- **Applied only when homing** with that specific tool
+- **X and Y probe offsets are zero** - because the nozzle is the probe
+- **Z offset** is specified by `z_offset` in `[tool_probe Tn]` (where Tn = T0, T1, etc.)
+- **Always a negative number** - the trigger point is "below" the bed
+- **Each tool has its own offset** - due to variation in assembly, preload screws, and OptoTap board
 
-Each tool will have its own probe Z offset, because of variation in the
-assembly of the tool, the preload screws, and the OptoTap board itself. It is
-typical to set up the print start macro such that T0 is always used for the
-final QGL and Z homing before printing. Then it is only necessary to fine-tune
-the probe Z offset on T0. Other tools need only be close enough for an initial
-Z homing before picking up T0.
+A more negative probe Z offset means less squish; a less negative (closer to zero) value means more squish, as the tool will not rise as far from the trigger point.
 
-It is possible to use other bed probes like Cartographer or Beacon with
-StealthChanger, but this is not really supported or documented yet. (FIXME: say
-more here)
+### Z_offset Calibration Procedure
 
-# G-code offsets
+1. Manually put a tool on the [shuttle](../Shuttle.md) and run `INITIALIZE_TOOLCHANGER`
+2. Warm your nozzle to 150C or clean it well.
+3. Run `G28` to home all axes
+4. Run `QUAD_GANTRY_LEVEL` to level the gantry
+5. Run `G28` again to re-home after QGL
+6. Do a [Manual Paper Test](https://www.klipper3d.org/Bed_Level.html#the-paper-test) as normal (like a single toolhead printer) and adjust the Z
+7. Copy the offset value and save it to `z_offset` in `[tool_probe Tn]` of the tool config file (`stealthchanger/tools/Tn.cfg`)
+8. Repeat from step 1 for all tools
+9. Run `FIRMWARE_RESTART` to apply changes
 
-Besides the probe offsets, you will also need to calibrate the differences
-between the nozzle positions on each tool, so that parts of a model printed
-with different tools will line up correctly. This is necessary even with
-“identical” tools because of the tolerances of the parts used and the assembly
-procedure.
+**Note:** It is typical to set up the print start macro such that T0 is always used for the final QGL and Z homing before printing. Then it is only necessary to fine-tune the probe Z offset on T0. Other tools need only be close enough for an initial Z homing before picking up T0.
 
-By convention, these G-code offsets are set to 0 for T0. The offsets for other
-tools specify the distance that tool needs to move to place its nozzle in
-exactly the same position that T0’s would be. This can be either positive or
-negative on each axis. G-code offsets are typically stable from print to print,
-but they may need adjustment if you rebuild a tool or have a particularly hard
-crash.
+**Tip:** Follow [Ellis's method](https://ellis3dp.com/Print-Tuning-Guide/articles/first_layer_squish.html) or the [paper test](https://www.klipper3d.org/Bed_Level.html#the-paper-test) to get the right amount of first-layer squish.
 
-G-code offsets are specified by `gcode_x_offset`, `gcode_y_offset`, and
-`gcode_z_offset` within `[tool Tn]` (where Tn = T1, T2, …). These parameters
-should be set to 0 for T0.
+## G-code Offsets
 
-## Manual calibration
+G-code offsets align nozzle positions between tools so that parts of a model printed with different tools will line up correctly. This is necessary even with "identical" tools because of tolerances in parts and assembly.
 
-The simplest but most tedious method of calibrating G-code offsets is to print
-a bunch of test objects like [this
-one](https://www.printables.com/model/201707-x-y-and-z-calibration-tool-for-idex-dual-extruder).
-For X and Y you are looking at the [vernier
-scales](https://en.wikipedia.org/wiki/Vernier_scale); for Z you are looking to
-have the same amount of squish on both sides (remember, T0 squish is set by the
-probe Z offset, not G-code offset).
+### Understanding G-code Offsets
 
-## Mechanical calibration probes
+- **Applied when changing tools** during printing
+- **Relative to your primary tool** (the one you always home with, typically T0)
+- **Primary tool:** `gcode_*_offset = 0` (it's the reference)
+- **Other tools:** Set to match the primary tool's position
+- **Specified by:** `gcode_x_offset`, `gcode_y_offset`, and `gcode_z_offset` in `[tool Tn]`
+- **Stable from print to print** - but may need adjustment if you rebuild a tool or have a crash
 
-A mechanical calibration probe is basically an endstop that can be triggered by
-the nozzle moving along any axis. By tapping the probe from ±X, ±Y and +Z
-directions, the position of the nozzle opening can be determined (assuming a
-clean nozzle that is bored concentric to its outer surfaces).
+By convention, these offsets are set to 0 for T0. The offsets for other tools specify the distance that tool needs to move to place its nozzle in exactly the same position that T0's would be. This can be either positive or negative on each axis.
 
-Several designs are available:
+### Setup Process
 
-* [Sexball](https://github.com/DraftShift/StealthChanger/wiki/Bill-of-Materials#sexball-probe),
-  which replaces the pin of hartk’s Sexbolt endstop with a ball
-  (FIXME: elaborate instead of linking to old docs)
+**Single Tool:**
+- Set `[tool_probe]` offsets - you're done
+- Can home directly with that tool
 
-* [Nudge](https://github.com/zruncho3d/nudge)
+**Multiple Tools:**
+1. Choose a primary tool (typically T0)
+2. Set primary tool's `[tool_probe]` offsets correctly
+3. Set primary tool's `gcode_*_offset = 0`
+4. Calibrate other tools' `gcode_*_offset` to match primary tool position
+5. Always home with the primary tool
 
-* Multiple designs in the [NozzleAlign](https://github.com/viesturz/NozzleAlign) repo
+<div style="background-color: #e7f3ff; border-left: 4px solid #2196F3; padding: 12px; margin: 12px 0;">
 
-LDO StealthChanger kits come with a Sexball probe and this is probably a good
-place to start for new users.
+**Note:** You can setup your printer to home with TN if you're only using that one tool during printing, but it requires a more advanced print_start macro (add link to example)
 
-You can permanently mount any of these probes in the overtravel region at the
-front or rear of the bed. With Sexball it is easy to remove the ball and pin,
-so that tools do not collide during printing. Alternately, you can make the
-whole probe assembly removable, as long as you have some way to rigidly attach
-it on or near the bed for calibration. (FIXME: some examples of this)
+</div>
 
-Any of these probes is basically the same from the firmware perspective and you
-can consult the [NozzleAlign](https://github.com/viesturz/NozzleAlign) docs for
-information on configuration and commands.
-
-Due to thermal expansion, it is best to probe as close to printing conditions
-as possible, though you must also ensure that the nozzle stays clean and does
-not ooze. 150°C is a good default.
-
-FIXME: automatic calibration on every print, is it possible?
-
-## Optical calibration
-
-Another approach for XY offsets is to use a camera looking up at the nozzle.
-Some hardware options:
-
-* [CXC by Ember Prototypes](https://www.emberprototypes.com/products/cxc)
-
-* [DIY version](https://www.printables.com/model/1099576-xy-nozzle-alignment-camera)
-  using OV9726 camera module
-
-* Any USB microscope, if you can mount it rigidly
-
-For software, you can use:
-
-* [kTAMV](https://github.com/TypQxQ/kTAMV), which automatically locates the
-  nozzle using machine vision
-
-* [Axiscope](https://github.com/nic335/Axiscope), which provides a web
-  interface for manually locating nozzles. This involves more manual effort
-  than kTAMV, but is simpler and can be more reliable. Axiscope can also
-  interact with a Sexbolt or other Z endstop to calculate Z offsets.
-
-# Dock locations
-
-FIXME: write about setting dock locations
-
-In the meantime, see below.
-
-# Other per-tool stuff
-
-PID, E-steps, input shaper
-
-FIXME: write about these
-
-# Specific calibration routines
-
-FIXME: This section is copied over from the old docs. It should be cleaned up and merged with the above.
-
-## Z Offset (Probe Offset)
-
-**NOTE:** Tn is the tool on the shuttle (e.g., T0, T1, etc.)
-
-This sets the `z_offset` in the `[tool_probe Tn]` section, which determines where Z=0 is when homing with that tool.
-
-1. Put a tool on the [shuttle](../Shuttle.md) and run `INITIALIZE_TOOLCHANGER`
-2. Run `G28` to home all axes
-3. Run `QUAD_GANTRY_LEVEL` to level the gantry
-4. Run `G28` again to re-home after QGL
-5. Do a [Manual Paper Test](https://www.klipper3d.org/Bed_Level.html#the-paper-test) as normal (like a single toolhead printer) and adjust the Z
-6. Copy the offset value and save it to `z_offset` in `[tool_probe Tn]` of the tool config file (`stealthchanger/tools/Tn.cfg`)
-7. Repeat from step 1 for all tools (steps 2 and 3 are optional after the first tool)
-8. Run `FIRMWARE_RESTART` to apply changes
-
-
-## GCODE Z Offset
-
-**NOTE:** Tn is the tool being calibrated (e.g., T1, T2, etc.)
+### G-code Z Offset Calibration Procedure
 
 **IMPORTANT:** 
 - Only home or probe with T0 during this calibration
 - `gcode_z_offset` on Tool 0 is always 0 (T0 is the reference tool)
-- Set [z_offset](#z-offset-probe-offset) for all tools first before doing GCODE offsets
+- Set probe Z offset for all tools first before doing G-code offsets
 
-This sets the `gcode_z_offset` in the `[tool Tn]` section, which compensates for differences in nozzle height between tools.
-
-1. Set [z_offset](#z-offset-probe-offset) for all tools first
+1. Set probe Z offset for all tools first
 2. Make sure T0 is on the shuttle and run `INITIALIZE_TOOLCHANGER`
 3. Run `G28` to home all axes
 4. Run `QUAD_GANTRY_LEVEL` to level the gantry
@@ -206,8 +117,57 @@ This sets the `gcode_z_offset` in the `[tool Tn]` section, which compensates for
 10. Repeat from step 6 for all remaining tools
 11. Run `FIRMWARE_RESTART` to apply changes
 
+### Calibration Methods
 
-## Dock Parking
+#### Manual Calibration (Test Prints)
+
+The simplest but most tedious method is to print test objects like [this one](https://www.printables.com/model/201707-x-y-and-z-calibration-tool-for-idex-dual-extruder) or [Nozzle Alignment Assist](https://www.printables.com/model/109267-nozzle-alignment-assist). For X and Y you are looking at the [vernier scales](https://en.wikipedia.org/wiki/Vernier_scale); for Z you are looking to have the same amount of squish on both sides (remember, T0 squish is set by the probe Z offset, not G-code offset).
+
+#### Mechanical Calibration Probes
+
+A mechanical calibration probe is basically an endstop that can be triggered by the nozzle moving along any axis. By tapping the probe from ±X, ±Y and +Z directions, the position of the nozzle opening can be determined (assuming a clean nozzle that is bored concentric to its outer surfaces).
+
+**Available Probes:**
+
+- **[Sexball](https://github.com/DraftShift/StealthChanger/wiki/Bill-of-Materials#sexball-probe)** - Replaces the pin of hartk's Sexbolt endstop with a ball. LDO StealthChanger kits come with a Sexball probe and this is probably a good place to start for new users.
+- **[Nudge](https://github.com/zruncho3d/nudge)** - Another popular calibration probe design
+- **Multiple designs** in the [NozzleAlign](https://github.com/viesturz/NozzleAlign) repo
+
+**Mounting:**
+
+You can permanently mount any of these probes in the overtravel region at the front or rear of the bed. With Sexball it is easy to remove the ball and pin, so that tools do not collide during printing. Alternately, you can make the whole probe assembly removable, as long as you have some way to rigidly attach it on or near the bed for calibration.
+
+**Configuration:**
+
+Any of these probes is basically the same from the firmware perspective. Consult the [NozzleAlign](https://github.com/viesturz/NozzleAlign) docs for information on configuration and commands.
+
+**Temperature:**
+
+Due to thermal expansion, it is best to probe as close to printing conditions as possible, though you must also ensure that the nozzle stays clean and does not ooze. 150°C is a good default.
+
+#### Optical Calibration (Camera Tools)
+
+Another approach for XY offsets is to use a camera looking up at the nozzle.
+
+**Hardware Options:**
+- [CXC by Ember Prototypes](https://www.emberprototypes.com/products/cxc)
+- [DIY version](https://www.printables.com/model/1099576-xy-nozzle-alignment-camera) using OV9726 camera module
+- Any USB microscope, if you can mount it rigidly
+
+**Software Options:**
+- **[kTAMV](https://github.com/TypQxQ/kTAMV)** - Automatically locates the nozzle using machine vision
+- **[IDEX Nozzle Calibration Tool](https://github.com/Life0fBrian/Brians-IDEX-Nozzle-Calibration-tool)** - Another camera-based calibration tool
+- **[Axiscope](https://github.com/nic335/Axiscope)** - Provides a web interface for manually locating nozzles. This involves more manual effort than kTAMV, but is simpler and can be more reliable. Axiscope can also interact with a Sexbolt or other Z endstop to calculate Z offsets.
+
+## Dock Positions
+
+Dock positions define where each tool parks when not in use. This is critical for reliable tool changes.
+
+### Setting Dock Positions
+
+When setting your dock position in your tool config, X and Y are pretty self explanatory - put the tool in the right spot for it to sit. However, Z should be the point where 1 more mm down will untrigger the tap module.
+
+### Dock Parking Calibration Procedure
 
 **IMPORTANT:** 
 - Set `params_close_y` to your highest `params_park_y` + 30 in `toolchanger-config.cfg`
@@ -231,10 +191,38 @@ This sets the dock park position (`params_park_x`, `params_park_y`, `params_park
 11. Repeat this process for all tools
 12. Run `FIRMWARE_RESTART` to apply changes
 
-### Docking/Undocking
+### Docking/Undocking Movement
 
-The Moving using config parameters is as such:
+The movement using config parameters is as follows:
 
 | Current tool | No tool | Next tool |
 |--------------|---------|-----------|
-|`safe_y`, `park_x` -> `park_z` -> `close_y` -> `path` | `close_y` -> `park_x` | `path` -> `safe_y` -> `t_command_restore_axis` |
+| `safe_y`, `park_x` -> `park_z` -> `close_y` -> `path` | `close_y` -> `park_x` | `path` -> `safe_y` -> `t_command_restore_axis` |
+
+## Tool Offset Calibration
+
+A calibration probe (Sexball, Nudge, Axiscope, etc.) automatically measures the position differences between tools and sets the `gcode_x_offset`, `gcode_y_offset`, and `gcode_z_offset` values in your tool configuration files. This provides more accurate and repeatable tool alignment than manual calibration methods.
+
+To use a calibration probe, configure the `_CALIBRATION_SWITCH` section in `stealthchanger/toolchanger-config.cfg` with your probe's endstop pin. This enables automatic calibration routines.
+
+Example:
+```ini
+[_CALIBRATION_SWITCH]
+pin: ^ar21  # Your calibration probe endstop pin
+```
+
+For information on available calibration probes and how to use them, see the [Mechanical Calibration Probes](#mechanical-calibration-probes) section below.
+
+## Other Per-Tool Calibration
+
+Additional calibration that may be needed per tool:
+
+- **PID Tuning** - Each tool's heater may need PID tuning
+- **E-steps** - Extruder steps per mm calibration
+- **Input Shaper** - Vibration compensation (typically done once for the machine, not per tool)
+
+These follow standard Klipper calibration procedures and are not specific to StealthChanger.
+
+---
+
+**Next:** [Slicers & Printing](Slicers.md) → Configure your slicer for multi-tool printing

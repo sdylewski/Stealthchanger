@@ -103,6 +103,12 @@ Physical probes (Sexball, Nudge, Axiscope, etc.) and relocated endstops simplify
 </tr>
 </table>
 
+## Building
+1. **Plan the build** – [Checklist](Building/Checklist.md) and [Bill of Materials](Building/Bill-of-Materials.md)
+2. **Order parts** – [Vendors and Kits](Building/Vendors-and-Kits.md)
+3. **Print components** – [Printing guide](Building/Printing.md)
+4. **Estimate cost** – [Approximate cost calculator](https://docs.google.com/spreadsheets/d/1cjlZ4xi84sUbo09nV3CDkOrLjz3leInTZ9sxwSzPscE)
+5. **Visualize the assembly** – [Reference CAD (.step) by N3MI](https://github.com/N3MI-DG/sc-guides)
 ## Software & Configuration
 
 <img src="media/Logos/klipper_toolchanger_logo.png" width="160" align="right" />
@@ -117,13 +123,6 @@ Klipper must be toolchanger-aware for StealthChanger. The typical flow looks lik
 5. [LEDs](SoftwareAndConfig/LEDs.md) – optional post-install lighting effects and status indicators
 
 
-
-## Building
-1. **Plan the build** – [Checklist](Building/Checklist.md) and [Bill of Materials](Building/Bill-of-Materials.md)
-2. **Order parts** – [Vendors and Kits](Building/Vendors-and-Kits.md)
-3. **Print components** – [Printing guide](Building/Printing.md)
-4. **Estimate cost** – [Approximate cost calculator](https://docs.google.com/spreadsheets/d/1cjlZ4xi84sUbo09nV3CDkOrLjz3leInTZ9sxwSzPscE)
-5. **Visualize the assembly** – [Reference CAD (.step) by N3MI](https://github.com/N3MI-DG/sc-guides)
 
 ## Support & Resources
 
