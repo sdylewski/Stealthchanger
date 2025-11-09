@@ -16,7 +16,7 @@ Follow these steps in order:
 2. **[Configure](Configuration.md)** all your parameters for each toolhead - Set up tool files, offsets, and dock positions
 3. **[Calibrate Toolheads](ToolCalibration.md)** your Z offsets and toolhead XY offsets - Ensure accurate tool alignment
 4. **[Calibrate Docks](DockCalibration.md)** your dock locations - Set up reliable tool changes
-5. **[Setup your slicer](Slicers.md)** and print-start macros - Configure your slicer for multi-tool printing
+5. **[Setup your slicer](Slicers.md)** and print-start macros - Configure your slicer and print_start macro for multi-tool printing
 6. **Print!** - Start your first multi-color print
 
 ## About klipper-toolchanger-easy
@@ -32,6 +32,23 @@ StealthChanger uses [klipper-toolchanger-easy](https://github.com/jwellman80/kli
 ---
 
 ## FAQ
+
+**Quick Links:**
+- [If using "fan0 or fan2" from slicer](#if-using-fan0-or-fan2-from-slicer-need-to-change-those-back-to-named-fans)
+- [After a tool change the ooze gets deposited](#after-a-tool-change-the-ooze-of-my-toolhead-gets-deposited-onto-my-print--the-picked-up-tool-drags-over-the-print-to-the-prime-tower)
+- [Can I skip a number in the tool numbering?](#can-i-skip-a-number-in-the-tool-numbering)
+- [The wrong tool heats up](#the-wrong-tool-heats-up)
+- [I'm getting weird behavior](#im-getting-some-weird-behaviour-where-the-wrong-tool-gets-selected-heated-part-cooling-fan-is-wrong-etc)
+- [What are these T0, T1, ... macros?](#what-are-these-t0-t1--macros)
+- [Can I park the active tool?](#can-i-park-the-active-tool-and-not-select-a-new-one)
+- [I'm getting errors about a T3](#im-getting-errors-about-a-t3-i-dont-even-have-a-t3)
+- [My pressure advance doesn't work](#my-pressure-advance-doesnt-work)
+- [My tool pickup failed](#my-tool-pickup-failed-and-it-halted-klipper-so-the-print-is-lost-can-i-just-not-make-it-pause-so-it-can-recover-and-resume)
+- [I'm getting a Klipper error about multi_fan](#im-getting-a-klipper-error-about-multi_fan-or-fan_generic)
+- [Can I use Kalico?](#can-i-use-kalico-instead-of-mainline-klipper)
+- [I'm getting "invalid syntax"](#im-getting-invalid-syntax)
+
+---
 
 ### If using "fan0 or fan2" from slicer, need to change those back to named fans
 If your slicer is using "fan0" or "fan2" for fan control, you need to change those back to named fans. klipper-toolchanger-easy uses named fans like `T0_partfan`, `T1_partfan`, etc. Update your slicer settings to use the correct fan names.

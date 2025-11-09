@@ -119,6 +119,15 @@ For crossbars mounted outside the front extrusions, you will need to use the doo
   
 ## FAQ
 
+**Quick Links:**
+- [Moving from and to the dock is so slow](#moving-from-and-to-the-dock-is-so-slow)
+- [I can't get past 50mm/s Z velocity](#i-cant-seem-to-get-past-50mms-z-velocity-before-it-makes-really-angry-noises-and-skips-steps)
+- [I can't get my tools to sit flush](#i-cant-seem-to-get-my-tools-to-sit-flush)
+- [My tool is going straight into the dock](#my-tool-is-going-straight-into-the-dock-i-had-to-emergency-stop)
+- [I can't get my crossbar between my frame](#i-cant-for-the-life-of-me-get-my-crossbar-between-my-frame)
+
+---
+
 ### Moving from and to the dock is so slow
 You can increase the printer Z speed `max_z_velocity` and acceleration `max_z_accel`, depending on your motors, motor drivers. It's recommended to increase this in small steps because lost steps due to a loose belt will violently skew the gantry and might break your motor mounts.
 For example 24V moons motors with TMC2209 drivers can reliably get `max_z_velocity: 200` and `max_z_accel: 750` if the rest of the hardware is fine, that speed reduces dropoff/pickup to ~10seconds.
@@ -126,7 +135,7 @@ For example 24V moons motors with TMC2209 drivers can reliably get `max_z_veloci
 ### I can't seem to get past 50mm/s Z velocity before it makes really angry noises and skips steps
 Make sure you have [StealthChop](https://www.klipper3d.org/TMC_Drivers.html#setting-spreadcycle-vs-stealthchop-mode) disabled on all of the Z motors. Spreadcycle is louder but gives much more torque that's required to run the Z velocity at a higher speed
 
-If you have TMC autotune, make sure to set the Z motors profile to `performance`, by default Z motors will be on the silent profile.
+If you have [TMC autotune](https://github.com/andrewmcgr/klipper_tmc_autotune), make sure to set the Z motors profile to `performance`, by default Z motors will be on the silent profile.
 
 ### I can't seem to get my tools to sit flush
 Make sure your nozzle blocker cup isn't pushing the tool out of its flush position, ideally retract the cup as far as possible, then make sure the tool sits flush by adjusting the back of the dock, then slowly raise the cup until it touches the nozzle without putting force on the toolhead

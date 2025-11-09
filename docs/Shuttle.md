@@ -124,6 +124,16 @@ Sometimes the bushings aren't debured or do not slide well when you recieve them
 
 ## FAQ
 
+**Quick Links:**
+- [Do I need an OctoTAP board per toolhead?](#do-i-need-an-octotap-board-per-toolhead)
+- [My magnets don't fit in my backplate](#my-magnets-dont-fit-in-my-backplate)
+- [My shuttle and backplate don't mate well](#my-shuttle-and-backplate-dont-mate-well)
+- [My dimensions are spot on but it still doesn't mate smoothly](#my-dimensions-are-spot-on-but-it-still-doesnt-mate-smoothly)
+- [Do I really need N52 magnets?](#do-i-really-need-n52-magnets)
+- [How do I install the magnets?](#how-do-i-install-the-magnets)
+
+---
+
 ### Do I need an OctoTAP board per toolhead?
 Yes, in order to detect which tool is actively on the shuttle each toolhead should have an OctoTAP board. It has an optical sensor whose beam gets broken by the flag of the shuttle (the little protrusion at the top of the shuttle). That's how the software knows which tool is actively on the shuttle and it can also detect whether a tool change has been succesfully performed (= crash detection).
 

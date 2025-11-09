@@ -122,3 +122,4 @@ If you need to customize the `PRINT_START` macro:
 
 **Note:** Always ensure T0 is used for the final QGL and Z homing, as this is critical for accurate tool alignment.
 
+

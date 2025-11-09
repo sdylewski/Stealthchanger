@@ -42,7 +42,7 @@ parent: Building
 
 ## Slicer Setup
 
- - [ ] [Configure your slicer](../SoftwareAndConfig/Slicers.md) for multi-tool printing
+ - [ ] [Configure your slicer](../SoftwareAndConfig/Slicers.md) and print_start macro for multi-tool printing
  - [ ] Set up print start macros and tool change G-code
 
 ## Optional

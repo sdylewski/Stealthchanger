@@ -18,6 +18,11 @@ Lots of toolheads mean lots of extra wires and filament that needs to be managed
 
 ## FAQ
 
+**Quick Links:**
+- [I'm getting a lot of "Timer Too Close" errors](#im-getting-a-lot-of-timer-too-close-errors-what-gives)
+
+---
+
 ### I'm getting a lot of "Timer Too Close" errors, what gives?
 There are several possible reasons for Timer Too Close (TTC) errors from Klipper:
 

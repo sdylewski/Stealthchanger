@@ -67,6 +67,13 @@ Latches ensure the top hat stays on the printer securely and tightly, squishing 
 
 ## FAQ
 
+**Quick Links:**
+- [Do I need a top hat?](#do-i-need-a-top-hat)
+- [Can I move the umbilical exits to the tophat back panel?](#can-i-move-the-umbilical-exits-to-the-tophat-back-panel)
+- [Can I install a new exhaust plate on the tophat back panel?](#can-i-install-a-new-exhaust-plate-on-the-tophat-back-panel)
+
+---
+
 ### Do I need a top hat?
 If you are going to print with filament that requires chamber temperatures above room temperature then yes, otherwise no. You cannot enclose the printer without a hat.
 

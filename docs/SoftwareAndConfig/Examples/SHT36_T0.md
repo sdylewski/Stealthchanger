@@ -150,3 +150,4 @@ spi_software_miso_pin: SHT36T0:PB2
 axes_map: x,z,y
 ```
 
+

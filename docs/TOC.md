@@ -27,7 +27,7 @@
 	2. Configuration: Configuration.md
 	3. Toolhead Calibration: ToolCalibration.md
 	4. Dock Calibration: DockCalibration.md
-	5. Slicers: Slicers.md
+	5. Slicers & Macros: Slicers.md
 4. Support:
 	1. FAQ
 	2. Serials

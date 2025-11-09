@@ -88,6 +88,12 @@ Depending on how strong the umbilical affects the toolhead in the corners, it mi
 
 ## FAQ
 
+**Quick Links:**
+- [How do I get my sensorless endstops to work](#how-do-i-get-my-sensorless-endstops-to-work)
+- [What about Z Offset?](#what-about-z-offset)
+
+---
+
 ### How do I get my sensorless endstops to work
 [https://docs.vorondesign.com/tuning/sensorless.html](https://docs.vorondesign.com/tuning/sensorless.html)
 

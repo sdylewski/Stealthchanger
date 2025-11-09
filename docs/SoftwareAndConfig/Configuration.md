@@ -35,9 +35,10 @@ You need to configure:
 1. [Toolhead Configuration](#toolhead-configuration)
 2. [Toolchanger Settings](#toolchanger-settings)
 3. [Dock Positions](#dock-positions)
-4. [close_y and safe_y](#close_y-and-safe_y)
-5. [Docking Path](#docking-path)
-6. [Print Start Macro](#print-start-macro)
+4. [close_y, safe_y, and park_y](#close_y-safe_y-and-park_y)
+5. [Docking/Undocking Movement](#dockingundocking-movement)
+6. [Docking Path](#docking-path)
+7. [Print Start Macro](#print-start-macro)
 
 ## Toolhead Configuration
 
@@ -116,22 +117,79 @@ When setting your dock position in your tool config, X and Y are pretty self exp
 
 **Note:** Detailed instructions for calibrating dock positions are covered in the [Dock Calibration](DockCalibration.md) section. You'll configure `params_park_x`, `params_park_y`, and `params_park_z` for each tool during calibration. 
 
-## close_y and safe_y
+## close_y, safe_y, and park_y
 
-It is important to get this right. If you don't, you will have changing issues, or crash your tools into your docks. This is where we recommend you start:
+These three Y-axis parameters define the safe movement zones around your docks. Getting these values correct is critical - incorrect values can cause tool change failures or crashes into docks.
 
-- close_y = park_y + 30
-- safe_y = park_y + thickness of your thickest tool (plus a little buffer)
+### Understanding the Parameters
 
-For example, if your Y park position is -15. Your close Y should be 15. If your Y park position is 0, it should be 30. Safe Y should be slighty further out.
+**`park_y`** (per tool, in `stealthchanger/tools/Tn.cfg`):
+- The Y position where the tool sits when docked
+- This is the exact dock position for each individual tool
+- Set during [dock calibration](DockCalibration.md)
 
+**`close_y`** (global, in `stealthchanger/toolchanger-config.cfg`):
+- The Y position where the shuttle approaches close to the dock before entering the precise pickup/dropoff path
+- This is a "close approach" position - close enough to start the precise movement sequence, but not so close that it risks collision
+- Should be set to your **highest** `park_y` value + 30mm
+- Used when moving between docks and as the starting point for precise docking paths
 
-**Example with park_y = -15:**
-- `park_y = -15` (tool docked)
-- `close_y = 15` (park_y + 30 = -15 + 30 = 15)
-- `safe_y = 25+` (park_y + tool thickness + buffer, e.g., -15 + 40 = 25)
+**`safe_y`** (global, in `stealthchanger/toolchanger-config.cfg`):
+- The Y position that provides safe clearance from all docked tools
+- This is the "safe zone" where the shuttle can move freely without risk of hitting any docked tools
+- Should be set to `close_y` + the thickness of your thickest tool + 10mm buffer
+- Used when moving to/from the print area and after completing tool changes
 
-**Note:** These values are configured in `stealthchanger/toolchanger-config.cfg` and are covered in detail in the [Dock Calibration](DockCalibration.md) section. 
+### Movement Flow
+
+The toolchanger uses these positions in sequence:
+1. **From print area to dock**: Move to `safe_y` → Move to dock X/Z → Move to `close_y` → Execute precise `dropoff_path`
+2. **Between docks**: Move to `close_y` → Move to target dock X position
+3. **From dock to print area**: Execute precise `pickup_path` → Move to `safe_y` → Continue to print
+
+### Recommended Starting Values
+
+Use these values as starting points based on your toolhead type. Adjust as needed during calibration:
+
+| Toolhead Type | Dock Width | Typical Tool Thickness | Recommended `close_y`* | Recommended `safe_y`* |
+|--------------|------------|------------------------|----------------------|---------------------|
+| **StealthBurner** | 76mm | ~45-50mm | `park_y + 30` | `close_y + 50` |
+| **Anthead** | 60mm | ~40-45mm | `park_y + 30` | `close_y + 45` |
+| **DragonBurner** | 60mm | ~40-45mm | `park_y + 30` | `close_y + 45` |
+| **RapidBurner** | 60mm | ~40-45mm | `park_y + 30` | `close_y + 45` |
+| **XOL** | 76mm | ~45-50mm | `park_y + 30` | `close_y + 50` |
+| **Yavoth** | 60mm | ~40-45mm | `park_y + 30` | `close_y + 45` |
+| **SV08** | 60mm | ~40-45mm | `park_y + 30` | `close_y + 45` |
+| **A4T** | Varies | ~35-40mm | `park_y + 30` | `close_y + 40` |
+
+\* *`close_y` should be set to your highest `park_y` value + 30mm. `safe_y` should be set to `close_y` + your thickest tool's thickness + 10mm buffer.*
+
+**Example Calculation:**
+If your highest `park_y` is `-15` and you're using StealthBurner toolheads:
+- `close_y = -15 + 30 = 15`
+- `safe_y = 15 + 50 + 10 = 75`
+
+**Alternative Method for `safe_y`:**
+With a tool on the shuttle, manually move the Y axis behind your docks. Find the Y position where you can move freely without hitting any docked tools. Use that Y position as your `safe_y` value.
+
+**Note:** These values are configured in `stealthchanger/toolchanger-config.cfg` (for `close_y` and `safe_y`) and in each tool's config file (for `park_y`). See [Dock Calibration](DockCalibration.md) for detailed calibration procedures.
+
+## Docking/Undocking Movement
+
+The toolchanger uses a specific movement sequence when changing tools. Understanding this sequence helps with calibration and troubleshooting. The sequence is broken into three phases:
+
+| Phase | Description | Movement Sequence |
+|-------|-------------|-------------------|
+| **Dropping off current tool** | Moving from print area to dock and placing the tool | Move to `safe_y` (clear of dock) → Move to `park_x` (dock X position) → Move to `park_z` (dock Z height) → Move to `close_y` (near dock) → Execute `dropoff_path` (precise placement sequence) |
+| **Moving between docks** | Shuttle moves from one dock to another with no tool | Move to `close_y` (near target dock) → Move to `park_x` (target dock X position) |
+| **Picking up next tool** | Retrieving the next tool from its dock | Execute `pickup_path` (precise pickup sequence) → Move to `safe_y` (clear of dock) → Restore axes per `t_command_restore_axis` setting (typically Z, or XYZ) |
+
+**Key Points:**
+- **`safe_y`**: Safe clearance distance from the dock (prevents collisions)
+- **`park_x`, `park_y`, `park_z`**: The exact dock position where the tool sits
+- **`close_y`**: Close approach position before entering the precise path
+- **`dropoff_path` / `pickup_path`**: Detailed relative movement sequences for precise tool placement/retrieval
+- **`t_command_restore_axis`**: Which axes to restore after pickup (e.g., `Z` or `XYZ`)
 
 ## Docking Path
 
@@ -221,6 +279,17 @@ params_pickup_path: [
 **Next:** [Toolhead Calibration](ToolCalibration.md) → Set up probe offsets and G-code offsets
 
 ## FAQ
+
+**Quick Links:**
+- [Can I skip a number in the tool numbering?](#can-i-skip-a-number-in-the-tool-numbering)
+- [The wrong tool heats up](#the-wrong-tool-heats-up)
+- [I'm getting weird behavior](#im-getting-weird-behavior-where-the-wrong-tool-gets-selected-heated-part-cooling-fan-is-wrong-etc)
+- [What are these T0, T1, ... macros?](#what-are-these-t0-t1--macros)
+- [Can I park the active tool?](#can-i-park-the-active-tool-and-not-select-a-new-one)
+- [I'm getting errors about a T3](#im-getting-errors-about-a-t3-i-dont-even-have-a-t3)
+- [I'm getting a Klipper error about multi_fan](#im-getting-a-klipper-error-about-multi_fan-or-fan_generic)
+
+---
 
 ### Can I skip a number in the tool numbering?
 No, Klipper requires sequential numbering starting from 0. Skipping a number (e.g., having T0 and T2 but no T1) will cause Klipper to complain. Tools must be numbered sequentially: T0, T1, T2, etc.

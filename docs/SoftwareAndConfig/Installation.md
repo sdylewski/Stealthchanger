@@ -79,6 +79,14 @@ Add this line to your `printer.cfg` to include the toolchanger configuration:
 
 ## FAQ
 
+**Quick Links:**
+- [Installation fails with "invalid syntax" error](#installation-fails-with-invalid-syntax-error)
+- [Can I use Kalico instead of mainline Klipper?](#can-i-use-kalico-instead-of-mainline-klipper)
+- [Do I need to remove my existing PRINT_START macro?](#do-i-need-to-remove-my-existing-print_start-macro)
+- [Will Moonraker updates overwrite my customizations?](#will-moonraker-updates-overwrite-my-customizations)
+
+---
+
 ### Installation fails with "invalid syntax" error
 Make sure you are using at least Python 3. The installation script requires Python 3 to run properly.
 

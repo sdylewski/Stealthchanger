@@ -96,11 +96,19 @@ Before using dock_tuner, ensure you have:
 
 ---
 
-**Next:** [Slicers & Printing](Slicers.md) → Configure your slicer for multi-tool printing
+**Next:** [Slicers & Macros](Slicers.md) → Configure your slicer and print_start macro for multi-tool printing
 
 **Related:** [Dock Calibration](DockCalibration.md) → Manual calibration method
 
 ## FAQ
+
+**Quick Links:**
+- [dock_tuner doesn't detect my tool](#dock_tuner-doesnt-detect-my-tool)
+- [Can I use dock_tuner with non-T0 tools?](#can-i-use-dock_tuner-with-non-t0-tools)
+- [dock_tuner moves too fast/slow](#dock_tuner-moves-too-fastslow)
+- [The dock positions from dock_tuner don't match my manual calibration](#the-dock-positions-from-dock_tuner-dont-match-my-manual-calibration)
+
+---
 
 ### dock_tuner doesn't detect my tool
 Make sure:

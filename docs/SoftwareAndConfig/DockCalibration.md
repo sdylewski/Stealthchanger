@@ -68,25 +68,26 @@ This sets the dock park position (`params_park_x`, `params_park_y`, `params_park
 14. Repeat this process for all remaining tools
 15. Run `FIRMWARE_RESTART` to apply changes
 
-## Docking/Undocking Movement
-
-The movement using config parameters is as follows:
-
-| Current tool | No tool | Next tool |
-|--------------|---------|-----------|
-| `safe_y`, `park_x` -> `park_z` -> `close_y` -> `path` | `close_y` -> `park_x` | `path` -> `safe_y` -> `t_command_restore_axis` |
+**Note:** For details on how the docking/undocking movement sequence works, see the [Docking/Undocking Movement](Configuration.md#dockingundocking-movement) section in the Configuration page.
 
 ---
 
-**Next:** [Slicers & Printing](Slicers.md) → Configure your slicer for multi-tool printing
+**Next:** [Slicers & Macros](Slicers.md) → Configure your slicer and print_start macro for multi-tool printing
 
 ## FAQ
+
+**Quick Links:**
+- [Moving from and to the dock is so slow](#moving-from-and-to-the-dock-is-so-slow)
+- [I can't get past 50mm/s Z velocity](#i-cant-seem-to-get-past-50mms-z-velocity-before-it-makes-really-angry-noises-and-skips-steps)
+- [My tool pickup failed](#my-tool-pickup-failed-and-it-halted-klipper-so-the-print-is-lost-can-i-make-it-pause-so-it-can-recover-and-resume)
+
+---
 
 ### Moving from and to the dock is so slow
 You can increase the printer Z speed `max_z_velocity` and acceleration `max_z_accel`, depending on your motors and motor drivers. It's recommended to increase this in small steps because lost steps due to a loose belt will violently skew the gantry and might break your motor mounts. For example, 24V Moons motors with TMC2209 drivers can reliably get `max_z_velocity: 200` and `max_z_accel: 750` if the rest of the hardware is fine. That speed reduces dropoff/pickup to ~10 seconds.
 
 ### I can't seem to get past 50mm/s Z velocity before it makes really angry noises and skips steps
-Make sure you have [StealthChop](https://www.klipper3d.org/TMC_Drivers.html#setting-spreadcycle-vs-stealthchop-mode) disabled on all of the Z motors. SpreadCycle is louder but gives much more torque that's required to run the Z velocity at a higher speed. If you have TMC autotune, make sure to set the Z motors profile to `performance` - by default Z motors will be on the silent profile.
+Make sure you have [StealthChop](https://www.klipper3d.org/TMC_Drivers.html#setting-spreadcycle-vs-stealthchop-mode) disabled on all of the Z motors. SpreadCycle is louder but gives much more torque that's required to run the Z velocity at a higher speed. If you have [TMC autotune](https://github.com/andrewmcgr/klipper_tmc_autotune), make sure to set the Z motors profile to `performance` - by default Z motors will be on the silent profile.
 
 ### My tool pickup failed and it halted Klipper so the print is lost. Can I make it pause so it can recover and resume?
 You can use the `error_gcode` and `recover_gcode` of toolchanger for this:

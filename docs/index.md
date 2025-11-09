@@ -65,11 +65,13 @@ Learn about options and mounting strategies in [Docks, Crossbar, and Door Buffer
 <td valign="top">
 Multiple toolheads mean more wiring, CAN/USB connections, and filament paths. Key resources:
 
-- [Electronics & Cable Management](CableManagement/CableManagement.md)
-- [Backpack & Electrical Distribution](CableManagement/ElectricalDistribution.md)
-- [Umbilicals](CableManagement/Umbilicals.md)
-- [Power](CableManagement/Power.md)
-- [Filament Management](CableManagement/FilamentManagement.md)
+<ul>
+<li><a href="CableManagement/CableManagement.md">Electronics & Cable Management</a></li>
+<li><a href="CableManagement/ElectricalDistribution.md">Backpack & Electrical Distribution</a></li>
+<li><a href="CableManagement/Umbilicals.md">Umbilicals</a></li>
+<li><a href="CableManagement/Power.md">Power</a></li>
+<li><a href="CableManagement/FilamentManagement.md">Filament Management</a></li>
+</ul>
 </td>
 <td valign="top" width="220">
 <img src="media/CableManagement/wire_management.jpg" width="200" />
@@ -120,7 +122,7 @@ Klipper must be toolchanger-aware for StealthChanger. The typical flow looks lik
 2. [Configuration](SoftwareAndConfig/Configuration.md) – set up tool files and toolchanger settings for your hardware
 3. [Toolhead Calibration](SoftwareAndConfig/ToolCalibration.md) – set probe offsets and tool alignment
 4. [Dock Calibration](SoftwareAndConfig/DockCalibration.md) – set dock positions for reliable tool changes
-5. [Slicers & Printing](SoftwareAndConfig/Slicers.md) – configure slicer and macros for multi-tool printing
+5. [Slicers & Macros](SoftwareAndConfig/Slicers.md) – configure slicer and macros for multi-tool printing
 6. [LEDs](SoftwareAndConfig/LEDs.md) – optional post-install lighting effects and status indicators
 
 

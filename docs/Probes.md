@@ -6,65 +6,72 @@ parent: StealthChanger Components
 <!-- Use the page layout at TOC.md:  https://github.com/sdylewski/StealthChanger/blob/main/docs/TOC.md -->
 # Probes
 
-StealthChanger uses two types of probes:
-1. **Z-probes** - For Z homing and [bed leveling](../SoftwareAndConfig/ToolCalibration.md#bed-probing) (determines Z=0 and `z-offset`)
-2. **Inter-tool offset probes** - For calibrating X,Y,Z offsets between tools (`gcode_offset` in `[tool]` section). See [calibration guide](../SoftwareAndConfig/ToolCalibration.md) for setup.
+StealthChanger requires two types of probes for different purposes:
 
-**Note:** Keep nozzles clean for accurate measurements. XY probes must be mounted on bed extrusions or securely attached to the bed during calibration.
+| Probe Type | Purpose | When Used |
+|------------|---------|-----------|
+| **Z-Probe** | Z homing and bed leveling | Every print (determines Z=0) |
+| **Tool Offset Probe** | Calibrate X, Y, Z offsets between tools | Initial setup and after hardware changes |
 
-## 1. Z-probes
+**Quick Summary:**
+- **Z-Probe**: Required for every toolhead. Uses OctoTap (TAP) or Beacon/Carto for contactless homing.
+- **Tool Offset Probe**: Optional but recommended. Calibrates nozzle positions so all tools print in the same location. Can use Sexball, Nudge, Axiscope, or printable calibration method.
 
-### TAP
-Uses the [OctoTap PCB](../Shuttle.md#do-i-need-an-octotap-board-per-toolhead) (required for [tool detection](../Shuttle.md)) for Z homing via nozzle contact, similar to Voron TAP. **Note:** You need an OctoTap PCB per [toolhead](../Toolheads/Toolheads.md) even if using a different Z-probe.
+See the [Toolhead Calibration](SoftwareAndConfig/ToolCalibration.md) guide for detailed setup procedures.
 
-**Important:** Z-offset will be negative since the trigger occurs after nozzle contact. Install a wiper and use a `CLEAN_NOZZLE` macro after initial home and before [QGL](../SoftwareAndConfig/ToolCalibration.md#bed-probing)—any leftover filament affects accuracy.
+## Z-Probes
 
-**Pros:**
-- Free (OctoTap already required)
-- Accurate with clean nozzle
+Z-probes determine the Z=0 position for each toolhead. You need one per toolhead.
 
-**Cons:**
-- Requires tool on [shuttle](../Shuttle.md) (no toolless homing)
-- Slow for [QGL](../SoftwareAndConfig/ToolCalibration.md#bed-probing) and large bed meshes
-- May dimple PEI plates (especially smooth ones with N52 magnets)
+### TAP (Recommended for most users)
+Uses the [OctoTap PCB](../Shuttle.md#do-i-need-an-octotap-board-per-toolhead) (already required for tool detection) for Z homing via nozzle contact.
+
+**Setup:**
+- OctoTap PCB is required per toolhead regardless of Z-probe choice
+- Z-offset will be negative (trigger occurs after nozzle contact)
+- Install a wiper and use `CLEAN_NOZZLE` macro after homing—filament residue affects accuracy
+
+| Pros | Cons |
+|------|------|
+| No additional hardware (OctoTap already needed) | Requires tool on shuttle (no toolless homing) |
+| Accurate with clean nozzle | Slower for QGL and large bed meshes |
+| | May dimple PEI plates (especially smooth ones with N52 magnets) |
    
-### Beacon/Carto
+### Beacon/Carto (For toolless homing)
 Magnetic field sensor that detects the build plate without contact, even while moving.
 
-**Pros:**
-- Toolless homing
-- Much faster than TAP
+**Setup:**
+- Requires one per tool or shuttle mount (Klipper doesn't tolerate sensor appearing/disappearing)
+- Extra umbilical cable to shuttle
+- Some variants may be unstable at elevated temperatures
 
-**Cons:**
-- Requires one per tool or [shuttle](../Shuttle.md) mount (Klipper doesn't tolerate sensor appearing/disappearing at runtime)
-- Extra [umbilical](../CableManagement/Umbilicals.md) to shuttle
-- Some variants unstable at elevated temperatures
+| Pros | Cons |
+|------|------|
+| Toolless homing (no tool required) | Additional cost and wiring |
+| Much faster than TAP | Requires shuttle-mounted option for toolless operation |
 
-#### Mounts
-* [Carto mounts for CNC shuttles](https://github.com/DraftShift/StealthChanger/tree/main/UserMods/N3MI-DG/Carto_Mounts)
-* [Beacon/Carto Mount for Fystec/LDO CNC Shuttle with Top Brace](https://github.com/DraftShift/StealthChanger/tree/main/UserMods/cekim-git/CNCShuttleMount/)
-* [Fysect Shuttle Cartograper Mount](https://www.printables.com/model/1455180-fysect-shuttle-cartograper-mount/files)
+**Mounts:**
+- [Carto mounts for CNC shuttles](https://github.com/DraftShift/StealthChanger/tree/main/UserMods/N3MI-DG/Carto_Mounts)
+- [Beacon/Carto Mount for Fystec/LDO CNC Shuttle with Top Brace](https://github.com/DraftShift/StealthChanger/tree/main/UserMods/cekim-git/CNCShuttleMount/)
+- [Fysect Shuttle Cartograper Mount](https://www.printables.com/model/1455180-fysect-shuttle-cartograper-mount/files)
 
-## 2. Inter-tool offset calibration probes
+## Tool Offset Probes
 
-**Note:** Hardware isn't required—you can calibrate X, Y, and Z by printing reference plates. However, a dedicated probe yields better results faster. See [printable calibration](#using-a-printable-calibration) below.
+Tool offset probes calibrate X, Y, and Z offsets between tools so all nozzles print in the same location. **Optional but highly recommended**—hardware probes are faster and more accurate than printable calibration methods.
 
-### Sexball
-A [sexbolt](https://mods.vorondesign.com/details/t1DBVlcUBbdEK6habEsVzg) mod with a ball top that self-centers by [probing](https://www.youtube.com/watch?v=gKaL7Oxud2c) each side. Determines X,Y,Z offsets relative to T0, saved as `gcode_offset` in `[tool]` sections.
+### Sexball (Most Popular)
+A [sexbolt](https://mods.vorondesign.com/details/t1DBVlcUBbdEK6habEsVzg) mod with a ball top that self-centers by [probing](https://www.youtube.com/watch?v=gKaL7Oxud2c) each side. Automatically determines X, Y, and Z offsets.
 
 <img src="media/Probes/sexball-probe.jpg" width="200">
 *Image by asoli*
 
-**Pros:**
-- Easy setup (may need to move bed for tool access)
-- Calibrates X, Y, and Z offsets with scripts
+| Pros | Cons |
+|------|------|
+| Automated calibration with scripts | Requires 6mm clearance on all four sides (limits mounting locations) |
+| Calibrates X, Y, and Z in one process | Needs tight tolerances: no play in sexball, concentric nozzles required |
+| Easy setup | Sideways force on sphere can cause issues |
 
-**Cons:**
-- Requires 6mm travel past center on all four sides (limits mounting locations)
-- Needs tight tolerances: no play in sexball, concentric nozzles required (cheap nozzles often aren't)
-- Sideways force on sphere can cause issues
-
-See [tool calibration configuration](../SoftwareAndConfig/ToolCalibration.md) to set up calibration config and macros.
+**Setup:** See [Toolhead Calibration](../SoftwareAndConfig/ToolCalibration.md) for configuration.
 
 #### BOM
 Replaces the shaft on a sexbolt:
@@ -89,8 +96,8 @@ Also available from [official vendors](Building/Vendors-and-Kits.md).
 * [Alternative with 4mm dowels instead of ball](https://www.printables.com/model/1073728-shorter-multi-tool-calibration-probe-with-4mm-dowe) ([discord link](https://discord.com/channels/1226846451028725821/1306506750509449258))
 * [Dockable bed-top mount](https://www.printables.com/model/1453289-stealthchanger-dockable-nudge-or-sexbolt-mount)
 
-### [Axiscope](https://github.com/nic335/Axiscope)
-Camera-based alignment system with web interface for visual nozzle alignment. Supports physical [endstop](../Endstops.md) for Z offset calibration.
+### [Axiscope](https://github.com/nic335/Axiscope) (Visual Alignment)
+Camera-based system with web interface for visual nozzle alignment. Manual but eliminates tolerance issues.
 
 <table>
 <tr>
@@ -100,35 +107,29 @@ Camera-based alignment system with web interface for visual nozzle alignment. Su
  <tr><td colspan="2">*Images from [printables](https://www.printables.com/model/1099576-xy-nozzle-alignment-camera)*</td></tr>
 </table>
 
-**Pros:**
-- Visual approach eliminates tolerance issues and nozzle inaccuracies
-- Close-up inspection reveals issues (e.g., stuck filament affecting Z)
-
-**Cons:**
-- Manual alignment required (~2 minutes per [tool](../Toolheads/Toolheads.md))
-- Z offset requires [endstop](../Endstops.md); set X,Y offsets before calibrating Z
-
-**Tip:** Camera USB cable is short—consider a [USB keystone insert](https://www.printables.com/model/609433-voron-skirt-keystone-for-usbethernet) at the front.
+| Pros | Cons |
+|------|------|
+| Visual approach eliminates tolerance issues | Manual alignment (~2 minutes per tool) |
+| Reveals nozzle problems (stuck filament, etc.) | Z offset requires separate endstop |
 
 **BOM:**
 - OV9726 camera module
 - 5V 3mm round white LEDs (6000-6500k) x 4
 - [3D printed camera module holder](https://www.printables.com/model/1099576-xy-nozzle-alignment-camera)
+
+**Tip:** Camera USB cable is short—consider a [USB keystone insert](https://www.printables.com/model/609433-voron-skirt-keystone-for-usbethernet) at the front.
    
-### [Nudge](https://github.com/zruncho3d/nudge)
+### [Nudge](https://github.com/zruncho3d/nudge) (DIY Build)
+3D-printable probe using a vertical pole and spring tension to complete a circuit.
+
 <img src="media/Probes/Nudge.jpg" width="200"> *Image from Nudge site*
 
-Buildable probe: vertical pole held against bolts by spring tension, completing a circuit. Pushing the top breaks the circuit at the bottom, registering contact.
+| Pros | Cons |
+|------|------|
+| Mostly 3D printed with common parts | Requires careful tuning to avoid jamming |
+| Less horizontal-to-vertical motion translation than Sexball | Must use copper SHCS screws (stainless steel doesn't work reliably) |
 
-**Pros:**
-- Mostly 3D printed with common parts
-- Less horizontal-to-vertical motion translation than Sexball
-
-**Cons:**
-- Requires tuning to avoid jamming (driving pole too far in Z)
-- Use copper SHCS screws (SS screws don't work reliably)
-
-See [calibration section](../SoftwareAndConfig/ToolCalibration.md) for usage.
+**Setup:** See [Toolhead Calibration](../SoftwareAndConfig/ToolCalibration.md) for usage.
 
 
 #### Mods
@@ -137,23 +138,32 @@ See [calibration section](../SoftwareAndConfig/ToolCalibration.md) for usage.
 * [2.4 Dockable Nudge Mount](https://github.com/DraftShift/StealthChanger/tree/main/UserMods/MRSalguod/2.4%20Dockable%20Nudge%20Mount)
 
 
-### Using a printable calibration
-No hardware required—print reference plates for calibration (more work, but free).
-
-**⚠️ Warning:** If gcode_z_offsets are unknown, set them high before printing to prevent lower nozzles from digging into the bed. See [calibration guide](../SoftwareAndConfig/ToolCalibration.md) for proper setup.
+### Printable Calibration (No Hardware)
+Print reference plates and visually measure offsets. Free but time-consuming.
 
 <img src="media/Probes/xy_print_cal.jpg" width="300">
 
+**⚠️ Warning:** If `gcode_z_offsets` are unknown, set them high before printing to prevent lower nozzles from digging into the bed.
+
 **Method:** [X, Y and Z calibration tool for IDEX](https://www.printables.com/model/201707-x-y-and-z-calibration-tool-for-idex-dual-extruder)
 
-**Pros:**
-- Visual approach (what you see is what you get)
-
-**Cons:**
-- Very time-consuming (especially for 5-6 [tools](../Toolheads/Toolheads.md))
-- Bad Z offset can damage PEI plate
+| Pros | Cons |
+|------|------|
+| No hardware required | Very time-consuming (especially for 5-6 tools) |
+| Visual confirmation | Risk of damaging PEI plate if Z offset is wrong |
    
 ## FAQ
+
+**Quick Links:**
+- [My sexball probe doesn't work](#my-sexball-probe-doesnt-work-its-always-triggered)
+- [My OctoTAP board doesn't trigger reliably](#my-octotap-board-doesnt-trigger-reliably)
+- [Do I need to cut the trace on the OctoTAP board?](#do-i-need-to-cut-the-trace-on-the-octotap-board)
+- [Can I use `SAVE_CONFIG` after `PROBE_CALIBRATE`?](#can-i-use-save_config-after-probe_calibrate)
+- [My Nudge reports "endstop triggered before contact"](#my-nudge-reports-endstop-triggered-before-contact)
+- [Do I need to calibrate offsets on every print?](#do-i-need-to-calibrate-offsets-on-every-print)
+- [What is toolless homing?](#what-is-toolless-homing)
+
+---
 
 ### My sexball probe doesn't work, it's always triggered
 With [sensorless homing](../Endstops.md#sensorless-homing), ensure [endstops](../Endstops.md)/micro switches use ports that don't share pins with motor diag pins (e.g., use Z motor ports). Check your mainboard manual for pin assignments.

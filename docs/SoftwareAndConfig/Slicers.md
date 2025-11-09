@@ -1,11 +1,11 @@
 ---
-title: Slicers & Printing
+title: Slicers & Macros
 nav_order: 6
 parent: Software & Configuration
 ---
 <!-- Use the page layout at TOC.md:  https://github.com/sdylewski/StealthChanger/blob/main/docs/TOC.md -->
 
-# Slicers & Printing
+# Slicers & Macros
 
 After [installing](Installation.md), [configuring](Configuration.md), and [calibrating](ToolCalibration.md) klipper-toolchanger-easy, you need to set up your slicer to work with the toolchanger system.
 
@@ -121,6 +121,15 @@ M104 S{material_print_temperature} T{extruder_nr}
 - [LEDs](LEDs.md) → Configure color LEDs and lighting effects
 
 ## FAQ
+
+**Quick Links:**
+- [PrusaSlicer wipe tower position error](#prusaslicer-wipe-tower-position-error-after-upgrading-to-290)
+- [OrcaSlicer sets pressure advance to zero](#orcaslicer-sets-pressure-advance-to-zero-with-prime-tower)
+- [My tool waits a long time to heat up](#my-tool-waits-a-long-time-to-heat-up-before-continuing)
+- [How do I decrease the prime amount in OrcaSlicer?](#how-do-i-decrease-the-prime-amount-in-orcaslicer)
+- [Can I use ooze prevention and pre-heating?](#can-i-use-ooze-prevention-and-pre-heating)
+
+---
 
 ### PrusaSlicer wipe tower position error after upgrading to 2.9.0
 If you use `G1 X{wipe_tower_x} Y{wipe_tower_y} F{travel_speed*60}` in your Tool change G-code, it won't work in PrusaSlicer 2.9.0. They dropped the option to choose your wipe tower position, and the above command will give an error. Either don't use the wipe tower positions, or stick with PrusaSlicer 2.8.1 until it's fixed.
