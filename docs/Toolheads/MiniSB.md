@@ -4,7 +4,7 @@ nav_order: 3
 parent: Toolheads
 ---
 <!-- Use the page layout at TOC.md:  https://github.com/sdylewski/StealthChanger/blob/main/docs/TOC.md -->
-# MiniSB Toolhead
+# MiniSB
 
 <img src="../media/Toolheads/MiniSB.png" width=150>
 
@@ -26,13 +26,34 @@ parent: Toolheads
 - [1] m3x8 BHCS (optional in v1.1)
 
 ### BOM Additions for MiniSB
- - TBD
+
+* TBD
+
+## PCB Mounting Options
+
+### Official PCB Mounts (Draftshift Design)
+
+*No official PCB mounts from Draftshift Design. See User Mods below.*
+
+### User Mods
+
+*No user mod PCB mounts documented yet. Check the [StealthChanger UserMods](https://github.com/DraftShift/StealthChanger/tree/main/UserMods) directory for community contributions.*
 
 
 ## Dock
-* Dock width: 60mm
 
-## Dock options:
+| Dock Width | Stubby Dock Compatible |
+|------------|------------------------|
+| 60mm | ✅ Yes |
 
-* Original Drafshift Design [MiniSB Back and base](https://github.com/DraftShift/ModularDock/tree/main/STLs/MiniSB)
+### Official Dock Types (Draftshift Design)
+
+| Dock Type | Description | Link |
+|-----------|-------------|------|
+| Standard Dock | Full-height dock with back and base | [MiniSB Back and Base](https://github.com/DraftShift/ModularDock/tree/main/STLs/MiniSB) |
+| Stubby Dock | Shorter dock (no vertical supports, crossbar attachment only) - saves ~10mm Y build space | [MiniSB Stubby Base](https://github.com/DraftShift/ModularDock/tree/main/STLs/MiniSB) |
+
+### User Mods
+
+*No user mod docks documented yet. Check the [ModularDock UserMods](https://github.com/DraftShift/ModularDock/tree/main/UserMods) directory for community contributions.*
   

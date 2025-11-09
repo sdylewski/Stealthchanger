@@ -4,14 +4,16 @@ nav_order: 8
 parent: Toolheads
 ---
 
-# Jabberwocky Toolhead
+# Jabberwocky
 
 <img src="../media/Toolheads/Jabberwocky.png" width=200>
 
 ## References
+
 * [Jabberwocky Reference Page](https://github.com/kinematicdigit/Jabberwocky)
 
 ## Backplate
+
 * [Jabberwocky Backplate](https://github.com/sdylewski/StealthChanger/blob/main/STLs/Backplates)
 
 ### Backplate BOM for All Tools
@@ -23,14 +25,45 @@ parent: Toolheads
 - [1] [OptoTap](https://s.click.aliexpress.com/e/_DEGsGTV) (only the sensor PCB is required)
 - [1] m3x8 BHCS (optional in v1.1)
 
+### BOM Additions for Jabberwocky
+
+* TBD
+
+## PCB Mounting Options
+
+### Official PCB Mounts (Draftshift Design)
+
+*No official PCB mounts from Draftshift Design. See User Mods below.*
+
+### User Mods
+
+*No user mod PCB mounts documented yet. Check the [StealthChanger UserMods](https://github.com/DraftShift/StealthChanger/tree/main/UserMods) directory for community contributions.*
+
+## Toolhead Options & Mods
+
+* TBD
+
 ## Dock
-* Dock width: 76mm
+
+| Dock Width | Stubby Dock Compatible |
+|------------|------------------------|
+| 76mm | ❌ No |
+
+### Official Dock Types (Draftshift Design)
+
+| Dock Type | Description | Link |
+|-----------|-------------|------|
+| Standard Dock | Full-height dock with back and base | [Jabberwocky Back and Base](https://github.com/DraftShift/ModularDock/tree/main/STLs/Jabberwocky) |
+
+**Note:** Jabberwocky is not compatible with stubby docks due to toolhead geometry.
+
+### User Mods
+
+*No user mod docks documented yet. Check the [ModularDock UserMods](https://github.com/DraftShift/ModularDock/tree/main/UserMods) directory for community contributions.*
+
+**Additional Resources:**
 * Common components for [your dock type](../Docks.md)
 * [Modular dock assembly guide](https://github.com/DraftShift/ModularDock/blob/main/Manual/ModularDock_Assembly_Guide.pdf)
-  
-
-### Dock options
-* Original Draftshift Design [Jabberwocky Back and Base](https://github.com/DraftShift/ModularDock/tree/main/STLs/Jabberwocky)
 
 ## Tips & Suggestions
 * TBD

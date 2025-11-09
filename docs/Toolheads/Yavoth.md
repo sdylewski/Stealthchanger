@@ -4,16 +4,17 @@ nav_order: 6
 parent: Toolheads
 ---
 <!-- Use the page layout at TOC.md:  https://github.com/sdylewski/StealthChanger/blob/main/docs/TOC.md -->
-# Yavoth Toolhead
+# Yavoth
 
 <img src="../media/Toolheads/Yavoth.png" width="200">
 
-## Reference
-[Yavoth reference page](https://github.com/chirpy2605/voron/tree/main/V0/Yavoth)
+## References
+
+* [Yavoth reference page](https://github.com/chirpy2605/voron/tree/main/V0/Yavoth)
 
 ## Backplate
 
-[Backplate for HF/UHF](https://github.com/DraftShift/StealthChanger/tree/main/STLs/Backplates)
+* [Backplate for HF/UHF](https://github.com/DraftShift/StealthChanger/tree/main/STLs/Backplates)
 
 ### Backplate BOM for All Tools
 
@@ -24,23 +25,41 @@ parent: Toolheads
 - [1] [OptoTap](https://s.click.aliexpress.com/e/_DEGsGTV) (only the sensor PCB is required)
 - [1] m3x8 BHCS (optional in v1.1)
 
-### BOM Additions for Dragonburner
-- [1] m3x12 BHCS (optional to keep spacer in place)
-- [2] m3x35 SHCS
-- [2] m3 heat inserts
-- [2] m3x8 BHCS (optional in v1.1)
-- Several 5x2 or 5x3 N52 magnets to hold toolhead to dock (Highly recommended for non-magnetic docks)
+### BOM Additions for Yavoth
 
+* TBD
+
+## PCB Mounting Options
+
+### Official PCB Mounts (Draftshift Design)
+
+*No official PCB mounts from Draftshift Design. See User Mods below.*
+
+### User Mods
+
+| PCB | Extruder | Description | Link |
+|-----|----------|-------------|------|
+| EBB36 | Sherpa Micro | EBB36 mount with cover for Sherpa Micro | [Sherpa Micro EBB36 Mount With Cover](https://github.com/DraftShift/StealthChanger/tree/main/UserMods/N3MI-DG/Sherpa_Micro_EBB36_Mount) |
 
 ## Toolhead Options & Mods
-* [Sherpa Micro EBB36 Mount With Cover](https://github.com/DraftShift/StealthChanger/tree/main/UserMods/N3MI-DG/Sherpa_Micro_EBB36_Mount)
+
 * [Yavoth LED cowl](https://github.com/DraftShift/StealthChanger/tree/main/UserMods/jdmontgomer/Yavoth_LED_Cowl)
   
   
 ## Dock
-* Dock width: 60mm
 
-## Dock options:
+| Dock Width | Stubby Dock Compatible |
+|------------|------------------------|
+| 60mm | ✅ Yes |
 
-* Original Drafshift Design [Yavoth Back and base](https://github.com/DraftShift/ModularDock/tree/main/STLs/Yavoth)
+### Official Dock Types (Draftshift Design)
+
+| Dock Type | Description | Link |
+|-----------|-------------|------|
+| Standard Dock | Full-height dock with back and base | [Yavoth Back and Base](https://github.com/DraftShift/ModularDock/tree/main/STLs/Yavoth) |
+| Stubby Dock | Shorter dock (no vertical supports, crossbar attachment only) - saves ~10mm Y build space | [Yavoth Stubby Base](https://github.com/DraftShift/ModularDock/tree/main/STLs/Yavoth) |
+
+### User Mods
+
+*No user mod docks documented yet. Check the [ModularDock UserMods](https://github.com/DraftShift/ModularDock/tree/main/UserMods) directory for community contributions.*
   

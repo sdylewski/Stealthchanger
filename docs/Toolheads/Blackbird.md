@@ -4,13 +4,12 @@ nav_order: 8
 parent: Toolheads
 ---
 <!-- Use the page layout at TOC.md:  https://github.com/sdylewski/StealthChanger/blob/main/docs/TOC.md -->
-# Blackbird Toolhead
-
+# Blackbird
 
 <img src="../media/Toolheads/Blackbird.jpg" width=200>
 
+## References
 
-## Reference
 * [Blackbird Github page](https://github.com/Armchair-Heavy-Industries/Archetype/tree/main/Archetype%20-%20Blackbird)
 * [Archetype web page](https://docs.armchairheavyindustries.com/docs/archetype)
 
@@ -28,19 +27,40 @@ parent: Toolheads
 - [1] m3x8 BHCS (optional in v1.1)
 
 ### BOM Additions for Blackbird
+
 - [1] m3x12 BHCS (to hold the sherpa mount in place)
 - [2] m3 heat inserts
 - [2] m3x8 BHCS (optional in v1.1)
 
+## PCB Mounting Options
 
+### Official PCB Mounts (Draftshift Design)
+
+*No official PCB mounts from Draftshift Design. See User Mods below.*
+
+### User Mods
+
+*No user mod PCB mounts documented yet. Check the [StealthChanger UserMods](https://github.com/DraftShift/StealthChanger/tree/main/UserMods) directory for community contributions.*
 
 ## Toolhead Options & Mods
+
 * [Blackbird Orbiter mount for Stealthchanger](https://github.com/DraftShift/StealthChanger/tree/main/UserMods/jdmontgomer/Blackbird_Orbiter_Mount)
 
 ## Dock
-* Dock width: 76mm
 
-## Dock options:
+| Dock Width | Stubby Dock Compatible |
+|------------|------------------------|
+| 76mm | ❌ No |
 
-* Original Drafshift Design [Blackbird Back and base](https://github.com/DraftShift/ModularDock/tree/main/STLs/Blackbird)
+### Official Dock Types (Draftshift Design)
+
+| Dock Type | Description | Link |
+|-----------|-------------|------|
+| Standard Dock | Full-height dock with back and base | [Blackbird Back and Base](https://github.com/DraftShift/ModularDock/tree/main/STLs/Blackbird) |
+
+**Note:** Blackbird is not compatible with stubby docks due to toolhead geometry.
+
+### User Mods
+
+*No user mod docks documented yet. Check the [ModularDock UserMods](https://github.com/DraftShift/ModularDock/tree/main/UserMods) directory for community contributions.*
   
