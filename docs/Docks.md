@@ -16,19 +16,41 @@ parent: StealthChanger Components
 
 
 ### How many toolheads can I fit?
-To calculate how many tools you can fit on the front of your printer you ened to know the tools to use first and the amount of room for your front idlers (stock gantry also can't move the entire length of X so make sure you factor that in as well.
+To calculate how many tools you can fit on the front of your printer you need to know the tools to use first and the amount of room for your front idlers (stock gantry also can't move the entire length of X so make sure you factor that in as well.
 
    - Remember to leave space between docks for protruding parts and wires. Snagging the neighbouring tool while changing toolheads quickly leads to expensive sounds
-   - Dragon Burners/Yavoth require 60mm per tool (recommend 5mm between for extruder handles and wires)
-   - Blackbird, Stealth Burners and XOL require 76mm per tool
    - The gantry requires about 20mm each at max and min X to be able to pass the tools.
 
-To know how many tools you can fit it is then: measure the front top extrusion inside, subtract 40mm for front idlers/gantry and then divide the remainder by the size of your toolhead.
+**Dock Width Required per Toolhead:**
 
+| Dock Width | Toolheads |
+|------------|-----------|
+| **60mm** | Anthead, DragonBurner, RapidBurner, MiniSB, Yavoth, SV08 |
+| **76mm** | StealthBurner, XOL, A4T, Blackbird, Jabberwocky |
 
-Example: Voron 350 is 470mm total, 5 stealthburners is 76 x 5 = 380 -> 470 - (380 + 40) = 50, so that means you can fit 5 Stealthburners and have 50mm to spare which is not enough for any other tools. (and then, five tools means four spaces, so at most 50/4 = 12.5mm between docks)
+**Note:** Recommend at least 5mm spacing between docks for extruder handles and wires, especially for 60mm toolheads.
 
-Example: Voron 250 is 370mm total, 5 Antheads is 60 * 5 = 300 -> 370 - (300 + 40) = 30, so that means you have 30mm to spare with 5 Antheads on a 250mm printer. (and then, five tools means four spaces, so at most 30/4 = 7.5mm between tools, which may require modifying the extruder tension bolt/spring)
+### Calculation Formula
+
+1. Measure the front top extrusion inside length
+2. Subtract 40mm for front idlers/gantry clearance (this already accounts for spacing at the ends)
+3. Calculate available space: `Available Space = Extrusion Length - 40mm`
+4. Account for 5mm spacing between each dock (N toolheads = N-1 spaces of 5mm each)
+5. Calculate: `Available Space ÷ (Dock Width + 5mm) = Max Toolheads` (round down)
+
+**Formula:** `Max Toolheads = (Extrusion Length - 40mm) ÷ (Dock Width + 5mm)`
+
+**Explanation:** Each toolhead needs its dock width plus 5mm for spacing to the next dock. The last toolhead doesn't need spacing after it, but this formula accounts for that by rounding down.
+
+**Verification:** Ensure `(Toolheads × Dock Width) + ((Toolheads - 1) × 5mm) ≤ (Extrusion Length - 40mm)`
+
+### Examples
+
+| Printer Size | Extrusion Length | Dock Width | Dock Spacing | Max Toolheads | Calculation | Total Used | Remaining Space | Actual Spacing | Notes |
+|--------------|------------------|------------|--------------|---------------|-------------|------------|-----------------|----------------|-------|
+| Voron 350 | 470mm | 76mm | 5mm | 5 | (470 - 40) ÷ (76 + 5) = 5.31 → 5 | 400mm (5×76 + 4×5) | 30mm | 7.5mm (30 ÷ 4) | 5 tools = 4 spaces, exceeds 5mm minimum |
+| Voron 300 | 420mm | 60mm | 5mm | 5 | (420 - 40) ÷ (60 + 5) = 5.85 → 5 | 320mm (5×60 + 4×5) | 60mm | 15mm (60 ÷ 4) | 6 tools would need 385mm (6×60 + 5×5), only 380mm available |
+| Voron 250 | 370mm | 60mm | 5mm | 5 | (370 - 40) ÷ (60 + 5) = 5.08 → 5 | 325mm (5×60 + 4×5) | 5mm | 1.25mm (5 ÷ 4) | Very tight spacing, may require modifying extruder tension bolt/spring |
 
 
 ## Crossbar Options

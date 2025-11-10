@@ -66,6 +66,16 @@ parent: Toolheads
 |------------|------------------------|
 | 60mm | ✅ Yes |
 
+### Maximum Toolheads per Printer Size
+
+| Printer Size | Max Toolheads |
+|--------------|---------------|
+| Voron 250 | 5 |
+| Voron 300 | 5 |
+| Voron 350 | 6 |
+
+*Calculation assumes 5mm spacing between docks. See [Docks](../Docks.md) for details.*
+
 ### Official Dock Types (Draftshift Design)
 
 | Dock Type | Description | Link |

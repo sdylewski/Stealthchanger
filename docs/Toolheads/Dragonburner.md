@@ -48,7 +48,7 @@ parent: Toolheads
 
 | PCB | Extruder | Description | Link |
 |-----|----------|-------------|------|
-| EBB36, Nighthawk36, SHT36 | Orbiter 2.5, HGX Sherpa | Recommended: PCB36 mount and backplate. Needs [22mm standoffs](https://www.printables.com/model/1440113-m3-heatset-standoffs-10mm-30mm) for Orbiter 2 extruders | [TheSin's PCB36 mount and backplate](https://github.com/DraftShift/StealthChanger/tree/main/UserMods/TheSin-/PCB36_Mount) |
+| EBB36, Nighthawk36, SHT36 | Orbiter 2.5, HGX Sherpa | Recommended: PCB36 mount and backplate. Needs [22mm standoffs](https://www.printables.com/model/1440113-m3-heatset-standoffs-10mm-30mm) for Orbiter 2 extruders and 17.5mm standoffs for G2SA. | [TheSin's PCB36 mount and backplate](https://github.com/DraftShift/StealthChanger/tree/main/UserMods/TheSin-/PCB36_Mount) |
 | EBB36 | Orbiter 2.0 | EBB36 mount for Orbiter 2.0 extruder | [Dragon Burner EBB36 mount for the Orbiter2.0 extruder](https://github.com/DraftShift/StealthChanger/tree/main/UserMods/cekim-git/EBB36Mount) |
 | EBB36 | Orbiter | Dragonburner Orbiter EBB36 mount | [Dragonburner Orbiter EBB36 mount](https://github.com/DraftShift/StealthChanger/tree/main/UserMods/traxman25/Dragonburner_EBB36_SC_Mount) |
 
@@ -70,6 +70,16 @@ parent: Toolheads
 | Dock Width | Stubby Dock Compatible |
 |------------|------------------------|
 | 60mm | ✅ Yes |
+
+### Maximum Toolheads per Printer Size
+
+| Printer Size | Max Toolheads |
+|--------------|---------------|
+| Voron 250 | 5 |
+| Voron 300 | 5 |
+| Voron 350 | 6 |
+
+*Calculation assumes 5mm spacing between docks. See [Docks](../Docks.md) for details.*
 
 ### Official Dock Types (Draftshift Design)
 
