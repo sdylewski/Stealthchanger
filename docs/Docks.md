@@ -18,22 +18,37 @@ parent: StealthChanger Components
 
 The Modular Dock system offers several dock variants to suit different needs and printer configurations:
 
-| Dock Type | Description | Y Build Space Impact | Z Height | Official/User Mod | Notes |
-|-----------|-------------|---------------------|----------|------------------|-------|
-| **Standard/Long Dock** | Full-height dock with back, base, and vertical front plates. Standard height front plates position crossbar 170mm below top extrusion. | ~20mm loss | 170mm | Official | Most common, strongest, most stable |
-| **Short Dock** | Dock with shorter Z height (vertical dimension). Short height front plates position crossbar 130mm below top extrusion. | ~20mm loss (same as standard) | 130mm | Official | Shorter in Z axis, allows crossbar to be mounted higher. Requires toolhead/extruder/PTFE tube to clear top frame. |
-| **Stubby Dock** | Shorter dock in Y dimension with no vertical supports, crossbar attachment only. Uses stubby base instead of full base. | ~10mm loss (saves 10mm vs standard) | Same as standard | Official | Not all toolheads are compatible. Reduces Y build space loss by half. |
-| **Crabby Dock** | Minimal dock with no vertical supports - just a shaped plate bolted directly to the crossbar. | Varies | Varies | User Mod | Provides maximum flexibility in dock positioning. May require additional securing methods (screws with PTFE tubes, magnets) to keep toolheads properly positioned. |
+### Standard/Long Dock (Official)
 
-**Key Differences:**
-- **Standard vs Short**: Refers to the Z height (vertical dimension) of the front vertical plates. Short docks are 130mm tall in Z vs 170mm for standard, positioning the crossbar higher. This doesn't affect Y build space.
-- **Stubby**: Shorter in Y dimension (depth), removes vertical supports entirely, saving ~10mm Y build space compared to standard docks
-- **Crabby**: User mod variant with maximum flexibility, no vertical supports, minimal design
+Full-height dock with back, base, and vertical front plates. Standard height front plates position the crossbar 170mm below the top extrusion. This is the most common, strongest, and most stable dock type. It works with the default door buffer Z position.
 
-**Compatibility:** 
-- Not all toolheads support stubby docks. Check individual toolhead pages for compatibility.
-- **Door Buffer**: Only standard/long docks are compatible with the default door buffer. Short docks, stubby docks, and crabby docks are not compatible with the standard door buffer configuration.
-- All crabby docks are user mods, not official Draftshift Design.
+- **Y Build Space Impact**: ~20mm loss
+- **Z Height**: 170mm
+- **Compatibility**: Works with all toolheads and the default door buffer configuration
+
+### Short Dock (Official)
+
+Dock with shorter Z height (vertical dimension). Short height front plates position the crossbar 130mm below the top extrusion, allowing the crossbar to be mounted higher. This is useful when you need more clearance above the dock. Requires toolhead/extruder/PTFE tube to clear the top frame.
+
+- **Y Build Space Impact**: ~20mm loss (same as standard)
+- **Z Height**: 130mm
+- **Compatibility**: Works with all toolheads, but **not compatible with the default door buffer** - the door buffer is designed for the standard 170mm Z height
+
+### Stubby Dock (Official)
+
+Shorter dock in Y dimension (depth), using a stubby base instead of the full base. This reduces Y build space loss by approximately half compared to standard docks (~10mm vs ~20mm). **Important**: Stubby docks are only compatible with crossbars mounted between the frame. They are **not compatible with externally-mounted crossbars (door buffer)** because the X carriage cannot reach the shorter docks when the crossbar is mounted externally.
+
+- **Y Build Space Impact**: ~10mm loss (saves 10mm vs standard)
+- **Z Height**: Same as standard (170mm)
+- **Compatibility**: Not all toolheads support stubby docks - check individual toolhead pages for compatibility. Only works with crossbars mounted between the frame, not with door buffer configurations.
+
+### Crabby Dock (User Mod)
+
+Minimal dock with no vertical supports - just a shaped plate bolted directly to the crossbar. Provides better visibility of toolheads when docked and maximum flexibility in dock positioning. May require additional securing methods (screws with PTFE tubes, magnets) to keep toolheads properly positioned.
+
+- **Y Build Space Impact**: Varies
+- **Z Height**: Varies
+- **Compatibility**: All crabby docks are user mods, not official Draftshift Design. Not compatible with the default door buffer configuration.
 
 ### How many toolheads can I fit?
 To calculate how many tools you can fit on the front of your printer you need to know the tools to use first and the amount of room for your front idlers (stock gantry also can't move the entire length of X so make sure you factor that in as well.
