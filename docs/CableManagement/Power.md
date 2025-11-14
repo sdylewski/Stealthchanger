@@ -42,11 +42,23 @@ Common options for 24V power supplies. Make sure you have enough room in your el
 | **UHP-350-24** | 350W (14.6A) | 220 × 62 × 31 mm | Convection | Slim design |
 | **UHP-500-24** | 500W (20.9A) | 233 × 81 × 31 mm | Convection | Slim design |
 
+**Note:** At higher power supply temperatures, UHP (and other) power supplies reduce their output capability (derated). It's important to keep the power supply cool with good electronics bay ventilation/fan to maintain full rated output.
+
 ### Multiple Power Supplies
 
 Other options include using multiple lower-wattage PSUs combined in parallel. **Important:** If you use multiple PSUs, you must tie the GND (ground) of each one together to have a common reference point, otherwise communications issues will arise. 
 
 ## Limiting power draw
-// TODO: power management mitigation in SW so all heaters aren't on at the same time (add link to code or slicer settings?)
+
+To reduce peak power requirements, you can prevent all toolheads from heating to full temperature simultaneously. The most effective method is using **ooze prevention** settings in your slicer, which keeps inactive tools at a lower idle temperature (typically 30-50°C below print temperature) and only heats them up shortly before they're needed.
+
+**Recommended approach:**
+- Use ooze prevention settings in your slicer (available in OrcaSlicer and PrusaSlicer)
+- See [Ooze Prevention Settings](../SoftwareAndConfig/Slicers.md#can-i-use-ooze-prevention-and-pre-heating) for recommended temperature deltas and pre-heat times
+
+**Other methods:**
+- Stagger tool heating in your slicer start G-code (heat tools sequentially rather than simultaneously)
+- Use lower pre-heat temperatures in `PRINT_START` and let tools reach full temperature during the print
+- **Limit heater power in Klipper**: Use the `max_power` parameter in each tool's `[extruder]` or `[extruder1]`, `[extruder2]`, etc. section to limit maximum power output. The value ranges from 0.0 to 1.0 (where 1.0 = 100% power). For example, setting `max_power: 0.7` limits the heater to 70% of its maximum power. This will slow heating but reduces peak power draw. See [Klipper Heater Configuration](https://www.klipper3d.org/Config_Reference.html#extruder) for details.
 
 
