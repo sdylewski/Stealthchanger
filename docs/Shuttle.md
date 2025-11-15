@@ -147,7 +147,7 @@ If you have have a CNC shuttle it's absolutely critical that you calibrate your 
 If you have pins that are held in by screws, mate with the shuttle and then tighten the pin screws, that way the pins are perfectly aligned with the bushings of the shuttle. Then bed in your shuttle and backplate by running a probe over and over again with `PROBE_ACCURACY SAMPLES=100` (put something hard under the nozzle so you don't dimple the PEI plate).
 
 ### My tool still binds (or slowly drags itself into place) when I put it on the shuttle.
-Pin alignment is crucial for smooth operation. It's possible that the plastic prevents the pin from aligning perfectly of the shuttle, but you can mold the pin housing if the backplate by heating up the pin:
+Pin alignment is crucial for smooth operation. It's possible that the plastic prevents the pin from aligning perfectly of the shuttle, but you can mold the pin housing of the backplate by heating up the pin:
 1. Heat up the pin with a soldering iron
 2. When it's hot push it into the backplate with pliers (don't burn yourself!)
 3. While still hot put the backplate or tool onto the shuttle and make sure it seats fully.
