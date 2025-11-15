@@ -150,7 +150,7 @@ If you have pins that are held in by screws, mate with the shuttle and then tigh
 Pin alignment is crucial for smooth operation. It's possible that the plastic prevents the pin from aligning perfectly of the shuttle, but you can mold the pin housing if the backplate by heating up the pin:
 1. Heat up the pin with a soldering iron
 2. When it's hot push it into the backplate with pliers (don't burn yourself!)
-3. While still got put the backplate or tool onto the shuttle and make sure it seats fully.
+3. While still hot put the backplate or tool onto the shuttle and make sure it seats fully.
 4. Wait 5-10min to let it cool down and settle.
 5. Tighten the pin with a screw or epoxy it in place.
 
