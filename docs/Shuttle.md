@@ -102,6 +102,20 @@ If you printed the shuttle and backplate and things are just not smooth or you h
 
 Big thank you to `unguided-wanderer` on Discord for this technique.
 
+#### More Aggressive Heat Treating (Pins Still Not Smooth)
+If the standard heat treating method above doesn't resolve binding or if your tool still slowly drags itself into place when putting it on the shuttle, you can use a more aggressive approach to mold the pin housing:
+
+Pin alignment is crucial for smooth operation. It's possible that the plastic prevents the pin from aligning perfectly with the shuttle, but you can mold the pin housing of the backplate by heating up the pin:
+1. Heat up the pin with a soldering iron
+2. When it's hot push it into the backplate with pliers (don't burn yourself!)
+3. While still hot put the backplate or tool onto the shuttle and make sure it seats fully.
+4. Wait 5-10min to let it cool down and settle.
+5. Tighten the pin with a screw or epoxy it in place.
+
+It should now mate much smoother, [celebrate!](https://youtube.com/watch?v=4TYv2PhG89A)
+
+Big thank you to `@WHYYTE` on Discord for this technique.
+
 
 ### Cleaning out bushings
 Sometimes the bushings aren't debured or do not slide well when you recieve them.
@@ -131,7 +145,6 @@ Sometimes the bushings aren't debured or do not slide well when you recieve them
 - [My dimensions are spot on but it still doesn't mate smoothly](#my-dimensions-are-spot-on-but-it-still-doesnt-mate-smoothly)
 - [Do I really need N52 magnets?](#do-i-really-need-n52-magnets)
 - [How do I install the magnets?](#how-do-i-install-the-magnets)
-- [My tool still binds (or slowly drags itself into place) when I put it on the shuttle.](#my-tool-still-binds-or-slowly-drags-itself-into-place-when-i-put-it-on-the-shuttle)
 ---
 
 ### Do I need an OctoTAP board per toolhead?
@@ -145,17 +158,6 @@ If you have have a CNC shuttle it's absolutely critical that you calibrate your 
 
 ### My dimensions are spot on but it still doesn't mate smoothly
 If you have pins that are held in by screws, mate with the shuttle and then tighten the pin screws, that way the pins are perfectly aligned with the bushings of the shuttle. Then bed in your shuttle and backplate by running a probe over and over again with `PROBE_ACCURACY SAMPLES=100` (put something hard under the nozzle so you don't dimple the PEI plate).
-
-### My tool still binds (or slowly drags itself into place) when I put it on the shuttle.
-Pin alignment is crucial for smooth operation. It's possible that the plastic prevents the pin from aligning perfectly of the shuttle, but you can mold the pin housing of the backplate by heating up the pin:
-1. Heat up the pin with a soldering iron
-2. When it's hot push it into the backplate with pliers (don't burn yourself!)
-3. While still hot put the backplate or tool onto the shuttle and make sure it seats fully.
-4. Wait 5-10min to let it cool down and settle.
-5. Tighten the pin with a screw or epoxy it in place.
-
-It should now mate much smoother, [celebrate!](https://youtube.com/watch?v=4TYv2PhG89A)
-   
 
 ### Do I really need N52 magnets?
 N52 magnets are much stronger than N35 and will make the shuttle/toolhead more rigid. N35 magnets might cause reliability issues and introduce more play.

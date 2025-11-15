@@ -42,7 +42,9 @@ PRINT_START TOOL=0 TOOL_TEMP=220 BED_TEMP=60 T0_TEMP=220 T1_TEMP=230
 
 **Note:** The `_PARK_ON_COOLING_PAD` macro in `PRINT_START` is not needed for StealthChanger and can be commented out or removed if present.
 
-**Example:** See the [PRINT_START macro example](Examples/PRINT_START.md) for a complete reference implementation.
+**Examples:** 
+- [Minimal PRINT_START Example](Examples/PRINT_START_Simple.md) - Basic implementation
+- [Advanced PRINT_START Example](Examples/PRINT_START_Advanced.md) - Enhanced features with smart QGL selection and tool detection
 
 ## Overview
 
