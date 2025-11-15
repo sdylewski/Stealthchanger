@@ -53,8 +53,8 @@ Other options include using multiple lower-wattage PSUs combined in parallel. **
 To reduce peak power requirements, you can prevent all toolheads from heating to full temperature simultaneously. The most effective method is using **ooze prevention** settings in your slicer, which keeps inactive tools at a lower idle temperature (typically 30-50°C below print temperature) and only heats them up shortly before they're needed.
 
 **Recommended approach:**
-- Use ooze prevention settings in your slicer (available in OrcaSlicer and PrusaSlicer)
-- See [Ooze Prevention Settings](../SoftwareAndConfig/Slicers.md#can-i-use-ooze-prevention-and-pre-heating) for recommended temperature deltas and pre-heat times
+- Use [ooze prevention settings](../SoftwareAndConfig/Slicers.md#can-i-use-ooze-prevention-and-pre-heating) in your slicer (available in OrcaSlicer and PrusaSlicer)
+
 
 **Other methods:**
 - Stagger tool heating in your slicer start G-code (heat tools sequentially rather than simultaneously)

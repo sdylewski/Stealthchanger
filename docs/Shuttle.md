@@ -68,6 +68,7 @@ In order to get proper matching set you should:
 - inset 2x M3x8mm SHCS screws in the top 2 pins to secure, and a M3x6 or 8mm BHCS screw in the bottom pin. If needed, you can glue in the pins.
 - if everything feels smooth, pop the bushings out and glue them in place using either superglue or epoxy
 - see [Heat Treating](#heat-treating) for fine-tuning the fit after gluing.
+- see [Backplate Preload](#backplate-preload) for setting preload screws after assembly.
 - be sure to test that the mating still feels smooth after the glue sets.
 - You can now use the shuttle as a "master blank" for glueing the pins into all your backplates.
 
